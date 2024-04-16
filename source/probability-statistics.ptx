@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="probability-statistics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>概率统计</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="chap1.ptx" />
+  <xi:include href="chap2.ptx" />
+  
+  
+  
+</chapter>

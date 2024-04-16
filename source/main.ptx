@@ -13,7 +13,7 @@
 
     <!-- Include chapters -->
     <xi:include href="./linear-algebra.ptx" />
-    <xi:include href="./ch-chapter-title2.ptx" />
+    <xi:include href="./probability-statistics.ptx" />
 
 
     <!-- Include backmatter -->
