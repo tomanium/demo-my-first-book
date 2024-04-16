@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-chapter-title1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>线性代数</title>
+
+  <section>
+    <title>章节一</title>
+  
+    <!-- <objectives>
+      <ol>
+        <li>Learn how to verify that a transformation is linear, or prove that a transformation is not linear.</li>
+        <li>Understand the relationship between linear transformations and matrix transformations.</li>
+        <li>Recipe:compute the matrix of a linear transformation.</li>
+        <li><em>Theorem:</em> linear transformations and matrix transformations.</li>
+        <li><em>Notation:</em> the <term>standard coordinate vectors</term> <m>e_1,e_2,\ldots</m>.</li>
+        <li><em>Vocabulary words:</em> <term>linear transformation</term>, <term>standard matrix</term>, <term>identity matrix</term>.</li>
+      </ol>
+    </objectives> -->
+  
+    <introduction>
+      <p>不知道大家注意没有，在《高等数学 <m>\cdot</m> 上册》中讨论的函数都只有一个自变量，这种函数叫一元函数。比如一元函数的极限，一元函数的导数与微分，一元函数的积分。那么到了下册这里，我们将开启一个全新的副本，就是多元函数的相关问题。
+      </p>
+      <p>本章将在一元的基础上，主要讨论二元函数的微分，二元以上的多元函数以此类推。那么从一元到二元函数，产生了一些新的问题，我们先从几个概念开始。
+      </p>
+    </introduction>
+  
+    
+  
+  </section>
+  
+  <section>
+    <title>章节二</title>
+  
+    <!-- <objectives>
+      <ol>
+        <li>Learn how to verify that a transformation is linear, or prove that a transformation is not linear.</li>
+        <li>Understand the relationship between linear transformations and matrix transformations.</li>
+        <li>Recipe:compute the matrix of a linear transformation.</li>
+        <li><em>Theorem:</em> linear transformations and matrix transformations.</li>
+        <li><em>Notation:</em> the <term>standard coordinate vectors</term> <m>e_1,e_2,\ldots</m>.</li>
+        <li><em>Vocabulary words:</em> <term>linear transformation</term>, <term>standard matrix</term>, <term>identity matrix</term>.</li>
+      </ol>
+    </objectives> -->
+  
+    <introduction>
+      <p>不知道大家注意没有，在《高等数学 <m>\cdot</m> 上册》中讨论的函数都只有一个自变量，这种函数叫一元函数。比如一元函数的极限，一元函数的导数与微分，一元函数的积分。那么到了下册这里，我们将开启一个全新的副本，就是多元函数的相关问题。
+      </p>
+      <p>本章将在一元的基础上，主要讨论二元函数的微分，二元以上的多元函数以此类推。那么从一元到二元函数，产生了一些新的问题，我们先从几个概念开始。
+      </p>
+    </introduction>
+  
+    
+  
+  </section>
+  
+  
+</chapter>

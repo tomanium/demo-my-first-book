@@ -12,7 +12,7 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title1.ptx" />
+    <xi:include href="./linear-algebra.ptx" />
     <xi:include href="./ch-chapter-title2.ptx" />
 
 
