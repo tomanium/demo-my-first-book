@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="chap2" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>第二章</title>
+<section xml:id="la-chap2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>第二章 矩阵及其运算</title>
   <subsection>
     <exercises>
     <exercise label="multiple-choice-not-randomized">

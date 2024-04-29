@@ -8,8 +8,8 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="chap1.ptx" />
-  <xi:include href="chap2.ptx" />
+  <xi:include href="la-chap1.ptx" />
+  <xi:include href="la-chap2.ptx" />
   
   
   

@@ -6,12 +6,13 @@
 
   <book xml:id="my-great-book">
     <title>考研数学</title>
-    <subtitle>前进路上的绊脚石</subtitle>
+    <!-- <subtitle>前进路上的绊脚石</subtitle> -->
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
+    <xi:include href="./calculus.ptx" />
     <xi:include href="./linear-algebra.ptx" />
     <xi:include href="./probability-statistics.ptx" />
 
