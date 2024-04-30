@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="la-chap2">
-  <title>第二章 矩阵及其运算</title>
+<section xml:id="la-chap4">
+  <title>第四章 向量组的线性相关性</title>
   <subsection>
     <exercises>
     <exercise label="multiple-choice-not-randomized">
