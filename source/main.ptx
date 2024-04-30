@@ -6,7 +6,7 @@
 
   <book xml:id="my-great-book">
     <title>考研数学</title>
-    <!-- <subtitle>前进路上的绊脚石</subtitle> -->
+    <subtitle>前进路上的绊脚石</subtitle>
 
     <!-- Include frontmatter -->
     <!-- <xi:include href="./frontmatter.ptx" /> -->

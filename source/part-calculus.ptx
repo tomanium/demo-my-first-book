@@ -10,6 +10,16 @@
   <!-- include sections -->
   <xi:include href="chapters/calc/cal-chap1.ptx" />
   <xi:include href="chapters/calc/cal-chap2.ptx" />
+  <xi:include href="chapters/calc/cal-chap3.ptx" />
+  <xi:include href="chapters/calc/cal-chap4.ptx" />
+  <xi:include href="chapters/calc/cal-chap5.ptx" />
+  <xi:include href="chapters/calc/cal-chap6.ptx" />
+  <xi:include href="chapters/calc/cal-chap7.ptx" />
+  <xi:include href="chapters/calc/cal-chap8.ptx" />
+  <xi:include href="chapters/calc/cal-chap9.ptx" />
+  <xi:include href="chapters/calc/cal-chap10.ptx" />
+  <xi:include href="chapters/calc/cal-chap11.ptx" />
+  
   
   
   

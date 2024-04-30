@@ -10,6 +10,9 @@
   <!-- include sections -->
   <xi:include href="chapters/la/la-chap1.ptx" />
   <xi:include href="chapters/la/la-chap2.ptx" />
+  <xi:include href="chapters/la/la-chap3.ptx" />
+  <xi:include href="chapters/la/la-chap4.ptx" />
+  <xi:include href="chapters/la/la-chap5.ptx" />
   
   
   
