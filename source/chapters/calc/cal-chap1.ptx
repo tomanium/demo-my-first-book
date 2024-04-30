@@ -132,14 +132,6 @@
 
 <!-- 
 
- <p></p>
-
-<p></p>
-
-<p>证明 ;</p>
-
-<p></p>
-
 <p>证明 <m>\lim\limits _{x \rightarrow 3} \frac{x-3}{x^{2}-9}=\frac{1}{6}</m></p>
 
 <p>限定 <m>0\lt|x-3|\lt1</m>, 即 <m>2\ltx\lt4</m>, 且 <m>x \neq 3</m>. 因为
