@@ -9,16 +9,16 @@
     <!-- <subtitle>前进路上的绊脚石</subtitle> -->
 
     <!-- Include frontmatter -->
-    <xi:include href="./frontmatter.ptx" />
+    <!-- <xi:include href="./frontmatter.ptx" /> -->
 
     <!-- Include chapters -->
-    <xi:include href="./calculus.ptx" />
-    <xi:include href="./linear-algebra.ptx" />
-    <xi:include href="./probability-statistics.ptx" />
+    <xi:include href="./part-calculus.ptx" />
+    <xi:include href="./part-linear-algebra.ptx" />
+    <xi:include href="./part-probability-statistics.ptx" />
 
 
     <!-- Include backmatter -->
-    <xi:include href="./backmatter.ptx" />
+    <!-- <xi:include href="./backmatter.ptx" /> -->
 
   </book>
 </pretext>
