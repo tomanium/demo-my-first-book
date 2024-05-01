@@ -3,17 +3,26 @@
 <section xml:id="cal-chap3">
   <title>第三章 微分中值定理与导数应用</title>
     <exercises xml:id="exercises-cal3">
+        <title>练习题</title>
+        
             
         <!-- Q1 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x) \in C[0, a], f(x) \in D(0, a)</m>, 且 <m>f(a)=0</m>, 证明: <m>\exists \xi \in(0,1) </m>, s.t  <m>2 f(\xi)+\xi f^{\prime}(\xi)=0</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证: 令 <m>F(x)=x^{2} f(x)</m>, <m>\because f(x) \in C[0, a], f(x) \in D(0, a)</m></p>
+
+                    <p><m>\because f(x) \in C[0, a], f(x) \in D(0, a)</m> 
+                    <m>\therefore F(x) \in C[0, a], F(x) \in D(0, a)</m></p>
+
+                    <p>又  <m>\because F(0)=0, F(a)=0</m>, <m>\therefore F(x)</m> 在 <m>[0, a]</m> 上满足罗尔定理.
+                    即 <m>\exists \xi \in(0, a)</m> 使得 <m>F^{\prime}(\xi)=0</m>. 
+                    即 <m>2 \xi f(\xi)+\xi^{2} f^{\prime}(\xi)=0</m>. 即 <m>2 f(\xi)+\xi f^{\prime}(\xi)=0</m>.
                 </p>
             </answer>
         </exercise>
@@ -22,12 +31,18 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x) \in C[a, b], f(x) \in D(a, b)</m>, 且 <m>f(a)=f(b)=0</m>, 证明: <m>\exists \xi \in(0,1)</m>, s.t <m>\lambda f(\xi)+f^{\prime}(\xi)=0</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证: 令 <m>F(x)=e^{\lambda x} f(x)</m>, <m>\because f(x) \in C[a, b], f(x) \in D(a, b)</m>
+                    <m>\therefore F(x) \in C[a, b], F(x) \in D(a, b)</m></p>
+
+                    <p>又 <m>\because F(a)=e^{\lambda a} f(a)=0, F(b)=e^{\lambda b} f(b)=0</m></p>
+
+                    <p><m>\therefore F(x)</m> 在 <m>[a, b]</m> 上满足罗尔定理. 即 <m>\exists \xi \in(0,1)</m> 使得 <m>\mathrm{F}^{\prime}(\xi)=0</m>.
+                    即 <m>e^{\lambda \xi} f^{\prime}(\xi)+\lambda e^{\lambda \xi} f(\xi)=0</m>. 消去 <m>e^{\lambda \xi}</m>, 即 <m>f^{\prime}(\xi)+\lambda f(\xi)=0</m>.
                 </p>
             </answer>
         </exercise>
@@ -36,12 +51,21 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x), g(x)</m> 在 <m>[a, b]</m> 上连续, 在 <m>(a, b)</m> 内可导, 且 <m>g(x) \neq 0</m>, <m>f(a) g(b)=g(a) f(b)</m>, 试证 <m>\exists \xi \in(a, b)</m>, 使得 <m>f^{\prime}(\xi) g(\xi)=f(\xi) g^{\prime}(\xi)</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证: <m>\because f^{\prime}(\xi) g(\xi)=f(\xi) g^{\prime}(\xi) \Leftrightarrow f^{\prime}(\xi) g(\xi)-f(\xi) g^{\prime}(\xi)=0</m>, 又 <m>g(\xi) \neq 0, \Rightarrow \frac{f^{\prime}(\xi) g(\xi)-f(\xi) g^{\prime}(\xi)}{g^{2}(\xi)}=\left[\frac{f(x)}{g(x)}\right]_{x=\xi}^{\prime}=0</m>,</p>
+
+                    <p><m>\therefore</m> 令 <m>\varphi(x)=\frac{f(x)}{g(x)}</m>.</p>
+
+                    <p>由题设知 <m>\varphi(x)</m> 在 <m>[a, b]</m> 上连续, 在 <m>(a, b)</m> 可导 :
+                    <me>
+                    \varphi^{\prime}(x)=\frac{f^{\prime}(x) g(x)-f(x) g^{\prime}(x)}{g^{2}(x)},
+                    </me></p>
+
+                    <p>且 <m>\varphi(a)=\frac{f(a)}{g(a)}=\frac{f(b)}{g(b)}=\varphi(b) </m>, 故由 Rolle 定理知 <m>\exists \xi \in(a, b)</m>, 使得 <m>\varphi^{\prime}(\xi)=0</m>, 即 <m>f^{\prime}(\xi) g(\xi)=f(\xi) g^{\prime}(\xi)</m>.
                 </p>
             </answer>
         </exercise>
@@ -50,12 +74,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x)</m> 在 <m>[a, b]</m> 上连续, 在 <m>(a, b)</m> 内二阶可导, 联接 <m>(a, f(a)),(b, f(b))</m> 直线交于曲线 <m>y=f(x)</m> 于 <m>(c, f(c)), a \lt c \lt b</m>, 求证: <m>\exists \xi \in(a, b)</m>, 使得 <m>f^{\prime \prime}(\xi)=0</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证明: <m>f(x)</m> 在 <m>[a, c],[c, b]</m> 上满足拉格朗日中值定理条件,则
+                    <me>
+                    f^{\prime}\left(\xi_{1}\right)=\frac{f(c)-f(a)}{c-a}\left(a \lt \xi_{1} \lt c\right), \quad f^{\prime}\left(\xi_{2}\right)=\frac{f(b)-f(c)}{b-c}\left(c \lt \xi_{2} \lt b\right)
+                    </me></p>
+
+                    <p>由于 <m>A(a, f(a)), B(b, f(b)), C(c, f(c))</m> 三点共线, 则有
+                    <me>
+                    \frac{f(c)-f(a)}{c-a}=\frac{f(b)-f(c)}{b-c}=\frac{f(b)-f(a)}{b-a}=K_{A B}\left(K_{A B} \text { 为 } A B \text { 的斜率 }\right)
+                    </me></p>
+
+                    <p>再对 <m>f^{\prime}(x)</m> 在 <m>\left[\xi_{1}, \xi_{2}\right]</m> 上应用罗尔定理得 <m>f^{\prime \prime}(\xi)=0, \xi \in\left(\xi_{1}, \xi_{2}\right) \subset(a, b)</m>.
                 </p>
             </answer>
         </exercise>
@@ -64,12 +98,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x)</m> 在 <m>[a, b]</m> 上连续, 在 <m>(a, b)</m> 内可导, 且 <m>f^{\prime}(x) \neq 0</m>, 试证: 存在 <m>\xi, \eta \in(a, b)</m> 使得 <m>\frac{f^{\prime}(\xi)}{f^{\prime}(\eta)}=\frac{\mathrm{e}^{b}-\mathrm{e}^{a}}{b-a} \mathrm{e}^{-\eta}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证: 注意到要证的等式中, 除了有函数 <m>f(x)</m> 外, 还涉及到函数 <m>\mathrm{e}^{x}</m>, 这就要考虑使用Cauchy定理.</p>
+
+                <p>因为 <m>f(x), \mathrm{e}^{x}</m> 在 <m>[a, b]</m> 满足 Cauchy 定理的条件, 于是有</p>
+
+                <p><me>\frac{\mathrm{e}^{b}-\mathrm{e}^{a}}{f(b)-f(a)}=\frac{\mathrm{e}^{\eta}}{f^{\prime}(\eta)}, \text{其中} \eta \in(a, b)\quad (1)</me></p>
+
+                <p>又在 <m>[a, b]</m> 上对 <m>f(x)</m> 使用 Lagrange 定理, 得</p>
+
+                <p><me>f(b)-f(a)=(b-a) f^{\prime}(\xi), \text{其中} \xi \in(a, b)\quad (2)</me></p>
+
+                <p>将(2)式代入(1)式, 得 <m>\frac{\mathrm{e}^{b}-\mathrm{e}^{a}}{(b-a) f^{\prime}(\xi)}=\frac{\mathrm{e}^{\eta}}{f^{\prime}(\eta)}</m>, 即 <m>\frac{f^{\prime}(\xi)}{f^{\prime}(\eta)}=\frac{\mathrm{e}^{b}-\mathrm{e}^{a}}{b-a} \mathrm{e}^{-\eta} \quad(\xi, \eta \in(a, b))</m>.
                 </p>
             </answer>
         </exercise>
@@ -78,12 +122,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x)</m> 在 <m>[0,1]</m> 上连续, 在 <m>(0,1)</m> 内可导, 且 <m>f(0)=0, f(1)=\frac{1}{3}</m>,试证 <m>\exists \xi \in\left(0, \frac{1}{2}\right), \eta \in\left(\frac{1}{2}, 1\right)</m> 使得 <m>f^{\prime}(\xi)+f^{\prime}(\eta)=\xi^{2}+\eta^{2}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证 <m>\because f^{\prime}(\xi)+f^{\prime}(\eta)=\xi^{2}+\eta^{2} \Leftrightarrow\left[f^{\prime}(\xi)-\xi^{2}\right]+\left[f^{\prime}(\eta)-\eta^{2}\right]=0</m>,而 <m>f^{\prime}(\xi)-\xi^{2}=\left[f(x)-\frac{1}{3} x^{3}\right]_{x=\xi}^{\prime}</m>, <m>\therefore</m> 令 <m>\varphi(x)=f(x)-\frac{x^{3}}{3}</m>.  <m>\varphi(0)=\varphi(1)=0</m>.</p>
+
+                    <p>由题设知 <m>\varphi(x)</m> 在 <m>\left[0, \frac{1}{2}\right]</m> 与 <m>\left[\frac{1}{2}, 1\right]</m> 上满足Lagrange定理条件,故 <m>\exists \xi \in\left(0, \frac{1}{2}\right), \eta \in\left(\frac{1}{2}, 1\right)</m>, 使得
+                    <me>
+                    \begin{array}{l}
+                    \varphi\left(\frac{1}{2}\right)-\varphi(0)=\left(\frac{1}{2}-0\right) \varphi^{\prime}(\xi)=\frac{1}{2}\left[f^{\prime}(\xi)-\xi^{2}\right], \\
+                    \varphi(1)-\varphi\left(\frac{1}{2}\right)=\left(1-\frac{1}{2}\right) \varphi^{\prime}(\eta)=\frac{1}{2}\left[f^{\prime}(\eta)-\eta^{2}\right] .
+                    \end{array}
+                    </me></p>
+
+                    <p>二式相加得 <m>\varphi(1)-\varphi(0)=\frac{1}{2}\left[f^{\prime}(\xi)-\xi^{2}\right]+\frac{1}{2}\left[f^{\prime}(\eta)-\eta^{2}\right]=0</m>,即 <m>f^{\prime}(\xi)+f^{\prime}(\eta)=\xi^{2}+\eta^{2}</m>.
                 </p>
             </answer>
         </exercise>
@@ -92,12 +146,36 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f \in \mathrm{C}[a, b]</m>, <m>f \in \mathrm{D}(a, b), 0 \lt a \lt b</m>. 证明 <m>\exists \xi, \eta \in(a, b)</m>, 使得
+                <me>
+                f^{\prime}(\xi)=\left(a^{2}+a b+b^{2}\right) \frac{f^{\prime}(\eta)}{3 \eta^{2}} 
+                </me>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证: 由Lagrange定理, <m>\exists \xi \in(a, b)</m> 使得
+                    <me>
+                    f^{\prime}(\xi)=\frac{f(b)-f(a)}{b-a} .\quad(1)
+                    </me></p>
+
+                    <p>设 <m>g(x)=x^{3}</m>, 则 <m>f(x), g(x)</m> 在 <m>[a, b]</m> 上满足Cauchy定理条件, <m>\therefore \exists \eta \in(a, b)</m>, 使得 <m>\frac{f(b)-f(a)}{b^{3}-a^{3}}=\frac{f^{\prime}(\eta)}{3 \eta^{2}}</m>,即. 
+                    <me> \frac{f(b)-f(a)}{b-a}=\left(a^{2}+a b+b^{2}\right) \frac{f^{\prime}(\eta)}{3 \eta^{2}} \quad(2)</me>
+                    由(1), (2) 即得 <m>f^{\prime}(\xi)=\left(a^{2}+a b+b^{2}\right) \frac{f^{\prime}(\eta)}{3 \eta^{2}}</m>.</p>
+
+                    <p>下列几种情况可考虑这样作辅助函数：
+                    <me>
+                    \begin{array}{|c|c|}
+                    \hline 要证式子中含  &amp;  作辅助函数 \\
+                    \hline f(\xi)+\xi f^{\prime}(\xi)   &amp;   \varphi(x)=x f(x)  \\
+                    \hline \xi f^{\prime}(\xi)-f(\xi)   &amp;   \varphi(x)=\frac{f(x)}{x}  \\
+                    \hline \xi f^{\prime}(\xi)-n f(\xi)   &amp;   \varphi(x)=\frac{f(x)}{x^{n}}  \\
+                    \hline \lambda f(\xi)+f^{\prime}(\xi)   &amp;   \varphi(x)=\mathrm{e}^{\lambda x} f(x)  \\
+                    \hline g^{\prime}(\xi) f(\xi)+f^{\prime}(\xi)   &amp;  \varphi(x)=\mathrm{e}^{g(x)} f(x)  \\
+                    \hline g(a, b)(\text { 如 }\int_{a}^{b} f(x) \mathrm{d} x )   &amp;   \varphi(x)=g(a, x), x \in[a, b]  \\
+                    \hline
+                    \end{array}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -106,12 +184,25 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x)</m> 在 <m>[0,1]</m> 上连续, <m>f(x)</m> 在 <m>(0,1)</m> 内可导, 且 <m>f(0)=0, f(1)=1</m>, 证明: (1) <m>\exists x_{0} \in(0,1)</m> 使得 <m>f\left(x_{0}\right)=2-3 x_{0}</m> ;(2) <m>\exists \xi, \eta \in(0,1), \xi \neq \eta</m> 使得 <m>\left[1+f^{\prime}(\xi)\right]\left[1+f^{\prime}(\eta)\right]=4</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证明: (1) 令 <m>F(x)=f(x)-2+3 x</m>,  <m>F(x)</m> 在 <m>[0,1]</m> 上连续, 且 <m>F(0)=-2, F(1)=2 </m>
+                由介值定理, 存在 <m> x_{0} \in(0,1) </m> 使得 <m> F\left(x_{0}\right)=0 </m> 即 <m> f\left(x_{0}\right)=2-3 x_{0} </m>
+                (2) <m> F(x) </m> 分别在 <m> \left[0, x_{0}\right],\left[x_{0}, 1\right] </m> 上利用拉格朗日中值定理
+                <me>
+                \begin{array}{rl}
+                \frac{2}{x_{0}}  =\frac{F\left(x_{0}\right)-F(0)}{x_{0}}=F^{\prime}(\xi)=f^{\prime}(\xi)+3  &amp;  0 \lt \xi \lt x_{0} \\
+                \frac{2}{1-x_{0}}  =\frac{F(1)-F\left(x_{0}\right)}{1-x_{0}}=F^{\prime}(\eta)=f^{\prime}(\eta)+3  &amp;  x_{0} \lt \eta \lt 1
+                \end{array}
+                </me></p>
+
+                <p>两式都减 <m>2</m> ,后相乘
+                <me>
+                \left[1+f^{\prime}(\xi)\right]\left[1+f^{\prime}(\eta)\right]=\frac{2-2 x_{0}}{x_{0}} \cdot \frac{2 x_{0}}{1-x_{0}}=4
+                </me>
                 </p>
             </answer>
         </exercise>
@@ -120,12 +211,12 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow 1} \frac{x^{3}-3 x+2}{x^{3}-x^{2}-x+1}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 <m>\lim\limits _{x \rightarrow 1} \frac{x^{3}-3 x+2}{x^{3}-x^{2}-x+1} \xlongequal{\frac{0}{0}} \lim\limits _{x \rightarrow 1} \frac{3 x^{2}-3}{3 x^{2}-2 x-1} \xlongequal{\frac{0}{0}} \lim\limits _{x \rightarrow 1} \frac{6 x}{6 x-2}=\frac{3}{2} </m>.
                 </p>
             </answer>
         </exercise>
@@ -134,12 +225,12 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow 0} \frac{x-\sin x}{x \tan ^{2} x}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 <m>\lim\limits _{x \rightarrow 0} \frac{x-\sin x}{x \tan ^{2} x} \xlongequal{\text { 化简 }} \lim\limits _{x \rightarrow 0} \frac{x-\sin x}{x^{3}}\xlongequal{\frac{0}{0}} \lim\limits _{x \rightarrow 0} \frac{1-\cos x}{3 x^{2}} \xlongequal{\frac{0}{0}} \lim\limits _{x \rightarrow 0} \frac{\sin x}{6 x}=\frac{1}{6} .</m>
                 </p>
             </answer>
         </exercise>
@@ -148,12 +239,18 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    极限 <m>\lim\limits _{x \rightarrow 0} \frac{(x-\sin x) e^{-x^{2}}}{\sqrt{1-x^{3}}-1} =\underline{} </m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 分母等价代换/分子上极限非零的因子先求</p>
+
+                <p><me>\begin{aligned}
+                    \lim\limits _{x \rightarrow 0} \frac{(x-\sin x) e^{-x^{2}}}{\sqrt{1-x^{3}}-1} &amp; =\lim\limits _{x \rightarrow 0} \frac{x-\sin x}{-\frac{x^{3}}{2}}\\
+                &amp; =-2 \lim _{x \rightarrow 0} \frac{x-\sin x}{x^{3}} \stackrel{\frac{0}{0}}{=}-2 \lim _{x \rightarrow 0} \frac{1-\cos x}{3 x^{2}}\\ &amp; =-2 \lim _{x \rightarrow 0} \frac{\frac{x^{2}}{2}}{3 x^{2}}=\frac{-1}{3}
+                \end{aligned}
+                </me>
                 </p>
             </answer>
         </exercise>
@@ -162,12 +259,13 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow+\infty} \frac{\ln x}{x^{n}}, n \in \mathbf{Z}_{+} </m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                <me>\lim _{x \rightarrow+\infty} \frac{\ln x}{x^{n}} \xlongequal{\frac{\infty}{\infty}} \lim _{x \rightarrow+\infty} \frac{\frac{1}{x}}{n x^{n-1}}=\lim _{x \rightarrow+\infty} \frac{1}{n x^{n}}=0 </me>
                 </p>
             </answer>
         </exercise>
@@ -176,12 +274,13 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow+\infty} \frac{x^{n}}{\mathrm{e}^{x}}, n \in \mathbf{Z}_{+} </m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                    <me>\lim _{x \rightarrow+\infty} \frac{x^{n}}{\mathrm{e}^{x}} \xlongequal{\frac{\infty}{\infty}} \lim _{x \rightarrow+\infty} \frac{n x^{n-1}}{\mathrm{e}^{x}} \xlongequal{\frac{\infty}{\infty}} \lim _{x \rightarrow+\infty} \frac{n(n-1) x^{n-2}}{\mathrm{e}^{x}} \xlongequal{\frac{\infty}{\infty}} \cdots=\lim _{x \rightarrow+\infty} \frac{n !}{\mathrm{e}^{x}}=0 </me>
                 </p>
             </answer>
         </exercise>
@@ -190,12 +289,14 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow \infty} x\left(\cos \frac{1}{x}-1\right)</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 
+                    <me>\lim\limits _{x \rightarrow \infty} x\left(\cos \frac{1}{x}-1\right) \xlongequal{0 \cdot \infty} \lim\limits _{x \rightarrow \infty} \frac{\cos \frac{1}{x}-1}{1}\left(\frac{0}{0}\right)
+                    \xlongequal{t=\frac{1}{x}} \lim _{t \rightarrow 0} \frac{\cos t-1}{t}=\lim _{t \rightarrow 0} \frac{-\sin t}{1}=0 .</me>
                 </p>
             </answer>
         </exercise>
@@ -204,12 +305,18 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow 1}\left(\frac{x}{x-1}-\frac{1}{\ln x}\right)</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:
+                    <me>
+                    \begin{aligned}
+                    \lim _{x \rightarrow 1}\left(\frac{x}{x-1}-\frac{1}{\ln x}\right)  &amp; \xlongequal{\infty-\infty} \lim_{x \rightarrow 1} \frac{x \ln x-x+1}{(x-1) \ln x}\left(\frac{0}{0}\right) \\
+                    &amp; =\lim _{x \rightarrow 1} \frac{x \ln x-x+1}{(x-1)^{2}} \xlongequal{\frac{0}{0}} \lim _{x \rightarrow 1} \frac{\ln x}{2(x-1)}=\lim _{x \rightarrow 1} \frac{x-1}{2(x-1)^{2}}=\frac{1}{2} .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -218,12 +325,18 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow 0}\left(\frac{1}{x}-\frac{1}{\mathrm{e}^{x}-1}\right)</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:
+                    <me>
+                    \begin{aligned}
+                    \lim _{x \rightarrow 0}\left(\frac{1}{x}-\frac{1}{\mathrm{e}^{x}-1}\right)  &amp; \xlongequal{\infty-\infty} \lim_{x \rightarrow 0} \frac{\mathrm{e}^{x}-1-x}{x\left(\mathrm{e}^{x}-1\right)}=\lim _{x \rightarrow 0} \frac{\mathrm{e}^{x}-1-x}{x^{2}} \\
+                    &amp; \xlongequal{\frac{0}{0}} \lim_{x \rightarrow 0} \frac{\mathrm{e}^{x}-1}{2 x}=\lim _{x \rightarrow 0} \frac{\mathrm{e}^{x}}{2}=\frac{1}{2}. \\
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -232,12 +345,12 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow 1} x^{\frac{1}{1-x}}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: <m>\lim\limits _{x \rightarrow 1} x^{\frac{1}{1-x}} \xlongequal{\frac{1}{=}} \lim\limits _{x \rightarrow 1} \mathrm{e}^{\frac{\ln x}{1-x}}=\mathrm{e}^{\lim \limits_{x \rightarrow 1} \frac{\ln x}{1-x}} \stackrel{\frac{0}{0}}{=} \mathrm{e}^{\lim\limits _{x \rightarrow }\frac{\frac{1}{x}}{-1}}=\mathrm{e}^{-1}</m>.
                 </p>
             </answer>
         </exercise>
@@ -246,12 +359,12 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow 0^{+}} x^{\sin x}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: <m>\lim\limits _{x \rightarrow 0^{+}} x^{\sin x} \xlongequal{0^{0}} \lim\limits _{x \rightarrow 0^{+}} \mathrm{e}^{\sin x \ln x}=\mathrm{e}^{\lim \limits_{x \rightarrow 0^{+}} \sin x \ln x}=\mathrm{e}^{\lim\limits _{x \rightarrow 0^{+}} x \ln x}=\mathrm{e}^{0}=1</m>.
                 </p>
             </answer>
         </exercise>
@@ -260,12 +373,18 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求<m>\lim\limits _{x \rightarrow \frac{\pi}{2}^{-}}(\tan x)^{\cos x}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    <me>
+                        \begin{aligned}
+                        \lim _{x \rightarrow \frac{\pi}{2}^{-}}(\tan x)^{\cos x}  &amp; \xlongequal{\infty^{0}} \lim _{x \rightarrow \frac{\pi}{2}^{-}} \mathrm{e}^{\cos x \ln \tan x}=\mathrm{e}^{\lim\limits _{x \rightarrow \frac{\pi}{2}^{-}} \cos x \ln \tan x}\\
+                         &amp; \xlongequal{0\cdot\infty}\mathrm{e}^{\lim\limits_{x\to\frac\pi2^-}\frac{\ln\tan x}{\sec x}}\xlongequal{\frac{\infty}{\infty}}\lim_{x\to\frac\pi2^-}\frac{\frac1{\tan x}\sec^2x}{\sec x\tan x}=\mathrm{e}^{\lim\limits_{x\to\frac\pi2^{-}}\frac{\sec x}{\tan^2x}}\\
+                         &amp; =\mathrm{e}^{\lim_{x\to\frac\pi2^{-}} \frac{\cos x}{\sin ^{2} x} }=\mathrm{e}^{0}=1 . \\
+                        \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -274,12 +393,17 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    <m>\lim\limits_{x \rightarrow 0}\left(x+2^{x}\right)^{\frac{2}{x}}</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    <me>
+                        \begin{aligned}
+                        \lim _{x \rightarrow 0}\left(x+2^{x}\right)^{\frac{2}{x}}  &amp;  =\lim _{x \rightarrow 0}\left(1+x+2^{x}-1\right)^{\frac{2}{x}}=\lim _{x \rightarrow 0}\left(1+x+2^{x}-1\right)^{\frac{1}{x+2^{x}-1} \frac{2\left(x+2^{x}-1\right)}{x}} \\
+                         &amp;  =e^{\lim\limits _{x \rightarrow 0} \frac{2\left(x+2^{x}-1\right)}{x}}=e^{\lim\limits _{x \rightarrow 0} 2+2^{\frac{2^{x}-1}{x}}}=e^{2+2 \ln 2}=4 e^{2}
+                        \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -288,12 +412,18 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 <m>\lim\limits _{x \rightarrow 0} \frac{\sin x-x \cos x}{\sin ^{3} x}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解
+<me>
+\begin{aligned}
+ \lim _{x \rightarrow 0} \frac{\sin x-x \cos x}{\sin ^{3} x} &amp; =\lim _{x \rightarrow 0} \frac{\sin x-x \cos x}{x^{3}} \\
+ &amp; =\lim _{x \rightarrow 0} \frac{\left(x-\frac{x^{3}}{3 !}+o\left(x^{3}\right)\right)-x\left(1-\frac{x^{2}}{2 !}+o\left(x^{2}\right)\right)}{x^{3}}\\ &amp; =\lim _{x \rightarrow 0} \frac{\left(\frac{1}{2 !}-\frac{1}{3 !}+\right) x^{3}+o\left(x^{3}\right)}{x^{3}}=\frac{1}{3} . \\
+\end{aligned}
+</me>
                 </p>
             </answer>
         </exercise>
@@ -302,12 +432,17 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    <m>\lim\limits _{x \rightarrow 0} \frac{e^{x^{2}}+2 \cos x-3}{x^{2} \ln \left(1-x^{2}\right)}= </m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 
+                    <me>\begin{aligned}
+                            \lim _{x \rightarrow 0} \frac{e^{x^{2}}+2 \cos x-3}{x^{2} \ln \left(1-x^{2}\right)} &amp; =\lim _{x \rightarrow 0} \frac{1+x^{2}+\frac{x^{4}}{2 !}+o\left(x^{4}\right)+2\left(1-\frac{x^{2}}{2 !}+\frac{x^{4}}{4 !}+o\left(x^{4}\right)\right)-3}{-x^{4}}\\
+                        &amp; =\lim _{x \rightarrow 0} \frac{\left(\frac{1}{2}+\frac{1}{12}\right) x^{4}+o\left(x^{4}\right)}{-x^{4}}=\frac{-7}{12} .
+                        \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -316,12 +451,31 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x)=x+a \ln (1+x)+b x \sin x, g(x)=k x^{3}</m>. 若 <m>f(x)</m> 与 <m>g(x)</m> 在 <m>x \rightarrow 0</m> 时是等价无穷小, 求 <m>a, b, k</m>的值.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: (使用带皮亚诺型余项的泰勒公式)
+                <me>
+                \begin{aligned}
+                \because \lim _{x \rightarrow 0} \frac{f(x)}{g(x)} &amp; =\lim _{x \rightarrow 0} \frac{x+a\left[x-\frac{x^{2}}{2}+\frac{x^{3}}{3}+o\left(x^{3}\right)\right]+b x\left[x-\frac{x^{3}}{3 !}+o\left(x^{3}\right)\right]}{k x^{3}} \\
+                &amp; =\lim _{x \rightarrow 0} \frac{(1+a) x+\left(b-\frac{a}{2}\right) x^{2}+\frac{a}{3} x^{3}+\frac{b}{3 !} x^{4}+o\left(x^{3}\right)}{k x^{3}}=1, 
+                \end{aligned}
+                </me></p>
+
+                <p>故必有 
+                <m>\left\{\begin{array} { l } 
+                { 1 + a = 0 , } \\
+                { b - \frac { a } { 2 } = 0 , } \\
+                { k = \frac { a } { 3 } . }
+                \end{array}\right.</m> 
+                解之得 <m>\left\{\begin{array}{l}
+                a=-1, \\
+                b=-\frac{1}{2}, \\
+                k=-\frac{1}{3} .
+                \end{array}\right.
+                </m>
                 </p>
             </answer>
         </exercise>
@@ -330,12 +484,42 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x)</m> 在 <m>[a, b]</m> 上二阶可导, 且 <m>f^{\prime}(a)=f^{\prime}(b)=0</m>, 证明 <m>\exists c \in(a, b)</m>, 使得
+                    <me>
+                    \left|f^{\prime \prime}(c)\right| \geq \frac{4}{(b-a)^{2}}|f(b)-f(a)| .
+                    </me>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证: 将 <m>f(x)</m> 分别在点 <m>a</m> 和 <m>b</m> 处展为 <m>1</m> 阶Taylor 公式
+                <me>
+                \begin{aligned}
+                f(x)  &amp;  =f(a)+f^{\prime}(a)(x-a)+\frac{1}{2 !} f^{\prime \prime}(\xi)(x-a)^{2} \\
+                &amp;  =f(a)+\frac{1}{2} f^{\prime \prime}(\xi)(x-a)^{2} . a \lt \xi \lt x, \ldots \ldots \ldots (1)\\
+                f(x)  &amp;  =f(b)+f^{\prime}(b)(x-b)+\frac{1}{2 !} f^{\prime \prime}(\eta)(x-b)^{2} \\
+                &amp;  =f(b)+\frac{1}{2} f^{\prime \prime}(\eta)(x-b)^{2} \cdot x \lt \eta \lt b \ldots \ldots \ldots \ldots(2)
+                \end{aligned}
+                </me></p>
+
+                <p>在(1), (2)中取 <m>x=\frac{a+b}{2}</m>, 得
+                <me>
+                \begin{aligned}
+                f\left(\frac{a+b}{2}\right) &amp; =f(a)+\frac{(b-a)^{2}}{8} f^{\prime \prime}(\xi), a \lt \xi \lt \frac{a+b}{2}, \text { (3) } \\
+                f\left(\frac{a+b}{2}\right) &amp; =f(b)+\frac{(b-a)^{2}}{8} f^{\prime \prime}(\eta), \frac{a+b}{2} \lt \eta \lt b . \text { (4) }
+                \end{aligned}
+                </me>
+                (3)-(4)并整理得 <m>f(b)-f(a)=\frac{(b-a)^{2}}{8}\left[f^{\prime \prime}(\xi)-f^{\prime \prime}(\eta)\right] </m>,
+                <me>
+                \begin{aligned}
+                \therefore|f(b)-f(a)|  &amp;  =\frac{(b-a)^{2}}{8}\left|f^{\prime \prime}(\xi)-f^{\prime \prime}(\eta)\right| \leq \frac{(b-a)^{2}}{8}\left[\left|f^{\prime \prime}(\xi)\right|+\left|f^{\prime \prime}(\eta)\right|\right] \\
+                &amp;  \leq \frac{(b-a)^{2}}{8} \cdot 2 \max \left\{\left|f^{\prime \prime}(\xi)\right|,\left|f^{\prime \prime}(\eta)\right|\right\}=\frac{(b-a)^{2}}{4}\left|f^{\prime \prime}(c)\right|,
+                \end{aligned}
+                </me>
+                (其中 <m> \left|f^{\prime \prime}(c)\right|=\max \left\{\left|f^{\prime \prime}(\xi)\right|,\left|f^{\prime \prime}(\eta)\right|\right\}, c \in(a, b) </m> ). 即 
+                <me>
+                \left|f^{\prime \prime}(c)\right| \geq \frac{4}{(b-a)^{2}}|f(b)-f(a)| \text {. }
+                </me>
                 </p>
             </answer>
         </exercise>
@@ -344,12 +528,29 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x)</m> 在 <m>[-1,1]</m> 上具有三阶连续导数, 且 <m>f(-1)=0, f(1)=1, f^{\prime}(0)=0</m>,证明 <m>\exists \xi \in(-1,1)</m>, 使得 <m>f^{\prime \prime \prime}(\xi)=3</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证 (显然要用Taylor公式). <m>\because f^{\prime}(0)=0</m>, <m>\therefore</m> 取 <m>x_{0}=0</m>.</p>
+
+                    <p><m>f(x)=f(0)+f^{\prime}(0) x+\frac{1}{2 !} f^{\prime \prime}(0) x^{2}+\frac{1}{3 !} f^{\prime \prime \prime}(\eta) x^{3}</m>, <m>\eta</m> 介于  <m>0</m>  与 <m>x</m> 之间.</p>
+
+                    <p>令  <m>x=-1</m> 得  <m>0=f(-1)=f(0)+\frac{1}{2} f^{\prime \prime}(0)-\frac{1}{6} f^{\prime \prime \prime}\left(\eta_{1}\right)</m>,<m>-1 \lt \eta_{1} \lt 0</m> ;
+                    令  <m>x=1</m> 得  <m>1=f(1)=f(0)+\frac{1}{2} f^{\prime \prime}+\frac{1}{6} f^{\prime \prime \prime}\left(\eta_{2}\right)</m>, <m>0 \lt \eta_{2} \lt 1</m> .</p>
+
+                    <p>两式相减得 <m>1=\frac{1}{6}\left[f^{\prime \prime \prime}\left(\eta_{2}\right)+f^{\prime \prime \prime}\left(\eta_{1}\right)\right]</m>, 即
+                    <me>
+                    \frac{f^{\prime \prime \prime}\left(\eta_{2}\right)+f^{\prime \prime \prime}\left(\eta_{1}\right)}{2}=3, \quad \eta_{1}, \eta_{2} \in(-1,1) .
+                    </me></p>
+
+                    <p>由于 <m> f^{\prime \prime \prime}(x) </m> 在 <m> [-1,1] </m> 上连续, 由介值定理</p>
+
+                    <p><m>\exists \xi \in\left[\eta_{1}, \eta_{2}\right] \subset(-1,1)</m>, 使得
+                    <me>
+                    f^{\prime \prime \prime}(\xi)=\frac{f^{\prime \prime \prime}\left(\eta_{2}\right)+f^{\prime \prime \prime}\left(\eta_{1}\right)}{2}=3 
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -358,12 +559,30 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x)</m> 在 <m>[a, b]</m> 上具有连续二阶导数, 证明: <m>\exists \xi \in(a, b)</m> 使得
+                    <me>
+                    \frac{4}{(b-a)^{2}}\left[f(a)-2 f\left(\frac{a+b}{2}\right)+f(b)\right]=f^{\prime \prime}(\xi)
+                    </me>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证明: 将 <m>f(a), f(b)</m> 在 <m>x_{0}=\frac{a+b}{2}</m> 处作泰勒展开
+                    <me>
+                    \begin{array}{l}
+                    f(a)=f\left(\frac{a+b}{2}\right)+f^{\prime}\left(\frac{a+b}{2}\right)\left(a-\frac{a+b}{2}\right)+\frac{1}{2 !} f^{\prime \prime}\left(\xi_{1}\right)\left(a-\frac{a+b}{2}\right)^{2} \xi_{1} \in\left(a, \frac{a+b}{2}\right) \\
+                    f(b)=f\left(\frac{a+b}{2}\right)+f^{\prime}\left(\frac{a+b}{2}\right)\left(b-\frac{a+b}{2}\right)+\frac{1}{2 !} f^{\prime \prime}\left(\xi_{2}\right)\left(b-\frac{a+b}{2}\right)^{2} \xi_{2} \in\left(\frac{a+b}{2}, b\right)
+                    \end{array}
+                    </me></p>
+
+                    <p>两式相加得到 <m>f(b)+f(a)-2 f\left(\frac{a+b}{2}\right)=\frac{1}{8}(b-a)^{2}\left[f^{\prime \prime}\left(\xi_{1}\right)+f^{\prime \prime}\left(\xi_{2}\right)\right]</m>.
+                    由于 <m>f^{\prime \prime}(x)</m> 连续, 由介值定理,由于  <m>f^{\prime \prime}(x)</m> 连续, 由介值定理：
+                    <me>
+                    \begin{array}{l}
+                    \exists \xi \in\left[\xi_{1}, \xi_{2}\right], \text { s.t } f^{\prime \prime}(\xi)=\frac{f^{\prime \prime}\left(\xi_{1}\right)+f^{\prime \prime}\left(\xi_{2}\right)}{2}\\
+                    f(b)+f(a)-2 f\left(\frac{a+b}{2}\right)=\frac{1}{4}(b-a)^{2} f^{\prime \prime}(\xi)
+                    \end{array}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -372,12 +591,23 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    当 <m>0 \lt x \lt \frac{\pi}{2}</m> 时, <m>\sin x+\tan x \gt 2 x</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证: 令 <m>f(x)=\sin x+\tan x-2 x,\left(0 \leq x \lt \frac{\pi}{2}\right)</m>, 则 <m>f(0)=0</m>.</p>
+
+                    <p><m>f^{\prime}(x)=\cos x+\sec ^{2} x-2</m>,<m>\left(0 \leq x \lt \frac{\pi}{2}\right)</m>,  且 <m>f^{\prime}(0)=0</m> .</p>
+
+                    <p><m>\because \forall x \in\left(0, \frac{\pi}{2}\right)</m>, <m>f^{\prime \prime}(x)=-\sin x+2 \sec ^{2} x \tan x=\frac{\sin x\left(2-\cos ^{3} x\right)}{\cos ^{3} x} \gt 0,</m></p>
+
+                    <p><m>\therefore f^{\prime}(x)</m> 在 <m>\left[0, \frac{\pi}{2}\right)</m> 内严格递增, 故 <m>\forall x \in\left(0, \frac{\pi}{2}\right)</m>, 有 <m>f^{\prime}(x) \gt f^{\prime}(0)=0</m>.</p>
+
+                    <p>于是 <m>f(x)</m> 在 <m>\left[0, \frac{\pi}{2}\right)</m> 内严格递增, 故 <m>\forall x \in\left(0, \frac{\pi}{2}\right)</m>, 有
+                    <me>
+                    f(x) \gt f(0)=0 \text {, 即 } \sin x+\tan x \gt 2 x \text {. }
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -386,12 +616,21 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    证明不等式 <m>1+x \ln \left(x+\sqrt{1+x^{2}}\right) \geq \sqrt{1+x^{2}}</m>, 对任意 <m>x \in(-\infty,+\infty)</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证明：设 <m>f(x)=1+x \ln \left(x+\sqrt{1+x^{2}}\right)-\sqrt{1+x^{2}}</m>
+                <me>
+                f^{\prime}(x)=\ln \left(x+\sqrt{1+x^{2}}\right)+x \frac{1}{\sqrt{1+x^{2}}}-\frac{x}{\sqrt{1+x^{2}}}=\ln \left(x+\sqrt{1+x^{2}}\right)
+                </me></p>
+
+                <p><m>x=0</m> 是唯一驻点.
+                <m>f^{\prime \prime}(x)=\frac{1}{\sqrt{1+x^{2}}} \gt 0</m>, <m>x=0 </m> 是极小值点 <m>f(0)=0</m>,
+                即: 对 <m>\forall x \in(-\infty,+\infty)</m>, 都有 <m>f(x) \geq 0</m>.
+                即: <m>1+x \ln \left(x+\sqrt{1+x^{2}}\right) \geq \sqrt{1+x^{2}}</m>, 对任意 <m>x\in(-\infty,+\infty)</m>.
+                证毕.
                 </p>
             </answer>
         </exercise>
@@ -400,12 +639,24 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    证明:当 <m>0 \lt x \lt 1</m> 时, <m>\frac{1-x}{1+x} \lt e^{-2 x}</m>. 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证明:即证明 <m>(1-x) e^{2 x}-(1+x) \lt 0</m></p>
+
+                <p>令  <m>f(x)=(1-x) e^{2 x}-(1+x)</m> , <m>f(0)=0</m>
+                <m>f^{\prime}(x)=-e^{2 x}+2(1-x) e^{2 x}-1=(1-2 x) e^{2 x}-1</m>.
+                <m>f^{\prime \prime}(x)=-2 e^{2 x}+2(1-2 x) e^{2 x}=-4 x e^{2 x} \lt 0</m></p>
+
+                <p>二阶导小于零 <m>\Rightarrow</m> 一阶导单调递减 而 <m>f^{\prime}(0)=0</m>,
+                即: <m>x \gt 0</m> 时 <m>f^{\prime}(x) \lt 0 \Rightarrow x \in(0,1)</m> 时 <m>f(x)</m> 在 <m>(0,1)</m> 内单调递减
+                <me>
+                f(x) \lt f(0)=0 \text { 即: }(1-x) e^{2 x}-(1+x) \lt 0
+                </me></p>
+
+                <p>证毕
                 </p>
             </answer>
         </exercise>
@@ -414,12 +665,16 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    证明:当 <m>x \gt 1</m> 时, <m>\left(\frac{x}{\ln x}\right)^{x} \geq x^{\frac{x}{\ln x}}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证明: 分析, 取对数 <m>x \cdot \ln \left(\frac{x}{\ln x}\right) \geq \frac{x}{\ln x} \cdot \ln x=x</m> 只需证明 <m>\ln \left(\frac{x}{\ln x}\right) \geq 1</m>
+                    即: <m>\frac{x}{\ln x} \geq e \quad </m> 令 <m> f(x)=x-e \ln x</m>, <m>f(1)=1 \gt 0</m>.
+                    <m>f^{\prime}(x)=1-\frac{e}{x}=\frac{x-e}{x}</m>, <m>x=e </m> 是唯一的驻点.
+                    <m>f(x)</m> 在 <m>(1, e)</m> 单调减, <m>f(x)</m> 在 <m>(e,+\infty)</m> 单调增 <m>x=e</m> 极小值点
+                    <m>x \gt 1</m> 时, <m>f(x) \gt f(e)=0</m> 即: <m>\frac{x}{\ln x} \geq e</m>.
                 </p>
             </answer>
         </exercise>
@@ -428,26 +683,76 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>f(x), g(x)</m> 有二阶导数, 且 <m>g^{\prime \prime}(x) \lt 0, g\left(x_{0}\right)=a</m>是 <m>g(x)</m> 的极值, 则 <m>f[g(x)]</m> 在 <m>x_{0}</m> 点有极大值的充分条件是 <m>[\mathrm{B}]</m>.
                 </p>
             </statement>
-            <answer>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m>f^{\prime}(a) \lt 0</m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>f^{\prime}(a) \gt 0</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>f^{\prime \prime}(a) \lt 0</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>f^{\prime \prime}(a) \gt 0</m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+		    <answer>
                 <p>
-                    
+                    解： 记 <m>\varphi(x)=f[g(x)]</m> . <m>\varphi^{\prime}(x)=f^{\prime}[g(x)] g^{\prime}(x)</m>, <m>\varphi^{\prime \prime}(x)=f^{\prime \prime}[g(x)]\left(g^{\prime}(x)\right)^{2}+f^{\prime}[g(x)] g^{\prime \prime}(x)</m></p>
+
+                <p><m> \because g\left(x_{0}\right)=a </m> 是 <m> g(x) </m> 的极值, 且 <m> g^{\prime}(x) </m> 存在, <m> \therefore g^{\prime}\left(x_{0}\right)=0 </m>.
+                于是 <m>\varphi^{\prime}\left(x_{0}\right)=f^{\prime}\left[g\left(x_{0}\right)\right] g^{\prime}\left(x_{0}\right)=0</m>, 即 <m>x_{0}</m> 是 <m>\varphi(x)</m> 的驻点.</p>
+
+                <p>而当  <m>\varphi^{\prime \prime}\left(x_{0}\right) =f^{\prime \prime}\left[g\left(x_{0}\right)\right]\left(g^{\prime}\left(x_{0}\right)\right)^{2}+f^{\prime}\left[g\left(x_{0}\right)\right] g^{\prime \prime}\left(x_{0}\right) =f^{\prime}(a) g^{\prime \prime}\left(x_{0}\right) \lt 0</m>,  即 <m>f^{\prime}(a) \gt 0\left(\because g^{\prime \prime}(x) \lt 0\right)</m>  时, <m>f[g(x)]</m> 在 <m>x_{0}</m> 处有极大值. 选B.
                 </p>
             </answer>
         </exercise>
+
 
         <!-- Q32 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    证明 <m>\forall x \gt 0, \forall y \gt 0</m>, 且 <m>x \neq y</m>, 恒有
+                    <me>
+                    x \ln x+y \ln y \gt (x+y) \ln \frac{x+y}{2} .
+                    </me>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证: 令 <m>f(t)=t \ln t, t \in(0,+\infty)</m>, 则 <m>f^{\prime}(t)=\ln t+1</m>.
+                    <m>\because f^{\prime \prime}(t)=\frac{1}{t} \gt 0(\forall t \gt 0)</m>, 故 <m>f(x)</m> 为凹函数, 所以 <m>\forall x \gt 0, \forall y \gt 0</m>, 且 <m>x \neq y</m>, 恒有
+                    <me>
+                    \frac{x \ln x+y \ln y}{2} \gt \frac{x+y}{2} \ln \frac{x+y}{2},
+                    </me></p>
+
+                    <p>即 <m> x \ln x+y \ln y \gt (x+y) \ln \frac{x+y}{2} </m>.
                 </p>
             </answer>
         </exercise>
@@ -456,12 +761,16 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设 <m>y=y(x)</m> 由参量方程 <m>\left\{\begin{array}{l}x=t^{3}+3 t+1, \\ y=t^{3}-3 t+1\end{array}\right.</m> 确定,则曲线 <m>y=y(x)</m> 向上凸的 <m>x</m> 的取值范围是______.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: <m>\frac{\mathrm{d} y}{\mathrm{~d} x}=\frac{3 t^{2}-3}{3 t^{2}+3}=1-\frac{2}{t^{2}+1}</m>, <m>\frac{\mathrm{d}^{2} y}{\mathrm{~d} x^{2}}=\frac{\left(1-\frac{2}{t^{2}+1}\right)^{\prime}}{3 t^{2}+3}=\frac{4 t}{3\left(t^{2}+1\right)}</m>.
+                    当且仅当 <m>t \lt 0</m> 时, <m>\frac{\mathrm{d}^{2} y}{\mathrm{~d} x^{2}}=\frac{4 t}{3\left(t^{2}+1\right)} \lt 0</m>, 即 <m>t \lt 0</m> 时曲线是凸的.</p>
+
+                    <p>而当 <m>t \lt 0</m> 时, <m>x^{\prime}(t)=3 t^{2}+3 \gt 0</m>, 即 <m>x(t)</m> 是严格递增. 又由 <m>x(0)=1, \lim\limits _{t \rightarrow-\infty} x(t)=-\infty</m> 知, <m>x \in(-\infty, 1)</m>.
+                    由上可知曲线 <m>y=y(x)</m> 向上凸的 <m>x</m> 的取值范围是 <m>(-\infty, 1)</m>.
                 </p>
             </answer>
         </exercise>
@@ -470,40 +779,130 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    下列曲线有渐近线的是(   )
                 </p>
             </statement>
-            <answer>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m>y=x+\sin x</m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m>y=x^{2}+\sin x</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>y=x+\sin \frac{1}{x}</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>y=x^{2}+\sin \frac{1}{x}</m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+		    <answer>
                 <p>
-                    
+                    解: <m>\because \forall a \in \mathbf{R}, \lim\limits _{x \rightarrow a^{ \pm}} y \neq \infty</m>, 故 <m>4</m> 条曲线均无垂直渐近线.
+                    对于(A), <m>\lim\limits _{x \rightarrow \infty} \frac{y}{x}=\lim\limits _{x \rightarrow \infty}\left(1+\frac{\sin x}{x}\right)=1</m> (存在), 但 <m>\lim\limits _{x \rightarrow \infty}(y-1 \cdot x)=\lim _{x \rightarrow \infty} \sin x</m> 不存在, 故无渐近线.
+                    对于(B), <m>\lim\limits _{x \rightarrow \infty} \frac{y}{x}=\lim\limits _{x \rightarrow \infty}\left(x+\frac{\sin x}{x}\right)=\infty</m> (不存在),对于(D)同理知其无渐近线.</p>
+
+                    <p>选C.</p>
+
+                    <p>事实上, 对于  (C), <m>\lim\limits _{x \rightarrow \infty} \frac{y}{x}=\lim\limits _{x \rightarrow \infty}\left(1+\frac{1}{x} \sin \frac{1}{x}\right)=1</m>, 且 <m>\lim \limits_{x \rightarrow \infty}(y-1 \cdot x)=\lim\limits _{x \rightarrow \infty} \sin \frac{1}{x}=0</m>, 故 <m>y=x</m> 是其渐近线.
                 </p>
             </answer>
         </exercise>
+
 
         <!-- Q35 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    曲线 <m>y=\frac{x^{2}+x}{x^{2}-1}</m> 的渐近线条数为(   )
                 </p>
             </statement>
-            <answer>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            0
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            1
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                           2
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            3
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+		    <answer>
                 <p>
-                    
+                    解: 显然 <m>x \neq \pm 1</m>, 于是曲线方程可写为 <m>y=\frac{x}{x-1}</m>.
+                <m>\because \lim\limits _{x \rightarrow \infty} y=\lim\limits _{x \rightarrow \infty} \frac{x}{x-1}=1, \therefore</m> 曲线有 1 条水平渐近线 <m>y=1</m>;</p>
+
+                <p><m>\because \lim\limits _{x \rightarrow 1} y=\lim\limits _{x \rightarrow 1} \frac{x}{x-1}=\infty, \therefore </m> 曲线有1条垂直渐近线 <m> x=1 ;</m>
+                <m>\because \lim\limits _{x \rightarrow \infty} \frac{y}{x}=\lim\limits _{x \rightarrow \infty} \frac{x}{x(x-1)}=0</m>, <m>\therefore</m> 曲线无斜渐近线;
+                综上知该曲线有 <m>2</m> 条渐近线.
                 </p>
             </answer>
         </exercise>
+
 
         <!-- Q36 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    求曲线 <m>y=\frac{x^{1+x}}{(1+x)^{x}}(x \gt 0)</m> 的斜渐近线.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 斜率 
+                <me>k=\lim _{x \rightarrow \infty} \frac{y}{x}=\lim _{x \rightarrow \infty} \frac{x^{x}}{(1+x)^{x}}=\lim _{x \rightarrow \infty} \frac{1}{\left(1+\frac{1}{x}\right)^{x}}=\frac{1}{e}</me></p>
+
+                <p><me>\begin{aligned}
+                    b &amp; =\lim _{x \rightarrow \infty}(y-k x)=\lim _{x \rightarrow \infty}\left(\frac{x^{1+x}}{(1+x)^{x}}-\frac{x}{e}\right)=\lim _{x \rightarrow \infty} x \cdot\left(\frac{1}{\left(1+\frac{1}{x}\right)^{x}}-\frac{1}{e}\right)\\ &amp; =\lim _{x \rightarrow \infty} x \cdot\left(\frac{e-\left(1+\frac{1}{x}\right)^{x}}{e\left(1+\frac{1}{x}\right)^{x}}\right)=\lim _{x \rightarrow \infty} x \cdot\left(\frac{e-e^{x \ln \left(1+\frac{1}{x}\right)}}{e^{2}}\right)\\ &amp; =\frac{1}{e} \lim_{x \rightarrow \infty} x \cdot\left(1-e^{x \ln \left(1+\frac{1}{x}\right)-1}\right) \stackrel{t=\frac{1}{x}}{=} \frac{1}{e^{2}} \lim _{t \rightarrow 0} \frac{1}{t} \cdot\left(1-e^{\frac{1}{t} \ln (1+t)-1}\right)\\
+                    &amp; =\frac{1}{e} \lim _{t \rightarrow 0} \frac{1}{t} \cdot\left(1-\frac{1}{t} \ln (1+t)\right)=\frac{1}{e} \lim _{t \rightarrow 0} \frac{t-\ln (1+t)}{t^{2}}\\ &amp; =\frac{1}{e} \lim _{t \rightarrow 0} \frac{1-\frac{1}{1+t}}{2 t}=\frac{1}{2 e} . 
+                \end{aligned}
+                </me>
                 </p>
             </answer>
         </exercise>
@@ -512,31 +911,61 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设曲线 <m>y=x+\sqrt{x^{2}-x+1}</m>, 则下列说法正确的是 <m>(\quad)</m>.
                 </p>
             </statement>
-            <answer>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            没有渐近线
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            有一条水平和一条斜渐近线
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            有一条铅直渐近线
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            有两条水平渐近线
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+		    <answer>
                 <p>
-                    
+                    解: 考虑 <m>\lim\limits _{x \rightarrow+\infty} y=\lim\limits _{x \rightarrow+\infty}\left(x+\sqrt{x^{2}-x+1}\right)=+\infty </m>, 右侧无水平渐近线</p>
+
+                    <p>当 <m>\lim\limits _{x \rightarrow-\infty} y=\lim\limits _{x \rightarrow-\infty}\left(x+\sqrt{x^{2}-x+1}\right)=\lim\limits _{x \rightarrow-\infty} \frac{-x+1}{\sqrt{x^{2}-x+1}-x}=\lim\limits _{x \rightarrow-\infty} \frac{1-\frac{1}{x}}{\sqrt{1-\frac{1}{x}+\frac{1}{x^{2}}}+1}</m>,
+                    <m>y=\frac{1}{2}</m>  为水平渐近线</p>
+
+                    <p>斜率 <m>k=\lim\limits _{x \rightarrow+\infty} \frac{y}{x}=\lim\limits _{x \rightarrow+\infty}\left(1+\sqrt{1-\frac{1}{x}+\frac{1}{x^{2}}}\right)=2</m>, <m>y=2 x-\frac{1}{2}</m> 为斜渐近线</p>
+
+                    <p><me>b=\lim\limits _{x \rightarrow \infty}(y-k x)=\lim\limits _{x \rightarrow+\infty}\left(\sqrt{x^{2}-x+1}-x\right)=\lim\limits _{x \rightarrow+\infty} \frac{-x+1}{\sqrt{x^{2}-x+1}+x}=\lim\limits _{x \rightarrow+\infty} \frac{-1+\frac{1}{x}}{\sqrt{1-\frac{1}{x}+\frac{1}{x^{2}}}+1}
+                    </me></p>
+
+                    <p>选B
                 </p>
             </answer>
         </exercise>
-
-        <!-- Q38 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-        
-
+    
 
     </exercises>
 </section>

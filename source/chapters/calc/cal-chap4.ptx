@@ -8,12 +8,15 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> \mathrm{e}^{-x} </m>  是  <m> f(x) </m>  的一个原函数, 求  <m> \displaystyle\int -4 x^{4} f(\ln x) \mathrm{d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 由题意, 有  <m> f(x)=\left(\mathrm{e}^{-x}\right)^{\prime}=-\mathrm{e}^{-x}  </m> ,于是  <m>  f(\ln x)=-\mathrm{e}^{-\ln x}=-\frac{1}{x} </m> , 故
+                    <me> 
+                    \int-4 x^{4} f(\ln x) \mathrm{d} x= \int 4 x^{3} \mathrm{~d} x=x^{4}+C .
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -22,12 +25,15 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> \displaystyle \int x f(x) \mathrm{d} x=\arcsin x+C </m> , 求  <m> \displaystyle \int \frac{1}{f(x)} \mathrm{d} x </m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 由题意, 有  <m> x f(x)=(\arcsin x+C)^{\prime}=\frac{1}{\sqrt{1-x^{2}}} </m> , 于是  <m> \frac{1}{f(x)}=x \sqrt{1-x^{2}} </m> , 
+                    <me> 
+                    \therefore \int \frac{1}{f(x)} \mathrm{d} x=\int x \sqrt{1-x^{2}} \mathrm{~d} x=-\frac{1}{3}\left(1-x^{2}\right)^{\frac{3}{2}}+C \text {. }
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -36,12 +42,17 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    已知  <m> \displaystyle\int f(x) \cos x \mathrm{~d} x=\cos x+C  </m> , 求  <m>  \lim _{x \rightarrow 0} \frac{f(x)}{x^{2}+3 x} </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 :
+                    <m> \because f(x) \cos x=\left(\displaystyle\int f(x) \cos x \mathrm{~d} x\right)^{\prime}=(\cos x+C)^{\prime} =-\sin x </m>  , 即 <m> f(x)=-\tan x </m>  , </p> 
+
+                    <p>  <me> 
+                    \therefore \lim _{x \rightarrow 0} \frac{f(x)}{x^{2}+3 x}=\lim _{x \rightarrow 0} \frac{-\tan x}{x^{2}+3 x}=-\lim _{x \rightarrow 0} \frac{x}{x^{2}+3 x}=-\lim _{x \rightarrow 0} \frac{1}{x+3}=-\frac{1}{3} \text {. }
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -50,12 +61,15 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \frac{(x+1)(x-2)}{x^{2}} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 先化简, 后积分!  <m> \because \frac{(x+1)(x-2)}{x^{2}}=\frac{x^{2}-x-2}{x^{2}}=1-\frac{1}{x}-\frac{2}{x^{2}} </m> ,
+                    <me> 
+                    \therefore \int \frac{(x+1)(x-2)}{x^{3}} \mathrm{~d} x=\int\left(1-\frac{1}{x}-\frac{2}{x^{2}}\right) \mathrm{d} x=x-\ln |x|+\frac{2}{x}+C 
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -64,12 +78,15 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \frac{x^{2}+1}{x^{4}+1} \mathrm{~d} x </m> .
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                    <me> \begin{aligned}
+                        \int \frac{x^{2}+1}{x^{4}+1} \mathrm{~d} x=\int \frac{1+\frac{1}{x^{2}}}{x^{2}+\frac{1}{x^{2}}} \mathrm{~d} x &amp; =\int \frac{\mathrm{d}\left(x-\frac{1}{x}\right)}{\left(x-\frac{1}{x}\right)^{2}+2}  \\ &amp; =\frac{1}{\sqrt{2}} \arctan \frac{x-\frac{1}{x}}{\sqrt{2}}+C\\ &amp; =\frac{1}{\sqrt{2}} \arctan \frac{x^{2}-1}{\sqrt{2} x}+C 
+                    \end{aligned} </me>
                 </p>
             </answer>
         </exercise>
@@ -78,12 +95,23 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求 (1)  <m> \displaystyle\int \frac{\mathrm{e}^{x}}{1+\mathrm{e}^{x}} \mathrm{~d} x </m> ,
+                    (2)  <m> \displaystyle \int \frac{1}{1+\mathrm{e}^{x}} \mathrm{~d} x </m> ,
+                    (3)  <m> \displaystyle \int \frac{1}{\mathrm{e}^{x}+\mathrm{e}^{-x}} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 (1)  <m> \displaystyle\int \frac{\mathrm{e}^{x}}{1+\mathrm{e}^{x}} \mathrm{~d} x=\int \frac{\mathrm{d}\left(\mathrm{e}^{x}+1\right)}{1+\mathrm{e}^{x}}=\ln \left(1+\mathrm{e}^{x}\right)+C </m> . </p> 
+
+                    <p> (2)  <me> \begin{aligned}
+                        \int \frac{1}{1+\mathrm{e}^{x}} \mathrm{~d} x &amp; =\int \frac{1+\mathrm{e}^{x}-\mathrm{e}^{x}}{1+\mathrm{e}^{x}} \mathrm{~d} x\\ &amp; =\int \mathrm{d} x-\int \frac{\mathrm{e}^{x}}{1+\mathrm{e}^{x}} \mathrm{~d} x \\
+                        &amp; =x-\ln \left(1+\mathrm{e}^{x}\right)+C=\ln \frac{\mathrm{e}^{x}}{1+\mathrm{e}^{x}}+C,
+                    \end{aligned} </me>  </p> 
+
+                    <p> 或  <m> \displaystyle\int \frac{1}{1+\mathrm{e}^{x}} \mathrm{~d} x=\int \frac{\mathrm{e}^{-x}}{1+\mathrm{e}^{-x}} \mathrm{~d} x=-\int \frac{\mathrm{d}\left(1+\mathrm{e}^{-x}\right)}{1+\mathrm{e}^{-x}}=-\ln \left(1+\mathrm{e}^{-x}\right)+C </m> . </p> 
+
+                    <p> (3)  <m> \displaystyle\int \frac{1}{\mathrm{e}^{x}+\mathrm{e}^{-x}} \mathrm{~d} x=\int \frac{\mathrm{e}^{x}}{1+\mathrm{e}^{2 x}} \mathrm{~d} x=\int \frac{\mathrm{de}^{x}}{1+\mathrm{e}^{2 x}}=\arctan \mathrm{e}^{x}+C </m> . 
                 </p>
             </answer>
         </exercise>
@@ -92,12 +120,23 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \frac{1}{\sin ^{2} x \cos ^{2} x} \mathrm{~d} x </m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 方法 1 </p> 
+
+                    <p>  <me> \begin{aligned}
+                        \int \frac{1}{\sin ^{2} x \cos ^{2} x} \mathrm{~d} x &amp; =\int \frac{\sin ^{2} x+\cos ^{2} x}{\sin ^{2} x \cos ^{2} x} \mathrm{~d} x \\
+                    &amp; =\int\left(\frac{1}{\cos ^{2} x}+\frac{1}{\sin ^{2} x}\right) \mathrm{d} x\\ &amp; =\tan x-\cot x+C . 
+                    \end{aligned} </me>  </p> 
+
+                    <p> 方法 2 
+                    <me> \begin{aligned}
+                        \int \frac{1}{\sin ^{2} x \cos ^{2} x} \mathrm{~d} x  &amp; \xlongequal{\text { 上下同除 } \cos ^{4} x} \int \frac{\sec ^{4} x}{\tan ^{2} x} \mathrm{~d} x=\int \frac{\sec ^{2} x}{\tan ^{2} x} \mathrm{dtan} x \\
+                    &amp; =\int \frac{1+\tan ^{2} x}{\tan ^{2} x} \mathrm{dtan} x=\int\left(1+\frac{1}{\tan ^{2} x}\right) d \tan x\\ &amp; =\tan x-\frac{1}{\tan x}+c 
+                    \end{aligned}  </me>
                 </p>
             </answer>
         </exercise>
@@ -106,12 +145,25 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \frac{1}{\sin ^{3} x \cos x} \mathrm{~d} x  </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                    <me> \begin{aligned}
+                        \int \frac{1}{\sin ^{3} x \cos x} \mathrm{~d} x &amp; =\int \frac{\sin ^{2} x+\cos ^{2} x}{\sin ^{3} x \cos x} \mathrm{~d} x\\ &amp; =\int \frac{1}{\sin x \cos x} \mathrm{~d} x+\int \frac{\cos x}{\sin ^{3} x} \mathrm{~d} x \\
+                        &amp; =\int \frac{2}{\sin 2 x} \mathrm{~d} x+\int \frac{\mathrm{d}(\sin x)}{\sin ^{3} x}\\ &amp; =\ln |\csc 2 x-\cot 2 x|-\frac{1}{2 \sin ^{2} x}+C
+                    \end{aligned}  </me>  </p> 
+
+                    <p> 或
+                    <me> 
+                    \begin{aligned}
+                    \int \frac{1}{\sin ^{3} x \cos x} \mathrm{~d} x  &amp; \xlongequal{\text { 上下同除 } \cos ^{4} x} \int \frac{\sec ^{4} x}{\tan ^{3} x} \mathrm{~d} x=\int \frac{\sec ^{2} x}{\tan ^{3} x} \mathrm{dtan} x \\
+                    &amp; =\int \frac{1+\tan ^{2} x}{\tan ^{3} x} \mathrm{~d} \tan x=\int \frac{1+t^{2}}{t^{3}} \mathrm{~d} t \\
+                    &amp; =-\frac{1}{2 t^{2}}+\ln |t|+c=-\frac{1}{2} \cot ^{2} x+\ln |\tan x|+c \\
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -120,12 +172,19 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \frac{\sqrt[3]{x}}{x(\sqrt{x}+\sqrt[3]{x})} \mathrm{d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 令  <m> t=\sqrt[6]{x} </m> , 即  <m> x=t^{6} </m> , 则  <m> \mathrm{d} x=6 t^{5} \mathrm{~d} t </m> , 故
+                    <me> 
+                    \begin{aligned}
+                    &amp; \int \frac{\sqrt[3]{x}}{x(\sqrt{x}+\sqrt[3]{x})} \mathrm{d} x=\int \frac{t^{2} \cdot 6 t^{5} \mathrm{~d} t}{t^{6}\left(t^{3}+t^{2}\right)}=6 \int \frac{\mathrm{d} t}{t(t+1)} \\
+                    &amp; =6 \int\left(\frac{1}{t}-\frac{1}{t+1}\right) \mathrm{d} t=6(\ln |t|-\ln |t+1|)+C \\
+                    &amp; =6 \ln \left|\frac{t}{t+1}\right|+C=6 \ln \frac{\sqrt[6]{x}}{\sqrt[6]{x}+1}+C 
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -134,12 +193,21 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \frac{1}{x \sqrt{1+x^{2}}} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 令  <m> x=\frac{1}{t} </m> , 则  <m> \mathrm{d} x=-\frac{1}{t^{2}} \mathrm{~d} t </m> , 故
+                    <me> 
+                    \begin{aligned}
+                    &amp;  \int \frac{1}{x \sqrt{1+x^{2}}} \mathrm{~d} x=\int \frac{1}{\frac{1}{t} \sqrt{1+\left(\frac{1}{t}\right)^{2}}} \frac{-1}{t^{2}} \mathrm{~d} t \\
+                    =  &amp;  -\int \frac{1}{\sqrt{1+t^{2}}} \mathrm{~d} t=-\ln \left(t+\sqrt{1+t^{2}}\right)+C \\
+                    =  &amp;  -\ln \left[\frac{1}{x}+\sqrt{1+\left(\frac{1}{x}\right)^{2}}\right]+C=\ln \frac{\sqrt{1+x^{2}}-1}{x}+C .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 注: 也可用三角代换及其它方法 
                 </p>
             </answer>
         </exercise>
@@ -148,12 +216,19 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> I=\displaystyle\int \frac{\mathrm{d} x}{\left(2 x^{2}+1\right) \sqrt{x^{2}+1}} </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 令  <m> x=\tan t </m> , 则  <m> \sqrt{x^{2}+1}=\sec t, \mathrm{~d} x=\sec ^{2} t \mathrm{~d} t </m> ,
+                <me> 
+                \begin{aligned}
+                I  &amp;  =\int \frac{\sec ^{2} t \mathrm{~d} t}{\left(2 \tan ^{2} \mathrm{t}+1\right) \operatorname{sect}}=\int \frac{\sec t \mathrm{~d} t}{2 \tan ^{2} \mathrm{t}+1}=\int \frac{\cos t \mathrm{~d} t}{2 \sin ^{2} t+\cos ^{2} \mathrm{t}} \\
+                &amp;  =\int \frac{\cos t \mathrm{~d} t}{1+\sin ^{2} t}=\int \frac{\mathrm{d}(\sin t)}{1+\sin ^{2} t}=\arctan (\sin t)+C \\
+                &amp;  =\arctan \frac{x}{\sqrt{x^{2}+1}}+C .
+                \end{aligned}
+                </me> 
                 </p>
             </answer>
         </exercise>
@@ -162,12 +237,23 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> I=\displaystyle\int \sqrt{5-4 x-x^{2}} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                    <me> I=\int \sqrt{9-(x+2)^{2}} \mathrm{~d} x=\int \sqrt{9-(x+2)^{2}} \mathrm{~d}(x+2)=\int \sqrt{9-u^{2}} \mathrm{~d} u 
+                    </me>  </p> 
+
+                    <p> 令  <m> u=3 \sin t </m> , 则  <m> \mathrm{d} u=3 \cos t \mathrm{~d} t </m> ,
+                    <me> 
+                    \begin{aligned}
+                    I  &amp;  =\int \sqrt{9-u^{2}} \mathrm{~d} u=\int 3 \cos t \cdot 3 \cos t \mathrm{~d} t=\frac{9}{2}\left(t+\frac{1}{2} \sin 2 t\right)+C \\
+                    &amp;  =\frac{9}{2} t+\frac{9}{2} \sin t \cos t+C=\frac{9}{2} \arcsin \frac{u}{3}+\frac{9}{2} \cdot \frac{u}{3} \cdot \frac{\sqrt{1-u^{2}}}{3}+C \\
+                    &amp;  =\frac{9}{2} \arcsin \frac{x+2}{3}+\frac{x+2}{2} \sqrt{5-4 x-x^{2}}+C
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -176,12 +262,19 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> I=\displaystyle\int \frac{1}{x \sqrt{x^{2}-a^{2}}} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 令  <m> x=a \sec u </m> , 则  <m> \mathrm{d} x=a \sec u \tan u \mathrm{~d} u </m> ,
+                    <me> 
+                    \begin{aligned}
+                    \therefore I  &amp;  =\int \frac{1}{x \sqrt{x^{2}-a^{2}}} \mathrm{~d} x \\
+                    &amp;  =\int \frac{a \sec u \tan u}{a \sec u a \tan u} \mathrm{~d} u=\int \frac{\mathrm{d} u}{a}=\frac{1}{a} u+C \\
+                    &amp;  =\frac{1}{a} \arccos \frac{a}{x}+C
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -190,12 +283,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \sec ^{3} x \mathrm{~d} x </m> .
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                    <me> 
+                    \begin{aligned}
+                    \because \int \sec ^{3} x d x &amp; =\int \sec x \sec ^{2} x d x=\int \sec x d \tan x \\
+                    &amp; =\sec x \tan x-\int \sec x \tan ^{2} x \mathrm{~d} x \\
+                    &amp; =\sec x \tan x-\int \sec x\left(\sec ^{2} x-1\right) \mathrm{d} x \\
+                    &amp; =\sec x \tan x-\int \sec ^{3} x \mathrm{~d} x+\int \sec x \mathrm{~d} x \\
+                    &amp; =\sec x \tan x+\ln |\sec x+\tan x|-\int \sec ^{3} x \mathrm{~d} x \\
+                    \therefore \int \sec ^{3} x \mathrm{~d} x &amp; =\frac{\sec x \tan x}{2}+\frac{1}{2} \ln |\sec x+\tan x|+C \text {. } \\
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -204,12 +307,16 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算(1)  <m> \displaystyle\int \ln x \mathrm{~d} x </m> , (2)  <m> \displaystyle\int \arctan x \mathrm{~d} x </m> , (3)  <m> \displaystyle\int \arcsin x \mathrm{~d} x </m> .
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 (1)  <m> \displaystyle\int \ln x \mathrm{~d} x=x \ln x-\int \frac{x}{x} \mathrm{~d} x=x \ln x-x+C </m> . </p> 
+
+                <p> (2) <m> \displaystyle\int \arctan x \mathrm{~d} x=x \arctan x-\int \frac{x}{1+x^{2}} \mathrm{~d} x=x \arctan x-\frac{1}{2} \ln \left(1+x^{2}\right)+C .</m>
+
+                (3)  <m> \displaystyle\int \arcsin x \mathrm{~d} x=x \arcsin x-\int \frac{x}{\sqrt{1-x^{2}}} \mathrm{~d} x=x \arcsin x+\sqrt{1-x^{2}}+C . </m>
                 </p>
             </answer>
         </exercise>
@@ -218,12 +325,23 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int x^{2} \mathrm{e}^{-x} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 选  <m> u=x^{2} </m>  ，则  <m> \mathrm{d} v=\mathrm{e}^{-x} \mathrm{~d} x </m> ,
+                    <me> 
+                    \begin{aligned}
+                    \therefore \int x^{2} \mathrm{e}^{-x} \mathrm{~d} x  &amp;  =-x^{2} \mathrm{e}^{-x}-\int-2 x \mathrm{e}^{-x} \mathrm{~d} x=-x^{2} \mathrm{e}^{-x}+2 \int x \mathrm{e}^{-x} \mathrm{~d} x \\
+                    &amp;  =-x^{2} \mathrm{e}^{-x}+2\left[-x \mathrm{e}^{-x}-\int-\mathrm{e}^{-x} \mathrm{~d} x\right] \\
+                    &amp;  =-x^{2} \mathrm{e}^{-x}+2\left[-x \mathrm{e}^{-x}-\mathrm{e}^{-x}\right]+C \\
+                    &amp;  =-x^{2} \mathrm{e}^{-x}-2 x \mathrm{e}^{-x}-2 \mathrm{e}^{-x}+C \\
+                    &amp;  =-\mathrm{e}^{-x}\left(x^{2}+2 x+2\right)+C .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 对于  <m> \int x^{n} \mathrm{e}^{x} \mathrm{~d} x </m>  或  <m> \int x^{n} \mathrm{e}^{-x} \mathrm{~d} x </m> , 可选  <m> u=x^{n} </m> . 分部积分法可连续多次使用. 
                 </p>
             </answer>
         </exercise>
@@ -232,12 +350,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int x^{2} \sin x \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 选  <m> u=x^{2} </m> , 则  <m> \mathrm{d} v=\sin x \mathrm{~d} x </m> , 故
+                    <me> 
+                    \begin{aligned}
+                    \int x^{2} \sin x \mathrm{~d} x  &amp;  =x^{2}(-\cos x)-\int 2 x(-\cos x) \mathrm{d} x \\
+                    &amp;  =-x^{2} \cos x+2 \int x \cos x \mathrm{~d} x \\
+                    &amp;  =-x^{2} \cos x+2\left[x \sin x-\int \sin x \mathrm{~d} x\right] \\
+                    &amp;  =-x^{2} \cos x+2 x \sin x+2 \cos x+C .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 对于  <m> \int x^{n} \sin x \mathrm{~d} x </m>  或  <m> \int x^{n} \cos x \mathrm{~d} x </m> , 可选  <m> u=x^{n} </m> . 
                 </p>
             </answer>
         </exercise>
@@ -246,12 +374,14 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int x^{n} \ln x \mathrm{~d} x </m> .
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 
+                    <me>  \int x^{n} \ln x \mathrm{~d} x=\ln x \cdot \frac{x^{n+1}}{n+1}-\frac{1}{n+1} \int \frac{x^{n+1}}{x} \mathrm{~d} x=\frac{x^{n+1}}{n+1} \ln x-\frac{x^{n+1}}{(n+1)^{2}}+C .
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -260,12 +390,19 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \frac{\ln (1+\sqrt{x})}{\sqrt{x}} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                    <me> 
+                    \begin{aligned}
+                    \int \frac{\ln (1+\sqrt{x})}{\sqrt{x}} \mathrm{~d} x &amp; =2 \int \ln (1+t) \mathrm{d} t=2 \int \ln (1+t) \mathrm{d}(1+t) \\
+                    &amp; =2[(1+t) \ln (1+t)-(1+t)]+C_{1} \\
+                    &amp; =2[(1+\sqrt{x}) \ln (1+\sqrt{x})-\sqrt{x}]+C \\
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -274,12 +411,21 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \frac{\arcsin \sqrt{x}+\ln x}{\sqrt{x}} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                    <me> 
+                    \begin{aligned}
+                    \int \frac{\arcsin \sqrt{x}+\ln x}{\sqrt{x}} \mathrm{~d} x  &amp; \xlongequal{t=\sqrt{x}}\int \frac{\arcsin t+\ln t^{2}}{t} 2 t \mathrm{~d} t \\
+                    &amp; =2 \int \arcsin t \mathrm{~d} t+4 \int \ln t \mathrm{~d} t \\
+                    &amp; =2\left[t \arcsin t-\int \frac{t}{\sqrt{1-t^{2}}} \mathrm{~d} t\right]+4[t \ln t-t] \\
+                    &amp; =2\left(t \arcsin t+\sqrt{1-t^{2}}\right)+4(t \ln t-t)+C \\
+                    &amp; =2(\sqrt{x} \arcsin \sqrt{x}+\sqrt{1-x})+4(\sqrt{x} \ln \sqrt{x}-\sqrt{x})+C \\
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -288,12 +434,32 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> \displaystyle I=\int \frac{x+\sin x}{1+\cos x} \mathrm{~d} x </m> .
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:法 1 
+                    <me> 
+                    \begin{aligned}
+                    I &amp; =\int \frac{x}{1+\cos x} \mathrm{~d} x+\int \frac{\sin x}{1+\cos x} \mathrm{~d} x \\
+                    &amp; =\int \frac{x}{2 \cos ^{2} \frac{x}{2}} \mathrm{~d} x+\int \frac{-\mathrm{d}(1+\cos x)}{1+\cos x} \\
+                    &amp; =x \tan \frac{x}{2}-\int \tan \frac{x}{2} \mathrm{~d} x-\ln (1+\cos x) \\
+                    &amp; =x \tan \frac{x}{2}-2 \ln \left|\cos \frac{x}{2}\right|-\ln (1+\cos x)+C .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 法 2
+                    <me> 
+                    \begin{aligned}
+                    I=  &amp;  \int \frac{x+\sin x}{1+\cos x} \mathrm{~d} x=\int \frac{(x+\sin x)(1-\cos x)}{1-\cos ^{2} x} \mathrm{~d} x \\
+                    =  &amp;  \int \frac{x+\sin x-x \cos x-\sin x \cos x}{\sin ^{2} x} \mathrm{~d} x \\
+                    =  &amp;  \int \frac{x}{\sin ^{2} x} \mathrm{~d} x+\int \frac{1}{\sin x} \mathrm{~d} x-\int \frac{x \cos x}{\sin ^{2} x} \mathrm{~d} x-\int \frac{\cos x}{\sin x} \mathrm{~d} x \\
+                    =  &amp;  -x \cot x+\int \cot x \mathrm{~d} x+\int \frac{\mathrm{d} x}{\sin x} \\
+                    &amp;  +\frac{x}{\sin x}-\int \frac{\mathrm{d} x}{\sin x}-\int \cot x \mathrm{~d} x \\
+                    =  &amp;  -x \cot x+\frac{x}{\sin x}+C .
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -302,12 +468,23 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \sqrt{x^{2}-a^{2}} \mathrm{~d} x \quad(a \gt 0) </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                    <me> 
+                    \begin{aligned}
+                    \int \sqrt{x^{2}-a^{2}} \mathrm{~d} x &amp; =\int a \tan u a \sec u \tan u \mathrm{~d} u\\
+                    &amp; =a^{2}\left[\int \sec ^{3} u \mathrm{~d} u-\int \sec u \mathrm{~d} u\right]\\
+                    &amp; =a^{2}\left[\frac{\sec u \tan u}{2}-\frac{1}{2} \ln |\sec u+\tan u|\right]+C_{1} \\
+                    &amp; =\frac{a^{2}}{2}\left[\frac{x \sqrt{x^{2}-a^{2}}}{a^{2}}-\ln \left|\frac{x}{a}+\frac{\sqrt{x^{2}-a^{2}}}{a}\right|\right]+C_{1} \\
+                    &amp; =\frac{x}{2} \sqrt{x^{2}-a^{2}}-\frac{a^{2}}{2} \ln \left|x+\sqrt{x^{2}-a^{2}}\right|+C .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 或  <m> \displaystyle\int \sqrt{x^{2}-a^{2}} \mathrm{~d} x=x \sqrt{x^{2}-a^{2}}-\int x \mathrm{~d} \sqrt{x^{2}-a^{2}} \quad \ldots </m>
                 </p>
             </answer>
         </exercise>
@@ -316,12 +493,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \cos ^{n} x \mathrm{~d} x, n=2,3, \cdots </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 记  <m> \displaystyle I_{n}=\int \cos ^{n} x \mathrm{~d} x, n=2,3, \cdots </m> .
+                    <me> 
+                    \begin{aligned}
+                    \because I_{n}  &amp;  =\int \cos ^{n} x \mathrm{~d} x=\int \cos ^{n-1} x \cos x \mathrm{~d} x \\
+                    &amp;  =\cos ^{n-1} x \sin x+(n-1)\left[\cos ^{n-2} x \sin ^{2} x \mathrm{~d} x\right. \\
+                    &amp;  =\cos ^{n-1} x \sin x+(n-1)\left[\cos ^{n-2} x\left(1-\cos ^{2} x\right) \mathrm{d} x\right. \\
+                    &amp;  =\cos ^{n-1} x \sin x+(n-1)\left[\int \cos ^{n-2} x \mathrm{~d} x-\int \cos ^{n} x \mathrm{~d} x\right] \\
+                    &amp;  =\cos ^{n-1} x \sin x+(n-1) I_{n-2}-(n-1) I_{n} \\
+                    \therefore I_{n}  &amp;  =\frac{\sin x \cos ^{n-1} x}{n}+\frac{n-1}{n} I_{n-2} .
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -330,12 +517,37 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求下列积分:  <m> \displaystyle\int \frac{x^{2}+1}{(x+1)(x-2)^{2}} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 (1) 将分母分解因式:  <m> (x+1)(x-2)^{2} </m> ; (都是一次因式的方幂!) </p> 
+
+                    <p> (2) 设  <m> \frac{x^{2}+1}{(x+1)(x-2)^{2}}=\frac{A}{x+1}+\frac{B}{\underline{x-2}+\frac{C}{(x-2)^{2}}} </m> ; (分子都是常数!)其中 $A, B, C  为待定系数; </p> 
+
+                    <p> (3) 将右端通分得  <m> \frac{A(x-2)^{2}+B(x+1)(x-2)+C(x+1)}{(x+1)(x-2)^{2}} </m> ; </p> 
+
+                    <p> (4) 由两边 (分子) 恒等, 得
+                    <me> 
+                    \begin{aligned}
+                    x^{2}+1  &amp;  \equiv A(x-2)^{2}+B(x+1)(x-2)+C(x+1) \quad(*)\\
+                    &amp;  =(A+B) x^{2}+(C-4 A-B) x+4 A-B+C .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 比较两边  <m> x </m>  的同次幂的系数得  <m> \left\{\begin{array}{l}A+B=1, \\ C-4 A-B=0, \\ 4 A-2 B+C=1 .\end{array}\right. </m>  解得  <m> A=\frac{2}{9}, B=\frac{7}{9}, C=\frac{5}{3} </m> . </p> 
+
+                    <p> 注：亦可用 “赋值法” 定  <m> A, B, C </m>  : 在(*)式中,
+                    令  <m> x=-1 </m> , 得  <m> 2=9 A \Rightarrow A=\frac{2}{9} </m> ; 令  <m> x=2 </m>  得  <m> 5=3 C \Rightarrow C=\frac{5}{3} </m> ;令  <m> x=0 </m> , 得  <m> 1=4 A-2 B+C \Rightarrow B=\frac{7}{9} </m> . </p> 
+
+                    <p> (5)  <m> \therefore \frac{x^{2}+1}{(x+1)(x-2)^{2}}=\frac{\frac{2}{9}}{x+1}+\frac{\frac{7}{9}}{x-2}+\frac{\frac{5}{3}}{(x-2)^{2}} </m> .
+                    <me> 
+                    \begin{aligned}
+                    \therefore  &amp;  \int \frac{x^{2}+1}{(x+1)(x-2)^{2}} \mathrm{~d} x\\ &amp; =\frac{2}{9} \int \frac{1}{x+1} \mathrm{~d} x+\frac{7}{9} \int \frac{1}{x-2} \mathrm{~d} x+\frac{5}{3} \int \frac{1}{(x-2)^{2}} \mathrm{~d} x \\
+                    &amp;  =\frac{2}{9} \ln |x+1|+\frac{7}{9} \ln |x-2|-\frac{5}{3(x-2)}+C .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -344,12 +556,53 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求下列积分:  <m> \displaystyle \int \frac{2 x}{x^{5}+x^{4}+2 x^{3}+2 x^{2}+x+1} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: (1) 
+                    <me> 
+                    \begin{aligned}
+                    &amp;  x^{5}+x^{4}+2 x^{3}+2 x^{2}+x+1 \\
+                    =  &amp;  x^{4}(x+1)+2 x^{2}(x+1)+(x+1) \\
+                    =  &amp;  (x+1)\left(x^{4}+2 x^{2}+1\right) \\
+                    =  &amp;  (x+1)\left(x^{2}+1\right)^{2} \text { (一个1次因式, 一个2次因式的方幂!) }
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> (2) 设  <m> \frac{2 x}{x^{5}+x^{4}+2 x^{3}+2 x^{2}+x+1}=\frac{A}{x+1}+\frac{B x+C}{x^{2}+1}+\frac{D x+E}{\left(x^{2}+1\right)^{2}} </m>  </p> 
+
+                    <p> （分母为 1 次式的方幂时, 分子应为常数; 分母为 2 次式的方幂时, 分子应为 1 次式)
+                    其中  <m>  A, B, C, D, E  </m>  为待定常数; </p> 
+
+                    <p> (3)上式右端通分, 得
+                    <me> 
+                    \frac{A\left(x^{2}+1\right)^{2}+(B x+C)(x+1)\left(x^{2}+1\right)+(D x+E)(x+1)}{(x+1)\left(x^{2}+1\right)^{2}} \text {. }
+                    </me>  </p> 
+
+                    <p> (4) 由两边 (分子) 恒等, 得
+                    <me> 
+                    2 x \equiv A\left(x^{2}+1\right)^{2}+(B x+C)(x+1)\left(x^{2}+1\right)+(D x+E)(x+1),(*)
+                    </me>  </p> 
+
+                    <p> 采用 “混合法” 定系数: 令   <m> x=-1 </m>  , 得  <m> -2=4 A \Rightarrow A=-\frac{1}{2} </m>  ; </p> 
+
+                    <p> 比较两端  <m> x^{4} </m>  的系数, 得  <m> A+B=0 </m> , 从而  <m> B=-A=\frac{1}{2} </m> ;
+                    比较两端  <m> x^{3} </m>  的系数, 得  <m> B+C=0 </m> , 从而  <m> C=-B=-\frac{1}{2} </m> ;
+                    令  <m> x=0 </m>  得  <m> 0=A+C+E \Rightarrow E=-A-C=1 </m> ;
+                    令  <m> x=1 </m>  得  <m> 2=4 A+(D+E) \times 2 \Rightarrow D=1 </m> . </p> 
+
+                    <p> (5)  <m> \therefore \frac{2 x}{x^{5}+x^{4}+2 x^{3}+2 x^{2}+x+1}=\frac{-\frac{1}{2}}{x+1}+\frac{\frac{1}{2} x-\frac{1}{2}}{x^{2}+1}+\frac{x+1}{\left(x^{2}+1\right)^{2}} </m> .
+                    <me> 
+                    \begin{aligned}
+                    \therefore  &amp; \int \frac{2 x}{x^{5}+x^{4}+2 x^{3}+2 x^{2}+x+1} \mathrm{~d} x\\ &amp; =-\frac{1}{2} \int \frac{1}{x+1} \mathrm{~d} x+\frac{1}{2} \int \frac{x-1}{x^{2}+1} \mathrm{~d} x+\int \frac{x+1}{\left(x^{2}+1\right)^{2}} \mathrm{~d} x \\
+                    &amp; =-\frac{1}{2} \ln |x+1|+\frac{1}{4} \ln \left(x^{2}+1\right)-\frac{1}{2} \arctan x-\frac{1}{2} \frac{1}{x^{2}+1}+\int \frac{1}{\left(x^{2}+1\right)^{2}} \mathrm{~d} x \\
+                    &amp; =\frac{1}{4} \ln \frac{x^{2}+1}{(x+1)^{2}}-\frac{1}{2} \arctan x-\frac{1}{2} \frac{1}{x^{2}+1}+\int \frac{\sec ^{2} t \mathrm{~d} t}{\sec ^{4} t} \\
+                    &amp; =\frac{1}{4} \ln \frac{x^{2}+1}{(x+1)^{2}}-\frac{1}{2} \arctan x-\frac{1}{2} \frac{1}{x^{2}+1}+\int \cos ^{2} t \mathrm{~d} t\\
+                    &amp; =  \frac{1}{4} \ln \frac{x^{2}+1}{(x+1)^{2}}-\frac{1}{2} \arctan x-\frac{1}{2} \frac{1}{x^{2}+1}+\int \frac{1+\cos 2 t}{2} \mathrm{~d} t \\  &amp; =  \frac{1}{4} \ln \frac{x^{2}+1}{(x+1)^{2}}-\frac{1}{2} \arctan x-\frac{1}{2} \frac{1}{x^{2}+1}+\frac{1}{2} t+\frac{1}{4} \sin 2 t+C \\  &amp; =  \frac{1}{4} \ln \frac{x^{2}+1}{(x+1)^{2}}-\frac{1}{2} \arctan x-\frac{1}{2} \frac{1}{x^{2}+1}+\frac{1}{2} \arctan x  +\frac{1}{2} \frac{x}{\sqrt{x^{2}+1}} \frac{1}{\sqrt{x^{2}+1}}+C \\  &amp; =  \frac{1}{4} \ln \frac{x^{2}+1}{(x+1)^{2}}+\frac{x-1}{2\left(x^{2}+1\right)}+C .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -358,12 +611,27 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求不定积分  <m> \displaystyle \int \frac{3 x+6}{(x-1)^{2}\left(x^{2}+x+1\right)} d x </m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 有理式积分 分解
+                    <me> 
+                    \frac{3 x+6}{(x-1)^{2}\left(x^{2}+x+1\right)}=\frac{A}{(x-1)}+\frac{B}{(x-1)^{2}}+\frac{C x+D}{\left(x^{2}+x+1\right)} \\
+                    \Rightarrow\left\{\begin{array}{c}
+                    A=-2 \\
+                    B=3 \\
+                    C=2 \\
+                    D=1
+                    \end{array}\right. 
+                    </me>  </p> 
+
+                    <p>  <me> \begin{aligned}
+                        \int \frac{3 x+6}{(x-1)^{2}\left(x^{2}+x+1\right)} d x &amp; =\int \frac{-2}{x-1} d x+\int \frac{3}{(x-1)^{2}} d x+\int \frac{2 x+1}{\left(x^{2}+x+1\right)} d x \\
+                        &amp; =-2 \ln |x-1|-\frac{3}{x-1}+\ln \left(x^{2}+x+1\right)+C
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -372,12 +640,15 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算   <m> \displaystyle\int \frac{\sin x}{\sin x+\cos x} \mathrm{~d} x </m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：
+                    <me>  
+                        \begin{aligned}\int \frac{\sin x}{\sin x+\cos x} \mathrm{~d} x &amp; =\int \frac{\tan x}{\tan x+1} \mathrm{~d} x \\ &amp;  =\int \frac{u}{u+1} \frac{\mathrm{d} u}{1+u^{2}}=\frac{1}{2} \int\left[\frac{-1}{u+1}+\frac{u+1}{u^{2}+1}\right] \mathrm{d} u \\  &amp; =-\frac{1}{2} \ln |u+1|+\frac{1}{4} \ln \left(u^{2}+1\right)+\frac{1}{2} \arctan u+C \\  &amp; =-\frac{1}{2} \ln |u+1|+\frac{1}{4} \ln \left(u^{2}+1\right)+\frac{1}{2} \arctan u+C \\  &amp; =-\frac{1}{2} \ln |\tan x+1|+\frac{1}{2} \ln |\sec x|+\frac{1}{2} x+C \\  &amp; =-\frac{1}{2} \ln |\sin x+\cos x|+\frac{1}{2} x+C \end{aligned}  
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -386,12 +657,20 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \frac{1}{5+4 \cos 2 x} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 可令  <m> u=\tan \frac{x}{2} </m> , 但令   <m> u=\tan x </m>  要简单一些  <m> \mathrm{d} x=\frac{1}{1+u^{2}} \mathrm{~d} u, \cos 2 x=\frac{1-u^{2}}{1+u^{2}} </m> , </p> 
+                    <p>  <me> 
+                    \begin{aligned}
+                    \therefore \int \frac{1}{5+4 \cos 2 x} \mathrm{~d} x &amp; =\int \frac{\frac{1}{1+u^{2}}}{5+4 \cdot \frac{1-u^{2}}{1+u^{2}}} \mathrm{~d} u=\int \frac{\mathrm{d} u}{u^{2}+9} \\
+                    &amp; =\frac{1}{3} \arctan \frac{u}{3}+C=\frac{1}{3} \arctan \left(\frac{1}{3} \tan x\right)+C . \\
+                    \text { 或 } \int \frac{1}{5+4 \cos 2 x} \mathrm{~d} x &amp; =\int \frac{1}{5+4\left(2 \cos ^{2} x-1\right)} \mathrm{d} x=\int \frac{1}{1+8 \cos ^{2} x} \mathrm{~d} x \\
+                    &amp; =\int \frac{\sec ^{2} x}{\sec ^{2} x+8} \mathrm{~d} x=\int \frac{1}{\tan ^{2} x+9} \mathrm{~d} \tan x=\int \frac{1}{u^{2}+9} \mathrm{~d} u \ldots
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -400,12 +679,27 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \sin m x \cos n x \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 (1)当  <m> m=n </m>  时 “凑微分” 即可:
+                    <me> 
+                    \begin{aligned}
+                    \int \sin m x \cos m x \mathrm{~d} x  &amp;  =\frac{1}{m} \int \sin m x \mathrm{~d}(\sin m x) \\
+                    &amp;  =\frac{1}{2 m}(\sin m x)^{2}+C, \\
+                    \text { 或 } \int \sin m x \cos m x \mathrm{~d} x  &amp;  =\frac{1}{2} \int \sin 2 m x \mathrm{~d} x=-\frac{1}{4 m} \cos 2 m x+C .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> (2)当  <m> m \neq n </m>  时要应用 “积化和差” 公式:
+                    <me> 
+                    \begin{aligned}
+                    \text { 原式 }  &amp;  =\frac{1}{2} \int[\sin (m+n) x+\sin (m-n) x] \mathrm{d} x \\
+                    &amp;  =-\frac{1}{2(m+n)} \cos (m+n) x-\frac{1}{2(m-n)} \cos (m-n) x+C .
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -414,12 +708,14 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \cos ^{2} x \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    <me> 
+                        \int \cos ^{2} x \mathrm{~d} x=\int \frac{1+\cos 2 x}{2} \mathrm{~d} x=\frac{x}{2}+\frac{1}{4} \sin 2 x+C .
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -428,12 +724,21 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \sin ^{3} x \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 :
+                <me> 
+                \begin{aligned}
+                \int \sin ^{3} x \mathrm{~d} x &amp; =\int \sin ^{2} x \sin x \mathrm{~d} x \\
+                &amp; =\int\left(1-\cos ^{2} x\right)(-\mathrm{d} \cos x)=\int\left(\cos ^{2} x-1\right) \mathrm{d} \cos x \\
+                &amp; =\frac{1}{3} \cos ^{3} x-\cos x+C 
+                \end{aligned}
+                </me>  </p> 
+
+                <p> 而   <m> \displaystyle\int \cos ^{3} x \mathrm{~d} x=\int\left(1-\sin ^{2} x\right) \mathrm{d} \sin x=\sin x-\frac{1}{3} \sin ^{3} x+C </m>
                 </p>
             </answer>
         </exercise>
@@ -442,12 +747,21 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \sin ^{4} x \mathrm{~d} x </m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    <me> 
+                        \begin{aligned}
+                         \int \sin ^{4} x \mathrm{~d} x &amp; =\int\left(\frac{1-\cos 2 x}{2}\right)^{2} \mathrm{~d} x \\
+                         &amp;  =\frac{1}{4} \int\left(1-2 \cos 2 x+\cos ^{2} 2 x\right) \mathrm{d} x \\
+                         &amp;  =\frac{1}{4} x-\frac{1}{4} \sin 2 x+\frac{1}{4} \int \cos ^{2} 2 x \mathrm{~d} x \\
+                         &amp;  =\frac{1}{4} x-\frac{1}{4} \sin 2 x+\frac{1}{4} \int \frac{1+\cos 4 x}{2} \mathrm{~d} x \\
+                         &amp;  =\frac{1}{4} x-\frac{1}{4} \sin 2 x+\frac{1}{8} x+\frac{1}{32} \sin 4 x+C \\
+                         &amp;  =\frac{3}{8} x-\frac{1}{4} \sin 2 x+\frac{1}{32} \sin 4 x+C .
+                        \end{aligned}
+                         </me>
                 </p>
             </answer>
         </exercise>
@@ -456,12 +770,21 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle\int \sin ^{2} x \cos ^{5} x \mathrm{~d} x </m> .
+
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 :
+                <me> 
+                \begin{aligned}
+                \int \sin ^{2} x \cos ^{5} x \mathrm{~d} x &amp; =\int \sin ^{2} x \cos ^{4} x \mathrm{~d} \sin x \\
+                &amp; =\int \sin ^{2} x\left(1-\sin ^{2} x\right)^{2} d \sin x \\
+                &amp; =\int\left(\sin ^{2} x-2 \sin ^{4} x+\sin ^{6} x\right) d \sin x \\
+                &amp; =\frac{\sin ^{3} x}{3}-\frac{2 \sin ^{5} x}{5}+\frac{\sin ^{7} x}{7}+C .
+                \end{aligned}
+                </me> 
                 </p>
             </answer>
         </exercise>
@@ -470,12 +793,33 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \cos ^{2} x \sin ^{4} x \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 :
+                    <me> 
+                    \begin{aligned}\int \cos ^{2} x \sin ^{4} x \mathrm{~d} x &amp; =\int \frac{1+\cos 2 x}{2}\left(\frac{1-\cos 2 x}{2}\right)^{2} \mathrm{~d} x \\
+                    &amp; =\frac{1}{8} \int(1+\cos 2 x)\left(1-2 \cos 2 x+\cos ^{2} 2 x\right) \mathrm{d} x \\
+                    &amp; =\frac{1}{8} \int\left(1-\cos 2 x-\cos ^{2} 2 x+\cos ^{3} 2 x\right) \mathrm{d} x \\
+                    &amp; =\frac{1}{8} \int\left(1-\cos 2 x-\frac{1+\cos 4 x}{2}+\cos ^{3} 2 x\right) \mathrm{d} x \\
+                    &amp; =\frac{1}{8} \int\left(\frac{1}{2}-\cos 2 x-\frac{\cos 4 x}{2}+\cos ^{3} 2 x\right) \mathrm{d} x \\
+                    &amp; =\frac{x}{16}-\frac{\sin 2 x}{32}-\frac{\sin 4 x}{64}+\frac{1}{16} \int\left(1-\sin ^{2} 2 x\right) \mathrm{d}(\sin 2 x) \\
+                    &amp; =\frac{x}{16}-\frac{\sin 4 x}{64}-\frac{\sin ^{3} 2 x}{48}+C .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 另解 
+                    <me> 
+                    \begin{aligned}
+                    \int \cos ^{2} x \sin ^{4} x \mathrm{~d} x &amp; =\int\left(\cos ^{2} x \sin ^{2} x\right) \sin ^{2} x \mathrm{~d} x \\
+                    &amp; =\int\left(\frac{\sin 2 x}{2}\right)^{2} \frac{1-\cos 2 x}{2} \mathrm{~d} x \\
+                    &amp; =\frac{1}{8} \int \sin ^{2} 2 x(1-\cos 2 x) \mathrm{d} x \\
+                    &amp; =\frac{1}{8} \int \frac{1-\cos 4 x}{2} \mathrm{~d} x-\frac{1}{8} \int \sin ^{2} 2 x \cos 2 x \mathrm{~d} x \\
+                    &amp; =\frac{x}{16}-\frac{\sin 4 x}{64}-\frac{\sin ^{3} 2 x}{48}+C .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -484,12 +828,14 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \frac{1}{x \sqrt{x^{2}-1}} \mathrm{~d} x </m> .
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  方法 1  <m> \displaystyle\int \frac{1}{x \sqrt{x^{2}-1}} \mathrm{~d} x=\int \frac{1}{x^{2} \sqrt{1-\left(\frac{1}{x}\right)^{2}}} \mathrm{~d} x=\int \frac{-\mathrm{d}\left(\frac{1}{x}\right)}{\sqrt{1-\left(\frac{1}{x}\right)^{2}}}=-\arcsin \frac{1}{x}+C </m> . </p> 
+
+                <p> 方法 2  <m> \displaystyle\int \frac{1}{x \sqrt{x^{2}-1}} \mathrm{~d} x \xlongequal{x=\sec t} \int \frac{\sec t \tan t \mathrm{~d} t}{\sec t \tan t}=\int \mathrm{d} t=t+C=\arccos \frac{1}{x}+C . </m> 
                 </p>
             </answer>
         </exercise>
@@ -498,12 +844,13 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \frac{1}{x \sqrt{x-1}} \mathrm{~d} x </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                <me> \int \frac{1}{x \sqrt{x-1}} \mathrm{~d} x \xlongequal{u=\sqrt{x-1}} \int \frac{2 u}{\left(u^{2}+1\right) u} \mathrm{~d} u=2 \arctan u+C=2 \arctan \sqrt{x-1}+C </me>
                 </p>
             </answer>
         </exercise>
@@ -512,30 +859,24 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \displaystyle \int \ln \left(1+\sqrt{\frac{1+x}{x}}\right) \mathrm{d} x \quad(x \gt 0) </m> . 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 令  <m> \sqrt{\frac{1+x}{x}}=u </m> , 则  <m> x=\frac{1}{u^{2}-1} </m> .于是
+                <me> 
+                \begin{aligned}
+                &amp;  \int \ln \left(1+\sqrt{\frac{1+x}{x}}\right) \mathrm{d} x=\int \ln (1+u) \mathrm{d}\left(\frac{1}{u^{2}-1}\right) \\
+                &amp; = \frac{\ln (1+u)}{u^{2}-1}-\int \frac{1}{u^{2}-1} \frac{1}{1+u} \mathrm{~d} u=\frac{\ln (1+u)}{u^{2}-1}-\int \frac{1}{(u-1)(u+1)^{2}} \mathrm{~d} u \\
+                &amp; = \frac{\ln (1+u)}{u^{2}-1}-\frac{1}{4} \int\left[\frac{1}{u-1}-\frac{1}{u+1}-\frac{2}{(u+1)^{2}}\right] \mathrm{d} u \\
+                &amp; =  \frac{\ln (1+u)}{u^{2}-1}-\frac{1}{4} \ln (u-1)+\frac{1}{4} \ln (u+1)-\frac{1}{2(u+1)}+C\\
+                &amp; =x \ln \left(1+\sqrt{\frac{1+x}{x}}\right)+\frac{1}{4} \ln \frac{\sqrt{\frac{1+x}{x}}+1}{\sqrt{\frac{1+x}{x}}-1}-\frac{1}{2\left(\sqrt{\frac{1+x}{x}}+1\right)}+C \\  &amp; =x \ln \left(1+\sqrt{\frac{1+x}{x}}\right)+\frac{1}{2} \ln (\sqrt{1+x}+\sqrt{x})-\frac{\sqrt{x(1+x)}-x}{2}+C
+                \end{aligned}
+                </me>
                 </p>
             </answer>
         </exercise>
-
-        <!-- Q38 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-        
 
 
     </exercises>
