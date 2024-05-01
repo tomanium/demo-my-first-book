@@ -2,8 +2,8 @@
 
 <section xml:id="la-chap3">
   <title>第三章 矩阵的初等变换与线性方程组</title>
-  <subsection>
-    <exercises xml:id="exercises-1">
+  
+    <exercises xml:id="exercises-la3">
         
     
         <exercise>
@@ -123,6 +123,6 @@
 
     </exercises>
     
-</subsection>
+
 </section>
 

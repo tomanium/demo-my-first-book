@@ -2,8 +2,8 @@
 
 <section xml:id="la-chap1">
   <title>第一章 行列式</title>
-  <subsection>
-    <exercises xml:id="exercises-1">
+  
+    <exercises xml:id="exercises-la1">
         
     
         <exercise>
@@ -123,6 +123,5 @@
 
     </exercises>
     
-</subsection>
 </section>
 
