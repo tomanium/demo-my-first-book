@@ -2,127 +2,542 @@
 
 <section xml:id="cal-chap9">
   <title>第九章 重积分</title>
-  <subsection>
-    <exercises xml:id="exercises-1">
-        
-    
+    <exercises xml:id="exercises-cal1.9">
+            
+        <!-- Q1 -->
         <exercise>
-        
             <statement>
                 <p>
-                    Q1 下列向量组中，线性无关的是（   ）
+                    
                 </p>
             </statement>
-            <choices>
-                
-                <choice>
-                    <statement>
-                        <p>
-                             <m> (1,2,3,4)^{\mathrm{T}},(2,3,4,5)^{\mathrm{T}},(0,0,0,0)^{\mathrm{T}} </m>; 
-                        </p>
-                    </statement>
-                </choice>
-                <choice>
-                    <statement>
-                        <p>
-                             <m> (1,2,-1)^{\mathrm{T}},(3,5,6)^{\mathrm{T}},(0,7,9)^{\mathrm{T}},(1,0,2)^{\mathrm{T}} </m>;
-                        </p>
-                    </statement>
-                </choice>
-                <choice>
-                    <statement>
-                        <p>
-                             <m> (a, 1,2,3)^{\mathrm{T}},(b, 1,2,3)^{\mathrm{T}},(c, 3,4,5)^{\mathrm{T}},(d, 0,0,0)^{\mathrm{T}} </m>;
-                        </p>
-                    </statement>
-                </choice>
-
-                <choice correct="yes">
-                    <statement>
-                        <p>
-                           <m> (a, 1, b, 0,0)^{\mathrm{T}},(c, 0, d, 6,0)^{\mathrm{T}},(a, 0, c, 5,6)^{\mathrm{T}} .</m>
-                        </p>
-                    </statement>
-                </choice>
-            </choices>
-            <solution>
+            <answer>
                 <p>
-                    <p>解:(A)中有零向量必线性相关,</p>
-
-                    <p>(B) 4 个三维向量必线性相关,</p>
-
-                    <p>(C) 4 个四维向量用行列式,</p>
-
-                    <p><m>\left|\begin{array}{llll}a &amp; b &amp; c &amp; d \\ 1 &amp; 1 &amp; 3 &amp; 0 \\ 2 &amp; 2 &amp; 4 &amp; 0 \\ 3 &amp; 3 &amp; 5 &amp; 0\end{array}\right|=-d\left|\begin{array}{lll}1 &amp; 1 &amp; 3 \\ 2 &amp; 2 &amp; 4 \\ 3 &amp; 3 &amp; 5\end{array}\right|=0 </m></p>
-
-                    <p>(D)中, 因为 <m> \left|\begin{array}{lll}1 &amp; 0 &amp; 0 \\ 0 &amp; 6 &amp; 5 \\ 0 &amp; 0 &amp; 6\end{array}\right| =\ 0 </m>,知 <m> (1,0,0)^{\mathrm{T}},(0,6,0)^{\mathrm{T}},(0,5,6)^{\mathrm{T}} </m> 线性无关, 那么其延伸组
-                    <m> (a, 1, b, 0,0)^{\mathrm{T}},(c, 0, d, 6,0)^{\mathrm{T}},(a, 0, c, 5,6)^{\mathrm{T}} </m> 必线性无关.</p>
+                    
                 </p>
-            </solution>
-
+            </answer>
         </exercise>
 
+        <!-- Q2 -->
         <exercise>
-            <title>设 <m>\boldsymbol \alpha_{1}=\left(\begin{array}{l}0 \\ 0 \\ c_{1}\end{array}\right), \boldsymbol \alpha_{2}=\left(\begin{array}{c}0 \\ 1 \\ c_{2}\end{array}\right), \boldsymbol \alpha_{3}=\left(\begin{array}{c}1 \\ -1 \\ c_{3}\end{array}\right), \boldsymbol \alpha_{4}=\left(\begin{array}{c}-1 \\ 1 \\ c_{4}\end{array}\right) </m>, 其中 <m> c_{1}, c_{2}, c_{3}, c_{4} </m>为任意常数, 则下列向量组线性相关的是 (<m>\quad</m>).</title>
-            
-            
             <statement>
                 <p>
-                    Q2 设 <m>\boldsymbol \alpha_{1}=\left(\begin{array}{l}0 \\ 0 \\ c_{1}\end{array}\right), \boldsymbol \alpha_{2}=\left(\begin{array}{c}0 \\ 1 \\ c_{2}\end{array}\right), \boldsymbol \alpha_{3}=\left(\begin{array}{c}1 \\ -1 \\ c_{3}\end{array}\right), \boldsymbol \alpha_{4}=\left(\begin{array}{c}-1 \\ 1 \\ c_{4}\end{array}\right) </m>, 其中 <m> c_{1}, c_{2}, c_{3}, c_{4} </m>为任意常数, 则下列向量组线性相关的是 ().
+                    
                 </p>
             </statement>
-            <choices>
-                <choice>
-                    <statement>
-                        <p>
-                            <m>\alpha_1, \alpha_{2}, \alpha_{3}</m>;
-                        
-                        </p>
-                    </statement>
-                </choice>
-                <choice>
-                    <statement>
-                        <p>
-                            <m>\alpha_{1}, \alpha_{2}, \alpha_{4}</m>;
-                        </p>
-                    </statement>
-                </choice>
-                <choice correct="yes">
-                    <statement>
-                        <p>
-                             <m>\alpha_{1}, \alpha_{3}, \alpha_{4}</m>;
-                        
-                        </p>
-                    </statement>
-                </choice>
-                <choice>
-                    <statement>
-                        <p>
-                            <m>\alpha_{2},\alpha_{3},\alpha_{4}</m>
-                        </p>
-                    </statement>
-                </choice>
-                
-            </choices>
-            <solution>
+            <answer>
                 <p>
-                    解:(A) <m>\left|\left(\boldsymbol \alpha_{1}, \boldsymbol \alpha_{2}, \boldsymbol \alpha_{3}\right)\right|=\left|\begin{array}{ccc}0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -1 \\ c_{1} &amp; c_{2} &amp; c_{3}\end{array}\right|=-c_{1}</m> <m>\Rightarrow \boldsymbol \alpha_{1}, \boldsymbol \alpha_{2}, \boldsymbol \alpha_{3}</m> 不一定线性相关.
-
-                    <p>
-                        (B) <m>\left|\left(\boldsymbol \alpha_{1}, \boldsymbol \alpha_{2}, \boldsymbol \alpha_{4}\right)\right|=\left|\begin{array}{ccc}0 &amp; 0 &amp; -1 \\ 0 &amp; 1 &amp; 1 \\ c_{1} &amp; c_{2} &amp; c_{4}\end{array}\right|=c_{1} </m>  <m>\quad \Rightarrow \boldsymbol \alpha_{1}, \boldsymbol \alpha_{2}, \boldsymbol \alpha_{4}</m> 不一定线性相关.
-                    </p>
-
-                    (C) <m>\left|\left(\boldsymbol \alpha_{1}, \boldsymbol \alpha_{3}, \boldsymbol \alpha_{4}\right)\right|=\left|\begin{array}{ccc}0 &amp; 1 &amp; -1 \\ 0 &amp; -1 &amp; 1 \\ c_{1} &amp; c_{3} &amp; c_{4}\end{array}\right|=c_{1}\left|\begin{array}{cc}1 &amp; -1 \\ -1 &amp; 1\end{array}\right|=0 \Rightarrow \boldsymbol \alpha_{1}, \boldsymbol \alpha_{3}, \boldsymbol \alpha_{4} </m> 线性相关.
-
-                    (D) <m>\left|\left(\boldsymbol \alpha_{2}, \boldsymbol \alpha_{3}, \boldsymbol \alpha_{4}\right)\right|=\left|\begin{array}{ccc}0 &amp; 1 &amp; -1 \\ 1 &amp; -1 &amp; 1 \\ c_{2} &amp; c_{3} &amp; c_{4}\end{array}\right| \xlongequal[]{c_{3}+c_{2}}\left|\begin{array}{ccc}0 &amp; 1 &amp; 0 \\ 1 &amp; -1 &amp; 0 \\ c_{2} &amp; c_{3} &amp; c_{4}+c_{3}\end{array}\right|=-c_{4}-c_{3}</m> <m>\Rightarrow \boldsymbol \alpha_{2}, \boldsymbol \alpha_{3}, \boldsymbol \alpha_{4}</m> 不一定线性相关.
-                                        
+                    
                 </p>
-            </solution>
+            </answer>
         </exercise>
+
+        <!-- Q3 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q4 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q5 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q6 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q7 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q8 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q9 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q10 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q11 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q12 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q13 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q14 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q15 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q16 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q17 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q18 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q19 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q20 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q21 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q22 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q23 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q24 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q25 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q26 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q27 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q28 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q29 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q30 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q31 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q32 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q33 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q34 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q35 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q36 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q37 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q38 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+        
 
 
     </exercises>
-    
-</subsection>
 </section>
 

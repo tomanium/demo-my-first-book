@@ -77,23 +77,23 @@
             <answer>
                 <p>
                     证 [分析]关键在于找到定义中所说的一个正整数 <m>N</m>, 而  <m>N</m> 与任给的 <m>\varepsilon \gt 0</m> 有关:<m>\forall \varepsilon \gt 0</m>, 要使 <m>\left|\frac{(n-1)(2 n-1)}{6 n^{2}}-\frac{1}{3}\right|=\left|\frac{-3 n+1}{6 n^{2}}\right| \lt \varepsilon </m>, 因为
-<me>
-\left|\frac{-3 n+1}{6 n^{2}}\right|=\frac{3 n-1}{6 n^{2}} \lt \frac{3 n}{6 n^{2}}=\frac{1}{2 n} \lt \frac{1}{n} 
-</me></p>
+                <me>
+                \left|\frac{-3 n+1}{6 n^{2}}\right|=\frac{3 n-1}{6 n^{2}} \lt \frac{3 n}{6 n^{2}}=\frac{1}{2 n} \lt \frac{1}{n} 
+                </me></p>
 
-<p>故只需 <m>\frac{1}{n} \lt \varepsilon</m>, 即 <m>n \gt \frac{1}{\varepsilon}</m> 即可。于是可取 <m>N=\left[\frac{1}{\varepsilon}\right]</m>.</p>
+                <p>故只需 <m>\frac{1}{n} \lt \varepsilon</m>, 即 <m>n \gt \frac{1}{\varepsilon}</m> 即可。于是可取 <m>N=\left[\frac{1}{\varepsilon}\right]</m>.</p>
 
-<p><m>\forall \varepsilon>0, \exists N=\left[\frac{1}{\varepsilon}\right]+1</m>, 使得当 <m>n \gt N</m> 时, (由前述分析知, ) 恒有
-<me>
-\left|\frac{(n-1)(2 n-1)}{6 n^{2}}-\frac{1}{3}\right| \lt \varepsilon
-</me></p>
+                <p><m>\forall \varepsilon>0, \exists N=\left[\frac{1}{\varepsilon}\right]+1</m>, 使得当 <m>n \gt N</m> 时, (由前述分析知, ) 恒有
+                <me>
+                \left|\frac{(n-1)(2 n-1)}{6 n^{2}}-\frac{1}{3}\right| \lt \varepsilon
+                </me></p>
 
-<p>所以 <m>\lim\limits _{n \rightarrow \infty} \frac{(n-1)(2 n-1)}{6 n^{2}}=\frac{1}{3} </m>.</p>
+                <p>所以 <m>\lim\limits _{n \rightarrow \infty} \frac{(n-1)(2 n-1)}{6 n^{2}}=\frac{1}{3} </m>.</p>
 
-<p>用定义容易证明 <m>\lim\limits _{n \rightarrow \infty} \frac{1}{n^{\alpha}}=0\left(\forall \alpha \in \mathbf{R}_{+}\right)</m>; 及
-<me>
-\lim _{n \rightarrow \infty} a^{n}=0 \Leftrightarrow|a| \lt 1 .
-</me>
+                <p>用定义容易证明 <m>\lim\limits _{n \rightarrow \infty} \frac{1}{n^{\alpha}}=0\left(\forall \alpha \in \mathbf{R}_{+}\right)</m>; 及
+                <me>
+                \lim _{n \rightarrow \infty} a^{n}=0 \Leftrightarrow|a| \lt 1 .
+                </me>
                 </p>
             </answer>
         </exercise>
@@ -116,6 +116,469 @@
         <exercise>
             <statement>
                 <p>
+                    证明 <m>\lim\limits _{x \rightarrow 3} \frac{x-3}{x^{2}-9}=\frac{1}{6}</m>
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    限定 <m>0\lt|x-3|\lt 1</m>, 即 <m>2\ltx\lt4</m>, 且 <m>x \neq 3</m>. 因为
+                    \ltme\gt
+                    \left|\frac{x-3}{x^{2}-9}-\frac{1}{6}\right|=\left|\frac{x-3}{6(x+3)}\right|\lt\left|\frac{x-3}{30}\right|
+                    \lt/me\gt</p>
+
+                    <p>所以, 对任意给定的正数 <m> \varepsilon </m>, 要使
+                    \ltme\gt
+                    \left|\frac{x-3}{x^{2}-9}-\frac{1}{6}\right|\lt\frac{1}{30}|x-3|\lt\varepsilon
+                    \lt/me\gt</p>
+
+                    <p>取 <m>\delta=\min \{30 \varepsilon, 1\}</m>, 当 <m>x</m> 满足不等式 <m>0\lt|x-3|\lt\delta</m> 时, 对应的函数值 <m> f(x) </m> 都满足不等式
+                    \ltme\gt
+                    \left|\frac{x-3}{x^{2}-9}-\frac{1}{6}\right|\lt\varepsilon
+                    \lt/me\gt</p>
+
+                    <p>所以<m>\lim\limits _{x \rightarrow 3} \frac{x-3}{x^{2}-9}=\frac{1}{6}</m>
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q7 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q8 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q9 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q10 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q11 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q12 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q13 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q14 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q15 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q16 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q17 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q18 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q19 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q20 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q21 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q22 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q23 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q24 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q25 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q26 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q27 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q28 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q29 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q30 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q31 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q32 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q33 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q34 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q35 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q36 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q37 -->
+        <exercise>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    
+                </p>
+            </answer>
+        </exercise>
+
+        <!-- Q38 -->
+        <exercise>
+            <statement>
+                <p>
                     
                 </p>
             </statement>
@@ -132,24 +595,9 @@
 
 <!-- 
 
-<p>证明 <m>\lim\limits _{x \rightarrow 3} \frac{x-3}{x^{2}-9}=\frac{1}{6}</m></p>
+<p></p>
 
-<p>限定 <m>0\lt|x-3|\lt1</m>, 即 <m>2\ltx\lt4</m>, 且 <m>x \neq 3</m>. 因为
-\ltme\gt
-\left|\frac{x-3}{x^{2}-9}-\frac{1}{6}\right|=\left|\frac{x-3}{6(x+3)}\right|\lt\left|\frac{x-3}{30}\right|
-\lt/me\gt</p>
-
-<p>所以, 对任意给定的正数 <m> \varepsilon </m>, 要使
-\ltme\gt
-\left|\frac{x-3}{x^{2}-9}-\frac{1}{6}\right|\lt\frac{1}{30}|x-3|\lt\varepsilon
-\lt/me\gt</p>
-
-<p>取 <m>\delta=\min \{30 \varepsilon, 1\}</m>, 当 <m>x</m> 满足不等式 <m>0\lt|x-3|\lt\delta</m> 时, 对应的函数值 <m> f(x) </m> 都满足不等式
-\ltme\gt
-\left|\frac{x-3}{x^{2}-9}-\frac{1}{6}\right|\lt\varepsilon
-\lt/me\gt</p>
-
-<p>所以<m>\lim\limits _{x \rightarrow 3} \frac{x-3}{x^{2}-9}=\frac{1}{6}</m></p>
+<p></p>
 
 <p>求 <m>\lim\limits _{n \rightarrow \infty}\left(\frac{1}{\sqrt{n^{4}+1}}+\frac{2}{\sqrt{n^{4}+2^{2}}}+\cdots+\frac{n}{\sqrt{n^{4}+n^{2}}}\right) </m>.
 解 记 <m>x_{n}=\frac{1}{\sqrt{n^{4}+1}}+\frac{2}{\sqrt{n^{4}+2^{2}}}+\cdots+\frac{n}{\sqrt{n^{4}+n^{2}}}</m>, 则</p>
