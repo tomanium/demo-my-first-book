@@ -2,542 +2,1023 @@
 
 <section xml:id="la-chap5">
   <title>第五章 相似矩阵及二次型</title>
-    <exercises xml:id="exercises-la5">
-                    
-        <!-- Q1 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+    <subsection>
+        <title>特征值和特征向量的概念和性质</title>
 
-        <!-- Q2 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+        <exercises xml:id="exercises-la5_1">
+            <title>练习题</title>      
+            <!-- Q1 -->
+            <exercise>
+                <statement>
+                    <p>
+                        求  <m> \boldsymbol{A}=\left(\begin{array}{ccc}1  &amp;  -1  &amp;  1 \\ 1  &amp;  3  &amp;  -1 \\ 1  &amp;  1  &amp;  1\end{array}\right) </m>  的特征值和全部的特征向量
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解:  <m> \boldsymbol{A} </m>  的特征多项式为  <m> |\lambda \boldsymbol{E}-\boldsymbol{A}|=\left|\begin{array}{ccc}\lambda-1  &amp;  1  &amp;  -1 \\ -1  &amp;  \lambda-3  &amp;  1 \\ -1  &amp;  -1  &amp;  \lambda-1\end{array}\right|=(\lambda-1)(\lambda-2)^{2} </m>  </p> 
 
-        <!-- Q3 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                        <p> 矩阵  <m> \boldsymbol{A} </m>  的特征值  <m> \lambda_{1}=1, \lambda_{2}=\lambda_{3}=2 </m> .
+                        当  <m> \lambda=1 </m>  时，由  <m> (\boldsymbol{E}-\boldsymbol{A})\boldsymbol{x}=\mathbf{0} </m> , 得基础解系  <m> \boldsymbol{\alpha}_{1}=(-1,1,1)^{\mathrm{T}} </m> .
+                        故  <m> \boldsymbol{A} </m>  的属于特征值1的特征向量是  <m> k_{1} \boldsymbol{\alpha}_{1}, k_{1} </m>  为非零常数. </p> 
 
-        <!-- Q4 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                        <p> 当  <m> \lambda=2 </m>  时, 由  <m> (2 \boldsymbol{E}-\boldsymbol{A}) \boldsymbol{x}=\mathbf{0} </m> , 得基础解系  <m> \boldsymbol{\alpha}_{2}=(-1,1,0)^{\mathrm{T}}, \boldsymbol{\alpha}_{3}=(1,0,1)^{\mathrm{T}} </m> .故  <m> \boldsymbol{A} </m>  的属于特征值  <m> 2 </m>  的特征向量是  <m> k_{2} \boldsymbol{\alpha}_{2}+k_{3} \boldsymbol{\alpha}_{3} </m> , 其中  <m> k_{2}, k_{3} </m>  是不同时为零常数. 
+                            
+                    </p>
+                </answer>
+            </exercise>
 
-        <!-- Q5 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <!-- Q2 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{A} </m>  是  <m> 3 </m>  阶方阵的特征值为  <m> 1,2,2 </m> ,  <m> \boldsymbol{E} </m>  为单位阵,则  <m> \left|4 \boldsymbol{A}^{-1}-\boldsymbol{E}\right|= </m>  ____
 
-        <!-- Q6 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解：设  <m> \boldsymbol{A} </m>  为  <m> n </m>  阶方阵，且  <m> \boldsymbol{A} </m>  可逆, 则满足以下性质:  <m> |\boldsymbol{A}|=\lambda_{1} \cdot \lambda_{2} \cdots \cdots \lambda_{n} </m>  </p> 
 
-        <!-- Q7 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <p>  <me> 
+                    \begin{array}{|c|c|c|c|c|c|c|c|c|}
+                    \hline \text{矩阵}  &amp;   \boldsymbol{A}   &amp;   \boldsymbol{A}^{\mathrm{T}}   &amp;   \boldsymbol{A}^{-1}   &amp;   \boldsymbol{A}^{*}   &amp;   \boldsymbol{A}^{m}   &amp;   k \boldsymbol{A}   &amp;   \boldsymbol{E}   &amp;  f(\boldsymbol{A})=a_{m} \boldsymbol{A}^{m}+a_{m-1} \boldsymbol{A}^{m-1}+\cdots+a_{0} \boldsymbol{E}  \\
+                    \hline \text{特征值}  &amp;   \lambda   &amp;   \lambda   &amp;   \frac{1}{\lambda}   &amp;   \frac{\boldsymbol{| A} \mid}{\lambda}   &amp;   \lambda^{m}   &amp;   k \lambda   &amp;  1  &amp;   f(\lambda)=a_{m} \lambda^{m}+a_{m-1} \lambda^{m-1}+\cdots+a_{0} \cdot 1  \\
+                    \hline
+                    \end{array}
+                    </me>  </p> 
 
-        <!-- Q8 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <p> 令  <m> f(\boldsymbol{A})=4 \boldsymbol{A}^{-1}-\boldsymbol{E} </m> , 则  <m> f(\lambda)=\frac{4}{\lambda}-1 </m> . 因为  <m> \boldsymbol{A} </m>  的特征值为  <m> 1,2,2 </m> ,
+                    所以  <m> 4 \boldsymbol{A}^{-1}-\boldsymbol{E} </m>  的特征值为  <m> 3,1,1 </m> . 故  <m> \left|4 \boldsymbol{A}^{-1}-\boldsymbol{E}\right|=3 \cdot 1 \cdot 1=3 </m> . 
 
-        <!-- Q9 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    </p>
+                </answer>
+            </exercise>
 
-        <!-- Q10 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <!-- Q3 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{\alpha} </m>  为  <m> n </m>  维单位列向量,  <m> \boldsymbol{E} </m>  为  <m> n </m>  阶单位矩阵, 则  <m> (\quad) </m> . 
 
-        <!-- Q11 -->
-        <exercise>
-            <statement>
-                <p>
+                    </p>
+                </statement>
+                <choices>
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{E}-\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  不可逆
+                            </p>
+                        </statement>
+                    </choice>
                     
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{E}+\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  不可逆
+                            </p>
+                        </statement>
+                    </choice>
 
-        <!-- Q12 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{E}+2 \boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  不可逆
+                            </p>
+                        </statement>
+                    </choice>
 
-        <!-- Q13 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{E}-2 \boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  不可逆
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            【结论】 (1)  <m> \boldsymbol{A}  </m>  可逆  <m>  \Leftrightarrow|\boldsymbol{A}| \neq 0 \Leftrightarrow \boldsymbol{A} </m>  的特征值都不为零  <m> \Leftrightarrow \boldsymbol{A x}=\mathbf{0} </m>  只有零解 
+                            (2)  <m> \boldsymbol{A} \rightarrow \lambda, f(\boldsymbol{A}) \rightarrow f(\lambda) </m> ; 
+                            (3) 若  <m> r(\boldsymbol{A})=1 </m> , 则全部的特征值为  <m> \operatorname{tr}(\boldsymbol{A}), 0, \cdots, 0 </m>  </p> 
+                            
+                            <p> 解: 由于  <m> \boldsymbol{\alpha} </m>  为  <m> n </m>  维单位列向量, 故  <m> r\left(\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}\right)=r\left(\boldsymbol{\alpha}^{\mathrm{T}} \boldsymbol{\alpha}\right)=1\left(\right. </m>  或  <m> \left(\left.r \boldsymbol{\alpha}\boldsymbol{\alpha}^{\mathrm{T}}\right)=r(\boldsymbol{\alpha})=1\right) </m> 
+                            所以矩阵  <m> \boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  的特征值为  <m> 1,0, \cdots, 0 </m>  </p> 
+                            
+                            <p> (A)  <m> \boldsymbol{E}-\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  的特征值为  <m> 0,1, \cdots, 1 </m> , 则  <m> \left|\boldsymbol{E}-\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}\right|=0 </m> , 即  <m> \boldsymbol{E}-\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  不可逆. </p> 
+                            
+                            <p> (B)  <m> \boldsymbol{E}+\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}  </m>  的特征值为  <m>  2,1, \cdots, 1 </m> , 则  <m> \left|\boldsymbol{E}+\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}\right| \neq 0 </m> , 即  <m> \boldsymbol{E}+\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  可逆. </p> 
+                            
+                            <p> (C)  <m> \boldsymbol{E}+2 \boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  的特征值为  <m>  3,1, \cdots, 1 </m> , 则  <m> \left|\boldsymbol{E}+2 \boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}\right| \neq 0 </m> , 即  <m> \boldsymbol{E}+2 \boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  可逆. </p> 
+                            
+                            <p> (D)  <m> \boldsymbol{E}-2 \boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  的特征值为  <m> -1,1, \cdots, 1 </m> , 则  <m> \left|\boldsymbol{E}-2 \boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}\right| \neq 0 </m> , 即  <m> \boldsymbol{E}-2 \boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}} </m>  可逆. 
 
-        <!-- Q14 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                        </p>
+                </answer>
+            </exercise>
 
-        <!-- Q15 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
 
-        <!-- Q16 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <!-- Q4 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设阶矩阵  <m> \boldsymbol{A} </m>  有两个不同特征值,  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2} </m>  是  <m> \boldsymbol{A} </m>  的线性无关的特征向量, 且满足  <m> A^{2}\left(\alpha_{1}+\alpha_{2}\right)=\alpha_{1}+\alpha_{2} </m> , 则  <m> |A|= </m>  _______ 
 
-        <!-- Q17 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解: 设  <m> \alpha_{1}, \alpha_{2} </m>  对应的特征值为  <m> \lambda_{1}, \lambda_{2} </m> , 则  <m> A \alpha_{1}=\lambda_{1} \alpha_{1}, A \alpha_{2}=\lambda_{2} \alpha_{2} </m> .
+                        所以  <m> A^{2}\left(\alpha_{1}+\alpha_{2}\right)=A^{2} \alpha_{1}+A^{2} \alpha_{2}=\lambda_{1}^{2} \alpha_{1}+\lambda_{2}^{2} \alpha_{2} </m> , 因为  <m> A^{2}\left(\alpha_{1}+\alpha_{2}\right)=\alpha_{1}+\alpha_{2} </m> ,  <m> \Rightarrow\left(\lambda_{1}^{2}-1\right) \alpha_{1}+\left(\lambda_{2}^{2}-1\right) \alpha_{2}=\mathbf{0} </m> ,
+                        因为  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2} </m>  是  <m> \boldsymbol{A} </m>  的线性无关的特征向量, 所以  <m> \lambda_{1}^{2}=\lambda_{2}^{2}=1 </m> ,
+                        所以  <m> \boldsymbol{A} </m>  的两个不同特征值为  <m> -1,1 </m> , 则  <m> |\boldsymbol{A}|=(-1) \times 1=-1 </m> . 
+                    </p>
+                </answer>
+            </exercise>
 
-        <!-- Q18 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <!-- Q5 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{A} </m>  为  <m> n </m>  阶实对称矩阵,  <m> \boldsymbol{P} </m>  为  <m> n </m>  阶可逆阵. 已知  <m> n </m>  维列向量  <m> \boldsymbol{\alpha} </m> 是  <m> \boldsymbol{A} </m>  的属于特征值  <m> \lambda </m>  的特征向量, 则  <m> \left(\boldsymbol{P}^{-1} \boldsymbol{A P}\right)^{\mathrm{T}} </m>  属于特征值  <m> \lambda </m>  的特征向量是  <m> (\quad) </m> 
 
-        <!-- Q19 -->
-        <exercise>
-            <statement>
-                <p>
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{P}^{-1} \boldsymbol{\alpha} </m>
+                            </p>
+                        </statement>
+                    </choice>
                     
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{P}^{\mathrm{T}} \boldsymbol{\alpha} </m> 
+                            </p>
+                        </statement>
+                    </choice>
 
-        <!-- Q20 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{P} \boldsymbol{\alpha} </m>
+                            </p>
+                        </statement>
+                    </choice>
 
-        <!-- Q21 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \left(\boldsymbol{P}^{-1}\right)^{\mathrm{T}} \boldsymbol{\alpha} </m> .
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            【结论】应用定义  <m> A \alpha=\lambda \boldsymbol{\alpha} </m>  </p> 
 
-        <!-- Q22 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                            <p> 解: 令  <m> \boldsymbol{B}=\left(\boldsymbol{P}^{-1} \boldsymbol{A} \boldsymbol{P}\right)^{\mathrm{T}}=\boldsymbol{P}^{\mathrm{T}} \boldsymbol{A}^{\mathrm{T}}\left(\boldsymbol{P}^{-1}\right)^{\mathrm{T}}=\boldsymbol{P}^{\mathrm{T}}\boldsymbol{A}^{\mathrm{T}}\left(\boldsymbol{P}^{\mathrm{T}}\right)^{-1} </m> 
+                        上式右乘  <m>  \boldsymbol{P}^{\mathrm{T}} </m> ,  <m> \boldsymbol{B} \boldsymbol{P}^{\mathrm{T}}=\boldsymbol{P}^{\mathrm{T}} \boldsymbol{A}^{\mathrm{T}} </m>  
+                            <m> \because \boldsymbol{A} </m>  为实对称矩阵  <m> \Rightarrow \boldsymbol{A}=\boldsymbol{A}^{\mathrm{T}} </m> ,
+                            <m> \therefore \boldsymbol{B}\boldsymbol{P}^{\mathrm{T}}=\boldsymbol{P}^{\mathrm{T}} \boldsymbol{A} </m> , 又  <m> \because \boldsymbol{\alpha} </m>  是  <m> \boldsymbol{A} </m>  的属于特征值  <m> \lambda </m>  的特征向量  <m> \Rightarrow \boldsymbol{A} \boldsymbol{\alpha}=\lambda \boldsymbol{\alpha} </m> 
+                        上式右乘  <m> \boldsymbol{\alpha} </m>  ，得  <m> \boldsymbol{B} \boldsymbol{P}^{\mathrm{T}} \boldsymbol{\alpha}=\boldsymbol{P}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{\alpha}=\boldsymbol{P}^{\mathrm{T}} \lambda \boldsymbol{\alpha}=\lambda \boldsymbol{P}^{\mathrm{T}} \boldsymbol{\alpha} </m> ,
+                            <m> \boldsymbol{B}\left(\boldsymbol{P}^{\mathrm{T}} \boldsymbol{\alpha}\right)=\lambda\left(\boldsymbol{P}^{\mathrm{T}} \boldsymbol{\alpha}\right) </m>  故选 (B). 
 
-        <!-- Q23 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                        </p>
+                </answer>
+            </exercise>
+        </exercises>
+    </subsection>
 
-        <!-- Q24 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
 
-        <!-- Q25 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+    <subsection>
+        <title>相似矩阵</title>
 
-        <!-- Q26 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+        <exercises xml:id="exercises-la5_2">
+            <title>练习题</title>   
+            <!-- Q6 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{A}, \boldsymbol{B} </m>  为  <m> n </m>  阶矩阵, 且  <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  相似,  <m> \boldsymbol{E} </m>  为  <m> n </m>  阶单位阵, 则  <m> (\quad) </m>
 
-        <!-- Q27 -->
-        <exercise>
-            <statement>
-                <p>
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \lambda \boldsymbol{E}-\boldsymbol{A}=\lambda \boldsymbol{E}-\boldsymbol{B} </m> 
+                            </p>
+                        </statement>
+                    </choice>
                     
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  有相同的特征值和特征向量
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  相似于一个对角形矩阵
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                <m> t \boldsymbol{E}-\boldsymbol{A} \sim t \boldsymbol{E}-\boldsymbol{B}, t \in \mathrm{R} </m>
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            【结论】  <m> \boldsymbol{A} \sim \boldsymbol{B} \Rightarrow \boldsymbol{A}  </m>  与  <m>  \boldsymbol{B} </m>  有相同的特征值,  <m> |\lambda \boldsymbol{E}-\boldsymbol{A}|=|\lambda \boldsymbol{E}-\boldsymbol{B}|,|\boldsymbol{A}|=|\boldsymbol{B}|, \operatorname{tr}(\boldsymbol{A})=\operatorname{tr}(\boldsymbol{B}) </m> ,  <m> r(\boldsymbol{A})=r(\boldsymbol{B}), \boldsymbol{A}^{\mathrm{T}} \sim \boldsymbol{B}^{\mathrm{T}}, \boldsymbol{A}^{-1} \sim \boldsymbol{B}^{-1}(\boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  可逆  <m> ), \boldsymbol{A}^{*} \sim \boldsymbol{B}^{*}, f(\boldsymbol{A}) \sim f(\boldsymbol{B}) </m>  </p> 
 
-        <!-- Q28 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                           
+                           
+                            <p> 解:  <m> \boldsymbol{A} \sim \boldsymbol{B} \Rightarrow|\lambda \boldsymbol{E}-\boldsymbol{A}|=|\lambda \boldsymbol{E}-\boldsymbol{B}| </m> , 但  <m> \lambda \boldsymbol{E}-\boldsymbol{A}=\lambda \boldsymbol{E}-\boldsymbol{B} </m>  不一定成立 </p> 
+                           
+                            <p>  <m> \boldsymbol{A} \sim \boldsymbol{B} \Rightarrow \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  有相同的特征值, 但特征向量不一定相同 </p> 
+                           
+                            <p>  <m> \boldsymbol{A} \sim \boldsymbol{B}, \Rightarrow \boldsymbol{P}^{-1} \boldsymbol{A P}=\boldsymbol{B} </m>  ，但  <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  不一定能对角化 </p> 
+                           
+                            <p> (D)  <m>  t \boldsymbol{E}-\boldsymbol{A} \sim t \boldsymbol{E}-\boldsymbol{B}, t \in \mathrm{R}  </m>  成立
+                        </p>
+                  </answer>
+            </exercise>
+    
 
-        <!-- Q29 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <!-- Q7 -->
+            <exercise>
+                <statement>
+                    <p>
+                        已知  <m> 4 </m>  阶矩阵  <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  相似, 矩阵  <m> \boldsymbol{A} </m>  的特征值  <m> \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5} </m> ,则  <m> \left|\boldsymbol{B}^{-1}-\boldsymbol{E}\right|= </m>  ______
 
-        <!-- Q30 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        【结论】(1)  <m> \boldsymbol{A} \sim \boldsymbol{B} \Rightarrow\left\{\begin{array}{l}f(\boldsymbol{A}) \sim f(\boldsymbol{B}) \\ \boldsymbol{A} \text { 与 } \boldsymbol{B} \text { 有相同的特征值 }\end{array}\right. </m>  </p> 
 
-        <!-- Q31 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <p> (2)  <m> \boldsymbol{A} \rightarrow \lambda, f(\boldsymbol{A}) \rightarrow f(\lambda) </m>  </p> 
 
-        <!-- Q32 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <p> 解:  <m> \boldsymbol{A} \sim \boldsymbol{B} \Rightarrow \boldsymbol{A}^{-1}-\boldsymbol{E} \sim \boldsymbol{B}^{-1}-\boldsymbol{E} \Rightarrow \boldsymbol{A}^{-1}-\boldsymbol{E} </m>  与  <m> \boldsymbol{B}^{-1}-\boldsymbol{E} </m>  有相同的特征值,因为矩阵  <m> \boldsymbol{A} </m>  的特征值为  <m> \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5} </m> , </p> 
 
-        <!-- Q33 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <p> 所以  <m> \boldsymbol{A}^{-1}-\boldsymbol{E} </m>  与  <m> \boldsymbol{B}^{-1}-\boldsymbol{E} </m>  的特征值为  <m> 1,2,3,4 </m> ,故  <m> \left|\boldsymbol{B}^{-1}-\boldsymbol{E}\right|=1 \cdot 2 \cdot 3 \cdot 4=24 </m> . 
+                        
+                    </p>
+                </answer>
+            </exercise>
 
-        <!-- Q34 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <!-- Q8 -->
+            <exercise>
+                <statement>
+                    <p>
+                        下列矩阵中, 与矩阵  <m> \left(\begin{array}{lll}1  &amp;  1  &amp;  0 \\ 0  &amp;  1  &amp;  1 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m>  相似的为  <m> (\quad) </m> .
 
-        <!-- Q35 -->
-        <exercise>
-            <statement>
-                <p>
+                    </p>
+                </statement>
+                <choices>
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                <m> \left(\begin{array}{ccc}1  &amp;  1  &amp;  -1 \\ 0  &amp;  1  &amp;  1 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m>
+                            </p>
+                        </statement>
+                    </choice>
                     
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \left(\begin{array}{ccc}1  &amp;  0  &amp;  -1 \\ 0  &amp;  1  &amp;  1 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m>
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \left(\begin{array}{ccc}1  &amp;  1  &amp;  -1 \\ 0  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m>
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \left(\begin{array}{ccc}1  &amp;  0  &amp;  -1 \\ 0  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m> 
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            解: 已知矩阵与四个选项中的矩阵的特征多项式均为  <m> (\lambda-1)^{3} </m>  </p> 
 
-        <!-- Q36 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                            <p> 结论:  <m> \boldsymbol{A} \sim \boldsymbol{B} \Leftrightarrow \boldsymbol{A}-\boldsymbol{E} \sim \boldsymbol{B}-\boldsymbol{E} \Rightarrow r(\boldsymbol{A}-\boldsymbol{E})=r(\boldsymbol{B}-\boldsymbol{E}) </m>  </p> 
+                           
+                            <p> 利用逆否命题:  <m> r(\boldsymbol{A}-\boldsymbol{E}) \neq r(\boldsymbol{B}-\boldsymbol{E}) </m> , 则  <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  不相似 </p> 
+                           
+                            <p> 记  <m> \boldsymbol{A}=\left(\begin{array}{lll}1  &amp;  1  &amp;  0 \\ 0  &amp;  1  &amp;  1 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m> , 则  <m> \boldsymbol{E}-\boldsymbol{A}=\left(\begin{array}{ccc}0  &amp;  -1  &amp;  0 \\ 0  &amp;  0  &amp;  -1 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> , 于是  <m> r(\boldsymbol{E}-\boldsymbol{A})=2 </m> . </p> 
+                           
+                            <p> 记  <m> \boldsymbol{B}_{1}=\left(\begin{array}{ccc}1  &amp;  1  &amp;  -1 \\ 0  &amp;  1  &amp;  1 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m> , 则  <m> \boldsymbol{E}-\boldsymbol{B}_{1}=\left(\begin{array}{ccc}0  &amp;  -1  &amp;  1 \\ 0  &amp;  0  &amp;  -1 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> , 于是  <m> r\left(\boldsymbol{E}-\boldsymbol{B}_{1}\right)=2 </m> . </p> 
+                           
+                            <p> 记  <m> \boldsymbol{B}_{2}=\left(\begin{array}{ccc}1  &amp;  0  &amp;  -1 \\ 0  &amp;  1  &amp;  1 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m> , 则  <m> \boldsymbol{E}-\boldsymbol{B}_{2}=\left(\begin{array}{ccc}0  &amp;  0  &amp;  1 \\ 0  &amp;  0  &amp;  -1 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> , 于是  <m> r\left(\boldsymbol{E}-\boldsymbol{B}_{2}\right)=1 </m> . </p> 
+                           
+                            <p> 记  <m> \boldsymbol{B}_{3}=\left(\begin{array}{ccc}1  &amp;  1  &amp;  -1 \\ 0  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m> , 则  <m> \boldsymbol{E}-\boldsymbol{B}_{3}=\left(\begin{array}{ccc}0  &amp;  -1  &amp;  1 \\ 0  &amp;  0  &amp;  0 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> , 于是  <m> r\left(\boldsymbol{E}-\boldsymbol{B}_{3}\right)=1 </m> . </p> 
+                           
+                            <p> 记  <m> \boldsymbol{B}_{4}=\left(\begin{array}{ccc}1  &amp;  0  &amp;  -1 \\ 0  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  1\end{array}\right) </m> , 则  <m> \boldsymbol{E}-\boldsymbol{B}_{4}=\left(\begin{array}{lll}0  &amp;  0  &amp;  1 \\ 0  &amp;  0  &amp;  0 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> , 于是  <m> r\left(\boldsymbol{E}-\boldsymbol{B}_{4}\right)=1 </m> . </p> 
+                           
+                            <p> 由此可见, 只有  <m> \boldsymbol{E}-\boldsymbol{B}_{1} </m>  与  <m> \boldsymbol{E}-\boldsymbol{A} </m>  的秩相等 选(A).
+                        </p>
+                  </answer>
+            </exercise>
+    
 
-        <!-- Q37 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <!-- Q9 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{\alpha}, \boldsymbol{\beta} </m>  为  <m> 3 </m>  维列向量, 若矩阵  <m> \boldsymbol{\alpha} \boldsymbol{\beta}^{\mathrm{T}} </m>  相似于  <m> \left(\begin{array}{lll}2  &amp;  0  &amp;  0 \\ 0  &amp;  0  &amp;  0 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> ,则  <m> \boldsymbol{\beta}^{\mathrm{T}} \boldsymbol{\alpha}=  </m>  ______ 
 
-        <!-- Q38 -->
-        <exercise>
-            <statement>
-                <p>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        【结论】(1)  <m> \boldsymbol{A} \sim \boldsymbol{B} \Rightarrow \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  有相同的特征值 </p> 
+
+                    <p> (2)  <m> \boldsymbol{\beta}^{\mathrm{T}} \boldsymbol{\alpha} </m>  是  <m> \boldsymbol{\alpha} \boldsymbol{\beta}^{\mathrm{T}}  </m>  的主对角线元素之和，即  <m>  \boldsymbol{\beta}^{\mathrm{T}} \boldsymbol{\alpha}=\operatorname{tr}\left(\boldsymbol{\alpha} \boldsymbol{\beta}^{\mathrm{T}}\right) </m> 
+                    (3)  <m> \operatorname{tr}(\boldsymbol{A})=\lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}(\boldsymbol{A} </m>  的主对角元素之和等于  <m> \boldsymbol{A} </m>  特征值之和  <m> ) </m>  </p> 
+
+                    <p> 解: 因为  <m> \boldsymbol{\alpha} \boldsymbol{\beta}^{\mathrm{T}} </m>  相似于  <m> \left(\begin{array}{lll}2  &amp;  0  &amp;  0 \\ 0  &amp;  0  &amp;  0 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> , 所以  <m> \boldsymbol{\alpha} \boldsymbol{\beta}^{\mathrm{T}} </m>  的特征值为  <m> 2,0,0 </m> . 又因为  <m> \boldsymbol{\beta}^{\mathrm{T}} \boldsymbol{\alpha} </m>  是  <m> \alpha \boldsymbol{\beta}^{\mathrm{T}} </m>  的主对角线元素之和, 所以  <m> \boldsymbol{\beta}^{\mathrm{T}} \boldsymbol{\alpha}=\operatorname{tr}\left(\boldsymbol{\alpha} \boldsymbol{\beta}^{\mathrm{T}}\right)=2 </m> . 
+                        
+                    </p>
+                </answer>
+            </exercise>
+
+            <!-- Q10 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{A}, \boldsymbol{B} </m>  是可逆矩阵，且  <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  相似，则下列结论错误的是 () 
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{A}^{\mathrm{T}} </m>  与  <m> \boldsymbol{B}^{\mathrm{T}} </m>  相似
+                            </p>
+                        </statement>
+                    </choice>
                     
-                </p>
-            </statement>
-            <answer>
-                <p>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{A}^{-1} </m>  与  <m> \boldsymbol{B}^{-1} </m>  相似
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{A}+\boldsymbol{A}^{\mathrm{T}} </m>  与  <m>  \boldsymbol{B}+\boldsymbol{B}^{\mathrm{T}} </m>  相似
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{A}+\boldsymbol{A}^{-1} </m>  与  <m> \boldsymbol{B}+\boldsymbol{B}^{-1} </m>  相似
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            【结论】  <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  相似  <m> \Rightarrow </m>  存在可逆矩阵  <m> \boldsymbol{P} </m> , 使得  <m> \boldsymbol{B}=\boldsymbol{P}^{-1} \boldsymbol{A} \boldsymbol{P} </m>  </p> 
+
+                            <p> (A)  <m> \boldsymbol{B}^{\mathrm{T}}=\left(\boldsymbol{P}^{-1} \boldsymbol{A} \boldsymbol{P}\right)^{\mathrm{T}}=\boldsymbol{P}^{\mathrm{T}} \boldsymbol{A}^{\mathrm{T}}\left(\boldsymbol{P}^{-1}\right)^{\mathrm{T}}=\boldsymbol{P}^{\mathrm{T}} \boldsymbol{A}^{\mathrm{T}}\left(\boldsymbol{P}^{\mathrm{T}}\right)^{-1} \Rightarrow \boldsymbol{A}^{\mathrm{T}} </m>  与  <m> \boldsymbol{B}^{\mathrm{T}} </m>  相似; </p> 
+                           
+                            <p> (B)  <m> \boldsymbol{B}^{-1}=\left(\boldsymbol{P}^{-1} \boldsymbol{A} \boldsymbol{P}\right)^{-1}=\boldsymbol{P}^{-1} \boldsymbol{A}^{-1} \boldsymbol{P} \Rightarrow \boldsymbol{A}^{-1} </m>  与  <m> \boldsymbol{B}^{-1} </m>  相似; </p> 
+                           
+                            <p> (D)  <m> \boldsymbol{P}^{-1}\left(\boldsymbol{A}+\boldsymbol{A}^{-1}\right) \boldsymbol{P}=\boldsymbol{P}^{-1} \boldsymbol{A}+\boldsymbol{P}^{-1} \boldsymbol{A}^{-1} \boldsymbol{P}=\boldsymbol{B}+\boldsymbol{B}^{-1} \Rightarrow \boldsymbol{A}+\boldsymbol{A}^{-1} </m>  与  <m> \boldsymbol{B}+\boldsymbol{B}^{-1} </m>  相似; </p> 
+                           
+                            <p> (C)  <m> \boldsymbol{P}^{-1}\left(\boldsymbol{A}+\boldsymbol{A}^{\mathrm{T}}\right) \boldsymbol{P}=\boldsymbol{P}^{-1} \boldsymbol{A} \boldsymbol{P}+\boldsymbol{P}^{-1} \boldsymbol{A}^{\mathrm{T}} \boldsymbol{P} </m> .
+                           因为  <m> \boldsymbol{P}^{\mathrm{T}} \boldsymbol{A}^{\mathrm{T}}\left(\boldsymbol{P}^{\mathrm{T}}\right)^{-1}=\boldsymbol{B}^{\mathrm{T}} </m> , 但是   <m> \boldsymbol{P}^{-1} \boldsymbol{A}^{\mathrm{T}} \boldsymbol{P} \neq \boldsymbol{B}^{\mathrm{T}} </m> ,
+                           所以  <m> \boldsymbol{P}^{-1}\left(\boldsymbol{A}+\boldsymbol{A}^{\mathrm{T}}\right) \boldsymbol{P} \neq \boldsymbol{B}+\boldsymbol{B}^{\mathrm{T}}  </m> , 故  <m>  \boldsymbol{A}+\boldsymbol{A}^{\mathrm{T}} </m>  与  <m> \boldsymbol{B}+\boldsymbol{B}^{\mathrm{T}} </m>  相似不正确; 选  <m> \mathbf{C} </m> 
+
+                        </p>
+                  </answer>
+            </exercise>
+    
+
+            <!-- Q11 -->
+            <exercise>
+                <statement>
+                    <p>
+                        矩阵  <m> \left(\begin{array}{lll}1  &amp;  a  &amp;  1 \\ a  &amp;  b  &amp;  a \\ 1  &amp;  a  &amp;  1\end{array}\right) </m>  与  <m> \left(\begin{array}{lll}2  &amp;  0  &amp;  0 \\ 0  &amp;  b  &amp;  0 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m>  相似的充分必要条件为 ( ). 
+
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> a=0, b=2 </m> 
+                            </p>
+                        </statement>
+                    </choice>
                     
-                </p>
-            </answer>
-        </exercise>
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                <m> a=0, b </m>  为任意常数
+                            </p>
+                        </statement>
+                    </choice>
+
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> a=2, b=0 </m> 
+                            </p>
+                        </statement>
+                    </choice>
+
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> a=2, b </m>  为任意常数
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            【分析】  <m> \boldsymbol{A}, \boldsymbol{B} </m>  相似  <m> \Rightarrow \boldsymbol{A}, \boldsymbol{B} </m>  有相同的特征值, 反之不成立 </p> 
+
+                            <p>  <m> \boldsymbol{A}, \boldsymbol{B} </m>  相似  <m> \Leftarrow \boldsymbol{A}, \boldsymbol{B} </m>  有相同的特征值, 且  <m> \boldsymbol{A}, \boldsymbol{B} </m>  可对角化 </p> 
+                           
+                            <p> 实对称矩阵  <m> \boldsymbol{A}, \boldsymbol{B} </m>  相似  <m> \Leftrightarrow \boldsymbol{A}, \boldsymbol{B} </m>  有相同的特征值 </p> 
+                           
+                            <p> 解: 记  <m> \boldsymbol{A}=\left(\begin{array}{ccc}1  &amp;  a  &amp;  1 \\ a  &amp;  b  &amp;  a \\ 1  &amp;  a  &amp;  1\end{array}\right), \boldsymbol{B}=\left(\begin{array}{lll}2  &amp;  0  &amp;  0 \\ 0  &amp;  b  &amp;  0 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> . 若实对称矩阵  <m> \boldsymbol{A}, \boldsymbol{B} </m>  相似  <m> \Leftrightarrow \boldsymbol{A}, \boldsymbol{B} </m>  有相同的特征值  <m> 0,2, b </m> . </p> 
+                           
+                            <p>  <me> \begin{vmatrix}\lambda\boldsymbol{E}-\boldsymbol{A}\end{vmatrix}=\begin{vmatrix}\lambda-1 &amp; -a &amp; -1\\-a &amp; \lambda-b &amp; -a\\-1 &amp; -a &amp; \lambda-1\end{vmatrix}\xrightarrow[c_1+c_3]{r_3-r_1}\begin{vmatrix}\lambda-2 &amp; -a &amp; -1\\-2a &amp; \lambda-b &amp; -a\\0 &amp; 0 &amp; \lambda\end{vmatrix}=\lambda\begin{bmatrix}(\lambda-b)(\lambda-2)-2a^2\end{bmatrix}=0 </me>  </p> 
+                           
+                            <p>  <m> \lambda=2 </m>  代入得  <m> -4 a^{2}=0 </m> , 即  <m> a=0 </m>  于是  <m> |\lambda \boldsymbol{E}-\boldsymbol{A}|=\lambda(\lambda-2)(\lambda-b) . b \in \mathbf{R} </m>  </p> 
+                           
+                            <p> 若  <m> a=0, b </m>  为任意常数,  <m> \boldsymbol{A} </m>  和  <m> \boldsymbol{B} </m>  的特征值为  <m> 0,2, b </m> , 且  <m> \boldsymbol{A} </m>  相似于  <m> \boldsymbol{B} </m> ; 选(B). 
+
+                        </p>
+                </answer>
+		    </exercise>
+
+
+            <!-- Q12 -->
+            <exercise>
+                <statement>
+                    <p>
+                        已知矩阵  <m> \boldsymbol{A}=\left(\begin{array}{ccc}0  &amp;  -1  &amp;  1 \\ 2  &amp;  -3  &amp;  0 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> . 求  <m> \boldsymbol{A}^{99} </m>
+
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解: 利用相似对角化
+                    <me> 
+                    |\lambda \boldsymbol{E}-\boldsymbol{A}|=\left|\begin{array}{ccc}
+                    \lambda  &amp;  1  &amp;  -1 \\
+                    -2  &amp;  \lambda+3  &amp;  0 \\
+                    0  &amp;  0  &amp;  \lambda
+                    \end{array}\right|=\left|\begin{array}{cc}
+                    \lambda  &amp;  1 \\
+                    -2  &amp;  \lambda+3
+                    \end{array}\right|\lambda 
+                    =\lambda(\lambda+1)(\lambda+2) 
+                    </me>  </p> 
+
+                    <p> 于是  <m> \boldsymbol{A} </m>  的特征值为  <m> 0,-1,-2 </m>  . </p> 
+
+                    <p> 下面算  <m> \boldsymbol{A} </m>  的特征向量, 当  <m> \lambda_{1}=0 </m>  时, 解  <m> -\boldsymbol{A x}=\mathbf{0} </m>  方程, 即解  <m> \boldsymbol{A x}=\mathbf{0} </m>  </p> 
+
+                    <p>  </p> 
+
+                    <p>  <m> \boldsymbol{A}=\left(\begin{array}{ccc}0  &amp;  -1  &amp;  1 \\ 2  &amp;  -3  &amp;  0 \\ 0  &amp;  0  &amp;  0\end{array}\right) \xrightarrow[-r_{2}]{r_1\leftrightarrow r_{2}}\left(\begin{array}{ccc}2  &amp;  -3  &amp;  0 \\ 0  &amp;  1  &amp;  -1 \\ 0  &amp;  0  &amp;  0\end{array}\right)\xrightarrow[]{r_1+ 3r_{2}}\left(\begin{array}{ccc}2  &amp;  0  &amp;  -3 \\ 0  &amp;  1  &amp;  -1 \\ 0  &amp;  0  &amp;  0\end{array}\right)  </m>  </p> 
+
+                    <p> 同解方程  <m> \left\{\begin{array}{c}2 x_{1}=3 x_{3}, \\ x_{2}=x_{3},\end{array}\right. </m>  得特征向量为  <m> \alpha_{1}=\left(\begin{array}{l}3 \\ 2 \\ 2\end{array}\right) </m>  </p> 
+
+                    <p> 当  <m> \lambda_{2}=-1 </m>  时, 解  <m> (-\boldsymbol{E}-\boldsymbol{A}) \boldsymbol{x}=\mathbf{0} </m>  方程, </p> 
+
+                    <p>  <me> -\boldsymbol{E}-\boldsymbol{A}=\left(\begin{array}{ccc}-1  &amp;  1  &amp;  -1 \\ -2  &amp;  2  &amp;  0 \\ 0  &amp;  0  &amp;  -1\end{array}\right) \xrightarrow[-r_{1}]{r_1- r_{3}}\left(\begin{array}{ccc}1  &amp;  -1  &amp;  0 \\ -2  &amp;  2  &amp;  0 \\ 0  &amp;  0  &amp;  -1\end{array}\right)\xrightarrow[]{r_1+ 3r_{2}}\left(\begin{array}{ccc}1  &amp;  -1  &amp;  0 \\ 0  &amp;  0  &amp;  1 \\ 0  &amp;  0  &amp;  0\end{array}\right)  </me>  </p> 
+
+                    <p> 同解方程  <m> \left\{\begin{array}{c} x_{1}= x_{2}, \\ x_{3}=0,\end{array}\right. </m>  得特征向量为  <m> \alpha_{2}=\left(\begin{array}{l}1 \\ 1 \\ 0\end{array}\right) </m>  </p> 
+
+                    <p>  <m> \lambda \boldsymbol{E}-\boldsymbol{A}=\left(\begin{array}{ccc}\lambda  &amp;  1  &amp;  -1 \\ -2  &amp;  \lambda+3  &amp;  0 \\ 0  &amp;  0  &amp;  \lambda\end{array}\right) </m>  当  <m> \lambda_{3}=-2 </m>  时, 解  <m> (-2 \boldsymbol{E}-\boldsymbol{A}) \boldsymbol{x}=\mathbf{0} </m>  </p> 
+
+                    <p>  <me>  -2 \boldsymbol{E}-\boldsymbol{A}=\left(\begin{array}{ccc}-2  &amp;  1  &amp;  -1 \\ -2  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  -2\end{array}\right) \xrightarrow[r_{1}+r_{3}]{ -\frac 12 r_{3}}\left(\begin{array}{ccc}-2  &amp;  1  &amp;  0 \\ -2  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  1\end{array}\right) \rightarrow\left(\begin{array}{ccc}2  &amp;  -1  &amp;  0 \\ 0  &amp;  0  &amp;  1 \\ 0  &amp;  0  &amp;  0\end{array}\right)  </me>  </p> 
+
+                    <p> 同解方程  <m> \left\{\begin{array}{c}2 x_{1}=x_{2}, \\ x_{3}=0,\end{array}\right. </m>  得特征向量为  <m> \boldsymbol{\alpha}_{3}=\left(\begin{array}{l}1 \\ 2 \\ 0\end{array}\right) </m>  </p> 
+
+                    <p> 因此  <m> \boldsymbol{P}=\left(\begin{array}{lll}3  &amp;  1  &amp;  1 \\ 2  &amp;  1  &amp;  2 \\ 2  &amp;  0  &amp;  0\end{array}\right) </m> , 则   <m> \boldsymbol{P}^{-1} \boldsymbol{A P}=\left(\begin{array}{lll}0  &amp;   &amp;  \\  &amp;  -1  &amp;  \\  &amp;   &amp;  -2\end{array}\right) </m>  , 
+                    所以  <m> \boldsymbol{A}=\boldsymbol{P}\left(\begin{array}{lll}0  &amp;   &amp;  \\  &amp;  -1  &amp;  \\  &amp;   &amp;  -2\end{array}\right) \boldsymbol{P}^{-1} </m>  </p> 
+
+                    <p>  <me>  \begin{array}{l}\boldsymbol{A}^{99}=\boldsymbol{P}\left(\begin{array}{ccc}0  &amp;   &amp;  \\  &amp;  -1  &amp;  \\  &amp;   &amp;  -2\end{array}\right)^{99} \boldsymbol{P}^{-1}\\=\left(\begin{array}{lll}3  &amp;  1  &amp;  1 \\ 2  &amp;  1  &amp;  2 \\ 2  &amp;  0  &amp;  0\end{array}\right)\left(\begin{array}{lll}0 &amp;  &amp;  \\  &amp;  (-1)^{99} &amp;  \\ &amp;   &amp; (-2)^{99}\end{array}\right)\left(\begin{array}{ccc}0  &amp;  0  &amp;  \frac{1}{2} \\ 2  &amp;  -1  &amp;  -2 \\ -1  &amp;  1  &amp;  \frac{1}{2}\end{array}\right) \\ =\left(\begin{array}{ccc}2^{99}-2  &amp;  1-2^{99}  &amp;  2-2^{98} \\ 2^{100}-2  &amp;  1-2^{100}  &amp;  2-2^{99} \\ 0  &amp;  0  &amp;  0\end{array}\right) \\\end{array}  </me>
+                        
+                    </p>
+                </answer>
+            </exercise>
+
+            <!-- Q13 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{A} </m>  为  <m> 3 </m>  阶实对称矩阵,  <m> \boldsymbol{A} </m>  的秩为  <m> 2 </m>  , 且  <m> \boldsymbol{A}\left(\begin{array}{cc}1  &amp;  1 \\ 0  &amp;  0 \\ -1  &amp;  1\end{array}\right)=\left(\begin{array}{cc}-1  &amp;  1 \\ 0  &amp;  0 \\ 1  &amp;  1\end{array}\right) </m> . </p> 
+
+                    <p> (I)求  <m> \boldsymbol{A} </m>  的所有特征值和特征向量; 
+                    (II)求矩阵  <m> \boldsymbol{A} </m> . 
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解：(I)  <m> \boldsymbol{A}\left(\begin{array}{c}1 \\ 0 \\ -1\end{array}\right)=-\left(\begin{array}{c}1 \\ 0 \\ -1\end{array}\right), \boldsymbol{A}\left(\begin{array}{l}1 \\ 0 \\ 1\end{array}\right)=\left(\begin{array}{l}1 \\ 0 \\ 1\end{array}\right) </m> .
+                        所以  <m> 1,-1 </m>  为  <m> \boldsymbol{A} </m>  的特征值,
+                        因为  <m> r(\boldsymbol{A})=2 \Rightarrow|\boldsymbol{A}|=0 </m> , 所以  <m> 0 </m>  为  <m> \boldsymbol{A} </m>  的特征值. </p> 
+
+                        <p>  <m> \boldsymbol{\alpha}_{1}=(1,0,1)^{\mathrm{T}} </m>  与  <m> \boldsymbol{\alpha}_{2}=(1,0,-1)^{\mathrm{T}} </m>  分别为特征值  <m> 1 </m>  与  <m> -1 </m>  的特征向量,设  <m> \boldsymbol{\xi}=\left(x_{1}, x_{2}, x_{3}\right)^{\mathrm{T}} </m>  为  <m> 0 </m>  的特征向量.  <m> \boldsymbol{\xi} </m>  与  <m> \boldsymbol{\alpha}, \boldsymbol{\alpha}_{2} </m>  都正交, 则有  <m> \left\{\begin{array}{l}x_{1}+x_{3}=0 \\ x_{1}-x_{3}=0\end{array} \Rightarrow\left\{\begin{array}{l}x_{1}=0 \\ x_{3}=0\end{array}\right.\right. </m>  所以  <m> \boldsymbol{\xi}=k_{3}(0,1,0)^{\mathrm{T}} </m> , <m> k_{3}  </m>  为任意非零常数.  <m> \boldsymbol{A} </m>  的全部特征值为  <m> 1,-1,0 </m> , 其对应的所有特征向量为,  <m> k_{1}(1,0,1)^{\mathrm{T}}, k_{2}(1,0,-1)^{\mathrm{T}}, k_{3}(0,1,0)^{\mathrm{T}} </m>  .  <m> k_{1}, k_{2}, k_{3} </m>  为任意非零常数. </p> 
+
+                        <p> (II) 法1: 可逆矩阵  <m> \boldsymbol{P}=\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\xi}\right) </m> , 所以  <m> \boldsymbol{A}=\boldsymbol{P}\left(\begin{array}{ccc}1  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  1 \\ 1  &amp;  -1  &amp;  0\end{array}\right) </m> , 使得  <m> \boldsymbol{P}^{-1} \boldsymbol{A} \boldsymbol{P}=\boldsymbol{\Lambda}=\left(\begin{array}{lll}1  &amp;   &amp;  \\  &amp;  -1  &amp;  \\  &amp;   &amp;  0\end{array}\right) </m> , 所以 </p> 
+
+                        <p>  <me> \begin{array}{l} \boldsymbol{A}=\boldsymbol{P}\left(\begin{array}{ccc}1  &amp;   &amp;  \\  &amp;  -1  &amp;  \\  &amp;   &amp;  0\end{array}\right) \boldsymbol{P}^{-1} \\ =\left(\begin{array}{ccc}1  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  1 \\ 1  &amp;  -1  &amp;  0\end{array}\right)\left(\begin{array}{ccc}1  &amp;   &amp;  \\  &amp;  -1  &amp;  \\  &amp;   &amp;  0\end{array}\right)\left(\begin{array}{ccc}1  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  1 \\ 1  &amp;  -1  &amp;  0\end{array}\right)^{-1}\\=\left(\begin{array}{ccc}1  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  1 \\ 1  &amp;  -1  &amp;  0\end{array}\right)\left(\begin{array}{ccc}1  &amp;  &amp;  \\  &amp; -1  &amp; \\  &amp;  &amp; 0\end{array}\right)\left(\begin{array}{ccc}\frac{1}{2}  &amp;  0  &amp;  \frac{1}{2} \\ \frac{1}{2}  &amp;  0  &amp;  -\frac{1}{2} \\ 0  &amp;  1  &amp;  0\end{array}\right)\\=\left(\begin{array}{ccc}1  &amp;  -1  &amp;  0 \\ 0  &amp;  0  &amp;  0 \\ 1  &amp;  1  &amp;  0\end{array}\right)\left(\begin{array}{ccc}\frac{1}{2}  &amp;  0  &amp;  \frac{1}{2} \\ \frac{1}{2}  &amp;  0  &amp;  -\frac{1}{2} \\ 0  &amp;  1  &amp;  0\end{array}\right)\\=\left(\begin{array}{ccc}0  &amp;  0  &amp;  1 \\ 0  &amp;  0  &amp;  0 \\ 1  &amp;  0  &amp;  0\end{array}\right) \end{array} </me>  </p> 
+
+                        <p> 即  <m> \boldsymbol{A}=\left(\begin{array}{lll}0  &amp;  0  &amp;  1 \\ 0  &amp;  0  &amp;  0 \\ 1  &amp;  0  &amp;  0\end{array}\right) </m> . </p> 
+
+                        <p> (II)法2: 对  <m> 1,-1,0 </m>  的所有特征向量进行单位化, </p> 
+
+                        <p>  <me> \boldsymbol{\eta}_{1}=\frac{1}{\sqrt{2}}(1,0,1)^{\mathrm{T}}, \boldsymbol{\eta}_{2}=\frac{1}{\sqrt{2}}(1,0,-1)^{\mathrm{T}},  \boldsymbol{\eta}_{3}=(0,1,0)^{\mathrm{T}}, </me>  </p> 
+
+                        <p> 则   <m> \boldsymbol{Q}=\left(\boldsymbol{\eta}_{1}, \boldsymbol{\eta}_{2}, \boldsymbol{\eta}_{3}\right) </m>  为正交矩阵, 且  <m> \boldsymbol{Q}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{Q}=\boldsymbol{Q}^{-1} \boldsymbol{A} \boldsymbol{Q}=\left(\begin{array}{ccc}1  &amp;  \\ &amp;  -1  &amp;  \\ &amp;   &amp;  0\end{array}\right), </m>  </p> 
+
+                        <p> 所以 
+                        <me> 
+                        \begin{array}{l}
+                        \boldsymbol{A}=\boldsymbol{Q}\left(\begin{array}{lll}1  &amp;   &amp;  \\  &amp;  -1  &amp;  \\  &amp;   &amp;  0\end{array}\right) \boldsymbol{Q}^{-1}=\boldsymbol{Q}\left(\begin{array}{lll}1  &amp;   &amp;  \\  &amp;  -1  &amp;  \\  &amp;   &amp;  0\end{array}\right) \boldsymbol{Q}^{\mathrm{T}}\\
+                        =\left(\begin{array}{ccc}
+                        \frac{1}{\sqrt{2}}  &amp;  \frac{1}{\sqrt{2}}  &amp;  0 \\
+                        0  &amp;  0  &amp;  1 \\
+                        \frac{1}{\sqrt{2}}  &amp;  -\frac{1}{\sqrt{2}}  &amp;  0
+                        \end{array}\right)\left(\begin{array}{lll}
+                        1  &amp;   &amp;  \\
+                        &amp;  -1  &amp;  \\
+                        &amp;   &amp;  0
+                        \end{array}\right)\left(\begin{array}{ccc}
+                        \frac{1}{\sqrt{2}}  &amp;  0  &amp;  \frac{1}{\sqrt{2}} \\
+                        \frac{1}{\sqrt{2}}  &amp;  0  &amp;  -\frac{1}{\sqrt{2}} \\
+                        0  &amp;  1  &amp;  0
+                        \end{array}\right)\\=\left(\begin{array}{ccc}
+                        \frac{1}{\sqrt{2}}  &amp;  -\frac{1}{\sqrt{2}}  &amp;  0 \\
+                        0  &amp;  0  &amp;  0 \\
+                        \frac{1}{\sqrt{2}}  &amp;  \frac{1}{\sqrt{2}}  &amp;  0
+                        \end{array}\right)\left(\begin{array}{ccc}
+                        \frac{1}{\sqrt{2}}  &amp;  0  &amp;  \frac{1}{\sqrt{2}} \\
+                        \frac{1}{\sqrt{2}}  &amp;  0  &amp;  -\frac{1}{\sqrt{2}} \\
+                        0  &amp;  1  &amp;  0
+                        \end{array}\right) \\
+                        =\left(\begin{array}{lll}
+                        0  &amp;  0  &amp;  1 \\
+                        0  &amp;  0  &amp;  0 \\
+                        1  &amp;  0  &amp;  0
+                        \end{array}\right)
+                        \end{array}
+                        </me>  </p> 
+
+                        <p> 即   <m> \boldsymbol{A}=\left(\begin{array}{lll}0  &amp;  0  &amp;  1 \\0  &amp;  0  &amp;  0 \\1  &amp;  0  &amp;  0\end{array}\right) </m>
+                            
+                    </p>
+                </answer>
+            </exercise>
+
+
+        </exercises>
+    </subsection>
+
+    <subsection>
+        <title>二次型</title>    
+
+        <exercises xml:id="exercises-la5_3">
+            <title>练习题</title>   
+            <!-- Q14 -->
+            <exercise>
+                <statement>
+                    <p>
+                        二次型  <m> f\left(x_{1}, x_{2}, x_{3}\right)=x_{1}^{2}+a x_{2}^{2}+x_{3}^{2}+2 x_{1} x_{2}+2 a x_{1} x_{3}+2 x_{2} x_{3} </m>  的秩为  <m> 2 </m>  ,则  <m> a= </m>  ____ 
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解: 二次型  <m> f </m>  的秩为  <m> 2 </m>  , 即矩阵  <m> \boldsymbol{A} </m>  的秩为  <m> 2 </m>  .
+                        由于<m> \boldsymbol{A}=\left(\begin{array}{lll}
+                        1  &amp;  1  &amp;  a \\
+                        1  &amp;  a  &amp;  1 \\
+                        a  &amp;  1  &amp;  1
+                        \end{array}\right) </m> . 由  <m> |\boldsymbol{A}|=-(a-1)^{2}(a+2)=0 </m> , 知  <m> a=1 </m>  或  <m> a=-2 </m> . 易知  <m> a=1 </m>  时,  <m> r(A)=1 </m> ,  <m> a=-2 </m>  时,  <m> r(A)=2 </m> , 故  <m> a=-2 </m> 
+
+                    </p>
+                </answer>
+            </exercise>
+
+            <!-- Q15 -->
+            <exercise>
+                <statement>
+                    <p>
+                        二次型  <m> f\left(x_{1}, x_{2}, x_{3}\right)=x_{1}^{2}+3 x_{2}^{2}+x_{3}^{2}+2 x_{1} x_{2}+2 x_{1} x_{3}+2 x_{2} x_{3} </m> ,则  <m> f </m>  的正惯性指数为_____ 
+
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解：法1:正交变换法  
+                        <m> f </m>  对应的矩阵是  <m> \boldsymbol{A}=\left(\begin{array}{lll}1  &amp;  1  &amp;  1 \\ 1  &amp;  3  &amp;  1 \\ 1  &amp;  1  &amp;  1\end{array}\right) </m> 
+                        
+                        <me>  |\lambda \boldsymbol{E}-\boldsymbol{A}|=\left|\begin{array}{ccc}\lambda-1  &amp;  -1  &amp;  -1 \\ -1  &amp;  \lambda-3  &amp;  -1 \\ -1  &amp;  -1  &amp;  \lambda-1\end{array}\right| \stackrel{r_{1}-r_{3}}{=}\left|\begin{array}{ccc}\lambda  &amp;  0  &amp;  -\lambda \\ -1  &amp;  \lambda-3  &amp;  -1 \\ -1  &amp;  -1  &amp;  \lambda-1\end{array}\right| \stackrel{c_{3}+c_{1}}{=}\left|\begin{array}{ccc}\lambda  &amp;  0  &amp;  0 \\ -1  &amp;  \lambda-3  &amp;  -2 \\ -1  &amp;  -1  &amp;  \lambda-2\end{array}\right| \\=\lambda[(\lambda-3)(\lambda-2)-2]=\lambda\left(\lambda^{2}-5 \lambda+4\right)=\lambda(\lambda-4)(\lambda-1)
+                        </me>  </p> 
+
+                        <p>  <m> \boldsymbol{A} </m>  的特征值为  <m> 0,1,4 </m> ,  <m> f </m>  的正惯性指数为  <m> 2 </m> . </p> 
+
+                        <p> 法2:
+                        <me> 
+                        \begin{array}{l}
+                        f\left(x_{1}, x_{2}, x_{3}\right)=x_{1}^{2}+3 x_{2}^{2}+x_{3}^{2}+2 x_{1} x_{2}+2 x_{1} x_{3}+2 x_{2} x_{3} \\
+                        =\left(x_{1}+x_{2}+x_{3}\right)^{2}+2 x_{2}^{2}=y_{1}^{2}+y_{2}^{2} 
+                        \end{array}
+                        </me>  </p> 
+
+                        <p>  <m> f </m>  的正惯性指数为 <m> 2 </m> 
+                    </p>
+                </answer>
+            </exercise>
+
+            <!-- Q16 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设二次型  <m> f\left(x_{1}, x_{2}, x_{3}\right)=x_{1}^{2}-x_{2}^{2}+2 a x_{1} x_{3}+4 x_{2} x_{3} </m>  负惯性指数为  <m> 1 </m>  ,则  <m> a </m>  的取值范围是_______
+
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解: 由配方法知: 
+                    <me> 
+                    \begin{array}{l}
+                    f\left(x_{1}, x_{2}, x_{3}\right)=x_{1}^{2}-x_{2}^{2}+2 a x_{1} x_{3}+4 x_{2} x_{3} \\
+                    =x_{1}^{2}+2 a x_{1} x_{3}+a^{2} x_{3}^{2}-x_{2}^{2}+4 x_{2} x_{3}-a^{2} x_{3}^{2} \\
+                    =\left(x_{1}+a x_{3}\right)^{2}-\left(x_{2}^{2}-4 x_{2} x_{3}+4 x_{3}^{2}\right)-a^{2} x_{3}^{2}+4 x_{3}^{2} \\
+                    =\left(x_{1}+a x_{3}\right)^{2}-\left(x_{2}-2 x_{3}\right)^{2}+\left(4-a^{2}\right) x_{3}^{2}
+                    \end{array}
+                    </me>  </p> 
+
+                    <p> 由于  <m> f\left(x_{1}, x_{2}, x_{3}\right) </m>  的负惯性指数为  <m> 1,4-a^{2} \geq 0 </m>  从而  <m> -2 \leq a \leq 2 </m> . 
+                    </p>
+                </answer>
+            </exercise>
+
+            <!-- Q17 -->
+            <exercise>
+                <statement>
+                    <p>
+                        已知实二次型  <m> f=a\left(x_{1}^{2}+x_{2}^{2}+x_{3}^{2}\right)+4 x_{1} x_{2}+4 x_{1} x_{3}+4 x_{2} x_{3} </m> 经正交变换可成标准形  <m> f=6 y_{1}^{2} </m> , 则  <m> a= </m>  ______
+
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解:  <m> f </m>  的矩阵是  <m> \boldsymbol{A}=\left(\begin{array}{lll}a  &amp;  2  &amp;  2 \\ 2  &amp;  a  &amp;  2 \\ 2  &amp;  2  &amp;  a\end{array}\right) </m> , 因为  <m> f </m>  标准形为  <m> 6 y_{1}^{2} </m> ,所以  <m> \boldsymbol{A} </m>  特征值为  <m> 6,0,0 </m> . 所以  <m> \boldsymbol{A} </m>  可相似对角化:  <m> \boldsymbol{A} \sim \boldsymbol{\Lambda}=\left(\begin{array}{lll}6  &amp;   &amp;  \\  &amp;  0  &amp;  \\  &amp;   &amp;  0\end{array}\right) \Rightarrow \operatorname{tr}(\boldsymbol{A})=\operatorname{tr}(\boldsymbol{\Lambda}) </m>  </p> 
+
+                    <p> 所以  <m> 3 a=6 </m> , 得  <m> a=2 </m> . 
+                    </p>
+                </answer>
+            </exercise>
+
+            <!-- Q18 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            设  <m> \boldsymbol{A} </m>  是  <m> 3 </m>  阶实对称矩阵,  <m> \boldsymbol{E} </m>  是  <m> 3 </m>  阶单位矩阵. 若  <m> \boldsymbol{A}^{2}+\boldsymbol{A}=2 \boldsymbol{E} </m> ,且  <m> |\boldsymbol{A}|=4 </m> , 则二次型  <m> \boldsymbol{x}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{x} </m>  的规范形为 ( ).
+
+                        </p>
+                    </statement>
+                    <choices>
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> y_{1}^{2}+y_{2}^{2}+y_{3}^{2} </m> 
+                                </p>
+                            </statement>
+                        </choice>
+                        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> y_{1}^{2}+y_{2}^{2}-y_{3}^{2} </m>
+                                </p>
+                            </statement>
+                        </choice>
         
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    <m> y_{1}^{2}-y_{2}^{2}-y_{3}^{2} </m>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> -y_{1}^{2}-y_{2}^{2}-y_{3}^{2} </m> 
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                解: 设  <m> \lambda </m>  为  <m> \boldsymbol{A} </m>  的一个特征值,  <m> \alpha </m>  为属于特征值  <m> \lambda </m>  的特征向量.
+                                由于  <m> \boldsymbol{A}^{2}+\boldsymbol{A}=2 \boldsymbol{E} </m>  可得  <m> \left(\lambda^{2}+\lambda-2\right) \boldsymbol{\alpha}=\mathbf{0}  </m> . 又  <m>  \boldsymbol{\alpha} </m>  为非零向量, 故  <m> \lambda^{2}+\lambda-2=0 </m> . </p> 
+                                
+                                 <p> 解得  <m> \boldsymbol{A} </m>  的特征值只能为  <m> \lambda=1 </m>  或  <m> \lambda=-2 </m> .
+                                又因为  <m> |\boldsymbol{A}|=4 </m> , 所以  <m> \boldsymbol{A} </m>  的特征值应为  <m> -2,-2,1 </m> .
+                                所以二次型的正惯性指数为  <m> 1 </m>  , 负惯性指数为  <m> 2 </m>  .
+                                只有  <m> (\mathbf{C}) y_{1}^{2}-y_{2}^{2}-y_{3}^{2} </m>  满足, 所以选  <m> (\mathbf{C}) </m> .
+                            </p>
+                    </answer>
+                </exercise>
+    
+
+            <!-- Q19 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            设二次型  <m> f\left(x_{1}, x_{2}, x_{3}\right) </m>  在正交变换  <m> \boldsymbol{x}=\boldsymbol{P} \boldsymbol{y} </m>  下的标准形为  <m> 2y_{1}^{2}+y_{2}^{2}-y_{3}^{2} </m> , 其中  <m> \boldsymbol{P}=\left(\boldsymbol{e}_{1}, \boldsymbol{e}_{2}, \boldsymbol{e}_{3}\right) </m> .若  <m> \boldsymbol{Q}=\left(\boldsymbol{e}_{1},-\boldsymbol{e}_{3}, \boldsymbol{e}_{2}\right) </m> , 则  <m> f\left(x_{1}, x_{2}, x_{3}\right) </m> 在正交变换  <m> \boldsymbol{x}=\boldsymbol{Q} \boldsymbol{y} </m>  下的标准形为( ). 
+
+                        </p>
+                    </statement>
+                    <choices>
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    <m> 2 y_{1}^{2}-y_{2}^{2}+y_{3}^{2} </m>
+                                </p>
+                            </statement>
+                        </choice>
+                        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> 2 y_{1}^{2}+y_{2}^{2}-y_{3}^{2} </m>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> 2 y_{1}^{2}-y_{2}^{2}-y_{3}^{2} </m> 
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> 2 y_{1}^{2}+y_{2}^{2}+y_{3}^{2} </m>
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                解: 因为  <m> f\left(x_{1}, x_{2}, x_{3}\right) </m>  的标准形为  <m> 2 y_{1}^{2}+y_{2}{ }^{2}-y_{3}^{2} </m> . 所以特征值为  <m> 2,1,-1 </m> .  <m> \boldsymbol{e}_{1} </m>  是  <m> 2 </m>  对应的特征向量,  <m> \boldsymbol{e}_{2} </m>  是  <m> 1 </m>  对应的特征向量,  <m> \boldsymbol{e}_{3} </m>  是  <m> -1 </m>  对应的特征向量.由于  <m> -1 </m>  的对应的特征向量是  <m> k e_{3}(k \neq 0) </m> , 故  <m> -e_{3} </m>  是对应于  <m> -1 </m>  的特征向量.从而  <m> e_{1},-\boldsymbol{e}_{3}, \boldsymbol{e}_{2} </m>  分别是对应于特征值  <m> 2,-1,1 </m>  的特征向量. </p> 
+
+                                <p> 因此  <m> f\left(x_{1}, x_{2}, x_{3}\right) </m>  在正交变换  <m> \boldsymbol{x}=\boldsymbol{Q} \boldsymbol{y} </m>  下的标准形为  <m> 2 y_{1}{ }^{2}-y_{2}^{2}+y_{3}^{2} </m> ; 所以选(A) 
+
+                            </p>
+                    </answer>
+                </exercise>
+    
+        
+        </exercises>
+    </subsection>
 
 
-    </exercises>
+    <subsection>
+        <title>矩阵的相似与合同</title>    
+        
+        <exercises xml:id="exercises-la5_4">
+            <title>练习题</title>   
+            <!-- Q20 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            设矩阵  <m> \boldsymbol{A}=\left(\begin{array}{ccc}2  &amp;  -1  &amp;  -1 \\ -1  &amp;  2  &amp;  -1 \\ -1  &amp;  -1  &amp;  2\end{array}\right), \boldsymbol{B}=\left(\begin{array}{lll}1  &amp;  0  &amp;  0 \\ 0  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> , 则  <m> \boldsymbol{A}  </m>  与  <m>  \boldsymbol{B}(\quad) </m> . 
+
+                        </p>
+                    </statement>
+                    <choices>
+                        <choice>
+                            <statement>
+                                <p>
+                                    合同且相似
+                                </p>
+                            </statement>
+                        </choice>
+                        
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    合同但不相似
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    不合同但相似
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    不合同也不相似
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                解: 令  <m> |\lambda \boldsymbol{E}-\boldsymbol{A}|=\left|\begin{array}{ccc}\lambda-2  &amp;  1  &amp;  1 \\ 1  &amp;  \lambda-2  &amp;  1 \\ 1  &amp;  1  &amp;  \lambda-2\end{array}\right|=\lambda(\lambda-3)^{2}=0 </m> ,
+                                <m> \boldsymbol{A} </m>  的特征值为  <m> 3,3,0 </m> .  <m> B </m>  的特征值为  <m> 1,1,0 </m> . 故  <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  不相似.
+                                <m> \boldsymbol{A} </m>  正惯性指数为  <m> 2 </m>  , 负惯性指数为  <m>  0 </m> ,  <m> \boldsymbol{B} </m>  与  <m> \boldsymbol{A} </m>  正惯性指数相同.
+                               故  <m> \boldsymbol{A} </m>  与  <m> \boldsymbol{B} </m>  合同. 选(B) 
+                            </p>
+                    </answer>
+                </exercise>
+    
+
+        </exercises>
+    </subsection>
+
+
+    <subsection>
+        <title>正定二次型</title>    
+        
+        <exercises xml:id="exercises-la5_5">
+            <title>练习题</title>   
+            <!-- Q21 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            下列矩阵中, 正定矩阵是   <m> (\quad) </m>
+                        </p>
+                    </statement>
+                    <choices>
+                        <choice>
+                            <statement>
+                                <p>
+                                    <me> 
+                                        (A)=\left(\begin{array}{ccc}
+                                        1  &amp;  2  &amp;  1 \\
+                                        2  &amp;  5  &amp;  0 \\
+                                        1  &amp;  0  &amp;  -3
+                                        \end{array}\right)</me>
+                                </p>
+                            </statement>
+                        </choice>
+                        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <me>
+                                        (B)=\left(\begin{array}{lll}
+                                        1  &amp;  3  &amp;  4 \\
+                                        3  &amp;  9  &amp;  2 \\
+                                        4  &amp;  2  &amp;  6
+                                        \end{array}\right)</me>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <me>
+                                        (C)=\left(\begin{array}{ccc}
+                                        1  &amp;  2  &amp;  3 \\
+                                        2  &amp;  5  &amp;  7 \\
+                                        3  &amp;  7  &amp;  10
+                                        \end{array}\right)</me>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    <me>
+                                        (D)=\left(\begin{array}{ccc}
+                                        2  &amp;  -2  &amp;  0 \\
+                                        -2  &amp;  5  &amp;  -1 \\
+                                        0  &amp;  -1  &amp;  2
+                                        \end{array}\right) 
+                                         </me> 
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                解: (A)中  <m> a_{33}=-3 \lt 0 </m> , 同时  <m> |\boldsymbol{A}|=-8 \lt 0 </m> , 
+                                (B)中二阶顺序主子式  <m> \left|\begin{array}{ll}1  &amp;  3 \\ 3  &amp;  9\end{array}\right|=0 </m> ,
+                                (C)中行列式  <m> |\boldsymbol{A}|=0 </m> , 故它们均不是正定矩阵. 所以选(D).
+                                (D)中三个顺序主子式  <m> \boldsymbol{D}_{1}=2,\boldsymbol{D}_{2}=\left|\begin{array}{cc}2  &amp;  -2 \\ -2  &amp;  5\end{array}\right|=10-4=6 \gt 0 </m> ,
+                                 <me> 
+                                \boldsymbol{D}_{3}=\left|\begin{array}{ccc}
+                                2  &amp;  -2  &amp;  0 \\
+                                -2  &amp;  5  &amp;  -1 \\
+                                0  &amp;  -1  &amp;  2
+                                \end{array}\right|=20-2-8=10 \gt 0 \text { 而知(D)正定. }
+                                 </me>  </p> 
+                                
+                                 <p> 注: 若  <m> f=\boldsymbol{X}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{X} </m>  正定, 则  <m> \left\{\begin{array}{l}a_{i i} \gt 0(i=1,2, \cdots, n) \\ |\boldsymbol{A}| \gt 0\end{array}\right. </m> . 一般应用逆否命题
+
+                            </p>
+                    </answer>
+                </exercise>
+    
+
+            <!-- Q22 -->
+            <exercise>
+                <statement>
+                    <p>
+                        已知矩阵  <m> \boldsymbol{A} </m>  是  <m> n </m>  阶正定矩阵, 证明  <m> \boldsymbol{A}^{-1} </m>  是正定矩阵.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        【分析】  <m> \boldsymbol{A}^{-1} </m>  是正定矩阵, 要先证明  <m> \boldsymbol{A}^{-1} </m>  是对称矩阵, 再证明  <m> \boldsymbol{A}^{-1} </m>  为正定阵. </p> 
+
+                        <p> 证明: 因为  <m> \boldsymbol{A} </m>  正定, 所以  <m> \boldsymbol{A}^{\mathrm{T}}=\boldsymbol{A} </m> , 那么  <m> \left(\boldsymbol{A}^{-1}\right)^{\mathrm{T}}=\left(\boldsymbol{A}^{\mathrm{T}}\right)^{-1}=\boldsymbol{A}^{-1} </m> , 则  <m> \boldsymbol{A}^{-1} </m>  是对称矩阵.下证  <m> \boldsymbol{A}^{-1} </m>  为正定阵: </p> 
+
+                        <p> 法一：设矩阵  <m> \boldsymbol{A} </m>  的特征值为  <m> \lambda_{1}, \lambda_{2}, \cdots, \lambda_{n} </m> , 因为矩阵  <m> \boldsymbol{A} </m>  正定,则  <m> \lambda_{i} \gt 0(i=1,2, \cdots, n) </m> . 因此  <m> \boldsymbol{A}^{-1} </m>  的特征值为  <m> \frac{1}{\lambda_{1}}, \frac{1}{\lambda_{2}}, \cdots, \frac{1}{\lambda_{n}} </m> , 知  <m> \frac{1}{\lambda_{i}} \gt 0 </m> . <m> \lambda_{i} \gt 0(i=1,2, \cdots, n) </m> . 所以  <m> \boldsymbol{A}^{-1} </m>  是正定矩阵. </p> 
+
+                        <p> 法二：因为矩阵  <m> \boldsymbol{A} </m>  正定，故存在可逆矩阵  <m> \boldsymbol{C} </m>  使  <m> \boldsymbol{C}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{C}=\boldsymbol{E} </m> .两边取逆, 可得  <m> \left(\boldsymbol{C}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{C}\right)^{-1}=\boldsymbol{C}^{-1} \boldsymbol{A}^{-1}\left(\boldsymbol{C}^{\mathrm{T}}\right)^{-1}=\boldsymbol{C}^{-1}\boldsymbol{A}^{-1}\left(\boldsymbol{C}^{-1}\right)^{\mathrm{T}}=\boldsymbol{E} </m> .令  <m> \boldsymbol{P}=\left(\boldsymbol{C}^{-1}\right)^{\mathrm{T}} </m> , 则  <m>  \boldsymbol{P} </m>  可逆且  <m> \boldsymbol{P}^{\mathrm{T}}=\boldsymbol{C}^{-1} </m> , 于是  <m> \boldsymbol{P}^{\mathrm{T}} \boldsymbol{A}^{-1} \boldsymbol{P}=\boldsymbol{E} </m> ,故  <m> \boldsymbol{A}^{-1} </m>  与  <m> \boldsymbol{E} </m>  合同, 所以  <m> \boldsymbol{A}^{-1} </m>  是正定矩阵. 
+                            
+                    </p>
+                </answer>
+            </exercise>
+
+            
+
+
+        </exercises>
+
+    </subsection>
+
 </section>
 
