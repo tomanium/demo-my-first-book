@@ -8,12 +8,35 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> X </m>  服从  <m> N(0,1),\left(X_{1}, X_{2}, \cdots, X_{6}\right) </m>  为来自总体  <m> X </m>  的简单随机样本,
+                <me> 
+                Y=\left(X_{1}+X_{2}+X_{3}\right)^{2}+\left(X_{4}+X_{5}+X_{6}\right)^{2}
+                </me>  </p> 
+
+                <p> 试决定常数  <m> C </m> ,使得  <m> C Y </m>  服从  <m> \chi^{2} </m>  分布. 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 根据正态分布的性质，
+                    <me> 
+                    \begin{array}{l}
+                    X_{1}+X_{2}+X_{3} \sim N(0,3), \\
+                    X_{4}+X_{5}+X_{6} \sim N(0,3),
+                    \end{array}
+                    </me>  </p> 
+
+                    <p> 则  <m> \frac{X_{1}+X_{2}+X_{3}}{\sqrt{3}} \sim N(0,1), \frac{X_{4}+X_{5}+X_{6}}{\sqrt{3}} \sim N(0,1) </m> ,
+                    故  <m> \left(\frac{X_{1}+X_{2}+X_{3}}{\sqrt{3}}\right)^{2} \sim \chi^{2}(1),\left(\frac{X_{4}+X_{5}+X_{6}}{\sqrt{3}}\right)^{2} \sim \chi^{2}(1) </m> ,
+                    因为  <m> X_{1}, X_{2}, \cdots, X_{6} </m>  相互独立及  <m> \chi^{2} </m>  分布的可加性 ,
+                    <me> 
+                    \begin{array}{l}
+                    \left(\frac{X_{1}+X_{2}+X_{3}}{\sqrt{3}}\right)^{2}+\left(\frac{X_{4}+X_{5}+X_{6}}{\sqrt{3}}\right)^{2} \\
+                    =\frac{1}{3}\left[\left(X_{1}+X_{2}+X_{3}\right)^{2}+\left(X_{4}+X_{5}+X_{6}\right)^{2}\right] \sim \chi^{2}(2),
+                    \end{array}
+                    </me>  </p> 
+
+                    <p> 所以  <m> C=\frac{1}{3}, C Y </m>  服从  <m> \chi^{2} </m>  分布. 
                 </p>
             </answer>
         </exercise>
@@ -22,54 +45,192 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> X_{1}, X_{2}, \cdots, X_{15} </m>  是来自总体  <m> X \sim N\left(0,3^{2}\right) </m>  的简单随机样本, 则统计量
+                <me> 
+                Y=\frac{1}{2} \frac{X_{1}^{2}+X_{2}^{2}+\cdots+X_{10}^{2}}{X_{11}^{2}+X_{12}^{2}+\cdots+X_{15}^{2}}
+                </me>  </p> 
+
+                <p> 服从参数为____的____分布.
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m>(2,1)</m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m>(5,10)</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>(10,5)</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>(1,2)</m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解：分子除以  <m> 9: \frac{X_{1}^{2}+X_{2}^{2}+\cdots+X_{10}^{2}}{9}=\displaystyle\sum_{i=1}^{10}\left(\frac{X_{i}}{3}\right)^{2} \sim \chi^{2}(10)  </m> ; </p> 
+
+                        <p> 分母除以  <m> 9: \frac{X_{11}^{2}+X_{12}^{2}+X_{13}^{2}+X_{14}^{2}+X_{15}^{2}}{9}=\displaystyle\sum_{i=11}^{15}\left(\frac{X_{i}}{3}\right)^{2} \sim \chi^{2}(5)  </m> ; </p> 
+                       
+                        <p>  <m> Y=\frac{1}{2} \frac{X_{1}^{2}+X_{2}^{2}+\cdots+X_{10}^{2}}{X_{11}^{2}+X_{12}^{2}+\cdots+X_{15}^{2}}=\frac{\chi^{2}(10) / 10}{\chi^{2}(5) / 5} \sim F(10,5) </m> . 选  <m> C </m>
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q3 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> X\sim N(0,1), X_{1}, X_{2}, \cdots, X_{15} </m>  是来自总体  <m> X </m>  的简单随机样本, 则统计量  <m> \frac{c \sum_{i=1}^{4} X_{i}}{\sqrt{X_{5}^{2}+X_{6}^{2}+X_{7}^{2}}} \sim t(n),(c \gt 0)  </m>  则  <m>  (c, n)  </m>  为  <m>  (\quad)  </m>
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m>(\sqrt{3}, 3)</m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> (\frac{\sqrt{3}}{2}, 3)</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>(\frac{\sqrt{3}}{2}, 4)  </m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>(\sqrt{3}, 2)</m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        分子除以  <m> \sqrt{3}: \frac{c}{\sqrt{3}} \sum_{i=1}^{4} X_{i} \sim N(0,1) \Rightarrow \frac{c}{\sqrt{3}}=\frac{1}{2} \Rightarrow c=\frac{\sqrt{3}}{2} </m>  </p> 
+
+                        <p> 分母除以  <m>  \sqrt{3}: \frac{X_{5}^{2}+X_{6}^{2}+X_{7}^{2}}{3} \sim \chi^{2}(3) / 3 ; \quad \frac{c \sum_{i=1}^{4} X_{i}}{\sqrt{X_{5}^{2}+X_{6}^{2}+X_{7}^{2}}} \sim t(3) \quad  </m>  选 <m> B </m> 
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q4 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设总体  <m> X\sim N(0,1), X_{1}, \ldots, X_{n} </m>  是来自总体的简单随机样本 ,  <m> \bar{X} </m>  为样本均值,  <m> S^{2} </m>  为样本方差, 则 ( ) 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> n \bar{X} \sim N(0,1) </m> 
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice >
+                    <statement>
+                        <p>
+                            <m> n S^{2} \sim \chi^{2}(n) </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \frac{(n-1) \bar{X}}{S} \sim t(n-1) </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> \frac{(n-1) X_{1}^{2}}{\sum\limits_{i=2}^{n} X_{i}^{2}} \sim F(1, n-1) </m> 
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解 :
+                        <me> 
+                       \begin{array}{l}
+                       A: n \bar{X}=\sum_{i=1}^{n} X_{i}, E(n \bar{X})=0, D(n \bar{X})=n \\
+                       B: \frac{(n-1) S^{2}}{\sigma^{2}}=(n-1) S^{2} \sim \chi^{2}(n-1) \\
+                       C: \bar{X} \sim N\left(\mu, \frac{\sigma^{2}}{n}\right) \text { 即 } \bar{X} \sim N\left(0, \frac{\sigma^{2}}{n}\right) 
+                       (n-1) S^{2} \sim \chi^{2}(n-1),\\ \therefore \frac{\frac{\bar{X}}{\sqrt{1 / n}}}{\sqrt{(n-1) S^{2} /(n-1)}}=\frac{\sqrt{n} \bar{X}}{S} \sim t(n-1) \\
+                       D: X_{1}{ }^{2} \sim \chi^{2}(1), \sum\limits_{i=2}^{n} X_{i}{ }^{2} \sim \chi^{2}(n-1), \frac{X_{1}{ }^{2} / 1}{\sum\limits_{i=2}^{n} X_{i}{ }^{2} /(n-1)} \sim F(1, n-1)
+                       \end{array}
+                        </me> 
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q5 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设总体  <m> X </m>  的概率密度为  <m> f(x)=\left\{\begin{array}{l}(\theta+1) x^{\theta}, 0 \leq x \leq 1, \theta \gt -1, \\ 0, \text { other }\end{array}\right. </m> ,  <m> X_{1}, \ldots, X_{n} </m>  为来自总体  <m> X </m>  的简单随机样本。分别用矩估计和极大似然估计法求  <m> \theta </m>  的矩估计量. 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:  (1) <m> EX=\overline{X}, EX=\displaystyle\int_{0}^{1} x(\theta+1) x^{\theta} d x=\frac{\theta+1}{\theta+2}, </m>   <m> \therefore \hat{\theta}_{1}=\frac{1}{1-\overline{X}}-2 </m>  </p> 
+
+                    <p> (2)
+                    <me> 
+                    \begin{aligned}
+                    L(\theta) &amp; =\prod_{i=1}^{n} f\left(x_{i} ; \theta\right)=(\theta+1)^{n} x_{1}^{\theta} \cdot \ldots \cdot x_{n}^{\theta} \quad 0 \leq x_{i} \leq 1 \\
+                    \ln L(\theta) &amp; =n \ln (\theta+1)+\theta\left(\ln x_{1}+\ln x_{2}+\ldots+\ln x_{n}\right) \\
+                    \frac{d \ln L(\theta)}{d \theta} &amp; =\frac{n}{\theta+1}+\sum_{i=1}^{n} \ln x_{i}=0 \\
+                    \therefore \hat{\theta}_{2} &amp; =-\frac{n}{\sum\limits_{i=1}^{n} \ln x_{i}}-1
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -78,12 +239,28 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设总体  <m> X </m>  的概率分布为 
+                <me> 
+                \begin{array}{c||cccc}   X   &amp;  0  &amp;  1  &amp;  2  &amp;  3 \\ \hline P_{X}  &amp; \theta^{2}   &amp;   2 \theta(1-\theta)   &amp;   \theta^{2}   &amp;   1-2 \theta  \end{array}
+                </me> 
+                其中  <m> \theta\left(0 \lt \theta \lt \frac{1}{2}\right) </m>  是未知参数, 利用总体  <m> X </m>  的如下样本值  <m> 3,1,3,0,3,1,2,3 </m> . 求  <m> \theta </m>  的矩估计和极大似然估计值。
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:(1)  <m> E X=2 \theta(1-\theta)+2 \theta^{2}+3(1-2 \theta)=3-4 \theta  </m> 
+                <me>\therefore \hat{\theta}_{1}=\frac{3-\bar{X}}{4}, \because \bar{X}_{1}=2, \therefore \hat{\theta}_{1}=\frac{1}{4}</me>>
+                </p> 
+
+                <p> (2)
+                <me> 
+                \begin{aligned}
+                L(\theta) &amp; =\prod_{i=1}^{n} f\left(x_{i} ; \theta\right)=\theta^{2}(2 \theta(1-\theta))^{2} \theta^{2}(1-2 \theta)^{4}=4 \theta^{6}(1-\theta)^{2}(1-2 \theta)^{4} \\
+                \ln L(\theta) &amp; =\ln 4+6 \ln \theta+2 \ln (1-\theta)+4 \ln (1-2 \theta) \\
+                \frac{d \ln L(\theta)}{d \theta} &amp; =-\frac{6}{\theta}+\frac{-2}{1-\theta}+\frac{-8}{1-2 \theta}=0 \Rightarrow 12 \theta^{2}-14 \theta+3=0 \\
+                &amp; \therefore \hat{\theta}_{2}=\frac{1}{4}, \hat{\theta}_{2}=1(\text { 舍 })
+                \end{aligned}
+                </me> 
                 </p>
             </answer>
         </exercise>
@@ -92,452 +269,344 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> X_{1}, X_{2}, X_{3} </m>  是存在有限数学期望  <m> \mu </m>  和方差  <m> \sigma^{2} </m>  的总体  <m> X </m>  的简单随机样本, 下列统计量是总体X数学期望  <m> \mu </m>  的无偏估计中最有效的为 ( ) 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                           <m>\hat{\mu}=\frac{1}{5} X_{1}+\frac{3}{10} X_{2}+\frac{1}{2} X_{3}  </m> 
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>\hat{\mu}=\frac{1}{3} X_{1}+\frac{1}{4} X_{2}+\frac{5}{12} X_{3} </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \hat{\mu}=\frac{1}{4} X_{1}+\frac{1}{4} X_{2}+\frac{1}{4} X_{3}  </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>\hat{\mu}=\frac{1}{3} X_{1}+\frac{3}{4} X_{2}-\frac{1}{12} X_{3} </m> 
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解:  <m> E(\hat{\mu}) </m>  有线性计算公式, 计算系数  <m> A: \frac{1}{5}+\frac{3}{10}+\frac{1}{2}=1  </m> , 同理  <m>  B, D </m>  中系数代数和是 1 .计算方差的系数值, 越小越有效,  <m> A: \frac{1}{5^{2}}+\frac{3^{2}}{10^{2}}+\frac{1}{2^{2}}=0.38, B: 0.347, D: 0.6805  </m> . 选 <m> B </m> . 
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q8 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设总体  <m> X </m>  的概率分布为  <m> P\{X=1\}=\frac{1-\theta}{2}, P\{X=2\}=P\{X=3\}=\frac{1+\theta}{4} </m> , 利用来自总体的样本值  <m> 1,3,2,2,1,3,1,2 </m> , 可得  <m> \theta </m>  的最大似然估计值为 ( ). 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>  \frac{1}{4}  </m> 
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m>  \frac{3}{8}  </m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>  \frac{1}{2}  </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>  \frac{5}{8}  </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        <m> L(\theta)=[P\{X=1\}]^{3}[P\{X=2\}]^{3}[P\{X=3\}]^{2}=\left(\frac{1-\theta}{2}\right)^{3}\left(\frac{1+\theta}{4}\right)^{5} </m> , </p> 
+
+                        <p> 取对数
+                        <m> \ln L(\theta)=3 \ln (1-\theta)-3 \ln 2+5 \ln (1+\theta)-5 \ln 4 </m> , </p> 
+                       
+                        <p> 求偏导得
+                        <m> \frac{d \ln L(\theta)}{d \theta}=\frac{-3}{1-\theta}+\frac{5}{1+\theta}=\frac{2-8 \theta}{1-\theta^{2}}=0, \theta=1 / 4 </m> . 
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q9 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设总体  <m> X \sim N\left(\mu, \sigma^{2}\right), \sigma^{2} </m>  为已知参数,  <m> X_{1}, \ldots, X_{n} </m>  为来自总体的简单随机样本, 对  <m> \mu </m>  的置信水平为  <m> 1-\alpha </m>  的置信区间, 下列做法中一定能使估计更精确的时() 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            提高置信度  <m> 1- \alpha </m> , 增大样本容量
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            提高置信度  <m> 1-\alpha </m> , 减少样本容量
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            降低置信度  <m> 1-\alpha </m> , 增大样本容量
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            降低置信度  <m> 1- \alpha </m> , 减少样本容量
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        选 <m> C </m> . 估计更精确, 意味着置信区间  <m> L </m>  越短, 取某个值的概率更高,  <m> n </m>  越大减数越小,  <m> 1-a </m>  也低,  <m> a </m>  越大, 都会导致  <m> L </m>  越小 </p> 
+
+                        <p>  <me> 
+                       \begin{array}{|c|c|c|c|}
+                       \hline \text{待估参数}  &amp;  \text{其他参数}  &amp;  \text{枢纽量的分布}  &amp;  \text{置信区间} \\
+                       \hline \mu   &amp;   \sigma^{2}  \text{已知}  &amp;   Z=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)   &amp;   \left(\bar{X}-\frac{\sigma}{\sqrt{n}} z_{\alpha / 2}, \bar{X}+\frac{\sigma}{\sqrt{n}} z_{\alpha / 2}\right)  \\
+                       \hline \mu   &amp;   \sigma^{2}  \text{未知}  &amp;  t=\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)   &amp;   \left(\bar{X}-\frac{S}{\sqrt{n}} t_{\alpha/ 2}(n-1), \bar{X}+\frac{S}{\sqrt{n}} t_{\alpha /2}(n-1)\right)\\
+                       \hline
+                       \end{array}
+                        </me> 
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q10 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设有一批零件的长度服从正态分布  <m> N\left(\mu, \sigma^{2}\right) </m> , 其中  <m> \mu, \sigma^{2} </m>  均未知,现随机抽取  <m> 16 </m>  个零件, 测得样本均值为  <m> \bar{x}=20(\mathrm{~cm}) </m> , 样本标准差为  <m> s=1(\mathrm{~cm}) </m> , 则  <m> \mu </m>  的置信度为  <m> 0.9 </m>  的置信区间为 ( ) 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \left(20-\frac{1}{4} t_{0.05}(16), 20+\frac{1}{4} t_{0.05}(16)\right) </m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \left(20-\frac{1}{4} t_{0.1}(16), 20+\frac{1}{4} t_{0.1}(16)\right) </m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> \left(20-\frac{1}{4} t_{0.05}(15), 20+\frac{1}{4} t_{0.05}(15)\right) </m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \left(20-\frac{1}{4} t_{0.1}(15), 20+\frac{1}{4} t_{0.1}(15)\right) </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                    选C
+
+                    <me> 
+                        \begin{array}{|c|c|c|c|}
+                        \hline \text{待估参数}  &amp;  \text{其他参数}  &amp;  \text{枢纽量的分布}  &amp;  \text{置信区间} \\
+                        \hline \mu   &amp;   \sigma^{2}  \text{已知}  &amp;   Z=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)   &amp;   \left(\bar{X}-\frac{\sigma}{\sqrt{n}} z_{\alpha / 2}, \bar{X}+\frac{\sigma}{\sqrt{n}} z_{\alpha / 2}\right)  \\
+                        \hline \mu   &amp;   \sigma^{2}  \text{未知}  &amp;  t=\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)   &amp;   \left(\bar{X}-\frac{S}{\sqrt{n}} t_{\alpha/ 2}(n-1), \bar{X}+\frac{S}{\sqrt{n}} t_{\alpha /2}(n-1)\right)\\
+                        \hline
+                        \end{array}
+                         </me>
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q11 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    在假设检验时, 对于  <m> H_{0}: \mu=\mu_{0} ; H_{1}: \mu \neq \mu_{0}  </m> , 称 <m> (  \quad) </m> 为犯第一类错误. 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> H_{1} </m>  真, 接受  <m> H_{1} </m> 
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> H_{1} </m>  不真, 接受  <m> H_{1} </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> H_{1} </m>  真, 拒绝  <m> H_{1} </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> H_{1} </m>  不真, 拒绝  <m> H_{1} </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解: 第一类错误, 是弃真错误, 即  <m> H_{0} </m>  是真的, 拒绝接受  <m> H_{0} \Leftrightarrow H_{1} </m>  是假的,接受接受  <m> H_{1}  </m> . 选  <m> B </m>
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q12 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> X_{1}, X_{2}, \cdots, X_{16} </m>  是来自总体  <m> N(\mu, 4)  </m>  的简单随机样本, 考虑假设检验问题:  <m>  H_{0}: \mu \leqslant 10  </m>   <m>  H_{1}: \mu \gt 10, \Phi(x)  </m>  表示标准正态分布函数, 若该检验问题的拒绝域为  <m>  W=\{\bar{X} \geqslant 11\}  </m> , 其中  <m>  \bar{X}=\frac{1}{16} \sum\limits_{i=1}^{16} X_{i}  </m> , 则  <m>  \mu=11.5  </m>  时, 该检验犯第二类错误的概率为 ( ). 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> 1-\Phi(0.5) </m> 
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> 1-\Phi(1) </m> 
+                        </p>
+                    </statement>
+                </choice>
 
-        <!-- Q13 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> 1-\Phi(1.5) </m> 
+                        </p>
+                    </statement>
+                </choice>
 
-        <!-- Q14 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> 1-\Phi(2) </m> 
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        【分析】熟练掌握第一类错误的计算公式  <m> \alpha=P\left\{\right. </m>  拒绝  <m> H_{0} \mid H_{0} </m>  真  <m> \}=P\left\{w \mid H_{0}\right\} </m> , 和第二类错误的计算公式  <m> \beta=P\left\{\right. </m>  接受  <m> H_{0} \mid H_{0} </m>  不真  <m> \}=P\left\{\overline{w} \mid {H}_{1}\right\} </m> ; 熟练掌握标准正态的分布函数的性质; 熟练掌握单个正态总体的性质: </p> 
 
-        <!-- Q15 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q16 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q17 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q18 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q19 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q20 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q21 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q22 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q23 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q24 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q25 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q26 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q27 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q28 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q29 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q30 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q31 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q32 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q33 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q34 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q35 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q36 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q37 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q38 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-        
+                        <p>  <me> 
+                       \begin{array}{ll}
+                       X \sim N\left(\mu, \sigma^{2}\right) \Rightarrow \bar{X} \sim N\left(\mu, \frac{\sigma^{2}}{n}\right), \frac{\sqrt{n}(\bar{X}-\mu)}{\sigma} \sim N(0,1)  &amp;  X \sim N\left(\mu, \sigma^{2}\right) \Rightarrow \frac{\sum\limits_{i=1}^{n}\left(X_{i}-\mu\right)^{2}}{\sigma^{2}} \sim \chi^{2}(n) \\
+                       X \sim N\left(\mu, \sigma^{2}\right) \Rightarrow \frac{(n-1) S^{2}}{\sigma^{2}}=\sum\limits_{i=1}^{n}\left(\frac{X_{i}-\overline{X}^{2}}{\sigma}\right) \sim \chi^{2}(n-1)  &amp;  X \sim N\left(\mu, \sigma^{2}\right) \Rightarrow \frac{n(\overline{X}-\mu)^{2}}{{S}^{2}} \sim {F}(1, n-1)
+                       \end{array}
+                        </me>  </p> 
+                       
+                        <p> 解: 选 <m> B </m> . </p> 
+                       
+                        <p> 第二类错误是取伪错误  <m> \beta=P\left\{\right. </m>  接受  <m> H_{0} \mid H_{0} </m>  不真  <m> \}, \frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1) </m> 
+                        <me> 
+                       \begin{aligned}
+                       \beta=P\{\bar{w} \mid \mu=11.5\} &amp; =P\{\bar{X} \lt 11 \mid \mu=11.5\}\\ &amp; =P\left\{\frac{\bar{X}-11.5}{2 / \sqrt{16}} \lt \frac{11-11.5}{2 / \sqrt{16}}\right\}\\ &amp; =P\left\{\frac{\bar{X}-11.5}{2 / \sqrt{16}} \lt -1\right\} \\
+                        &amp; =\Phi(-1)=1-\Phi(1) .
+                       \end{aligned}
+                        </me>
+                	</p>
+          	</answer>
+		</exercise>
 
 
+    
     </exercises>
 </section>
 
