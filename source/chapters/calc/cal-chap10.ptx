@@ -3,17 +3,27 @@
 <section xml:id="cal-chap10">
   <title>第十章 曲线积分与曲面积分</title>
     <exercises xml:id="exercises-cal10">
+        <title>练习题</title>
+        
             
         <!-- Q1 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> \int_{L} y \mathrm{~d} s </m> , 其中  <m> L </m>  是抛物线  <m> y=\sqrt{x} </m>  上自原点至点  <m> A(1,1) </m>  的一段.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  <m> \because L: y=\sqrt{x}, x \in[0,1] </m>  , 即  <m> L: x=y^{2}, y \in[0,1] </m> , 
+                    <m> x^{\prime}=2 y  </m> ;  <m> \mathrm{d} s=\sqrt{1+x^{\prime 2}(y)} \mathrm{d} y=\sqrt{1+4 y^{2}} \mathrm{~d} y </m> , 
+                    <me> 
+                    \begin{aligned}
+                    \therefore \int_{L} y \mathrm{~d} s  &amp;  =\int_{0}^{1} y \sqrt{1+4 y^{2}} \mathrm{~d} y \\
+                    &amp;  =\frac{1}{8} \int_{0}^{1} \sqrt{1+4 y^{2}} \mathrm{~d}\left(1+4 y^{2}\right) \\
+                    &amp;  =\left.\frac{1}{8} \cdot \frac{2}{3}\left(1+4 y^{2}\right)^{\frac{3}{2}}\right|_{0} ^{1}=\frac{1}{12}(5 \sqrt{5}-1) .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -22,12 +32,29 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> \int_{L} y \mathrm{~d} s </m> , 其中  <m> L:\left\{\begin{array}{l}x=a(t-\sin t), \\ y=a(1-\cos t),\end{array} 0 \leq t \leq 2 \pi\right. </m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解
+                    <me> 
+                    \begin{array}{l}
+                    \because x^{\prime}(t)=a(1-\cos t), y^{\prime}(t)=a \sin t, \\
+                    \therefore \mathrm{d} s=\sqrt{a^{2}(1-\cos t)^{2}+a^{2} \sin ^{2} t} \mathrm{~d} t=\sqrt{2} a \sqrt{1-\cos t} \mathrm{~d} t .
+                    \end{array}
+                    </me>  </p> 
+
+                    <p> 故 
+                    <me> 
+                    \begin{aligned}
+                    \int_{L} y \mathrm{~d} s &amp; =\int_{0}^{2 \pi} a(1-\cos t) \cdot \sqrt{2} a \sqrt{1-\cos t} \mathrm{~d} t\\
+                    &amp; =\sqrt{2} a^{2} \int_{0}^{2 \pi}(1-\cos t)^{\frac{3}{2}} \mathrm{~d} t\\ &amp; =\sqrt{2} a^{2} \int_{0}^{2 \pi}\left(2 \sin ^{2} \frac{t}{2}\right)^{\frac{3}{2}} \mathrm{~d} t \\
+                    &amp; =\sqrt{2} a^{2} \int_{0}^{\pi}\left(2 \sin ^{2} u\right)^{\frac{3}{2}} 2 \mathrm{~d} u=8 a^{2} \int_{0}^{\pi} \sin ^{3} u \mathrm{~d} u \\
+                    &amp; =8 a^{2} \int_{0}^{\pi}\left(1-\cos ^{2} u\right)(-1) \mathrm{d} \cos u \\
+                    &amp; =8 a^{2}\left[\frac{\cos ^{2} u}{3}-\cos u\right]_{0}^{\pi}=8 a^{2}\left[\frac{-1-1}{3}-(-1-1)\right]=\frac{32}{3} a^{2} .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -36,12 +63,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求圆柱螺线  <m> \Gamma:\left\{\begin{array}{l}x=a \cos t, \\ y=a \sin t \\ z=k t\end{array}\right. </m> , 上对应于  <m> t </m>  从  <m> 0 </m>  到  <m> 2 \pi </m>  的一段弧的质量, 设其线密度  <m>  \mu=x^{2}+y^{2}+z^{2}  </m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 
+                    <me> 
+                    \begin{aligned}
+                    m=  &amp;  \int_{\Gamma} \mu \mathrm{d} s=\int_{\Gamma}\left(x^{2}+y^{2}+z^{2}\right) \mathrm{d} s \\
+                    =  &amp;  \int_{0}^{2 \pi}\left[(a \cos t)^{2}+(a \sin t)^{2}+(k t)^{2}\right]  \cdot \sqrt{(-a \sin t)^{2}+(a \cos t)^{2}+k^{2}} \mathrm{~d} t \\
+                    =  &amp;  \int_{0}^{2 \pi}\left(a^{2}+k^{2} t^{2}\right) \sqrt{a^{2}+k^{2}} \mathrm{~d} t \\
+                    =  &amp;  \sqrt{a^{2}+k^{2}}\left(2 \pi a^{2}+\left.\frac{k^{2}}{3} t^{3}\right|_{0} ^{2 \pi}\right) \\
+                    =  &amp;  \sqrt{a^{2}+k^{2}}\left(2 \pi a^{2}+\frac{8 k^{2} \pi^{3}}{3}\right) \\
+                    =  &amp;  \frac{2 \pi}{3} \sqrt{a^{2}+k^{2}}\left(3 a^{2}+4 k^{2} \pi^{2}\right) .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -50,12 +87,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设有均匀的半圆金属丝, 求其质心.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 设其半径为  <m> R </m> , 线密度为  <m> \mu </m> . 如图建立坐标系. </p> 
+
+                    <p> 图 </p> 
+
+                    <p> 则半圆  <m> L:\left\{\begin{array}{l}x=R \cos \theta, \\ y=R \sin \theta,\end{array}(0 \leq \theta \leq \pi)\right. </m> ,  <m> \mathrm{d} s=R \mathrm{~d} \theta </m> .
+                    设质心为  <m> (\bar{x}, \bar{y}) </m> ,由对称性知  <m> \bar{x}=0 </m> , 而
+                    <me> 
+                    \bar{y}=\frac{\int_{L} y \mu \mathrm{d} s}{\int_{L} \mu \mathrm{d} s}=\frac{\int_{L} y \mathrm{~d} s}{\int_{L} \mathrm{~d} s}=\frac{\int_{0}^{\pi} R \sin \theta \cdot R \mathrm{~d} \theta}{\pi R}=\frac{2 R}{\pi},
+                    </me>  </p> 
+
+                    <p> 即在如图的坐标系中  <m> L </m>  的质心为  <m> \left(0, \frac{2 R}{\pi}\right) </m> 
                 </p>
             </answer>
         </exercise>
@@ -64,12 +111,18 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> I=\iint_{\Sigma}\left(z+2 x+\frac{4}{3} y\right) \mathrm{d} S </m> , 其中  <m> \Sigma </m>  为平面  <m> \frac{x}{2}+\frac{y}{3}+\frac{z}{4}=1 </m>  位于第一卦限中的部分.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 </p> 
+
+                    <p> 图 </p> 
+
+                    <p>  <m> \Sigma: z=4-2 x-\frac{4}{3} y </m> ,   <m> z_{x}^{\prime}=-2, z_{y}^{\prime}=-\frac{4}{3},(x, y) \in D_{x y} </m> ,  <m> \mathrm{~d} S=\sqrt{1+(-2)^{2}+\left(\frac{4}{3}\right)^{2}} \mathrm{~d} \sigma=\frac{\sqrt{61}}{3} \mathrm{~d} \sigma </m>  . </p> 
+
+                    <p>  <me> I=\iint_{D_{x y}} 4 \cdot \frac{\sqrt{61}}{3} \mathrm{~d} \sigma=\frac{4 \sqrt{61}}{3} \iint_{D_{x y}} \mathrm{~d} \sigma=\frac{4 \sqrt{61}}{3} \cdot \frac{1}{2} \cdot 2 \cdot 3=4 \sqrt{61} </me> 
                 </p>
             </answer>
         </exercise>
@@ -78,26 +131,78 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> S: x^{2}+y^{2}+z^{2}=a^{2}(z \geq 0) </m> ,  <m> S_{1} </m>  为  <m> S </m>  在第一卦限中的部分, 则有 ( ).
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \iint_{S} x d S=4 \iint_{S_{1}} x d S </m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \iint_{S} y d S=4 \iint_{S_{1}} x d S </m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> \iint_{S} z d S=4 \iint_{S_{1}} x d S </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \iint_{S} x y z d S=4 \iint_{S_{1}} x y z d S </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解：考察对称性, 上半球面  <m> S </m>  关于  <m> x o z </m>  面,  <m> y o z </m>  面对称
+                        关于  <m> x ,y </m>  的奇函数在  <m> S </m>  上积分均为零. </p> 
+                        
+                         <p>  <m> \iint_{S} x d S=0 , \iint_{S} y d S=0 , \iint_{S} x y z d S=0 </m>  而  <m> \iint_{S_{1}} x d S \neq 0 </m>  ,  <m> \iint_{S_{1}} y d S \neq 0 </m>  , <m> \iint_{S_{1}} x y z d S \neq 0 </m> . </p> 
+                        
+                         <p>  <m> S_{1} </m>  具有轮换对称性   <m> \Rightarrow \iint_{S_{1}} x d S=\iint_{S_{1}} y d S=\iint_{S_{1}} z d S </m>  </p> 
+                        
+                         <p>  <m> \iint_{S} z d S=4 \iint_{S_{1}} z d S=4 \iint_{S_{1}} x d S </m> .  C正确 
+                         
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q7 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> I=\oiint_{\Sigma} \frac{x \cos \alpha+y \cos \beta+z \cos \gamma}{\left(x^{2}+y^{2}+z^{2}\right)^{\frac{3}{2}}} \mathrm{~d} S </m> , 其中  <m> \Sigma: x^{2}+y^{2}+z^{2}=a^{2}(a \gt 0), \cos \alpha, \cos \beta, \cos \gamma </m>  是  <m> \Sigma </m> 
+                    在点  <m> (x, y, z) </m>  处的外法向量的方向余弦.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  <m> \because \forall(x, y, z) \in \Sigma </m> , 有  <m> \cos \alpha=\frac{x}{a} </m> ,  <m> \cos \beta=\frac{y}{a} </m> ,  <m> \cos \gamma=\frac{z}{a} </m>  ,
+                    <me> 
+                    \begin{aligned} 
+                    \therefore I &amp; =\frac{1}{a^{3}} \oiint_{\Sigma}(x \cos \alpha+y \cos \beta+z \cos \gamma) \mathrm{d} S \\
+                    &amp; =\frac{1}{a^{3}} \oiint_{\Sigma} \frac{x^{2}+y^{2}+z^{2}}{a} \mathrm{~d} S=\frac{1}{a^{3}} \oiint_{\Sigma} \frac{a^{2}}{a} \mathrm{~d} S \\
+                    &amp; =\frac{1}{a^{2}} 4 \pi a^{2}=4 \pi .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -106,12 +211,30 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \int_{L}(x+y) \mathrm{d} x+(x-y) \mathrm{d} y </m> , 其中  <m> L </m>  如图所示: (1)  <m> L </m>  为圆弧  <m> \overset{\large{\frown}}{AB} </m> ; (2)  <m> L </m>  为折线  <m> A O B </m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    图 </p> 
+
+                <p> 解  <m> \because L:\left\{\begin{array}{l}x=R \cos t, \\ y=R \sin t,\end{array}\right. </m>    <m> t </m>  从  <m> \frac{\pi}{2} </m>  变到  <m> 0 </m> , </p> 
+
+                <p>  <me> 
+                \begin{aligned}
+                \therefore  &amp; \int_{L}(x+y) \mathrm{d} x+(x-y) \mathrm{d} y \\
+                &amp; =\int_{\frac{\pi}{2}}^{0}[(R \cos t+R \sin t)(-R \sin t)+(R \cos t-R \sin t) R \cos t] \mathrm{d} t \\
+                &amp; =R^{2} \int_{\frac{\pi}{2}}^{0}[\cos ^{2} t-\sin ^{2} t-2 \sin t \cos t] \mathrm{d} t\\ &amp; =R^{2} \int_{0}^{\frac{\pi}{2}} 2 \sin t \cos t \mathrm{~d} t=R^{2}
+                \end{aligned}
+                </me>  </p> 
+
+                <p> (2)   <m> L=A O B=A O+O B </m> ,  <m> \int_{L}=\int_{A O}+\int_{O B} </m>  
+                <m> \because A O </m> :  <m> x=0 </m> (  <m> y </m>   从  <m> R </m>  变到  <m> 0 </m>  ),  <m> \mathrm{d} x=0 </m> ,  <m> O B: y=0 </m>  (  <m> x </m>   从  <m> 0 </m>  变到  <m> R </m>  ),  <m> \mathrm{d} y=0 </m>  , </p> 
+
+                <p>  <me> \begin{aligned}
+                    \therefore \int_{L}(x+y) \mathrm{d} x+(x-y) \mathrm{d} y &amp; =\left(\int_{A O}+\int_{O B}\right)((x+y) \mathrm{d} x+(x-y) \mathrm{d} y) \\
+                &amp; =\int_{R}^{0}(0-y) \mathrm{d} y+\int_{0}^{R}(x+0) \mathrm{d} x=R^{2}
+                \end{aligned} </me>
                 </p>
             </answer>
         </exercise>
@@ -120,12 +243,25 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求<m>\int_{L} x y \mathrm{~d} x+(y-x) \mathrm{d} y</m>，其中（1）<m>L</m>为直线<m>y-x=0</m>从点<m>O(0,0)</m>到点<m>B(1,1)</m>；（2）<m>L</m>为抛物线<m>y=x^{2}</m>从点<m>O(0,0)</m>到点<m>B(1,1)</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：（1）<m>\because L: y=x(x \text { 从 } 0 \text { 变到 } 1)</m>, <m>\mathrm{d} y=\mathrm{d} x </m>
+                    </p> 
+                    <p> 
+                    <me>\therefore \int_{L} x y \mathrm{~d} x+(y-x) \mathrm{d} y=\int_{0}^{1}[x \cdot x+x-x] \mathrm{d} x=\frac{1}{3} </me>
+                    </p> 
+                    <p> 
+                    （2）<m>\because L: y=x^{2}(x \text { 从 } 0 \text { 变到 } 1)</m>, <m>\mathrm{d} y=2 x \mathrm{~d} x</m> </p> 
+                    <p> 
+                    <me>\begin{array}{l}
+                    \therefore \int_{L} x y \mathrm{~d} x+(y-x) \mathrm{d} y\\
+                    =\int_{0}^{1}\left[x \cdot x^{2}+\left(x^{2}-x\right) 2 x\right] \mathrm{d} x \\
+                    =\int_{0}^{1}\left(3 x^{3}-2 x^{2}\right) \mathrm{d} x\\
+                    =\frac{3}{4}-\frac{2}{3}=\frac{1}{12} .
+                    \end{array}</me>
                 </p>
             </answer>
         </exercise>
@@ -134,12 +270,38 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \oint_{L} y\left(z-x^{2}\right) \mathrm{d} x+x y^{2} \mathrm{~d} y+(x+y+1) \mathrm{d} z </m> , 其中  <m> L </m> 是闭曲线  <m> \left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=5, \\ z=x^{2}+y^{2}+1,\end{array}\right. </m>  的正向从原点看去为顺时针方向.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 为能写出  <m> L </m>  的参量方程, 我们做如下化简:
+                    <me> 
+                    \begin{array}{l} 
+                    L:\left\{\begin{array} { l } 
+                    { x ^ { 2 } + y ^ { 2 } + z ^ { 2 } = 5 , } \\
+                    { z = x ^ { 2 } + y ^ { 2 } + 1 }
+                    \end{array} \Leftrightarrow \left\{\begin{array}{l}
+                    x^{2}+y^{2}+z^{2}=5, \\
+                    z=x^{2}+y^{2}+1
+                    \end{array}\right.\right. \\
+                    \Leftrightarrow\left\{\begin{array} { l } 
+                    { z = 2 , } \\
+                    { z = x ^ { 2 } + y ^ { 2 } + 1 }
+                    \end{array} \Leftrightarrow \left\{\begin{array}{l}
+                    x^{2}+y^{2}=1, \\
+                    z=2 .
+                    \end{array}\right.\right. 
+                    \end{array}
+                    </me>  </p> 
+
+                    <p> 于是  <m>L:\left\{\begin{array}{l}
+                    x=\cos \theta, \\
+                    y=\sin \theta, \\
+                    z=2,
+                    \end{array}\right. </m>   <m> \theta </m>  从   <m> 0 </m>  变到  <m> 2 \pi</m> . </p> 
+
+                    <p>  <me> \begin{aligned}  \therefore  &amp; \oint_{L} y\left(z-x^{2}\right) \mathrm{d} x+x y^{2} \mathrm{~d} y+(x+y+1) \mathrm{d} z \\ =  &amp;  \int_{0}^{2 \pi}\left[\sin \theta\left(2-\cos ^{2} \theta\right)(-\sin \theta)+\cos \theta \sin ^{2} \theta \cdot \cos \theta+0\right] \mathrm{d} \theta \\ =  &amp;  \int_{0}^{2 \pi}\left[\sin \theta\left(2-\cos ^{2} \theta\right)(-\sin \theta)+\cos \theta \sin ^{2} \theta \cdot \cos \theta+0\right] \mathrm{d} \theta \\ =  &amp;  -2 \int_{0}^{2 \pi} \sin ^{4} \theta \mathrm{d} \theta=-\frac{1}{2} \int_{0}^{2 \pi}\left(1-2 \cos 2 \theta+\cos ^{2} 2 \theta\right) \mathrm{d} \theta \\ =  &amp;  -\frac{1}{2}\left[2 \pi-0+\frac{1}{2} \int_{0}^{2 \pi}(1+\cos 4 \theta) \mathrm{d} \theta\right] \\ =  &amp;  -\frac{1}{2}[2 \pi+\pi]=-\frac{3 \pi}{2} .\end{aligned} </me> 
                 </p>
             </answer>
         </exercise>
@@ -148,12 +310,18 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \oint_{L} 3 x y \mathrm{~d} x+x^{2} \mathrm{~d} y </m> , 其中  <m> L </m>  是如右图所示的正向闭合曲线.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  <m> \because P=3 x y, Q=x^{2} </m> 
+                <me> 
+                \begin{aligned}
+                \therefore \oint_{L} 3 x y \mathrm{~d} x+x^{2} \mathrm{~d} y &amp; =\iiint_{D}\left[\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right] \mathrm{d} x \mathrm{~d} y=\iint_{D}[2 x-3 x] \mathrm{d} x \mathrm{~d} y \\
+                &amp; =-\iint_{D} x \mathrm{~d} x \mathrm{~d} y=-\int_{-1}^{3} x \mathrm{~d} x \int_{0}^{2} \mathrm{~d} y\\ &amp; =-\left.2 \cdot \frac{x^{2}}{2}\right|_{-1} ^{3}=-8 .
+                \end{aligned}
+                </me>
                 </p>
             </answer>
         </exercise>
@@ -162,12 +330,17 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> \oint_{L} \frac{x \mathrm{~d} x+y \mathrm{~d} y}{2 x^{2}+y^{2}} </m> , 其中  <m> L </m>  是椭圆  <m> 2 x^{2}+y^{2}=1 </m>  的正向.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  <m> \because </m>  被积函数在  <m> L: 2 x^{2}+y^{2}=1 </m>  上有定义,
+                    <me> 
+                    \therefore \oint_{L} \frac{x \mathrm{~d} x+y \mathrm{~d} y}{2 x^{2}+y^{2}}=\oint_{L} \frac{x \mathrm{~d} x+y \mathrm{~d} y}{1}=\oint_{L} x \mathrm{~d} x+y \mathrm{~d} y\xlongequal{Green公式}\iint_{D}(0-0) \mathrm{d} x \mathrm{~d} y=0
+                    </me>  </p> 
+
+                    <p> 其中  <m>  D: 2 x^{2}+y^{2} \leq 1  </m>
                 </p>
             </answer>
         </exercise>
@@ -176,12 +349,17 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> \oint_{L} \frac{y}{\sqrt{a^{2}+x^{2}}} \mathrm{~d} x+\left[4 x+\ln \left(x+\sqrt{a^{2}+x^{2}}\right)\right] \mathrm{d} y </m> ,其中  <m> L </m>  是沿圆周  <m> x^{2}+y^{2}=a^{2} </m>  由点  <m> A(a, 0) </m>  依逆时针方向到点  <m> B(-a, 0) </m>  的半圆周.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  <m> \because \frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=4 </m> , 故若能使用Green公式计算,则十分简单. </p> 
+
+                    <p> 为此添上有向直线段  <m> \overline{B A} </m> , 使  <m> L+\overline{B A} </m>  称为正向闭合曲线, 记  <m> L+\overline{B A} </m>  所围域为  <m> D </m> .于是
+                    <me> 
+                    \text { 原式 }=\oint_{L+\overline{B A}}-\int_{\overline{B A}}=\iint_{D} 4 \mathrm{~d} x \mathrm{~d} y-\int_{-a}^{a} \frac{0^{2}}{\sqrt{a^{2}+x^{2}}} \mathrm{~d} x=2 \pi a^{2} .
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -190,12 +368,19 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \int_{L}-x^{4} \mathrm{~d} x+x y \mathrm{~d} y </m> , 其中  <m> L </m>  为圆周  <m> x^{2}+y^{2}=x </m>  在第一象限的部分, 以原点为起点, 以点  <m> (0,1) </m>  为终点.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:补上有向直线段  <m> L_{1}: y=0 </m> , (  <m> x </m>  从  <m> 1 </m>  变到  <m> 0 </m>  ), 于是得闭合曲线  <m> L+L_{1} </m> ,  <m> L+L_{1} </m>  取顺时针方向, 所围域记为  <m> D </m> .
+                    <me> 
+                    \begin{aligned}
+                    \therefore \int_{L}-x^{4} \mathrm{~d} x+x y \mathrm{~d} y &amp; =\oint_{L+L_{1}}-x^{4} \mathrm{~d} x+x y \mathrm{~d} y-\int_{L_{1}}-x^{4} \mathrm{~d} x+x y \mathrm{~d} y \\
+                    &amp; =-\iint_{D}[y-0] \mathrm{d} x \mathrm{~d} y-\int_{1}^{0}-x^{4} \mathrm{~d} x+0\\ &amp; =-\int_{0}^{\frac{\pi}{2}} \mathrm{~d} \theta \int_{0}^{\cos \theta} \rho \sin \theta \cdot \rho \mathrm{d} \rho-\frac{1}{5} \\
+                    &amp; =-\frac{1}{3} \int_{0}^{\frac{\pi}{2}} \cos ^{3} \theta \sin \theta \mathrm{d} \theta-\frac{1}{5}\\ &amp; =\left.\frac{1}{3} \cdot \frac{\cos ^{4} \theta}{4}\right|_{0} ^{\frac{\pi}{2}}-\frac{1}{5}=-\frac{1}{12}-\frac{1}{5}=-\frac{17}{60} .
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -204,12 +389,24 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算曲线积分  <m> I=\oint_{L} \frac{4 x-y}{4 x^{2}+y^{2}} d x+\frac{x+y}{4 x^{2}+y^{2}} d y  </m> , 其中  <m>  L  </m>  是  <m>  x^{2}+y^{2}=2 </m> ,逆时针.
                 </p>
             </statement>
             <answer>
                 <p>
+                    解
+                    设  <m> P(x, y)=\frac{4 x-y}{4 x^{2}+y^{2}} </m> ,  <m> Q(x, y)=\frac{x+y}{4 x^{2}+y^{2}} </m>  .
                     
+                    当  <m> (x, y) \neq(0,0) </m> ,  <m> \frac{\partial P(x, y)}{\partial y}=\frac{-4 x^{2}-8 x y+y^{2}}{\left(4 x^{2}+y^{2}\right)^{2}}=\frac{\partial Q(x, y)}{\partial x} </m>  </p> 
+
+                    <p>  <m> (0,0) </m>  是奇点, 挖去. 取  <m> L_{1}: 4 x^{2}+y^{2}=\varepsilon^{2} </m>  逆时针,  <m> \varepsilon \gt 0 </m>  充分小. </p> 
+
+                    <p>  <me> 
+                    \begin{aligned}
+                    I  &amp;  =\oint_{L} \frac{4 x-y}{4 x^{2}+y^{2}} d x+\frac{x+y}{4 x^{2}+y^{2}} d y=\oint_{L_{1}} \frac{4 x-y}{4 x^{2}+y^{2}} d x+\frac{x+y}{4 x^{2}+y^{2}} d y \\
+                    &amp;  =\frac{1}{\varepsilon^{2}} \oint_{L_{1}}(4 x-y) d x+(x+y) d y=\frac{2}{\varepsilon^{2}} \iint_{D} d x d y=\frac{2}{\varepsilon^{2}} \cdot \pi \frac{\varepsilon}{2} \varepsilon=\pi
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -218,12 +415,23 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    验证  <m> \left(3 x^{2} y+2 x y^{2}+\cos x \cos y\right) \mathrm{d} x+\left(x^{3}+2 x^{2} y-\sin x \sin y\right) \mathrm{d} </m>  的原函数存在, 并求之
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  <m> P=3 x^{2} y+2 x y^{2}+\cos x \cos y, Q=x^{3}+2 x^{2} y-\sin x \sin y </m> .
+                    <m> \because \frac{\partial P}{\partial y}=4 x y-\cos x \sin y=\frac{\partial Q}{\partial x} </m> , 故原函数存在.
+                    <me> 
+                    \begin{aligned}
+                    u(x, y)  &amp;  =\int_{(0,0)}^{(x, y)} P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y+C \\
+                    &amp;  =\int_{0}^{x}\left(3 x^{2} \cdot 0+2 x \cdot 0^{2}+\cos x \cos 0\right) \mathrm{d} x+\int_{0}^{y}\left(x^{3}+2 x^{2} y-\sin x \sin y\right) \mathrm{d} y+C \\
+                    &amp;  =\int_{0}^{x} \cos t \mathrm{~d} t+\int_{0}^{y}\left(x^{3}+2 x^{2} t-\sin x \sin t\right) \mathrm{d} t+C \\
+                    &amp;  =\left.\sin t\right|_{0} ^{x}+\left.\left(x^{3} t+x^{2} t^{2}+\sin x \cos t\right)\right|_{0} ^{y} \\
+                    &amp;  =\sin x+x^{3} y+x^{2} y^{2}+\sin x \cos y-\sin x+C \\
+                    &amp;  =x^{3} y+x^{2} y^{2}+\sin x \cos y+C .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -232,12 +440,25 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求  <m> \left(5 x^{4}+3 x y^{2}-y^{3}\right) \mathrm{d} x+\left(3 x^{2} y-3 x y^{2}+y^{2}\right) \mathrm{d} y=0 </m>  的通解.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  <m> \because P=5 x^{4}+3 x y^{2}-y^{3}, Q=3 x^{2} y-3 x y^{2}+y^{2} </m> ,  <m> \frac{\partial P}{\partial y}=6 x y-3 y^{2}=\frac{\partial Q}{\partial x} </m> , 所以此微分方程是全微分方程. </p> 
+
+                    <p>  <me> 
+                    \begin{aligned}
+                    u(x, y)  &amp;  =\int_{(0,0)}^{(x, y)}\left(5 x^{4}+3 x y^{2}-y^{3}\right) \mathrm{d} x+\left(3 x^{2} y-3 x y^{2}+y^{2}\right) \mathrm{d} y \\
+                    &amp;  =\int_{0}^{x}\left(5 x^{4}+3 x \cdot 0^{2}-0^{3}\right) \mathrm{d} x+\int_{0}^{y}\left(3 x^{2} y-3 x y^{2}+y^{2}\right) \mathrm{d} y \\
+                    &amp;  =x^{5}+\frac{3}{2} x^{2} y^{2}-x y^{3}+\frac{1}{3} y^{3} .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 于是全微分方程的通解为
+                    <me> 
+                    x^{5}+\frac{3}{2} x^{2} y^{2}-x y^{3}+\frac{1}{3} y^{3}=C 
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -246,12 +467,23 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> I=\iint_{\Sigma} x y z \mathrm{~d} x \mathrm{~d} y </m> , 其中  <m> \Sigma </m>  是球面  <m> x^{2}+y^{2}+z^{2}=1 </m>  的外侧在  <m> x \geq 0, y \geq 0 </m>  的部分.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  <m> \because \Sigma=\Sigma_{1}+\Sigma_{2}^{-} </m> , 其中  <m> \Sigma_{1}: z=\sqrt{1-x^{2}-y^{2}},(x, y) \in D_{x y} </m> , 取上侧;  <m> \Sigma_{2}: z=-\sqrt{1-x^{2}-y^{2}},(x, y) \in D_{x y} </m>   取下侧;  <m> D_{x y}: x^{2}+y^{2} \leq 1, x \geq 0, y \geq 0 </m>  . </p> 
+
+                    <p>  <me> 
+                    \begin{aligned}
+                    \therefore I &amp; =\iint_{\Sigma} x y z \mathrm{~d} x \mathrm{~d} y=\iint_{\Sigma_{1}} x y z \mathrm{~d} x \mathrm{~d} y+\iint_{\Sigma_{2}^{-}} x y z \mathrm{~d} x \mathrm{~d} y . \\
+                    &amp; =\iint_{D_{x y}} x y \sqrt{1-x^{2}-y^{2}} \mathrm{~d} \sigma-\iint_{D_{x y}} x y\left(-\sqrt{1-x^{2}-y^{2}}\right) \mathrm{d} \sigma \\
+                    &amp; =2 \iint_{D_{x y}} x y \sqrt{1-x^{2}-y^{2}} \mathrm{~d} \sigma=2 \int_{0}^{\frac{\pi}{2}} \mathrm{~d} \theta \int_{0}^{1} \rho \cos \theta \cdot \rho \sin \theta \sqrt{1-\rho^{2}} \cdot \rho \mathrm{d} \rho \\
+                    &amp; =2 \cdot \frac{1}{2} \int_{0}^{1} \rho^{3} \sqrt{1-\rho^{2}} \mathrm{~d} \rho=\int_{0}^{\frac{\pi}{2}} \sin ^{3} t \cos ^{2} t \mathrm{~d} t=\frac{2}{15} .
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 注意: 如果计算  <m> \iint_{\Sigma} x y z^{2} \mathrm{~d} x \mathrm{~d} y </m> , 其中  <m> \Sigma </m>  是球面  <m> x^{2}+y^{2}+z^{2}=1 </m>  的外侧在  <m> x \geq 0, y \geq 0 </m>  的部分.
                 </p>
             </answer>
         </exercise>
@@ -260,26 +492,100 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设曲面  <m> \Sigma=\left\{(x, y, z) \mid x^{2}+y^{2}+z^{2}=R^{2}, z \geq 0\right\} </m>  的上侧, 则下列曲面积分不为零的是 (  ).
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \iint_{\Sigma} x^{2} \mathrm{~d} y \mathrm{~d} z </m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> \iint_{\Sigma} x \mathrm{~d} y \mathrm{~d} z </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \iint_{\Sigma} z \mathrm{~d} z \mathrm{~d} x </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \iint_{\Sigma} y \mathrm{~d} x \mathrm{~d} y </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        <m> \Sigma </m>  关于  <m> z=0 </m>  (即  <m> x O y </m>  面) 对称 (包括侧也对称), 则有
+                    <me> 
+                   \iint_{\Sigma} f(x, y, z) \mathrm{d} x \mathrm{~d} y=\left\{\begin{array}{ll}
+                   0,  &amp;  \text { 若 } f \text { 为 } z \text { 的偶函数, } \\
+                   2 \iint_{\Sigma_{\text{上}}} f(x, y, z) \mathrm{d} x \mathrm{~d} y,  &amp;  \text { 若 } f \text { 为 } z \text { 的奇函数. }
+                   \end{array}\right.
+                    </me>  </p> 
+                   
+                    <p> 解  <m> \because \Sigma </m>  对称于  <m> x=0 </m> , 且  <m> f(x, y, z)=x^{2} </m>  是  <m> x </m>  的偶函数,
+                    <m> \therefore \iint_{\Sigma} x^{2} \mathrm{~d} \mathrm{y} \mathrm{d} z=0 </m> , 排除  <m> \mathrm{A} </m> ; 类似地排除  <m> \mathrm{C} </m> ;  <m> \iint_{\Sigma} y \mathrm{~d} x \mathrm{~d} y=\iint_{x^{2}+y^{2} \leq R^{2}} y \mathrm{~d} x \mathrm{~d} y=0 </m> , 排除  <m> \mathrm{D} </m> ; 选  <m> \mathrm{B} </m> . </p> 
+                   
+                    <p> 事实上  <me> \iint_{\Sigma} x \mathrm{~d} y \mathrm{~d} z=\iint_{D_{yz}} \sqrt{R^{2}-y^{2}-z^{2}} \mathrm{~d} \sigma-\iint_{D_{yz}}-\sqrt{R^{2}-y^{2}-z^{2}} \mathrm{~d} \sigma=2 \int_{0}^{\pi} \mathrm{d} \theta \int_{0}^{R} \rho \sqrt{R^{2}-\rho^{2}} \mathrm{~d} \rho=\frac{2}{3} \pi R^{3} \neq 0 </me>
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q20 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> I=\iint_{S}(x+y) \mathrm{d} y \mathrm{~d} z+y \mathrm{~d} z \mathrm{~d} x+\mathrm{d} x \mathrm{~d} y </m> , 其中  <m> S </m>  是平面  <m> x+y+z=1 </m>  在第一卦限部分的下侧.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：法一: 
+                <me> \begin{aligned}
+                    I &amp; =\iint_{S}(x+y) \mathrm{d} y \mathrm{~d} z+y \mathrm{~d} z \mathrm{~d} y+\mathrm{d} x \mathrm{~d} y \\ &amp; =\iint_{S}(x+y) \mathrm{d} y \mathrm{~d} z+\iint_{S} y \mathrm{~d} z \mathrm{~d} y+\iint_{S} \mathrm{~d} x \mathrm{~d} y \\
+                    &amp; =-\iint_{D_{y z}}(1-y-z+y) \mathrm{d} \sigma \quad(\because  \text{后侧})\\
+                    &amp; -\iint_{D_{z x}}(1-x-z) \mathrm{d} \sigma\quad(\because  \text{左侧})\\
+                    &amp; -\iint_{D_{xy}}\mathrm{d} \sigma\quad(\because  \text{下侧})\\
+                    &amp; =-\int_{0}^{1} \mathrm{~d} y \int_{0}^{1-y}(1-z) \mathrm{d} z-\int_{0}^{1} \mathrm{~d} x \int_{0}^{1-x}(1-x-z) \mathrm{d} z-\frac{1}{2}\\
+                    &amp; =-\frac{1}{3}-\frac{1}{6}-\frac{1}{2}=-1
+                \end{aligned} </me>  </p> 
+
+                <p> 法二:  <m> \because S </m>  为平面, 其单位法向量  <m> \boldsymbol{n}^{0}=\left\{\frac{-1}{\sqrt{3}}, \frac{-1}{\sqrt{3}}, \frac{-1}{\sqrt{3}}\right\} </m> , </p> 
+
+                <p> 
+                <me> \begin{aligned} \therefore I  &amp;  =\iint_{S}(x+y) \mathrm{d} y \mathrm{~d} z+y \mathrm{~d} z \mathrm{~d} y+\mathrm{d} x \mathrm{~d} y \\  &amp; = \iint_{S}[(x+y) \cos \alpha+y \cos \beta+\cos \gamma] \mathrm{d} S \\  &amp;  =-\frac{1}{\sqrt{3}} \iint_{S}(1+x+y+y) \mathrm{d} S \xlongequal{或}-\frac{1}{\sqrt{3}} \iint_{S}(1+1) \mathrm{d} S=-2 \iint_{D_{y}}  \mathrm{~d}x\mathrm{~d}y=-1 \\
+                &amp; =-\frac{1}{\sqrt{3}} \iint_{D_{x y}}(1+x+2 y) \sqrt{3} \mathrm{~d} \sigma=-\iint_{D_{x y}}(1+x+2 y) \mathrm{d} \sigma \\  &amp; =-\frac{1}{2}-\int_{0}^{1} x \mathrm{~d} x \int_{0}^{1-x} \mathrm{~d} y-\int_{0}^{1} \mathrm{~d} x \int_{0}^{1-x} 2 y \mathrm{~d} y \\  &amp; =-\frac{1}{2}-\int_{0}^{1}\left(x-x^{2}\right) \mathrm{d} x-\int_{0}^{1}(1-x)^{2} \mathrm{~d} x \\  &amp; =-\frac{1}{2}-\frac{1}{6}-\frac{1}{3}=-1 
+                \end{aligned}</me> </p> 
+
+                <p> 图 </p> 
+
+                <p> 法三:  <m> S: z=1-x-y,(x, y) \in D </m> ,  <m> D:\left\{\begin{array}{l}0 \leq y \leq 1-x, \\0 \leq x \leq 1\end{array}\right. </m> 
+                <m> \because z_{x}^{\prime}=-1, z_{y}^{\prime}=-1 </m> , 且  <m> \Sigma </m>  取下侧,
+                <me> 
+                \begin{aligned}
+                \therefore I  &amp;  =\iint_{S}(x+y) \mathrm{d} y \mathrm{~d} z+y \mathrm{~d} z \mathrm{~d} y+\mathrm{d} x \mathrm{~d} y \\
+                &amp;  =-\iint_{D}[-(x+y)(-1)-y(-1)+1] \mathrm{d} \sigma=-\iint_{D}[x+2 y+1] \mathrm{d} \sigma \\
+                &amp;  =-\int_{0}^{1} \mathrm{~d} x \int_{0}^{1-x}(x+2 y) \mathrm{d} y-\frac{1}{2}=-\int_{0}^{1}(1-x) \mathrm{d} x-\frac{1}{2}=-\frac{1}{2}-\frac{1}{2}=-1 .
+                \end{aligned}
+                </me> 
                 </p>
             </answer>
         </exercise>
@@ -288,12 +594,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> \Sigma </m>  为曲面  <m> z=\sqrt{x^{2}+y^{2}}\left(1 \leq x^{2}+y^{2} \leq 4\right) </m>  的下侧,  <m> f(x) </m>  是连续函数,计算  <m> I=\iint_{\Sigma}[x f(x y)+2 x-y] d y d z+[y f(x y)+2 y+x] d z d x+[z f(x y)+z] d x d y </m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    利用公式  <m> \iint_{\Sigma} P d y d z+Q d z d x+R d x d y= \pm \int_{D x y}\left[P \cdot\left(-z_{x}^{\prime}\right)+Q \cdot\left(-z_{y}^{\prime}\right)+R \cdot 1\right] d x d y </m>  </p> 
+
+                    <p> 解:  <m> z_{x}^{\prime}=\frac{x}{\sqrt{x^{2}+y^{2}}}, z_{y}^{\prime}=\frac{y}{\sqrt{x^{2}+y^{2}}} </m> 
+                    <me> 
+                    \begin{aligned}
+                    I  &amp;  =-\iint_{D x y}\left\{[x f(x y)+2 x-y] \cdot \frac{-x}{\sqrt{x^{2}+y^{2}}}+[y f(x y)+2 y+x] \cdot \frac{-y}{\sqrt{x^{2}+y^{2}}}+[z f(x y)+z]\right\} d x d y . \\
+                    &amp;  =\iint_{D x y} \sqrt{x^{2}+y^{2}} d x d y=\int_{0}^{2 \pi} d \theta \int_{1}^{2} \rho \cdot \rho d \rho=\frac{14 \pi}{3} . \\
+                    \end{aligned}
+                    </me>  </p> 
+
+                    <p> 特别注意: 类似题目中  <m> f(x) </m>  不知道表达式, 一定消去它.
                 </p>
             </answer>
         </exercise>
@@ -302,12 +618,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算  <m> \iint_{\Sigma}\left(x^{3}+a z^{2}\right) d y d z+\left(y^{3}+a x^{2}\right) d z d x+\left(z^{3}+a y^{2}\right) d x d y </m> ,  <m> \Sigma: z=\sqrt{a^{2}-x^{2}-y^{2}} </m>  取上侧
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:
+                    补面  <m>\Sigma_{1}\left\{\begin{array}{l}
+                    x^{2}+y^{2} \leq a^{2} \\z=0\end{array}\right.</m> 取下侧 </p> 
+
+                    <p>  <me> \begin{aligned} &amp; \iint_{\Sigma}\left(x^{3}+a z^{2}\right) d y d z+\left(y^{3}+a x^{2}\right) d z d x+\left(z^{3}+a y^{2}\right) d x d y \\
+                    &amp; =\left(\oiint_{\Sigma+\Sigma_{1}}-\iint_{\Sigma_{1}}\right)\left(x^{3}+a z^{2}\right) d y d z+\left(y^{3}+a x^{2}\right) d z d x+\left(z^{3}+a y^{2}\right) d x d y \text { 高斯公式 }\\
+                    &amp; =\iiint_{\Omega} 3\left(x^{2}+y^{2}+z^{2}\right) d v+\iint_{x^{2}+y^{2} \leq a^{2}} a y^{2} d x d y \quad \text { 注意 } \Sigma_{1}\text {投影时的符号 } \\
+                    &amp; =3 \int_{0}^{2 \pi} d \theta \int_{0}^{\frac{\pi}{2}} \sin \varphi d \varphi \int_{0}^{a} r^{2} \cdot r^{2} d r+a \int_{0}^{2 \pi} d \theta \int_{0}^{a} \rho^{2} \sin ^{2} \theta \cdot \rho d \rho \\
+                    &amp; =3 \cdot 2 \pi \cdot \frac{a^{5}}{5}+a \cdot 4 \cdot \frac{1}{2} \frac{\pi}{2} \cdot \frac{a^{4}}{4}=\frac{29 \pi a^{5}}{20} .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -316,12 +642,32 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> \boldsymbol{A}=\left(x^{2}+y^{2}\right) \boldsymbol{i}+y z^{2} \boldsymbol{j}+x z \boldsymbol{k} </m> , 求  <m> \left.(1) \operatorname{div} \boldsymbol{A}\right|_{(1,0,2)} ; </m>   <m> (2) </m>    <m> \operatorname{rot} \boldsymbol{A} </m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解
+                    (1)  <m> P=x^{2}+y^{2}, Q=y z^{2}, R=x z </m> .
+                    <m> \operatorname{div} \boldsymbol{A}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}=2 x+z^{2}+x=3 x+z^{2} </m> , 
+                    <m> \therefore \operatorname{div}\left. \boldsymbol{A}\right|_{(1,0,1)}=7 . </m>  </p> 
+
+                    <p> (2)
+                    <me> 
+                    \begin{aligned}
+                    \operatorname{rot} \boldsymbol{A}  &amp;  =\left|\begin{array}{ccc}
+                    \boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
+                    \frac{\partial}{\partial x}  &amp;  \frac{\partial}{\partial y}  &amp;  \frac{\partial}{\partial z} \\
+                    P  &amp;  Q  &amp;  R
+                    \end{array}\right|=\left|\begin{array}{ccc}
+                    \boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
+                    \frac{\partial}{\partial x}  &amp;  \frac{\partial}{\partial y}  &amp;  \frac{\partial}{\partial z} \\
+                    x^{2}+y^{2}  &amp;  y z^{2}  &amp;  x z
+                    \end{array}\right| \\
+                    &amp;  =(0-2 x y) \boldsymbol{i}-(z-0) \boldsymbol{j}+(0-2 y) \boldsymbol{k} \\
+                    &amp;  =-2 x y \boldsymbol{i}-z \boldsymbol{j}-2 y \boldsymbol{k} .
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -330,12 +676,15 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    利用Stokes公式计算  <m> \oint_{\Gamma} z d x+x d y+y d z </m> , 其中  <m> \Gamma </m>  为  <m> x+y+z=1 </m> 被三个坐标面所截成的三角形的整个边界, 正向为这个平面三角形上侧法向量之间符合右手规则。
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    <me> \begin{aligned}
+                        \oint_{\Gamma^{+}} z \mathrm{~d} x+x \mathrm{~d} y+y \mathrm{~d} z &amp; =\frac{1}{\sqrt{3}} \iint_{\Sigma}\left|\begin{array}{lll}1  &amp;  1  &amp;  1 \\ \frac{\partial}{\partial x}  &amp;  \frac{\partial}{\partial y}  &amp;  \frac{\partial}{\partial z} \\ z  &amp;  x  &amp;  y\end{array}\right| \mathrm{d} S\\
+                         &amp; =\frac{1}{\sqrt{3}} \iint_{\Sigma} 3 \mathrm{~d} S=\sqrt{3} \iint_{D x y} \sqrt{3} \mathrm{~d} x \mathrm{~d} y\\  &amp; =\frac{3}{2}
+                    \end{aligned} </me> 
                 </p>
             </answer>
         </exercise>
@@ -344,12 +693,34 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    验证  <m> \left(3 x^{2}-y+z^{2}\right) \mathrm{d} x+\left(-x+4 y^{3}\right) \mathrm{d} y+2 x z \mathrm{~d} z </m>  是全微分式,并求其原函数  <m> u(x, y, z) </m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  记  <m> \vec{A}=\{P, Q, R\}=\left\{3 x^{2}-y+z^{2},-x+4 y^{3}, 2 x z\right\} </m> , </p> 
+
+                    <p>  <me> 
+                    \because \vec{A}^{\prime}=\left[\begin{array}{lll}
+                    P_{x}^{\prime}  &amp;  P_{y}^{\prime}  &amp;  P_{z}^{\prime} \\
+                    Q_{x}^{\prime}  &amp;  Q_{y}^{\prime}  &amp;  Q_{z}^{\prime} \\
+                    R_{x}^{\prime}  &amp;  R_{y}^{\prime}  &amp;  R_{z}^{\prime}
+                    \end{array}\right]=\left[\begin{array}{ccc}
+                    6 x  &amp;  -1  &amp;  2 z \\
+                    -1  &amp;  12 y^{2}  &amp;  0 \\
+                    2 z  &amp;  0  &amp;  2 x
+                    \end{array}\right]
+                    </me>  </p> 
+
+                    <p> 在任意点  <m> (x, y, z) </m>  处是对称的, 即  <m> R_{y}^{\prime}=Q_{z}^{\prime}, P_{z}^{\prime}=R_{x}^{\prime}, Q_{x}^{\prime}=P_{y}^{\prime} </m> , 
+                    <m> \therefore\left(3 x^{2}-y+z^{2}\right) \mathrm{d} x+\left(-x+4 y^{3}\right) \mathrm{d} y+2 x z \mathrm{~d} z </m>  是全微分式.
+                    <me> 
+                    \begin{aligned}
+                    u(x, y, z) &amp; =\int_{(0,0,0)}^{(x, y, z)}\left(3 x^{2}-y+z^{2}\right) \mathrm{d} x+\left(-x+4 y^{3}\right) \mathrm{d} y+2 x z \mathrm{~d} z+C \\
+                    &amp; =\int_{0}^{x}\left(3 x^{2}-0+0^{2}\right) \mathrm{d} x+\int_{0}^{y}\left(-x+4 y^{3}\right) \mathrm{d} y+\int_{0}^{z} 2 x z \mathrm{~d} z+C \\
+                    &amp; =x^{3}-x y+y^{4}+x z^{2}+C .
+                    \end{aligned}
+                    </me> 
                 </p>
             </answer>
         </exercise>
