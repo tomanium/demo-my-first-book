@@ -2,542 +2,602 @@
 
 <section xml:id="la-chap4">
   <title>第四章 向量组的线性相关性</title>
-    <exercises xml:id="exercises-la4">
-                  
-      <!-- Q1 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+    
+    <subsection>
+    <title>线性方程组解的基础概念与性质</title>
+    
+  
+        <exercises xml:id="exercises-la4_1">
+                    
+            <!-- Q1 -->
+            <exercise>
+                <statement>
+                    <p>
+                        齐次线性方程  <m>  \left\{\begin{array}{l}x_{1}+2 x_{2}+3 x_{3}+2 x_{4}+5 x_{5}=0 \\ 2 x_{1}+2 x_{2}+x_{3}+3 x_{4}+x_{5}=0 \\ 3 x_{1}+4 x_{2}+3 x_{3}+4 x_{4}+3 x_{5}=0\end{array}\right.  </m>  的基础解系是_____
 
-      <!-- Q2 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解：<m>  \boldsymbol{A}=\left(\begin{array}{lllll}1  &amp;  2  &amp;  3  &amp;  2  &amp;  5 \\ 2  &amp;  2  &amp;  1  &amp;  3  &amp;  1 \\ 3  &amp;  4  &amp;  3  &amp;  4  &amp;  3\end{array}\right)\xrightarrow[ r_{3}-3r_{1}]{r_{2}-2r_{1}}\left(\begin{array}{ccccc}1  &amp;  2  &amp;  3  &amp;  2  &amp;  5 \\ 0  &amp;  -2  &amp;  -5  &amp;  -1  &amp;  -9 \\ 0  &amp;  -2  &amp;  -6  &amp;  -2  &amp;  -12\end{array}\right)\xrightarrow[ r_{3}-r_{2}]{\begin{array}{l}-r_{2} \\ -r_{3}\end{array}}\\ \left(\begin{array}{lllll}1  &amp;  2  &amp;  3  &amp;  2  &amp;  5 \\ 0  &amp;  2  &amp;  5  &amp;  1  &amp;  9 \\ 0  &amp;  0  &amp;  1  &amp;  1  &amp;  3\end{array}\right)\xrightarrow[ r_{1}-3r_{3}]{r_{2}-5r_{3}} \left(\begin{array}{ccccc}1  &amp;  2  &amp;  0  &amp;  -1  &amp;  -4 \\ 0  &amp;  2  &amp;  0  &amp;  -4  &amp;  -6 \\ 0  &amp;  0  &amp;  1  &amp;  1  &amp;  3\end{array}\right)\xrightarrow[ \frac 12r_{2}]{r_{1}-r_2}  \left(\begin{array}{ccccc}1  &amp;  0  &amp;  0  &amp;  3  &amp;  2 \\ 0  &amp;  1  &amp;  0  &amp;  -2  &amp;  -3 \\ 0  &amp;  0  &amp;  1  &amp;  1  &amp;  3\end{array}\right) </m>  ,同解方程组  <m>  \left\{\begin{array}{l}x_{1}=-3 x_{4}-2 x_{5} \\ x_{2}=2 x_{4}+3 x_{5} \\ x_{3}=-x_{4}-3 x_{5}\end{array}\right.  </m> , </p> 
 
-      <!-- Q3 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    <p> 令<m>\begin{array}{l}
+                    \left(\begin{array}{l}
+                    x_{4} \\
+                    x_{5}
+                    \end{array}\right)=\left(\begin{array}{l}
+                    1 \\
+                    0
+                    \end{array}\right),\left(\begin{array}{l}
+                    0 \\
+                    1
+                    \end{array}\right)
+                    \end{array}</m> </p> 
 
-      <!-- Q4 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    <p> 则基础解系是  <m> \boldsymbol{\eta}_{1}=(-3,2,-1,1,0)^{\mathrm{T}}, \boldsymbol{\eta}_{2}=(-2,3,-3,0,1)^{\mathrm{T}} </m>
+                    </p>
+                </answer>
+            </exercise>
 
-      <!-- Q5 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+            <!-- Q2 -->
+            <exercise>
+                <statement>
+                    <p>
+                        解方程组  <m> \left\{\begin{array}{ll}6 x_{1}-2 x_{2}+2 x_{3}+x_{4} &amp; =3, \\ x_{1}-x_{2}  +x_{4} &amp; =1, \\ 2 x_{1}  +x_{3}+3 x_{4} &amp; =2 .\end{array}\right. </m> 
 
-      <!-- Q6 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <m>\overline{\boldsymbol{A}}=\left(\begin{array}{cccc:c}6  &amp;  -2  &amp;  2  &amp;  1  &amp;  3 \\ 1  &amp;  -1  &amp;  0  &amp;  1  &amp;  1 \\ 2  &amp;  0  &amp;  1  &amp;  3  &amp;  2\end{array}\right) \rightarrow\left(\begin{array}{cccc:c}1  &amp;  -1  &amp;  0  &amp;  1  &amp;  1 \\ 2  &amp;  0  &amp;  1  &amp;  3  &amp;   2 \\ 6  &amp;  -2  &amp;  2  &amp;  1  &amp;   3\end{array}\right) \xrightarrow[r_{3}-6r_1]{r_{2}-2 r_{1}}\left(\begin{array}{cccc:c}1  &amp;  -1  &amp;  0  &amp;  1  &amp; 1 \\ 0  &amp;  2  &amp;  1  &amp;  1  &amp;  0 \\ 0  &amp;  4  &amp;  2  &amp;  -5  &amp;  -3\end{array}\right)\xrightarrow[]{r_{3}-2 r_{2}} \left(\begin{array}{cccc:c}1  &amp;  -1  &amp;  0  &amp;  1  &amp;  1 \\ 0  &amp;  2  &amp;  1  &amp;  1  &amp;  0 \\ 0  &amp;  0  &amp;  0  &amp;  -7  &amp;  -3\end{array}\right)\xrightarrow[\begin{array}{l}r_2-r_3\\r_1-r_3
+                            \end{array}]{-\frac 17r_{3}} \left(\begin{array}{cccc:c}1  &amp;  -1  &amp;  0  &amp;  0  &amp;  \frac 47 \\ 0  &amp;  2  &amp;  1  &amp;  0  &amp;  -\frac 37 \\ 0  &amp;  0  &amp;  0  &amp;  1  &amp;  \frac 37\end{array}\right)   </m> , 同解方程组  <m> \left\{\begin{array}{l}x_{1}=\frac{4}{7}+x_{2}, \\ x_{3}=-\frac{3}{7}-2 x_{2}, \\ x_{4}=\frac{3}{7}\end{array}\right. </m> </p> 
 
-      <!-- Q7 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                            <p> 非齐次方程通解为  <m> k[1,1,-2,0]^{\mathrm{T}}+\left[\frac{4}{7}, 0,-\frac{3}{7}, \frac{3}{7}\right]^{\mathrm{T}}, k \in \mathrm{R} </m>
+                    </p>
+                </answer>
+            </exercise>
 
-      <!-- Q8 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+            <!-- Q3 -->
+            <exercise>
+                <statement>
+                    <p>
+                        已知  <m> \boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2} </m>  是非齐次线性方程组  <m> \boldsymbol{A x}=\boldsymbol{b} </m>  的两个不同的解,  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2} </m>  是对应齐次线性方程组  <m> \boldsymbol{A x}=\mathbf{0} </m>  的基础解系,  <m> k_{1}, k_{2} </m>  为任意常数,则方程组  <m> A x=b </m>  的通解是 ( ) 
 
-      <!-- Q9 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> k_{1}\alpha_{1}+k_{2}\left(\alpha_{1}+\alpha_{2}\right)+\frac{\beta_{1}-\beta_{2}}{2} </m>
+                            </p>
+                        </statement>
+                    </choice>
+                    
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                <m> k_{1} \alpha_{1}+k_{2}\left(\alpha_{1}-\alpha_{2}\right)+\frac{\beta_{1}+\beta_{2}}{2} </m>
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> k_{1} \alpha_{1}+k_{2}\left(\beta_{1}+\beta_{2}\right)+\frac{\beta_{1}-\beta_{2}}{2} </m>
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> k_{1} \alpha_{1}+k_{2}\left(\beta_{1}-\beta_{2}\right)+\frac{\beta_{1}+\boldsymbol{\beta}_{2}}{2} </m>
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            解: 因为  <m> \beta_{1}, \beta_{2} </m>  是  <m> A x=b </m>  的两个不同的解,
+                            所以  <m> \frac{\beta_{1}+\beta_{2}}{2} </m>  是  <m> A x=b </m>  的一个解, 而  <m> \frac{\beta_{1}-\beta_{2}}{2} </m>  是  <m> A x=0 </m>  的一个解.因为  <m> \alpha_{1}, \alpha_{2} </m>  是  <m> A x=0 </m>  的基础解系,
+                            所以  <m> \alpha_{1}, \alpha_{1}+\alpha_{2} </m>  以及  <m> \alpha_{1}, \alpha_{1}-\alpha_{2} </m>  都可成为的基础解系（均线性无关）,故选(B) 
+                        </p>
+                  </answer>
+            </exercise>
+    
 
-      <!-- Q10 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+            <!-- Q4 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  是四元非齐次线性方程组  <m> \boldsymbol{A x}=\boldsymbol{\beta} </m>  的三个解向量,秩  <m>  r(\boldsymbol{A})=3, \boldsymbol{\alpha}_{1}=(1,2,3,4)^{\mathrm{T}}, \boldsymbol{\alpha}_{2}+\boldsymbol{\alpha}_{3}=(0,1,2,3)^{\mathrm{T}}, k  </m>  为任意常数,则方程组  <m>  \boldsymbol{A x}=\boldsymbol{\beta}  </m>  的通解是 ( ) 
 
-      <!-- Q11 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                 <m> (1,2,3,4)^{\mathrm{T}}+k(1,1,1,1)^{\mathrm{T}} </m>
+                            </p>
+                        </statement>
+                    </choice>
+                    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> (1,2,3,4)^{\mathrm{T}}+k(0,1,2,3)^{\mathrm{T}} </m>
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                <m> (1,2,3,4)^{\mathrm{T}}+k(2,3,4,5)^{\mathrm{T}} </m> 
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> (1,2,3,4)^{\mathrm{T}}+k(3,4,5,6)^{\mathrm{T}} </m>
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            解: 秩  <m> r(\boldsymbol{A})=3 \Rightarrow \boldsymbol{A X}=\mathbf{0} </m>  的基础解系中含有  <m> n-r(\boldsymbol{A})=4-3=1 </m>  个向量. </p> 
 
-      <!-- Q12 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                            <p>  <m> \boldsymbol{A \alpha}_{1}=\boldsymbol{\beta}, \quad \boldsymbol{A}\left(\boldsymbol{\alpha}_{2}+\boldsymbol{\alpha}_{3}\right)=2 \boldsymbol{\beta} \Rightarrow \boldsymbol{A}\left(\left(\boldsymbol{\alpha}_{2}+\boldsymbol{\alpha}_{3}\right)-2 \alpha_{1}\right)=0 </m> 
+                           所以  <m> \left(\boldsymbol{\alpha}_{2}+\boldsymbol{\alpha}_{3}\right)-2 \boldsymbol{\alpha}_{1}=(0,1,2,3)^{\mathrm{T}}-2(1,2,3,4)^{\mathrm{T}}=-(2,3,4,5)^{\mathrm{T}} </m> 为  <m> \boldsymbol{A X}=\mathbf{0} </m>  的一个非零解. </p> 
+                           
+                            <p> 所以  <m> (1,2,3,4)^{\mathrm{T}}+k(2,3,4,5)^{\mathrm{T}} </m>  为方程组  <m> \boldsymbol{A x}=\boldsymbol{\beta} </m>  的通解, 故选 (C) 
+                        </p>
+                  </answer>
+            </exercise>
+    
 
-      <!-- Q13 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+            <!-- Q5 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{A}=\left(\alpha_{1}, \alpha_{2}, \alpha_{3}\right) </m>  为3阶矩阵. 若  <m> \alpha_{1}, \alpha_{2}  </m>  线性无关,且  <m>  \alpha_{3}=-\alpha_{1}+2 \alpha_{2}  </m> , 则线性方程组  <m>  A x=0  </m>  的通解为 ______
 
-      <!-- Q14 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解: 由  <m> \alpha_{1}, \alpha_{2}  </m>  线性无关可得  <m> r(\boldsymbol{A}) \geq 2 </m> . 由  <m> \alpha_{3}=-\alpha_{1}+2 \alpha_{2} </m>  可得  <m> -\alpha_{1}+2 \alpha_{2}-\alpha_{3}=0 </m> , 从而  <m> \alpha_{1}, \alpha_{2}, \alpha_{3} </m>  线性相关, 于是  <m> r(\boldsymbol{A}) \leq 2 </m> , 因此  <m> r(\boldsymbol{A})=2  </m> .所以  <m> \boldsymbol{A x}=0  </m>  的基础解系中所含解向量个数为  <m>  3-r(A)=3-2=1 </m> . 又因为  <m> -\alpha_{1}+2 \alpha_{2}-\alpha_{3}=0 </m>  可写为  <m> \left(\alpha_{1}, \alpha_{2}, \alpha_{3}\right)\left(\begin{array}{c}-1 \\ 2 \\ -1\end{array}\right)=0 </m> 
+                        所以  <m> (-1,2,-1)^{\mathrm{T}} </m>  是  <m> \boldsymbol{A x}=\mathbf{0} </m>  的一个解, 即方程的基础解系.则线性方程组  <m> \boldsymbol{A x}=\mathbf{0} </m>  的通解为  <m> k(-1,2,-1)^{\mathrm{T}}(k \in \mathbf{R}) </m> . 
 
-      <!-- Q15 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    </p>
+                </answer>
+            </exercise>
 
-      <!-- Q16 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+            <!-- Q6 -->
+            <exercise>
+                <statement>
+                    <p>
+                        已知  <m> 4 </m>  阶方阵  <m> \boldsymbol{A}=\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4}\right), \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m>  均为 <m> 4 </m>  维列向量, 其中  <m> \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m>  线性无关,  <m> \boldsymbol{\alpha}_{1}=2 \boldsymbol{\alpha}_{2}-\boldsymbol{\alpha}_{3}  </m> . 如果  <m> \boldsymbol{\beta}=\boldsymbol{\alpha}_{1}+\boldsymbol{\alpha}_{2}+\boldsymbol{\alpha}_{3}+\boldsymbol{\alpha}_{4} </m> ,求线性方程组  <m>  \boldsymbol{A x}=\boldsymbol{\beta} </m>  的通解. 
 
-      <!-- Q17 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        法1: 因为  <m> \boldsymbol{\beta}=\boldsymbol{\alpha}_{1}+\boldsymbol{\alpha}_{2}+\boldsymbol{\alpha}_{3}+\boldsymbol{\alpha}_{4}, \Rightarrow  </m>   <m>  \left(\begin{array}{llll}\boldsymbol{\alpha}_{1},  &amp;  \boldsymbol{\alpha}_{2},  &amp;  \boldsymbol{\alpha}_{3},  &amp;  \boldsymbol{\alpha}_{4}\end{array}\right)\left(\begin{array}{l}1 \\ 1 \\ 1 \\ 1\end{array}\right)=\boldsymbol{\beta}  </m>  </p> 
 
-      <!-- Q18 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                        <p>  <m> \Rightarrow(1,1,1,1)^{\mathrm{T}} </m>  为的一个特解  <m> \boldsymbol{A} \boldsymbol{X}=\boldsymbol{\beta} </m>  </p> 
 
-      <!-- Q19 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                        <p> 因为  <m> \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m>  线性无关，且  <m> \boldsymbol{\alpha}_{1}=2 \boldsymbol{\alpha}_{2}-\boldsymbol{\alpha}_{3} </m>  知  <m> r(\boldsymbol{A})=3  </m> 
+                        <m>  \boldsymbol{A} \boldsymbol{X}=\mathbf{0} </m>  基础解系中含有  <m> 4-r(\boldsymbol{A})=4-3=1 </m>  个解向量. 又  <m> \boldsymbol{\alpha}_{1}=2 \boldsymbol{\alpha}_{2}-\boldsymbol{\alpha}_{3} \Rightarrow \boldsymbol{\alpha}_{1}-2 \boldsymbol{\alpha}_{2}+\boldsymbol{\alpha}_{3}=\mathbf{0} \Rightarrow\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4}\right)\left(\begin{array}{c}1 \\ -2 \\ 1 \\ 0\end{array}\right)=\mathbf{0} </m> . 即基础解为 <m> (1,-2,1,0)^{\mathrm{T}} </m>  </p> 
 
-      <!-- Q20 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                        <p>  <m> \Rightarrow \boldsymbol{A x}=\boldsymbol{\beta} </m>  的通解为  <m> (1,1,1,1)^{\mathrm{T}}+k(1,-2,1,0)^{\mathrm{T}}(k \in \mathbf{R}) </m> . </p> 
 
-      <!-- Q21 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                        <p> 法2: 令  <m> \boldsymbol{A} \boldsymbol{x}=\boldsymbol{\beta} </m>  的解为  <m> \boldsymbol{x}=\left(x_{1}, x_{2}, x_{3}, x_{4}\right)^{\mathrm{T}} </m> .
+                        得  <m> x_{1} \boldsymbol{\alpha}_{1}+x_{2} \boldsymbol{\alpha}_{2}+x_{3} \boldsymbol{\alpha}_{3}+x_{4} \boldsymbol{\alpha}_{4}=\boldsymbol{\alpha}_{1}+\boldsymbol{\alpha}_{2}+\boldsymbol{\alpha}_{3}+\boldsymbol{\alpha}_{4} </m> . 将  <m> \boldsymbol{\alpha}_{1}=2 \boldsymbol{\alpha}_{2}-\boldsymbol{\alpha}_{3} </m>  代入得
+                        <me> 
+                        \begin{array}{l}
+                        x_{1}\left(2 \boldsymbol{\alpha}_{2}-\boldsymbol{\alpha}_{3}\right)+x_{2} \boldsymbol{\alpha}_{2}+x_{3} \boldsymbol{\alpha}_{3}+x_{4} \boldsymbol{\alpha}_{4}=2 \boldsymbol{\alpha}_{2}-\boldsymbol{\alpha}_{3}+\boldsymbol{\alpha}_{2}+\boldsymbol{\alpha}_{3}+\boldsymbol{\alpha}_{4} . \\
+                        \left(2 x_{1}+x_{2}-3\right) \boldsymbol{\alpha}_{2}+\left(-x_{1}+x_{3}\right) \boldsymbol{\alpha}_{3}+\left(x_{4}-1\right) \boldsymbol{\alpha}_{4}=\mathbf{0} .
+                        \end{array}
+                        </me>  </p> 
 
-      <!-- Q22 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                        <p> 因为  <m> \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m>  线性无关, 知  <m> \left\{\begin{array}{l}2 x_{1}+x_{2}-3=0, \\ -x_{1}+x_{3}=0, \\ x_{4}-1=0,\end{array}\right. </m>  </p> 
 
-      <!-- Q23 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                        <p>  <m> \overline{\boldsymbol{A}}=\left(\begin{array}{cccc:c}2  &amp;  1  &amp;  0  &amp;  0  &amp;  3 \\ -1  &amp;  0  &amp;  1  &amp;  0  &amp; 0 \\ 0  &amp;  0  &amp;  0  &amp;  1  &amp;  1\end{array}\right) \Rightarrow\left\{\begin{array}{l}x_{2}=3-2 x \\ x_{3}=x_{1} \\ x_{4}=1\end{array}\right. </m>  </p> 
 
-      <!-- Q24 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                        <p>  <m> \Rightarrow \boldsymbol{A x}=\boldsymbol{\beta} </m>  的通解为  <m> \left(\begin{array}{l}0 \\ 3 \\ 0 \\ 1\end{array}\right)+k\left(\begin{array}{c}1 \\ -2 \\ 1 \\ 0\end{array}\right)(k \in \mathbf{R}) </m> 
+                    </p>
+                </answer>
+            </exercise>
 
-      <!-- Q25 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+            <!-- Q7 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{A}=\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4}\right) </m>  是  <m> 4 </m>  阶矩阵,  <m> \boldsymbol{A}^{*} </m>  为  <m> \boldsymbol{A} </m>  的伴随矩阵, 若  <m>  (1,0,1,0)^{\mathrm{T}} </m>  是  <m> \boldsymbol{A x}=0 </m>  的一个基础解系，则  <m> \boldsymbol{A}^{*} \boldsymbol{x}=\mathbf{0} </m>  的基础解系可为（）
 
-      <!-- Q26 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{3} </m> 
+                            </p>
+                        </statement>
+                    </choice>
+                    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2} </m> 
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                <m> \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m> 
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            【分析】:(1)由  <m> r(\boldsymbol{A}) \Rightarrow r\left(\boldsymbol{A}^{*}\right)= </m>  ?(2)  <m> \boldsymbol{A} </m>  的列向量为  <m> \boldsymbol{A}^{*} \boldsymbol{X}=\mathbf{0} </m>  的解 </p> 
 
-      <!-- Q27 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                            <p> 解: 因为  <m> (1,0,1,0)^{\mathrm{T}} </m>  是  <m> \boldsymbol{A x}=\mathbf{0} </m>  的一个基础解系  <m> \Rightarrow n-r(\boldsymbol{A})=4-r(\boldsymbol{A})=1 </m> 
+                            <me> 
+                           \begin{array}{l}
+                           \Rightarrow r(\boldsymbol{A})=3, \text { 且 }|\boldsymbol{A}|=0 \\
+                           \Rightarrow \boldsymbol{A}^{*} \boldsymbol{A}=|\boldsymbol{E}| \boldsymbol{E}=\boldsymbol{O} \\
+                           \Rightarrow \boldsymbol{A}^{*}\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4}\right)=\boldsymbol{O}
+                           \end{array}
+                            </me>  </p> 
+                           
+                            <p> 即  <m> \boldsymbol{A} </m>  的列向量为  <m> \boldsymbol{A}^{*} \boldsymbol{X}=\mathbf{0} </m>  的解.又因为
+                            <me> 
+                            r\left(\boldsymbol{A}^{*}\right)=\left\{\begin{array}{l}
+                           n, r(\boldsymbol{A})=n \\
+                           1, r(\boldsymbol{A})=n-1 \\
+                           0, r(\boldsymbol{A}) \lt n-1
+                           \end{array} \Rightarrow r\left(\boldsymbol{A}^{*}\right)=1\right.
+                            </me>  </p> 
+                           
+                            <p> 所以  <m> \boldsymbol{A}^{*} \boldsymbol{x}=\mathbf{0} </m>  的基础解系由三个线性无关的解向量组成, 排除  <m> \mathrm{A}, \mathrm{B} </m> .  <m> (1,0,1,0)^{\mathrm{T}} </m>  是  <m> \boldsymbol{A x}=\mathbf{0} </m>  的一个基础解系  <m> \Rightarrow\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4}\right)(1,0,1,0)^{\mathrm{T}}=\mathbf{0} </m>   <m> \Rightarrow \boldsymbol{\alpha}_{1}+\boldsymbol{\alpha}_{3}=0 \Rightarrow \boldsymbol{\alpha}_{1}=-\boldsymbol{\alpha}_{3} </m> , 即  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{3}  </m>  线性相关  <m>  \Rightarrow \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  线性相关故  <m> \boldsymbol{A}^{*} \boldsymbol{x}=\mathbf{0} </m>  的基础解系可为  <m> \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m> , 故选(D)
 
-      <!-- Q28 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+                        </p>
+                  </answer>
+            </exercise>
+    
 
-      <!-- Q29 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+        </exercises>
+    </subsection>
 
-      <!-- Q30 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
-
-      <!-- Q31 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
-
-      <!-- Q32 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
-
-      <!-- Q33 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
-
-      <!-- Q34 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
-
-      <!-- Q35 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
-
-      <!-- Q36 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
-
-      <!-- Q37 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
-
-      <!-- Q38 -->
-      <exercise>
-          <statement>
-              <p>
-                  
-              </p>
-          </statement>
-          <answer>
-              <p>
-                  
-              </p>
-          </answer>
-      </exercise>
+    <subsection>
+        <title>线性方程组有无解的判别</title>
+        
       
+        <exercises xml:id="exercises-la4_2">
+            <!-- Q8 -->
+            <exercise>
+                <statement>
+                    <p>
+                        下列命题中正确的命题是 ( ).
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                方程组  <m> \boldsymbol{A} \boldsymbol{x}=\boldsymbol{b} </m>  有唯一解  <m> \Leftrightarrow|\boldsymbol{A}| \neq 0 </m> 
+                            </p>
+                        </statement>
+                    </choice>
+                    
+                    <choice>
+                        <statement>
+                            <p>
+                                若  <m> \boldsymbol{A x}=\mathbf{0} </m>  只有零解, 那么  <m> \boldsymbol{A x}=\boldsymbol{b} </m>  有唯一解
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                若  <m> \boldsymbol{A x}=\mathbf{0} </m>  有非零解，则  <m> \boldsymbol{A x}=\boldsymbol{b} </m>  有无穷多解
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                若  <m> \boldsymbol{A x}=\boldsymbol{b} </m>  有两个不同的解，那么  <m> \boldsymbol{A x}=\mathbf{0} </m>  有无穷多解
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            解: (A)  <m> \boldsymbol{A} </m>  不一定是方阵  <m> \Rightarrow|\boldsymbol{A}| </m>  不一定存在 </p> 
+
+                            <p> (B)  <m> \boldsymbol{A x}=\mathbf{0} </m>  只有零解  <m> \Leftrightarrow r(\boldsymbol{A})=n, \boldsymbol{A x}=\boldsymbol{b} </m>  有唯一解  <m> \Leftrightarrow r(\boldsymbol{A})=r(\overline{\boldsymbol{A}})=n </m> ,由于  <m> r(\boldsymbol{A})=n </m>  得不到  <m> r(\bar{\boldsymbol{A}})=n </m> , 所以  <m> B </m>  不正确 </p> 
+                           
+                            <p> (C)与(B)类似, 由于  <m> r(\boldsymbol{A}) \lt n </m>  得不到  <m> r(\boldsymbol{A})=r(\overline{\boldsymbol{A}}) \lt n </m> , 所以  <m> C </m>  不正确. </p> 
+                           
+                            <p> (D) 若  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2} </m>  是方程组  <m> \boldsymbol{A x}=\boldsymbol{b} </m>  的两个不同的解,
+                           则  <m> \alpha_{1}-\alpha_{2} \neq 0 </m>  是  <m> \boldsymbol{A x=0} </m>  的非零解, 从而  <m> \boldsymbol{A x=0} </m>  有无穷多解, 即  <m> D </m>  正确
+                        </p>
+                  </answer>
+            </exercise>
+    
+
+            <!-- Q9 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{A} </m>  是  <m> m \times n </m>  矩阵,  <m> \boldsymbol{B} </m>  是  <m> n \times m </m>  矩阵, 则线性方程组  <m> (\boldsymbol{A B}) \boldsymbol{x}=\boldsymbol{O}(\quad) </m> 
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                当  <m> n \gt m </m>  时仅有零解
+                            </p>
+                        </statement>
+                    </choice>
+                    
+                    <choice>
+                        <statement>
+                            <p>
+                                当  <m> n \gt m </m>  时必有非零解
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                当  <m> m \gt n </m>  时仅有零解
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                当  <m> m \gt n </m>  时必有非零解
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            结论:(1)  <m> r (\boldsymbol{A} \boldsymbol{B}) \leq \min \{r(\boldsymbol{A}), r(\boldsymbol{B})\} </m>  </p> 
+
+                            <p> (2)  <m> \boldsymbol{A}_{n} \boldsymbol{X}=\boldsymbol{O}|\boldsymbol{A}| \neq 0 \Leftrightarrow </m>  方程只有零解;  <m> |\boldsymbol{A}|=0 \Leftrightarrow </m>  方程有非零解;
+                            <m> r(\boldsymbol{A})=n \Leftrightarrow  </m>  方程只有零解;  <m>  r(\boldsymbol{A}) \lt n \Leftrightarrow  </m>  方程有非零解. </p> 
+                           
+                            <p> 解: 因为  <m> \boldsymbol{A} </m>  是  <m> m \times n </m>  矩阵,  <m> \boldsymbol{B} </m>  是  <m> n \times m </m>  矩阵  <m> \Rightarrow \boldsymbol{A B} </m>  是  <m> m \times m </m>  矩阵 <m> \Rightarrow(\boldsymbol{A B}) \boldsymbol{x}=\boldsymbol{O} </m>  中有  <m> m </m>  个未知量
+                           当  <m> m \gt n </m>  时,  <m> r(\boldsymbol{A B}) \leq \min \{r(\boldsymbol{A}), r(\boldsymbol{B})\} \leq n \lt m </m> 
+                           则  <m> (\boldsymbol{A B}) \boldsymbol{x}=\boldsymbol{O} </m>  系数矩阵的秩小于未知量个数  <m> \Rightarrow(\boldsymbol{A B}) \boldsymbol{x}=\boldsymbol{O} </m>  有非零解.
+                           (或  <m>  r(\boldsymbol{A B}) \lt m  </m> , 即  <m>  \boldsymbol{A} \boldsymbol{B}  </m>  不是满秩矩阵  <m> \Rightarrow|\boldsymbol{A B}|=0 \Rightarrow(\boldsymbol{A B}) \boldsymbol{x}=\boldsymbol{O} </m>  有非零解. )
+                           当  <m> n \gt m </m>  时,  <m> r(\boldsymbol{A B}) \leq \min \{r(\boldsymbol{A}), r(\boldsymbol{B})\} \leq m </m> ,不能确定方程仅有零解还是有非零解. 故选 (D) 当  <m>  m \gt n  </m>  时必有非零解. 
+                        </p>
+                  </answer>
+            </exercise>
+    
+        </exercises>
+    </subsection>
+
+    <subsection>
+        <title>线性方程组的求解</title>
+        
+      
+            <exercises xml:id="exercises-la4_3">
+            <!-- Q10 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设  <m> \boldsymbol{A}=\left(\begin{array}{llll}1  &amp;  a  &amp;  0  &amp;  0 \\ 0  &amp;  1  &amp;  a  &amp;  0 \\ 0  &amp;  0  &amp;  1  &amp;  a \\ a  &amp;  0  &amp;  0  &amp;  1\end{array}\right), \boldsymbol{\beta}=\left(\begin{array}{c}1 \\ -1 \\ 0 \\ 0\end{array}\right) </m> .
+                        (I)计算行列式  <m>  |\boldsymbol{A}|  </m> ;
+                        (II) 当实数  <m>  a  </m>  为何值时,方程组  <m>  \boldsymbol{A} \boldsymbol{X}=\boldsymbol{\beta}  </m>  有无穷多解,并求其通解. 
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解: (I) 按第一列展开得  <m> |\boldsymbol{A}|=\left|\begin{array}{lll}1  &amp;  a  &amp;  0 \\ 0  &amp;  1  &amp;  a \\ 0  &amp;  0  &amp;  1\end{array}\right|+(-1)^{4+1} a\left|\begin{array}{ccc}a  &amp;  0  &amp;  0 \\ 1  &amp;  a  &amp;  0 \\ 0  &amp;  1  &amp;  a\end{array}\right|=1-a^{4} </m>  </p> 
+
+                    <p> (II) 方程组  <m> \boldsymbol{A X}=\boldsymbol{\beta} </m>  有无穷多解当且仅当秩  <m> r(\boldsymbol{A}, \boldsymbol{\beta})=r(\boldsymbol{A}) \lt 4 </m> , 得  <m> |\boldsymbol{A}|=0 </m> , 即  <m> a= \pm 1 </m>  </p> 
+
+                    <p> 当  <m> a=1 </m>  时, </p> 
+
+                    <p>  <me> \overline{A}=\begin{pmatrix}1 &amp; 1 &amp; 0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 1 &amp; 0 &amp; -1\\0 &amp; 0 &amp; 1 &amp; 1 &amp; 0\\1 &amp; 0 &amp; 0 &amp; 1 &amp; 0\end{pmatrix}\overset{r_4-r_1}{\to}\begin{pmatrix}1 &amp; 1 &amp; 0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 1 &amp; 0 &amp; -1\\0 &amp; 0 &amp; 1 &amp; 1 &amp; 0\\0 &amp; -1 &amp; 0 &amp; 1 &amp; -1\end{pmatrix}\overset{r_4+r_2}{\to}\begin{pmatrix}1 &amp; 1 &amp; 0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 1 &amp; 0 &amp; -1\\0 &amp; 0 &amp; 1 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1 &amp; 1 &amp; -2\end{pmatrix}\overset{r_4-r_3}{\to}\begin{pmatrix}1 &amp; 1 &amp; 0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 1 &amp; 0  &amp; -1\\0 &amp; 0 &amp; 1 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; -2\end{pmatrix} </me>  </p> 
+
+                    <p> 于是  <m>  r(\boldsymbol{A}, \boldsymbol{\beta})=4 \gt r(\boldsymbol{A})=3  </m> , 此时方程组  <m>  \boldsymbol{A} \boldsymbol{X}=\boldsymbol{\beta}  </m>  无解, 故  <m>  a \neq 1  </m>  </p> 
+
+                    <p> 当  <m> a=-1 </m>  时, </p> 
+
+                    <p>  <me> \overline{A}=\begin{pmatrix}1 &amp; -1 &amp; 0 &amp; 0 &amp; \vdots &amp; 1\\0 &amp; 1 &amp; -1 &amp; 0 &amp; \vdots &amp; -1\\0 &amp; 0 &amp; 1 &amp; -1 &amp; \vdots &amp; 0\\-1 &amp; 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0\end{pmatrix}\xrightarrow[ i=1,2,3]{r_{4}+r_{i}}\begin{pmatrix}1 &amp; -1 &amp; 0 &amp; 0 &amp; \vdots &amp; 1\\0 &amp; 1 &amp; -1 &amp; 0 &amp; \vdots &amp; -1\\0 &amp; 0 &amp; 1 &amp; -1 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\end{pmatrix}\xrightarrow[ r_1+r_2]{r_{2}+r_{3}}\begin{pmatrix}1 &amp; 0 &amp; 0 &amp; -1 &amp; \vdots &amp; 0\\0 &amp; 1 &amp; 0 &amp; -1 &amp; \vdots &amp; -1\\0 &amp; 0 &amp; 1 &amp; -1 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\end{pmatrix} </me>  </p> 
+
+                    <p> 通解为  <m> x=k{\begin{pmatrix}1\\1\\1\\1\end{pmatrix}}+{\begin{pmatrix}0\\-1\\0\\0\end{pmatrix}},~k\in\mathbb{R}. </m>
+                    </p>
+                </answer>
+            </exercise>
+
+        </exercises>
+    </subsection>
 
 
-  </exercises>
+    <subsection>
+        <title>方程组的公共解</title>
+        
+      
+        <exercises xml:id="exercises-la4_4">
+            
+            <!-- Q11 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设有齐次线性方程组  <m> \boldsymbol{A} \boldsymbol{x}=\boldsymbol{O} </m>  和  <m> \boldsymbol{B} \boldsymbol{x}=\boldsymbol{O} </m> , 其中  <m> \boldsymbol{A}, \boldsymbol{B} </m>  均为  <m> m \times n </m>  矩阵,四个命题正确的是 ( ) 
+                    </p> 
+
+                    <p> (1) 若  <m> \boldsymbol{A x}=\boldsymbol{O} </m>  的解均是  <m> \boldsymbol{B x}=\boldsymbol{O} </m>  的解, 则秩  <m> r(\boldsymbol{A}) \geq r(\boldsymbol{B}) </m> ; </p> 
+                   
+                    <p> (2) 若秩  <m> r(\boldsymbol{A}) \geq r(\boldsymbol{B})  </m> , 则  <m> \boldsymbol{A} \boldsymbol{x}=\boldsymbol{O} </m>  的解均是  <m> \boldsymbol{B} \boldsymbol{x}=\boldsymbol{O}  </m>  的解; </p> 
+                   
+                    <p> (3) 若  <m> \boldsymbol{A} \boldsymbol{x}=\boldsymbol{O} </m>  和  <m> \boldsymbol{B} \boldsymbol{x}=\boldsymbol{O} </m>  同解，则秩  <m> r(\boldsymbol{A})=r(\boldsymbol{B})  </m> ; </p> 
+                   
+                    <p> (4) 若秩  <m> r(\boldsymbol{A})=r(\boldsymbol{B}) </m> , 则  <m> \boldsymbol{A x}=\boldsymbol{O} </m>  和  <m> \boldsymbol{B x}=\boldsymbol{O} </m>  同解; 
+                    </p>
+                </statement>
+                <choices>
+                    <choice>
+                        <statement>
+                            <p>
+                                (1)(2)
+                            </p>
+                        </statement>
+                    </choice>
+                    
+                    <choice correct="yes">
+                        <statement>
+                            <p>
+                                (1)(3)
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                (2)(4)
+                            </p>
+                        </statement>
+                    </choice>
+    
+                    <choice>
+                        <statement>
+                            <p>
+                                (3)(4)
+                            </p>
+                        </statement>
+                    </choice>
+                
+                </choices>
+                
+                <answer>
+                        <p>
+                            解: (1)若  <m> \boldsymbol{A x}=\boldsymbol{O} </m>  和  <m> \boldsymbol{B x}=\boldsymbol{O} </m>  同解, 即解空间相同
+                            它们的基础解系中包含向量的个数相同, 则  <m>  n-r(\boldsymbol{A})=n-r(\boldsymbol{B}) \Rightarrow r(\boldsymbol{A})=r(\boldsymbol{B}) \Rightarrow </m>  (3)成立,  <m> \mathrm{A}, \mathrm{C} </m>  排除 </p> 
+                            
+                             <p> (2) 当  <m> r(\boldsymbol{A})=r(\boldsymbol{B}) </m>  时, 不能保证  <m> \boldsymbol{A x}=\boldsymbol{O} </m>  和  <m> \boldsymbol{B} \boldsymbol{x}=\boldsymbol{O} </m>  同解 </p> 
+                            
+                             <p> 反例:  <m> \boldsymbol{A}=\left(\begin{array}{ll}1  &amp;  0 \\ 0  &amp;  0\end{array}\right), \boldsymbol{B}=\left(\begin{array}{ll}0  &amp;  0 \\ 0  &amp;  1\end{array}\right), </m>  </p> 
+                            
+                             <p> 但  <m> \boldsymbol{A} \boldsymbol{x}=\boldsymbol{O} </m>  和  <m> \boldsymbol{B} \boldsymbol{x}=\boldsymbol{O} </m>  不同解  <m> \Rightarrow \mathrm{C}, \mathrm{D} </m>  排除, 选  <m> \mathrm{B} </m>  </p> 
+                            
+                             <p> 结论:  <m> \boldsymbol{A x}=\boldsymbol{O} </m>  和  <m> \boldsymbol{B} \boldsymbol{x}=\boldsymbol{O} </m>  同解  <m> \Rightarrow r(\boldsymbol{A})=r(\boldsymbol{B}) </m> , 反之不成立
+                        </p>
+                  </answer>
+            </exercise>
+    
+
+            <!-- Q12 -->
+            <exercise>
+                <statement>
+                    <p>
+                        设线性方程组  <m> \left\{\begin{array}{l}x_{1}+x_{2}+x_{3}=0, \\ x_{1}+2 x_{2}+a x_{3}=0,\\ x_{1}+4 x_{2}+a^{2} x_{3}=0,\end{array}\right. </m>  与方程  <m> x_{1}+2 x_{2}+x_{3}=a-1, </m>  有公共解, 求  <m> a </m>  的值及所有公共解. 
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解：联立方程
+                        <me> 
+                        \left\{\begin{array}{c}
+                        x_{1}+x_{2}+x_{3}=0, \\
+                        x_{1}+2 x_{2}+a x_{3}=0, \\
+                        x_{1}+4 x_{2}+a^{2} x_{3}=0, \\
+                        x_{1}+2 x_{2}+x_{3}=a-1,
+                        \end{array}\right.
+                        </me>  </p> 
+
+                        <p>  <me> \overline{A}=\begin{pmatrix}1 &amp; 1 &amp; 1 &amp; \vdots &amp; 0\\1 &amp; 2 &amp; a &amp; \vdots &amp; 0\\1 &amp; 4 &amp; a^2 &amp; \vdots &amp; 0\\1 &amp; 2 &amp; 1 &amp; \vdots &amp;  a-1\end{pmatrix}\xrightarrow[ i=2,3,4]{r_{i}-r_{1}}\begin{pmatrix}1 &amp; 1 &amp; 1 &amp; \vdots &amp; 0\\0 &amp; 1 &amp; a-1 &amp; \vdots &amp; 0\\0 &amp; 3 &amp; a^2-1 &amp; \vdots &amp; 0\\0 &amp; 1 &amp; 0 &amp; \vdots &amp;  a-1\end{pmatrix}\xrightarrow[ r_3-3r_1]{r_{4}-r_{2}}\begin{pmatrix}1 &amp; 1 &amp; 1 &amp; \vdots &amp; 0\\0 &amp; 1 &amp; a-1 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; (a-1)(a-2) &amp; \vdots &amp; 0\\0 &amp; 0 &amp; 1-a &amp; \vdots &amp;  a-1\end{pmatrix} </me>  </p> 
+
+                        <p> 于是  <m> 1^{\circ} </m>  当  <m> a=1 </m>  时, 有  <m> r(\boldsymbol{A})=r(\overline{\boldsymbol{A}})=2 \lt 3 </m> , 方程组有解, 此时 </p> 
+
+                        <p>  <me> \boldsymbol{\overline{A}}\boldsymbol{\to}\begin{pmatrix}1 &amp; 1 &amp; 1 &amp; \vdots &amp; 0\\0 &amp; 1 &amp; 0 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\end{pmatrix}\xrightarrow[]{r_{1}-r_{2}}\begin{pmatrix}1 &amp; 0 &amp; 1 &amp; \vdots &amp; 0\\0 &amp; 1 &amp; 0 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\end{pmatrix} </me>  </p> 
+
+                        <p> 同解方程为  <m> \left\{\begin{array}{l}x_{1}=-x_{3}, \\ x_{2}=0,\end{array}\right. </m>   全部公共解为  <m> k\left(\begin{array}{c}1 \\ 0 \\ -1\end{array}\right), k \in \mathrm{R} </m>  </p> 
+
+                        <p>  <m> 2^{\circ} </m>  当  <m> a=2 </m>  时, 有  <m> r(A)=r(\overline{A})=3 </m> , 方程组有唯一解, 此时 </p> 
+
+                        <p>  <me> \overline{A}\to\begin{pmatrix}1 &amp; 1 &amp; 1 &amp; \vdots &amp; 0\\0 &amp; 1 &amp; 1 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; -1 &amp; \vdots &amp; 1\end{pmatrix}\xrightarrow[r_2+r_4]{r_{1}-r_{2}}\begin{pmatrix}1 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\\0 &amp; 1 &amp; 0 &amp; \vdots &amp; 1\\0 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\\0 &amp; 0 &amp; -1 &amp; \vdots &amp; 1\end{pmatrix}\to\begin{pmatrix}1 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\\0 &amp; 1 &amp; 0 &amp; \vdots &amp; 1\\0 &amp; 0 &amp; 1 &amp; \vdots &amp; -1\\0 &amp; 0 &amp; 0 &amp; \vdots &amp; 0\end{pmatrix} </me>  </p> 
+
+                        <p> 同解方程为  <m> \left\{\begin{array}{l}x_{1}=0, \\ x_{2}=1, \\ x_{3}=-1,\end{array}\right. </m>  有唯一的公共解:  <m> \left(\begin{array}{c}0 \\ 1 \\ -1\end{array}\right) </m> . 
+                    </p>
+                </answer>
+            </exercise>
+
+            <!-- Q13 -->
+            <exercise>
+                <statement>
+                    <p>
+                        已知齐次方程组(I)  <m> \left\{\begin{array}{c}x_{1}+2 x_{2}+3 x_{3}=0 \\ 2 x_{1}+3 x_{2}+5 x_{3}=0 \\ x_{1}+x_{2}+a x_{3}=0\end{array}\right. </m>  和 (II)  <m> \left\{\begin{array}{c}x_{1}+b x_{2}+c x_{3}=0, \\ 2 x_{1}+b^{2} x_{2}+(c+1) x_{3}=0,\end{array}\right. </m>  同解，求  <m> a,b,c </m>  的值. 
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        解: 因为方程组(II)中方程的个数小于未知量个数, 故方程组(II)必有无穷多解.那么由(I)与(II)同解, 知方程组(I)必有无穷多解. </p> 
+
+                    <p> 于是  <m> |\boldsymbol{A}|=\left|\begin{array}{lll}1  &amp;  2  &amp;  3 \\ 2  &amp;  3  &amp;  5 \\ 1  &amp;  1  &amp; a \end{array}\right|=2-a=0 </m> , 从而  <m> a=2 </m> . 代入方程组  <m> (\mathrm{I}) </m>  的系数矩阵得 </p> 
+
+                    <p>  <me> A=\begin{pmatrix}1 &amp; 2 &amp; 3\\2 &amp; 3 &amp; 5\\1 &amp; 1 &amp; 2\end{pmatrix}\xrightarrow[r_3-r_1]{r_{2}-2r_{1}}\begin{pmatrix}1 &amp; 0 &amp; 1\\0 &amp; -1 &amp; -1\\0 &amp; -1 &amp; -1\end{pmatrix}\overset{}{\rightarrow}\begin{pmatrix}1 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 1\\0 &amp; 0 &amp; 0\end{pmatrix}, </me>  </p> 
+
+                    <p> 故(I)的通解为  <m> k(-1,-1,1)^{\mathrm{T}} </m> , 即  <m> x_{1}=-k, x_{2}=-k, x_{3}=k,(k \in \mathrm{R}) </m> 
+                    代入方程(II)得  <m> \left\{\begin{array}{l}(-1-b+c) k=0, \\ \left(-2-b^{2}+c+1\right) k=0,\end{array} \Rightarrow\left\{\begin{array}{l}-1-b+c=0 \\ -2-b^{2}+c+1=0\end{array} \Rightarrow\left\{\begin{array}{l}c-b=1 \\ c-b^{2}=1\end{array} \Rightarrow b^{2}-b=0\right.\right.\right. </m>  可得  <m> b=1, c=2 </m>  或  <m> b=0, c=1 </m> . </p> 
+
+                    <p> (II)  <m> \left\{\begin{array}{l} x_{1}+b x_{2}+c x_{3}=0, \\ 2 x_{1}+b^{2} x_{2}+(c+1) x_{3}=0,\end{array}\right. </m>  且方程组 (I) 系数矩阵 <m> \boldsymbol{A} \rightarrow\left(\begin{array}{lll}1  &amp;  0  &amp;  1 \\ 0  &amp;  1  &amp;  1 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> ,  <m> b=1, c=2 </m>   或   <m> b=0, c=1 </m>  </p> 
+
+                    <p> 当  <m> b=1, c=2 </m>  时, 对方程组(II)的系数矩阵  <m> \boldsymbol{B} </m>  作初等行变换, 有  <m> \boldsymbol{B}=\left(\begin{array}{lll}1  &amp;  1  &amp;  2 \\ 2  &amp;  1  &amp;  3\end{array}\right) \rightarrow\left(\begin{array}{lll}1  &amp;  0  &amp;  1 \\ 0  &amp;  1  &amp;  1\end{array}\right) </m> , 故方程组(I)与(II)同解. </p> 
+
+                    <p> 当  <m> b=0, c=1 </m>  时, 对方程组(II) 的系数矩阵  <m> \boldsymbol{B} </m>  作初等行变换, 有  <m> \boldsymbol{B}=\left(\begin{array}{lll}1  &amp;  0  &amp;  1 \\ 2  &amp;  0  &amp;  2\end{array}\right) \rightarrow\left(\begin{array}{lll}1  &amp;  0  &amp;  1 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> , 故方程组(I)与(II)不同解.综上所述, 当  <m> a=2, b=1, c=2 </m>  时, 方程组(I)与(II)同解. 
+                    </p>
+                </answer>
+            </exercise>
+
+            
+        </exercises>
+    </subsection>
+
+
 </section>
 
