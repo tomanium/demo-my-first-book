@@ -402,12 +402,27 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求点  <m> {P}(3,-1,2) </m>  到  <m> L:\left\{\begin{array}{l}x+y-z+1=0, \\ 2 x-y+z-4=0,\end{array}\right. </m>  的距离.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 固定  <m> y_{0}=1 </m> , 则  <m> \left\{\begin{array}{rc}x-z=-2, \\ 2 x+z=5, \end{array}\right. </m>   <m> M_0=(1,1,3),\overrightarrow{M_{0} P}=(2,-2,-1) </m>  </p> 
+
+                <p>  <me> 
+                \begin{array}{l} 
+                \boldsymbol{s}=\left|\begin{array}{ccc}
+                \boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
+                1  &amp;  1  &amp;  -1 \\
+                2  &amp;  -1  &amp;  1
+                \end{array}\right|=-3 \boldsymbol{j}-3 \boldsymbol{k} . \\
+                d=\frac{\left|\boldsymbol{s} \times \overrightarrow{M_{0} P}\right|}{|\boldsymbol{s}|} =\frac{\left|\begin{array}{ccc}
+                \boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
+                2  &amp;  -2  &amp;  1 \\
+                0  &amp;  -3  &amp;  -3
+                \end{array}\right|}{\sqrt{18}}=\frac{|(3,6,6)|}{3 \sqrt{2}}=\frac{3 \sqrt{2}}{2} .
+                \end{array}
+                </me> 
                 </p>
             </answer>
         </exercise>
@@ -416,12 +431,26 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求异面直线  <m> L_{1}: \frac{x-3}{2}=\frac{y}{2}=\frac{z+1}{1} </m>  与  <m> L_{2}: \frac{x+1}{1}=\frac{y-1}{0}=\frac{z-2}{1} </m>  间的距离  <m> d </m> .
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:  <m> M_{1}(3,0,-1), M_{2}(-1,1,2) </m> 
+                    <me> 
+                    \begin{array}{l}
+                    \overrightarrow{s_{1}}=(2,2,1), \overrightarrow{s_{2}}=(1,0,1) \quad \vec{c}=\overrightarrow{M_{1} M_{2}}=(-4,1,3) \\
+                    d=\frac{\left|\overrightarrow{M_{1} M_{2}} \cdot\left(\boldsymbol{s}_{1} \times \boldsymbol{s}_{2}\right)\right|}{\left|\boldsymbol{s}_{1} \times \boldsymbol{s}_{2}\right|}=\frac{\left|\begin{array}{ccc}
+                    -4  &amp;  1  &amp;  3 \\
+                    2  &amp;  2  &amp;  1 \\
+                    1  &amp;  0  &amp;  1
+                    \end{array}\right|}{\left|\begin{array}{lll}
+                    \boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
+                    2  &amp;  2  &amp;  1 \\
+                    1  &amp;  0  &amp;  1
+                    \end{array}\right|}=\frac{15}{3}=5 . \\
+                    \end{array}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -430,12 +459,16 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求过直线  <m> L:\left\{\begin{array}{l}x+y-z=0, \\ x-y+z=1\end{array}\right. </m>  和点  <m> M(1,1,-1) </m>  的平面  <m> \Pi </m>  的方程. (1)写出过  <m> L </m>  的平面束方程；(2)确定  <m> \lambda </m>  的值, 从而得  <m> \Pi </m>  的方程
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    (1) <m> x+y-z+\lambda(x-y+z-1)=0 </m> ,
+                即  <m> (1+\lambda) x+(1-\lambda) y+(-1+\lambda) z-\lambda=0 </m> . </p> 
+                <p> 
+                (2))将点  <m> M(1,1,-1) </m>  的坐标代入上式 得
+                <m> 1+\lambda+1-\lambda+1-\lambda-\lambda=0, </m>  解之得  <m> \lambda=\frac{3}{2} </m> . 于是得  <m> x+y-z+\frac{3}{2}(x-y+z-1)=0 </m> , 即  <m> 5 x-y+z-3=0 </m> .
                 </p>
             </answer>
         </exercise>
@@ -444,12 +477,25 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求过直线  <m> L:\left\{\begin{array}{c}2 x+y-3 z+2=0, \\ 5 x+5 y-4 z+3=0\end{array}\right. </m>  的两个相互垂直的平面  <m> \Pi_{1} </m>  和  <m> \Pi_{2} </m>  的方程, 使得  <m> \Pi_{1} </m>  过点  <m> M(4,-3,1) </m> .
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 写出过  <m> L </m>  的平面束方程:
+                <me> 
+                2 x+y-3 z+2+\lambda(5 x+5 y-4 z+3)=0 
+                </me>  </p> 
+
+                <p> 即  <m> (2+5 \lambda) x+(1+5 \lambda) y+(-3-4 \lambda) z+2+3 \lambda=0 </m> .
+                将点  <m> M(4,-3,1) </m>  的坐标代入上式, 解得  <m> \lambda=-1 </m> . </p> 
+
+                <p> 故得
+                <me> 
+                \Pi_{1}: 3 x+4 y-z+1=0 .
+                </me>  </p> 
+
+                <p> 由  <m> \Pi_{1} \perp \Pi_{2} </m>  得  <m> 3(2+5 \lambda)+4(1+5 \lambda)-(-3-4 \lambda)=0 </m> ,解得  <m> \lambda=-\frac{1}{3}  </m> , 故  <m>  \Pi_{2}: x-2 y-5 z+3=0 </m> .
                 </p>
             </answer>
         </exercise>
@@ -458,12 +504,54 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    已知两直线  <m>  L_{1}:\left\{\begin{array}{c}x-3 y+z=0 \\ 2 x-4 y+z+1=0\end{array}\right.  </m>  与  <m>  L_{2}: \frac{x}{1}=\frac{y+1}{3}=\frac{z-2}{4}  </m> 
+                (1)证明:  <m> L_{1} </m>  与  <m> L_{2} </m>  异面;(2)求  <m> L_{1} </m>  与  <m> L_{2} </m>  距离; (3) 求过  <m> L_{1} </m>  且与  <m> L_{2} </m>  平行的平面.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 先将  <m> L_{1} </m>  化为点向式, 取  <m> x_{0}=1,\left\{\begin{array}{l}-3 y+z=-1 \\ -4 y+z=-3\end{array} \quad y_{0}=2, z_{0}=5\right. </m> 
+                    <me> 
+                    \begin{array}{l}
+                    \boldsymbol{s}_{1}=\left|\begin{array}{ccc}
+                    \boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
+                    1  &amp;  -3  &amp;  1 \\
+                    2  &amp;  -4  &amp;  1
+                    \end{array}\right|=(1,1,2) \quad s_{2}=(1,3,4) \quad \overrightarrow{M_{1} M_{2}}=(-1,-3,-3) \\
+                    \end{array}
+                    </me>  </p> 
+
+                    <p> (1)证明: 
+                    <me>  \because \overrightarrow{M_{1} M_{2}} \cdot\left(\boldsymbol{s}_{1} \times \boldsymbol{s}_{2}\right)=\left|\begin{array}{ccc}
+                    -1  &amp;  -3  &amp;  -3 \\
+                    1  &amp;  1  &amp;  2 \\
+                    1  &amp;  3  &amp;  4
+                    \end{array}\right|=\left|\begin{array}{ccc}
+                    -1  &amp;  -3  &amp;  -3 \\
+                    0  &amp;  -2  &amp;  -1 \\
+                    0  &amp;  0  &amp;  1
+                    \end{array}\right|=2 \neq 0 . </me>  </p> 
+
+                    <p> 由混合积的几何意义  <m> \overrightarrow{M_{1} M_{2}}, s_{1}, s_{2} </m>  不共面.
+                    <m> \therefore L_{1}  </m>  与  <m>  L_{2} </m>  异面. </p> 
+
+                    <p>  </p> 
+
+                    <p> (2)求  <m> L_{1} </m>  与  <m> L_{2} </m>  距离; </p> 
+
+                    <p>  <me> d=\frac{\left|\overline{M_1M_2}\cdot(s_1\times s_2)\right|}{\left|s_1\times s_2\right|}=\frac{2}{\begin{Vmatrix}i &amp; j &amp; k\\1 &amp; 1 &amp; 2\\1 &amp; 3 &amp; 4\end{Vmatrix}}=\frac{2}{|(-2,-2,2)|}=\frac{1}{\sqrt{3}}. </me>  </p> 
+
+                    <p> (3)求过  <m> L_{1} </m>  且与  <m> L_{2} </m>  平行的平面. </p> 
+
+                    <p> 过  <m> L_{1} </m>  的平面束:  <m> x-3 y+z+\lambda(2 x-4 y+z+1)=0 </m> 
+                    <me> 
+                    \begin{array}{c}
+                    (1+2 \lambda) x+(-3-4 \lambda) y+(1+\lambda) z+\lambda=0 \\
+                    \vec{\boldsymbol{n}}=(1+2 \lambda,-3-4 \lambda, 1+\lambda) \perp s_{2}=(1,3,4) \\
+                    1+2 \lambda-9-12 \lambda+4+4 \lambda=0 \Rightarrow \lambda=-\frac{2}{3} \\
+                    -x-y+z-2=0
+                    \end{array}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -472,12 +560,20 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设有平面曲线  <m> L:\left\{\begin{array}{l}2 y^{2}+z^{2}=1, \\ x=0 .\end{array}\right. </m>  求  <m> L </m>  绕  <m> O z </m>  轴旋转一周所生成的旋转曲面的方程.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 因为椭圆  <m> L:\left\{\begin{array}{l}2 y^{2}+z^{2}=1, \\ x=0 .\end{array}\right. </m>  绕  <m> O z </m>  轴旋转, 所以  <m> 2 y^{2}+z^{2}=1 </m>  中含有变量  <m> z </m>  的项不动, 而要将  <m> y </m>  换成  <m> \pm \sqrt{x^{2}+y^{2}} </m> ,于是所生成的旋转椭球面的方程为
+                <me> 
+                2\left(x^{2}+y^{2}\right)+z^{2}=1,
+                </me>  </p> 
+
+                <p> 即
+                <me> 
+                \frac{x^{2}+y^{2}}{\frac{1}{2}}+z^{2}=1 \text {. }
+                </me>
                 </p>
             </answer>
         </exercise>
@@ -486,12 +582,19 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    将曲线  <m> \Gamma:\left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=2 a z, \\ x+z=a\end{array}\right. </m> , 化为参量式
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 将  <m> z=a-x </m>  代入  <m> x^{2}+y^{2}+z^{2}=2 a z </m> , 得  <m> 2 x^{2}+y^{2}=a^{2} </m> , 故
+                <me> 
+                \Gamma:\left\{\begin{array}{l}
+                x=\frac{a}{\sqrt{2}} \cos t \\
+                y=a \sin t \\
+                z=a\left(1-\frac{1}{\sqrt{2}} \sin t\right) .
+                \end{array}\right.
+                </me>
                 </p>
             </answer>
         </exercise>
@@ -500,12 +603,20 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设曲线  <m> \Gamma:\left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=4, \\ x^{2}+y^{2}+z^{2}=4 z .\end{array}\right. </m>  求  <m> \Gamma </m>  关于  <m> x O y </m>  面的投影柱面及  <m> \Gamma </m>  在  <m> x O y </m>  面上的投影曲线  <m> L </m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 由  <m> \left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=4, \\ x^{2}+y^{2}+z^{2}=4 z\end{array}\right. </m>  得  <m> \left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=4 \text {, } \\ 4=4 z .\end{array}\right. </m>  </p> 
+
+                <p> 消去  <m> z </m>  得投影柱面方程  <m>  x^{2}+y^{2}=3  </m> . 于是, 投影曲线
+                <me> 
+                L:\left\{\begin{array}{l}
+                x^{2}+y^{2}=3, \\
+                z=0 .
+                \end{array}\right.
+                </me> 
                 </p>
             </answer>
         </exercise>
@@ -514,40 +625,113 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    曲线  <m> \Gamma:\left\{\begin{array}{l}\frac{x^{2}}{16}+\frac{y^{2}}{4}-\frac{z^{2}}{5}=1, \\ x-2 z+3=0\end{array}\right. </m> , 关于  <m> x O y </m>  面的投影柱面方程是 ( ).
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> x^{2}+20 y^{2}-24 x-116=0 </m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m> 4 y^{2}+4 z^{2}-12 z-7=0 </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \left\{\begin{array}{l}x^{2}+20 y^{2}-24 x-116=0, \\ z=0\end{array}\right. </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \left\{\begin{array}{l}4 y^{2}+4 z^{2}-12 z-7=0 \\ x=0\end{array}\right. </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        <m> x^{2}+20 y^{2}-24 x-116=0 </m>
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q24 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    曲面  <m> x^{2}+4 y^{2}+z^{2}=4 </m>  与平面  <m> x+z=1 </m>  的交线在  <m> y O z </m>  平面上的投影  <m> L </m>  的方程是 (  ).
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \left\{\begin{array}{l}x^{2}+4 y^{2}+(1-x)^{2}=4 \\ x=0\end{array}\right. </m> 
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \left\{\begin{array}{l}x^{2}+4 y^{2}+(1-x)^{2}=4, \\ z=0\end{array}\right. </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> \left\{\begin{array}{l}(1-z)^{2}+4 y^{2}+z^{2}=4, \\ x=0\end{array}\right. </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>  (1-z)^{2}+4 y^{2}+z^{2}=4 </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        <m> \left\{\begin{array}{l}(1-z)^{2}+4 y^{2}+z^{2}=4, \\ x=0\end{array}\right. </m> 
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q25 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    求直线  <m> L: \frac{x-1}{1}=\frac{y}{2}=\frac{z-1}{1} </m>  绕  <m> O z </m>  旋转所得旋转曲面  <m> \Sigma </m>  的方程.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解  <m> L: \frac{x-1}{1}=\frac{y}{2}=\frac{z-1}{1} \Leftrightarrow L:\left\{\begin{array}{l}x=1+t, \\ y=2 t, \\ z=1+t .\end{array}\right. </m> 
+                    <m> \forall t </m> , 对应  <m> L </m>  上点  <m> M(1+t, 2 t, 1+t) \cdot M </m>  到  <m> O z </m>  轴的距离为  <m> d=\sqrt{(1+t)^{2}+4 t^{2}}=\sqrt{1+2 t+5 t^{2}} </m> , 于是  <m> M </m>  绕  <m> O z </m>  轴旋转一周所得上的圆周为  <m> \left\{\begin{array}{l}x^{2}+y^{2}=(1+t)^{2}+4 t^{2} \\ z=1+t .\end{array}\right. </m>  消去参量  <m> t </m>  得  <m> \Sigma: x^{2}+y^{2}=z^{2}+4(z-1)^{2} </m> . 
                 </p>
             </answer>
         </exercise>
@@ -556,12 +740,25 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设直线  <m> L </m>  过点  <m> A(1,0,0), B(0,1,1) </m>  两点, 将  <m> L </m>  绕  <m> z </m>  轴旋转一周得到曲面  <m> \Sigma </m> . 求  <m> \Sigma </m>  的方程
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 易知  <m> L: \frac{x-1}{1}=\frac{y}{-1}=\frac{z}{-1} \Leftrightarrow L:\left\{\begin{array}{l}x=1+t, \\ y=-t, \\ z=-t .\end{array}\right. </m>  </p> 
+
+                    <p> 设  <m> M(x, y, z) </m>  即  <m> M(1+t,-t,-t) </m>  为  <m> \Sigma </m>  上任意一点则有
+                    <me> 
+                    \left\{\begin{array}{l}
+                    x^{2}+y^{2}=(1+t)^{2}+(-t)^{2}, \\
+                    z=-t .
+                    \end{array}\right.
+                    </me>  </p> 
+
+                    <p> 消去参量  <m>  t  </m>  得  <m>  \Sigma  </m>  的方程为  <m>  x^{2}+y^{2}=(1-z)^{2}+z^{2}  </m> , 即
+                    <me> 
+                    x^{2}+y^{2}-2 z^{2}+2 z=1 .
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -570,248 +767,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    证明直线  <m> L:\left\{\begin{array}{l}x+\frac{z}{3}=0, \\ y=2\end{array}\right. </m>  在单叶双曲面  <m> \Sigma: x^{2}+\frac{y^{2}}{4}-\frac{z^{2}}{9}=1 </m>  上.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证:  <m> L </m>  的参数方程为  <m> \left\{\begin{array}{l}x=t, \\ y=2, \\ z=-3 t \text {. }\end{array}\right. </m> 
+                    <m> \because \forall t \in(-\infty,+\infty) </m> , 有
+                    <me> 
+                    x^{2}+\frac{y^{2}}{4}-\frac{z^{2}}{9}=t^{2}+\frac{2^{2}}{4}-\frac{(-3 t)^{2}}{3}=1 ,
+                    </me>  </p> 
+
+                    <p>  <m> \therefore L </m>  上任一点都在  <m> \Sigma </m>  上, 于是  <m> L </m>  在  <m> \Sigma </m>  上.
                 </p>
             </answer>
         </exercise>
-
-        <!-- Q28 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q29 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        
+  
 
     </exercises>
 </section>
-
-
- 
-
-<!-- Q15<p> 求点  <m> {P}(3,-1,2) </m>  到  <m> L:\left\{\begin{array}{l}x+y-z+1=0, \\ 2 x-y+z-4=0,\end{array}\right. </m>  的距离. </p> 
-
-<p> 解: 固定  <m> y_{0}=1 </m> , 则  <m> \left\{\begin{array}{rc}x-z=-2, \\ 2 x+z=5, \end{array}\right. </m>   <m> M_0=(1,1,3),\overrightarrow{M_{0} P}=(2,-2,-1) </m>  </p> 
-
-<p>  <me> 
-\begin{array}{l} 
-\boldsymbol{s}=\left|\begin{array}{ccc}
-\boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
-1  &amp;  1  &amp;  -1 \\
-2  &amp;  -1  &amp;  1
-\end{array}\right|=-3 \boldsymbol{j}-3 \boldsymbol{k} . \\
-d=\frac{\left|\boldsymbol{s} \times \overrightarrow{M_{0} P}\right|}{|\boldsymbol{s}|} =\frac{\left|\begin{array}{ccc}
-\boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
-2  &amp;  -2  &amp;  1 \\
-0  &amp;  -3  &amp;  -3
-\end{array}\right|}{\sqrt{18}}=\frac{|(3,6,6)|}{3 \sqrt{2}}=\frac{3 \sqrt{2}}{2} .
-\end{array}
-</me>  </p> 
-
-<p>  </p> 
-
-<p> 求异面直线  <m> L_{1}: \frac{x-3}{2}=\frac{y}{2}=\frac{z+1}{1} </m>  与  <m> L_{2}: \frac{x+1}{1}=\frac{y-1}{0}=\frac{z-2}{1} </m>  间的距离  <m> d </m> . </p> 
-
-<p> 解:  <m> M_{1}(3,0,-1), M_{2}(-1,1,2) </m> 
-<me> 
-\begin{array}{l}
-\overrightarrow{s_{1}}=(2,2,1), \overrightarrow{s_{2}}=(1,0,1) \quad \vec{c}=\overrightarrow{M_{1} M_{2}}=(-4,1,3) \\
-d=\frac{\left|\overrightarrow{M_{1} M_{2}} \cdot\left(\boldsymbol{s}_{1} \times \boldsymbol{s}_{2}\right)\right|}{\left|\boldsymbol{s}_{1} \times \boldsymbol{s}_{2}\right|}=\frac{\left|\begin{array}{ccc}
--4  &amp;  1  &amp;  3 \\
-2  &amp;  2  &amp;  1 \\
-1  &amp;  0  &amp;  1
-\end{array}\right|}{\left|\begin{array}{lll}
-\boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
-2  &amp;  2  &amp;  1 \\
-1  &amp;  0  &amp;  1
-\end{array}\right|}=\frac{15}{3}=5 . \\
-\end{array}
-</me>  </p> 
-
-<p>  </p> 
-
-<p> 求过直线  <m> L:\left\{\begin{array}{l}x+y-z=0, \\ x-y+z=1\end{array}\right. </m>  和点  <m> M(1,1,-1) </m>  的平面  <m> \Pi </m>  的方程. </p> 
-
-<p> (1)写出过  <m> L </m>  的平面束方程:  <m> x+y-z+\lambda(x-y+z-1)=0 </m> ,
-即  <m> (1+\lambda) x+(1-\lambda) y+(-1+\lambda) z-\lambda=0 </m> . </p> 
-
-<p> (2)确定  <m> \lambda </m>  的值, 从而得  <m> \Pi </m>  的方程:
-将点  <m> M(1,1,-1) </m>  的坐标代入上式 得
-<m> 1+\lambda+1-\lambda+1-\lambda-\lambda=0, </m>  解之得  <m> \lambda=\frac{3}{2} </m> . 于是得  <m> x+y-z+\frac{3}{2}(x-y+z-1)=0 </m> , 即  <m> 5 x-y+z-3=0 </m> . </p> 
-
-<p>  </p> 
-
-<p> 求过直线  <m> L:\left\{\begin{array}{c}2 x+y-3 z+2=0, \\ 5 x+5 y-4 z+3=0\end{array}\right. </m>  的两个相互垂直的平面  <m> \Pi_{1} </m>  和  <m> \Pi_{2} </m>  的方程, 使得  <m> \Pi_{1} </m>  过点  <m> M(4,-3,1) </m> . </p> 
-
-<p> 解 写出过  <m> L </m>  的平面束方程:
-<me> 
-2 x+y-3 z+2+\lambda(5 x+5 y-4 z+3)=0 
-</me>  </p> 
-
-<p> 即  <m> (2+5 \lambda) x+(1+5 \lambda) y+(-3-4 \lambda) z+2+3 \lambda=0 </m> .
-将点  <m> M(4,-3,1) </m>  的坐标代入上式, 解得  <m> \lambda=-1 </m> . </p> 
-
-<p> 故得
-<me> 
-\Pi_{1}: 3 x+4 y-z+1=0 .
-</me>  </p> 
-
-<p> 由  <m> \Pi_{1} \perp \Pi_{2} </m>  得  <m> 3(2+5 \lambda)+4(1+5 \lambda)-(-3-4 \lambda)=0 </m> ,解得  <m> \lambda=-\frac{1}{3}  </m> , 故  <m>  \Pi_{2}: x-2 y-5 z+3=0 </m> . </p> 
-
-<p>  </p> 
-
-<p> 例6.19 已知两直线  <m>  L_{1}:\left\{\begin{array}{c}x-3 y+z=0 \\ 2 x-4 y+z+1=0\end{array}\right.  </m>  与  <m>  L_{2}: \frac{x}{1}=\frac{y+1}{3}=\frac{z-2}{4}  </m> 
-(1)证明:  <m> L_{1} </m>  与  <m> L_{2} </m>  异面;(2)求  <m> L_{1} </m>  与  <m> L_{2} </m>  距离; (3) 求过  <m> L_{1} </m>  且与  <m> L_{2} </m>  平行的平面. </p> 
-
-<p> 解 先将  <m> L_{1} </m>  化为点向式, 取  <m> x_{0}=1,\left\{\begin{array}{l}-3 y+z=-1 \\ -4 y+z=-3\end{array} \quad y_{0}=2, z_{0}=5\right. </m> 
-<me> 
-\begin{array}{l}
-\boldsymbol{s}_{1}=\left|\begin{array}{ccc}
-\boldsymbol{i}  &amp;  \boldsymbol{j}  &amp;  \boldsymbol{k} \\
-1  &amp;  -3  &amp;  1 \\
-2  &amp;  -4  &amp;  1
-\end{array}\right|=(1,1,2) \quad s_{2}=(1,3,4) \quad \overrightarrow{M_{1} M_{2}}=(-1,-3,-3) \\
-\end{array}
-</me>  </p> 
-
-<p> (1)证明: 
-<me>  \because \overrightarrow{M_{1} M_{2}} \cdot\left(\boldsymbol{s}_{1} \times \boldsymbol{s}_{2}\right)=\left|\begin{array}{ccc}
--1  &amp;  -3  &amp;  -3 \\
-1  &amp;  1  &amp;  2 \\
-1  &amp;  3  &amp;  4
-\end{array}\right|=\left|\begin{array}{ccc}
--1  &amp;  -3  &amp;  -3 \\
-0  &amp;  -2  &amp;  -1 \\
-0  &amp;  0  &amp;  1
-\end{array}\right|=2 \neq 0 . </me>  </p> 
-
-<p> 由混合积的几何意义  <m> \overrightarrow{M_{1} M_{2}}, s_{1}, s_{2} </m>  不共面.
-<m> \therefore L_{1}  </m>  与  <m>  L_{2} </m>  异面. </p> 
-
-<p>  </p> 
-
-<p> (2)求  <m> L_{1} </m>  与  <m> L_{2} </m>  距离; </p> 
-
-<p>  <me> d=\frac{\left|\overline{M_1M_2}\cdot(s_1\times s_2)\right|}{\left|s_1\times s_2\right|}=\frac{2}{\begin{Vmatrix}i &amp; j &amp; k\\1 &amp; 1 &amp; 2\\1 &amp; 3 &amp; 4\end{Vmatrix}}=\frac{2}{|(-2,-2,2)|}=\frac{1}{\sqrt{3}}. </me>  </p> 
-
-<p> (3)求过  <m> L_{1} </m>  且与  <m> L_{2} </m>  平行的平面. </p> 
-
-<p> 过  <m> L_{1} </m>  的平面束:  <m> x-3 y+z+\lambda(2 x-4 y+z+1)=0 </m> 
-<me> 
-\begin{array}{c}
-(1+2 \lambda) x+(-3-4 \lambda) y+(1+\lambda) z+\lambda=0 \\
-\vec{\boldsymbol{n}}=(1+2 \lambda,-3-4 \lambda, 1+\lambda) \perp s_{2}=(1,3,4) \\
-1+2 \lambda-9-12 \lambda+4+4 \lambda=0 \Rightarrow \lambda=-\frac{2}{3} \\
--x-y+z-2=0
-\end{array}
-</me>  </p> 
-
-<p> 设有平面曲线  <m> L:\left\{\begin{array}{l}2 y^{2}+z^{2}=1, \\ x=0 .\end{array}\right. </m>  求  <m> L </m>  绕  <m> O z </m>  轴旋转一周所生成的旋转曲面的方程.
-解: 因为椭圆  <m> L:\left\{\begin{array}{l}2 y^{2}+z^{2}=1, \\ x=0 .\end{array}\right. </m>  绕  <m> O z </m>  轴旋转, 所以  <m> 2 y^{2}+z^{2}=1 </m>  中含有变量  <m> z </m>  的项不动, 而要将  <m> y </m>  换成  <m> \pm \sqrt{x^{2}+y^{2}} </m> ,于是所生成的旋转椭球面的方程为
-<me> 
-2\left(x^{2}+y^{2}\right)+z^{2}=1,
-</me>  </p> 
-
-<p> 即
-<me> 
-\frac{x^{2}+y^{2}}{\frac{1}{2}}+z^{2}=1 \text {. }
-</me>  </p> 
-
-<p> 将曲线  <m> \Gamma:\left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=2 a z, \\ x+z=a\end{array}\right. </m> , 化为参量式 </p> 
-
-<p> 图 </p> 
-
-<p> 解 将  <m> z=a-x </m>  代入  <m> x^{2}+y^{2}+z^{2}=2 a z </m> , 得  <m> 2 x^{2}+y^{2}=a^{2} </m> , 故
-<me> 
-\Gamma:\left\{\begin{array}{l}
-x=\frac{a}{\sqrt{2}} \cos t \\
-y=a \sin t \\
-z=a\left(1-\frac{1}{\sqrt{2}} \sin t\right) .
-\end{array}\right.
-</me>  </p> 
-
-<p> 设曲线  <m> \Gamma:\left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=4, \\ x^{2}+y^{2}+z^{2}=4 z .\end{array}\right. </m>  求  <m> \Gamma </m>  关于  <m> x O y </m>  面的投影柱面及  <m> \Gamma </m>  在  <m> x O y </m>  面上的投影曲线  <m> L </m> .
-解 由  <m> \left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=4, \\ x^{2}+y^{2}+z^{2}=4 z\end{array}\right. </m>  得  <m> \left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=4 \text {, } \\ 4=4 z .\end{array}\right. </m>  </p> 
-
-<p> 消去  <m> z </m>  得投影柱面方程  <m>  x^{2}+y^{2}=3  </m> . 于是, 投影曲线
-<me> 
-L:\left\{\begin{array}{l}
-x^{2}+y^{2}=3, \\
-z=0 .
-\end{array}\right.
-</me>  </p> 
-
-<p> 曲线  <m> \Gamma:\left\{\begin{array}{l}\frac{x^{2}}{16}+\frac{y^{2}}{4}-\frac{z^{2}}{5}=1, \\ x-2 z+3=0\end{array}\right. </m> , 关于  <m> x O y </m>  面的投影柱面方程是 ( A ). </p> 
-
-<p> (A)  <m> x^{2}+20 y^{2}-24 x-116=0 </m> 
-(B)  <m> 4 y^{2}+4 z^{2}-12 z-7=0 </m> 
-(C)  <m> \left\{\begin{array}{l}x^{2}+20 y^{2}-24 x-116=0, \\ z=0\end{array}\right. </m> 
-(D)  <m> \left\{\begin{array}{l}4 y^{2}+4 z^{2}-12 z-7=0 \\ x=0\end{array}\right. </m>  </p> 
-
-<p> 曲面  <m> x^{2}+4 y^{2}+z^{2}=4 </m>  与平面  <m> x+z=1 </m>  的交线在  <m> y O z </m>  平面上的投影  <m> L </m>  的方程是 ( C ). </p> 
-
-<p> (A)  <m> \left\{\begin{array}{l}x^{2}+4 y^{2}+(1-x)^{2}=4 \\ x=0\end{array}\right. </m> 
-(B)  <m> \left\{\begin{array}{l}x^{2}+4 y^{2}+(1-x)^{2}=4, \\ z=0\end{array}\right. </m> 
-(C)  <m> \left\{\begin{array}{l}(1-z)^{2}+4 y^{2}+z^{2}=4, \\ x=0\end{array}\right. </m> 
-(D)  <m>  (1-z)^{2}+4 y^{2}+z^{2}=4 </m>  </p> 
-
-<p>  </p> 
-
-<p> 求直线  <m> L: \frac{x-1}{1}=\frac{y}{2}=\frac{z-1}{1} </m>  绕  <m> O z </m>  旋转所得旋转曲面  <m> \Sigma </m>  的方程. </p> 
-
-<p> 解  <m> L: \frac{x-1}{1}=\frac{y}{2}=\frac{z-1}{1} \Leftrightarrow L:\left\{\begin{array}{l}x=1+t, \\ y=2 t, \\ z=1+t .\end{array}\right. </m> 
-<m> \forall t </m> , 对应  <m> L </m>  上点  <m> M(1+t, 2 t, 1+t) \cdot M </m>  到  <m> O z </m>  轴的距离为  <m> d=\sqrt{(1+t)^{2}+4 t^{2}}=\sqrt{1+2 t+5 t^{2}} </m> , 于是  <m> M </m>  绕  <m> O z </m>  轴旋转一周所得上的圆周为  <m> \left\{\begin{array}{l}x^{2}+y^{2}=(1+t)^{2}+4 t^{2} \\ z=1+t .\end{array}\right. </m>  消去参量  <m> t </m>  得  <m> \Sigma: x^{2}+y^{2}=z^{2}+4(z-1)^{2} </m> . </p> 
-
-<p> 设直线  <m> L </m>  过点  <m> A(1,0,0), B(0,1,1) </m>  两点, 将  <m> L </m>  绕  <m> z </m>  轴旋转一周得到曲面  <m> \Sigma </m> . 求  <m> \Sigma </m>  的方程解 易知  <m> L: \frac{x-1}{1}=\frac{y}{-1}=\frac{z}{-1} \Leftrightarrow L:\left\{\begin{array}{l}x=1+t, \\ y=-t, \\ z=-t .\end{array}\right. </m>  </p> 
-
-<p> 设  <m> M(x, y, z) </m>  即  <m> M(1+t,-t,-t) </m>  为  <m> \Sigma </m>  上任意一点则有
-<me> 
-\left\{\begin{array}{l}
-x^{2}+y^{2}=(1+t)^{2}+(-t)^{2}, \\
-z=-t .
-\end{array}\right.
-</me>  </p> 
-
-<p> 消去参量  <m>  t  </m>  得  <m>  \Sigma  </m>  的方程为  <m>  x^{2}+y^{2}=(1-z)^{2}+z^{2}  </m> , 即
-<me> 
-x^{2}+y^{2}-2 z^{2}+2 z=1 .
-</me>  </p> 
-
-<p>  </p> 
-
-<p> 证明直线  <m> L:\left\{\begin{array}{l}x+\frac{z}{3}=0, \\ y=2\end{array}\right. </m>  在单叶双曲面  <m> \Sigma: x^{2}+\frac{y^{2}}{4}-\frac{z^{2}}{9}=1 </m>  上. </p> 
-
-<p> 证:  <m> L </m>  的参数方程为  <m> \left\{\begin{array}{l}x=t, \\ y=2, \\ z=-3 t \text {. }\end{array}\right. </m> 
-<m> \because \forall t \in(-\infty,+\infty) </m> , 有
-<me> 
-x^{2}+\frac{y^{2}}{4}-\frac{z^{2}}{9}=t^{2}+\frac{2^{2}}{4}-\frac{(-3 t)^{2}}{3}=1 ,
-</me>  </p> 
-
-<p>  <m> \therefore L </m>  上任一点都在  <m> \Sigma </m>  上, 于是  <m> L </m>  在  <m> \Sigma </m>  上. </p>  -->
