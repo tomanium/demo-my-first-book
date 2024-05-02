@@ -1,128 +1,495 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="la-chap3">
-  <title>第三章 矩阵的初等变换与线性方程组</title>
+    <title>第三章 矩阵的初等变换与线性方程组</title>
   
-    <exercises xml:id="exercises-la3">
-        
-    
-        <exercise>
-        
-            <statement>
-                <p>
-                    Q1 下列向量组中，线性无关的是（   ）
-                </p>
-            </statement>
-            <choices>
-                
-                <choice>
-                    <statement>
-                        <p>
-                             <m> (1,2,3,4)^{\mathrm{T}},(2,3,4,5)^{\mathrm{T}},(0,0,0,0)^{\mathrm{T}} </m>; 
-                        </p>
-                    </statement>
-                </choice>
-                <choice>
-                    <statement>
-                        <p>
-                             <m> (1,2,-1)^{\mathrm{T}},(3,5,6)^{\mathrm{T}},(0,7,9)^{\mathrm{T}},(1,0,2)^{\mathrm{T}} </m>;
-                        </p>
-                    </statement>
-                </choice>
-                <choice>
-                    <statement>
-                        <p>
-                             <m> (a, 1,2,3)^{\mathrm{T}},(b, 1,2,3)^{\mathrm{T}},(c, 3,4,5)^{\mathrm{T}},(d, 0,0,0)^{\mathrm{T}} </m>;
-                        </p>
-                    </statement>
-                </choice>
-
-                <choice correct="yes">
-                    <statement>
-                        <p>
-                           <m> (a, 1, b, 0,0)^{\mathrm{T}},(c, 0, d, 6,0)^{\mathrm{T}},(a, 0, c, 5,6)^{\mathrm{T}} .</m>
-                        </p>
-                    </statement>
-                </choice>
-            </choices>
-            <solution>
-                <p>
-                    <p>解:(A)中有零向量必线性相关,</p>
-
-                    <p>(B) 4 个三维向量必线性相关,</p>
-
-                    <p>(C) 4 个四维向量用行列式,</p>
-
-                    <p><m>\left|\begin{array}{llll}a &amp; b &amp; c &amp; d \\ 1 &amp; 1 &amp; 3 &amp; 0 \\ 2 &amp; 2 &amp; 4 &amp; 0 \\ 3 &amp; 3 &amp; 5 &amp; 0\end{array}\right|=-d\left|\begin{array}{lll}1 &amp; 1 &amp; 3 \\ 2 &amp; 2 &amp; 4 \\ 3 &amp; 3 &amp; 5\end{array}\right|=0 </m></p>
-
-                    <p>(D)中, 因为 <m> \left|\begin{array}{lll}1 &amp; 0 &amp; 0 \\ 0 &amp; 6 &amp; 5 \\ 0 &amp; 0 &amp; 6\end{array}\right| =\ 0 </m>,知 <m> (1,0,0)^{\mathrm{T}},(0,6,0)^{\mathrm{T}},(0,5,6)^{\mathrm{T}} </m> 线性无关, 那么其延伸组
-                    <m> (a, 1, b, 0,0)^{\mathrm{T}},(c, 0, d, 6,0)^{\mathrm{T}},(a, 0, c, 5,6)^{\mathrm{T}} </m> 必线性无关.</p>
-                </p>
-            </solution>
-
-        </exercise>
-
-        <exercise>
-            <title>设 <m>\boldsymbol \alpha_{1}=\left(\begin{array}{l}0 \\ 0 \\ c_{1}\end{array}\right), \boldsymbol \alpha_{2}=\left(\begin{array}{c}0 \\ 1 \\ c_{2}\end{array}\right), \boldsymbol \alpha_{3}=\left(\begin{array}{c}1 \\ -1 \\ c_{3}\end{array}\right), \boldsymbol \alpha_{4}=\left(\begin{array}{c}-1 \\ 1 \\ c_{4}\end{array}\right) </m>, 其中 <m> c_{1}, c_{2}, c_{3}, c_{4} </m>为任意常数, 则下列向量组线性相关的是 (<m>\quad</m>).</title>
+        <subsection>
+            <title>线性相关</title>
             
-            
-            <statement>
-                <p>
-                    Q2 设 <m>\boldsymbol \alpha_{1}=\left(\begin{array}{l}0 \\ 0 \\ c_{1}\end{array}\right), \boldsymbol \alpha_{2}=\left(\begin{array}{c}0 \\ 1 \\ c_{2}\end{array}\right), \boldsymbol \alpha_{3}=\left(\begin{array}{c}1 \\ -1 \\ c_{3}\end{array}\right), \boldsymbol \alpha_{4}=\left(\begin{array}{c}-1 \\ 1 \\ c_{4}\end{array}\right) </m>, 其中 <m> c_{1}, c_{2}, c_{3}, c_{4} </m>为任意常数, 则下列向量组线性相关的是 ().
-                </p>
-            </statement>
-            <choices>
-                <choice>
+        
+            <exercises xml:id="exercises-la3_1">
+                <title>练习题</title>   
+                <!-- Q1 -->
+                <exercise>
                     <statement>
                         <p>
-                            <m>\alpha_1, \alpha_{2}, \alpha_{3}</m>;
+                            下列向量组中，线性无关的是（）
+                        </p>
+                    </statement>
+                    <choices>
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m>  (1,2,3,4)^{\mathrm{T}},(2,3,4,5)^{\mathrm{T}},(0,0,0,0)^{\mathrm{T}}  </m> 
+                                </p>
+                            </statement>
+                        </choice>
                         
-                        </p>
-                    </statement>
-                </choice>
-                <choice>
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m>  (1,2,-1)^{\mathrm{T}},(3,5,6)^{\mathrm{T}},(0,7,9)^{\mathrm{T}},(1,0,2)^{\mathrm{T}}  </m>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m>  (a, 1,2,3)^{\mathrm{T}},(b, 1,2,3)^{\mathrm{T}},(c, 3,4,5)^{\mathrm{T}},(d, 0,0,0)^{\mathrm{T}}  </m> 
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    <m>  (a, 1, b, 0,0)^{\mathrm{T}},(c, 0, d, 6,0)^{\mathrm{T}},(a, 0, c, 5,6)^{\mathrm{T}} . </m>
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                解:(A)中有零向量必线性相关, </p> 
+
+                                <p> (B) 4 个三维向量必线性相关, </p> 
+                               
+                                <p> (C) 4 个四维向量用行列式, </p> 
+                               
+                                <p>  <m> \left|\begin{array}{llll}a  &amp;  b  &amp;  c  &amp;  d \\ 1  &amp;  1  &amp;  3  &amp;  0 \\ 2  &amp;  2  &amp;  4  &amp;  0 \\ 3  &amp;  3  &amp;  5  &amp;  0\end{array}\right|=-d\left|\begin{array}{lll}1  &amp;  1  &amp;  3 \\ 2  &amp;  2  &amp;  4 \\ 3  &amp;  3  &amp;  5\end{array}\right|=0  </m>  </p> 
+                               
+                                <p> (D)中, 因为  <m>  \left|\begin{array}{lll}1  &amp;  0  &amp;  0 \\ 0  &amp;  6  &amp;  5 \\ 0  &amp;  0  &amp;  6\end{array}\right| \neq 0  </m> ,知  <m>  (1,0,0)^{\mathrm{T}},(0,6,0)^{\mathrm{T}},(0,5,6)^{\mathrm{T}}  </m>  线性无关, 那么其延伸组
+                                <m>  (a, 1, b, 0,0)^{\mathrm{T}},(c, 0, d, 6,0)^{\mathrm{T}},(a, 0, c, 5,6)^{\mathrm{T}}  </m>  必线性无关.
+                            </p>
+                      </answer>
+                </exercise>
+        
+
+                <!-- Q2 -->
+                <exercise>
                     <statement>
                         <p>
-                            <m>\alpha_{1}, \alpha_{2}, \alpha_{4}</m>;
+                            设  <m> \boldsymbol{\alpha}_{1}=\left(\begin{array}{l}0 \\ 0 \\ c_{1}\end{array}\right), \boldsymbol{\alpha}_{2}=\left(\begin{array}{c}0 \\ 1 \\ c_{2}\end{array}\right), \boldsymbol{\alpha}_{3}=\left(\begin{array}{c}1 \\ -1 \\ c_{3}\end{array}\right), \boldsymbol{\alpha}_{4}=\left(\begin{array}{c}-1 \\ 1 \\ c_{4}\end{array}\right)  </m> , 其中  <m>  c_{1}, c_{2}, c_{3}, c_{4}  </m> 为任意常数, 则下列向量组线性相关的是 (). 
                         </p>
                     </statement>
-                </choice>
-                <choice correct="yes">
-                    <statement>
-                        <p>
-                             <m>\alpha_{1}, \alpha_{3}, \alpha_{4}</m>;
+                    <choices>
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> \alpha_{1}, \alpha_{2}, \alpha_{3} </m>
+                                </p>
+                            </statement>
+                        </choice>
                         
-                        </p>
-                    </statement>
-                </choice>
-                <choice>
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> \alpha_{1}, \alpha_{2}, \alpha_{4} </m>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    <m> \alpha_{1}, \alpha_{3}, \alpha_{4} </m>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> \alpha_{2}, \alpha_{3}, \alpha_{4} </m> 
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                解:(A)  <m> \left|\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}\right)\right|=\left|\begin{array}{ccc}0  &amp;  0  &amp;  1 \\ 0  &amp;  1  &amp;  -1 \\ c_{1}  &amp;  c_{2}  &amp;  c_{3}\end{array}\right|=-c_{1} </m>   <m> \Rightarrow \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  不一定线性相关. </p> 
+
+                                <p> (B)  <m> \left|\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{4}\right)\right|=\left|\begin{array}{ccc}0  &amp;  0  &amp;  -1 \\ 0  &amp;  1  &amp;  1 \\ c_{1}  &amp;  c_{2}  &amp;  c_{4}\end{array}\right|=c_{1}  </m>    <m> \quad \Rightarrow \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{4} </m>  不一定线性相关. </p> 
+                               
+                                <p> (C)  <m> \left|\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4}\right)\right|=\left|\begin{array}{ccc}0  &amp;  1  &amp;  -1 \\ 0  &amp;  -1  &amp;  1 \\ c_{1}  &amp;  c_{3}  &amp;  c_{4}\end{array}\right|=c_{1}\left|\begin{array}{cc}1  &amp;  -1 \\ -1  &amp;  1\end{array}\right|=0 \Rightarrow \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4}  </m>  线性相关. </p> 
+                               
+                                <p> (D)  <m> \left|\left(\boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4}\right)\right|=\left|\begin{array}{ccc}0  &amp;  1  &amp;  -1 \\ 1  &amp;  -1  &amp;  1 \\ c_{2}  &amp;  c_{3}  &amp;  c_{4}\end{array}\right| \xlongequal[]{c_{3}+c_{2}}\left|\begin{array}{ccc}0  &amp;  1  &amp;  0 \\ 1  &amp;  -1  &amp;  0 \\ c_{2}  &amp;  c_{3}  &amp;  c_{4}+c_{3}\end{array}\right|=-c_{4}-c_{3}  </m>   <m> \Rightarrow \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m>  不一定线性相关. 
+                            </p>
+                      </answer>
+                </exercise>
+        
+
+                <!-- Q3 -->
+                <exercise>
                     <statement>
                         <p>
-                            <m>\alpha_{2},\alpha_{3},\alpha_{4}</m>
+                            已知向量组  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  线性无关, 若  <m> \boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3} </m>  可用  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  线性表示，设  <m> \left(\beta_{1}, \beta_{2}, \beta_{3}\right)=\left(\alpha_{1}, \alpha_{2}, \alpha_{3}\right) C </m> , 证明  <m> \beta_{1}, \beta_{2}, \beta_{3} </m>  线性无关  <m> \Leftrightarrow|C| \neq 0 </m>
                         </p>
                     </statement>
-                </choice>
+                    <answer>
+                        <p>
+                            结论: 
+                            1.  <m> r(\boldsymbol{A B}) \leq \min \{r(\boldsymbol{A}), r(\boldsymbol{B})\} \Rightarrow r(\boldsymbol{A B}) \leq r(\boldsymbol{A})  </m> , 且  <m>  r(\boldsymbol{A B}) \leq r(\boldsymbol{B})  </m> . </p> 
+
+                            <p> 2. 初等变换不改变矩阵的秩.
+                            
+                            证明: 记  <m> A=\left(\alpha_{1}, \alpha_{2}, \alpha_{3}\right), B=\left(\beta_{1}, \beta_{2}, \boldsymbol{\beta}_{3}\right) </m> . </p> 
+
+                            <p> 必要性 若  <m> \boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3} </m>  线性无关, 则秩  <m> r(B)=r\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}\right)=3 </m> .
+                            <me> 
+                            \text { 又 } r(\boldsymbol{B})=r(A C) \leq r(\boldsymbol{C}) \leq 3 \text { ， }
+                            </me>  </p> 
+
+                            <p> 因此秩  <m> r(\boldsymbol{C})=3 </m> , 即矩阵  <m> \boldsymbol{C} </m>  可逆,  <m> |\boldsymbol{C}| \neq 0 </m> . </p> 
+
+                            <p> 充分性 若  <m> |C| \neq 0 </m> , 即矩阵  <m> C </m>  可逆, 那么
+                            <me> 
+                            r(\boldsymbol{B})=r(A C)=r(\boldsymbol{A})=r\left(\alpha_{1}, \alpha_{2}, \alpha_{3}\right)=3,
+                            </me>  </p> 
+
+                            <p> 所以  <m> \boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3} </m>  线性无关. 
+                        </p>
+                    </answer>
+                </exercise>
+
+                <!-- Q4 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            设  <m>  \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{s}  </m>  均为  <m>  n  </m>  维列向量,  <m>  \boldsymbol{A}  </m>  为  <m>  m \times n  </m>  矩阵，正确的选项是 ( )
+                        </p>
+                    </statement>
+                    <choices>
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    若  <m> \alpha_{1}, \alpha_{2}, \cdots, \alpha_{s} </m>  线性相关，则  <m> A\alpha_{1}, A \alpha_{2}, \cdots, A \alpha_{s} </m>  线性相关
+                                </p>
+                            </statement>
+                        </choice>
+                        
+                        <choice>
+                            <statement>
+                                <p>
+                                    若  <m> \alpha_{1}, \alpha_{2}, \cdots, \alpha_{s} </m>  线性相关，则  <m> A\alpha_{1}, A \alpha_{2}, \cdots, A \alpha_{s} </m>  线性无关
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    若  <m> {\alpha}_{1}, \alpha_{2}, \cdots, \alpha_{s} </m>  线性无关，则  <m> A \alpha_{1}, A \alpha_{2}, \cdots, A \alpha_{s} </m>  线性相关
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    若  <m> {\alpha}_{1}, \alpha_{2}, \cdots, \alpha_{s} </m>  线性无关，则  <m> {A} {\alpha}_{1}, {A} {\alpha}_{2}, \cdots, {A} {\alpha}_{s} </m>  线性无关
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                解: 令  <m> B=\left(\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}\right) </m> ， 则  <m> \left(A \alpha_{1}, A \alpha_{2}, \cdots, A \alpha_{s}\right)=A\left(\alpha_{1}, \alpha_{2}, \cdots, \alpha_{s}\right)=A B </m>  </p> 
+
+                                <p> 由于  <m> r(\boldsymbol{A B}) \leq \min \{r(\boldsymbol{A}), r(\boldsymbol{B})\} \leq r(\boldsymbol{B}) </m>  </p> 
+                               
+                                <p> (1) 若  <m> \alpha_{1}, \alpha_{2}, \cdots, \alpha_{s} </m>  线性相关  <m> \Rightarrow r(B) \lt s \Rightarrow r(A B) \lt s </m> . </p> 
+                               
+                                <p> 所以  <m> A \alpha_{1}, A \alpha_{2}, \cdots, A \alpha_{s} </m>  线性相关，故选 (A) </p> 
+                               
+                                <p> (2) 若  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{s}  </m>  线性无关  <m>  \Rightarrow r(\boldsymbol{B})=s \Rightarrow r(\boldsymbol{A B}) \leq s </m> . </p> 
+                               
+                                <p> 则  <m> A \alpha_{1}, A \alpha_{2}, \cdots, A \alpha_{s} </m>  无法确定线性相关性
+                            </p>
+                      </answer>
+                </exercise>
+        
+
+                <!-- Q5 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            已知  <m> \boldsymbol{Q}=\left(\begin{array}{lll}1  &amp;  2  &amp;  3 \\ 2  &amp;  4  &amp;  t \\ 3  &amp;  6  &amp;  9\end{array}\right), \boldsymbol{P} </m>  为  <m> 3 </m>  阶非零矩阵, 且满足  <m> \boldsymbol{P} \boldsymbol{Q}=\boldsymbol{O} </m> , 则  <m> (\quad) </m> 
+                        </p>
+                    </statement>
+                    <choices>
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> t=6 </m>  时  <m> \boldsymbol{P} </m>  的秩必为  <m> 1 </m> 
+                                </p>
+                            </statement>
+                        </choice>
+                        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> t=6 </m>  时  <m> \boldsymbol{P} </m>  的秩必为  <m> 2 </m>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    <m> t \neq 6 </m>  时  <m> \boldsymbol{P} </m>  的秩必为  <m> 1 </m>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    <m> t \neq 6 </m>  时  <m> \boldsymbol{P} </m>  的秩必为  <m> 2 </m> 
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                结论: 若  <m> \boldsymbol{A}_{m \times n} \boldsymbol{B}_{n \times s}=\boldsymbol{O} \Rightarrow r(\boldsymbol{A})+r(\boldsymbol{B}) \leq n </m>  </p> 
+
+                                <p> 解: 因为  <m> \boldsymbol{P Q}=\boldsymbol{O} </m> , 所以  <m> r(\mathbf{P})+r(\boldsymbol{Q}) \leq 3 \Rightarrow r(\mathbf{P}) \leq 3-r(\boldsymbol{Q}) </m>  </p> 
+                               
+                                <p> 又因为  <m> \boldsymbol{P} </m>  为 3 阶非零矩阵,  <m> r(\boldsymbol{P}) \geq 1 \Rightarrow 1 \leq r(\mathbf{P}) \leq 3-r(\boldsymbol{Q}) </m>  </p> 
+                               
+                                <p> 又  <m> Q=\left(\begin{array}{lll}1  &amp;  2  &amp;  3 \\ 2  &amp;  4  &amp;  t \\ 3  &amp;  6  &amp;  9\end{array}\right) \xrightarrow{\substack{\boldsymbol{r}_{2}-2 \boldsymbol{r}_{1} \\ \boldsymbol{r}_{3}-\boldsymbol{r}_{1}}}\left(\begin{array}{ccc}1  &amp;  2  &amp;  3 \\ 0  &amp;  0  &amp;  t-6 \\ 0  &amp;  0  &amp;  0\end{array}\right) </m> . </p> 
+                               
+                                <p> 当  <m> t=6 </m>  时,  <m>  r(\boldsymbol{Q})=1 \quad </m>  故  <m> r(\boldsymbol{P}) \leq 2 </m> , 即  <m> r(\boldsymbol{P})=1 </m>  或  <m> 2 </m> .
+                               当  <m> t \neq 6 </m>   时,  <m> r(\boldsymbol{Q})=2 \quad  </m>  故  <m> r(\boldsymbol{P})=1 </m> . 
+                            </p>
+                      </answer>
+                </exercise>
+        
+
+                <!-- Q6 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            设  <m> \boldsymbol{\alpha}, \boldsymbol{\beta} </m>  为  <m> 3 </m>  维列向量, 矩阵  <m> \boldsymbol{A}=\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}+\boldsymbol{\beta} \boldsymbol{\beta}^{\mathrm{T}}  </m> , 其中  <m>  \boldsymbol{\alpha}^{\mathrm{T}}, \boldsymbol{\beta}^{\mathrm{T}}  </m>  分别为  <m>  \boldsymbol{\alpha}, \boldsymbol{\beta}  </m>  的转置. 证明: (1) 秩  <m>  r(\boldsymbol{A}) \leq 2  </m> ; (2) 若  <m>  \boldsymbol{\alpha}, \boldsymbol{\beta}  </m>  线性相关, 则秩  <m>  r(\boldsymbol{A}) \lt 2  </m> .
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            矩阵秩的结论:  <m>  r\left(\boldsymbol{A}_{m \times n}\right) \leq \min \{m, n\}, r(\boldsymbol{A B}) \leq \min \{r(\boldsymbol{A}), r(\boldsymbol{B})\}  </m> ,
+ 
+                        <m> r(\boldsymbol{A}+\boldsymbol{B}) \leq r(\boldsymbol{A})+r(\boldsymbol{B}), r(\boldsymbol{A})=r\left(\boldsymbol{A}^{\mathrm{T}}\right)=r\left(\boldsymbol{A} \boldsymbol{A}^{\mathrm{T}}\right)=r\left(\boldsymbol{A}^{\mathrm{T}} \boldsymbol{A}\right) </m>  </p> 
+
+                        <p> 证法1：(1) 由于结论(1)可知
+                        <me> 
+                        r(\boldsymbol{A})=r\left(\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}+\boldsymbol{\beta} \boldsymbol{\beta}^{\mathrm{T}}\right) \leq r\left(\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}\right)+r\left(\boldsymbol{\beta} \boldsymbol{\beta}^{\mathrm{T}}\right)
+                        </me>  </p> 
+
+                        <p> 又  <m> r\left(\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}\right)=r(\boldsymbol{\alpha}) \leq 1, r\left(\boldsymbol{\beta} \boldsymbol{\beta}^{\mathrm{T}}\right)=r(\boldsymbol{\beta}) \leq 1  </m> . 所以  <m>  r(\boldsymbol{A}) \leq 1+1=2 </m> 
+                        (2) 若  <m> \boldsymbol{\alpha}, \boldsymbol{\beta} </m>  线性相关，不妨假设  <m> \boldsymbol{\alpha}=k \boldsymbol{\beta} </m> , 于是 </p> 
+
+                        <p>  <me> 
+                        r(\boldsymbol{A})=r\left(\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}+\boldsymbol{\beta} \boldsymbol{\beta}^{\mathrm{T}}\right)=r\left((k \boldsymbol{\beta})(k \boldsymbol{\beta})^{\mathrm{T}}+\boldsymbol{\beta} \boldsymbol{\beta}^{\mathrm{T}}\right)=r\left(\left(k^{2}+1\right) \boldsymbol{\beta} \boldsymbol{\beta}^{\mathrm{T}}\right)=r(\boldsymbol{\beta}) \leq 1 \lt 2
+                        </me> 
+
+                        证法2:
+                        <m> \boldsymbol{A}=\boldsymbol{\alpha} \boldsymbol{\alpha}^{\mathrm{T}}+\boldsymbol{\beta} \boldsymbol{\beta}^{\mathrm{T}}=(\boldsymbol{\alpha}, \boldsymbol{\beta}) \left(\begin{array}{l}\boldsymbol{\alpha}^{\mathrm{T}} \\ \boldsymbol{\beta}^{\mathrm{T}}\end{array}\right)=(\boldsymbol{\alpha}, \boldsymbol{\beta})(\boldsymbol{\alpha}, \boldsymbol{\beta})^{\mathrm{T}}  </m>  </p> 
+
+                        <p> 因为  <m> \boldsymbol{\alpha}, \boldsymbol{\beta} </m>  为 3 维列向量, 所以  <m>  (\boldsymbol{\alpha}, \boldsymbol{\beta})  </m>  为  <m>  3 \times 2  </m>  的矩阵, 故有
+                        <me> 
+                        r(\boldsymbol{A})=r\left((\boldsymbol{\alpha}, \boldsymbol{\beta})(\boldsymbol{\alpha}, \boldsymbol{\beta})^{\mathrm{T}}\right) \leq r(\boldsymbol{\alpha}, \boldsymbol{\beta}) \leq 2
+                        </me>  </p> 
+
+                        <p> (2) 由于对于任意的矩阵  <m> \boldsymbol{A}  </m>  都有  <m> r(\boldsymbol{A})=r\left(\boldsymbol{A} \boldsymbol{A}^{\mathrm{T}}\right) </m> 
+                        故  <m> r(\boldsymbol{A})=r\left((\boldsymbol{\alpha}, \boldsymbol{\beta})(\boldsymbol{\alpha},\boldsymbol{\beta})^{\mathrm{T}}\right)=r(\boldsymbol{\alpha}, \boldsymbol{\beta}) </m>  </p> 
+
+                        <p> 又  <m> \alpha, \beta </m>  线性相关，故  <m> r(\alpha, \beta) \leq 1 </m> , 从而  <m> r(A) \leq 1 \lt 2 </m> 
+                        </p>
+                    </answer>
+                </exercise>
+
                 
-            </choices>
-            <solution>
-                <p>
-                    解:(A) <m>\left|\left(\boldsymbol \alpha_{1}, \boldsymbol \alpha_{2}, \boldsymbol \alpha_{3}\right)\right|=\left|\begin{array}{ccc}0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -1 \\ c_{1} &amp; c_{2} &amp; c_{3}\end{array}\right|=-c_{1}</m> <m>\Rightarrow \boldsymbol \alpha_{1}, \boldsymbol \alpha_{2}, \boldsymbol \alpha_{3}</m> 不一定线性相关.
-
-                    <p>
-                        (B) <m>\left|\left(\boldsymbol \alpha_{1}, \boldsymbol \alpha_{2}, \boldsymbol \alpha_{4}\right)\right|=\left|\begin{array}{ccc}0 &amp; 0 &amp; -1 \\ 0 &amp; 1 &amp; 1 \\ c_{1} &amp; c_{2} &amp; c_{4}\end{array}\right|=c_{1} </m>  <m>\quad \Rightarrow \boldsymbol \alpha_{1}, \boldsymbol \alpha_{2}, \boldsymbol \alpha_{4}</m> 不一定线性相关.
-                    </p>
-
-                    (C) <m>\left|\left(\boldsymbol \alpha_{1}, \boldsymbol \alpha_{3}, \boldsymbol \alpha_{4}\right)\right|=\left|\begin{array}{ccc}0 &amp; 1 &amp; -1 \\ 0 &amp; -1 &amp; 1 \\ c_{1} &amp; c_{3} &amp; c_{4}\end{array}\right|=c_{1}\left|\begin{array}{cc}1 &amp; -1 \\ -1 &amp; 1\end{array}\right|=0 \Rightarrow \boldsymbol \alpha_{1}, \boldsymbol \alpha_{3}, \boldsymbol \alpha_{4} </m> 线性相关.
-
-                    (D) <m>\left|\left(\boldsymbol \alpha_{2}, \boldsymbol \alpha_{3}, \boldsymbol \alpha_{4}\right)\right|=\left|\begin{array}{ccc}0 &amp; 1 &amp; -1 \\ 1 &amp; -1 &amp; 1 \\ c_{2} &amp; c_{3} &amp; c_{4}\end{array}\right| \xlongequal[]{c_{3}+c_{2}}\left|\begin{array}{ccc}0 &amp; 1 &amp; 0 \\ 1 &amp; -1 &amp; 0 \\ c_{2} &amp; c_{3} &amp; c_{4}+c_{3}\end{array}\right|=-c_{4}-c_{3}</m> <m>\Rightarrow \boldsymbol \alpha_{2}, \boldsymbol \alpha_{3}, \boldsymbol \alpha_{4}</m> 不一定线性相关.
-                                        
-                </p>
-            </solution>
-        </exercise>
+            </exercises>
+        </subsection>
 
 
-    </exercises>
-    
+        <subsection>
+            <title>向量的线性表示</title>
+            
+        
+            <exercises xml:id="exercises-la3_2">
+                <title>练习题</title>   
+                <!-- Q8 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            设向量组  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  线性相关，向量组  <m> \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m>  线性无关，问: </p> 
+
+                        <p> (1)  <m> \alpha_{1} </m>  能否由  <m> \alpha_{2}, \alpha_{3} </m>  线性表出? 证明你的结论. </p> 
+
+                        <p> (2)  <m> \alpha_{4} </m>  能否由  <m> \alpha_{1}, \alpha_{2}, \alpha_{3} </m>  线性表出? 证明你的结论. 
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            结论:整体无关  <m>  \Rightarrow  </m>  部分无关 </p> 
+
+                        <p> (1) 因为已知向量组  <m> \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m>  线性无关，那么部分组  <m>  \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  线性无关.又因  <m> \boldsymbol{ \alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  线性相关，故  <m> \boldsymbol{ \alpha}_{1} </m>  可以由  <m> \boldsymbol{ \alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  线性表出. </p> 
+
+                        <p> (2) 反证法: 若  <m> \boldsymbol{\alpha}_{4}  </m>  能由  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m> , 线性表出, 设  <m> \boldsymbol{\alpha}_{4}=k_{1} \boldsymbol{\alpha}_{1}+k_{2} \boldsymbol{\alpha}_{2}+k_{3} \boldsymbol{\alpha}_{3} </m> 由(1)可知  <m> \boldsymbol{\alpha}_{1} </m>  可由  <m>  \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  线性表示，即  <m> \boldsymbol{\alpha}_{1}=l_{2} \boldsymbol{\alpha}_{2}+l_{3} \boldsymbol{\alpha}_{3} </m> . </p> 
+
+                        <p>  <me> 
+                        \boldsymbol{\alpha}_{4}=k_{1}\left(l_{2} \boldsymbol{\alpha}_{2}+l_{3} \boldsymbol{\alpha}_{3}\right)+k_{2} \boldsymbol{\alpha}_{2}+k_{3} \boldsymbol{\alpha}_{3}=\left(k_{1} l_{2}+k_{2}\right) \boldsymbol{\alpha}_{2}+\left(k_{1} l_{3}+k_{3}\right) \boldsymbol{\alpha}_{3},
+                        </me>  </p> 
+
+                        <p> 所以  <m> \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m>  线性相关, 与已知矛盾. 故  <m> \boldsymbol{\alpha}_{4} </m>  不能由  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3} </m>  线性表出. 
+                        </p>
+                    </answer>
+                </exercise>
+
+                <!-- Q9 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            设  <m> \boldsymbol{A}, \boldsymbol{B}, \boldsymbol{C} </m>  均为  <m> n </m>  阶矩阵, 若  <m> \boldsymbol{A} \boldsymbol{B}=\boldsymbol{C} </m> , 且  <m> \boldsymbol{B} </m>  可逆, 则 ( ). 
+                        </p>
+                    </statement>
+                    <choices>
+                        <choice>
+                            <statement>
+                                <p>
+                                    矩阵  <m> \boldsymbol{C} </m>  的行向量组与矩阵  <m> \boldsymbol{A} </m>  的行向量组等价
+                                </p>
+                            </statement>
+                        </choice>
+                        
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    矩阵  <m> \boldsymbol{C} </m>  的列向量组与矩阵  <m> \boldsymbol{A} </m>  的列向量组等价
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    矩阵  <m> \boldsymbol{C} </m>  的行向量组与矩阵  <m> \boldsymbol{B} </m>  的行向量组等价
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    矩阵  <m> \boldsymbol{C} </m>  的列向量组与矩阵  <m> \boldsymbol{B} </m>  的列向量组等价. 
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                解: 因为  <m> \boldsymbol{B} </m>  可逆, 所以  <m> \boldsymbol{A}, \boldsymbol{C} </m>  之间存在某种等价关系, 所以排除  <m> C, D </m> .记  <m> \boldsymbol{A}=\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{n}\right), \boldsymbol{C}=\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\beta}_{n}\right), \boldsymbol{B}=\left(b_{i j}\right)_{n \times n} </m> , 则  <m> \left(\begin{array}{ll}\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots,  &amp;  \boldsymbol{\alpha}_{n}\end{array}\right)\left(\begin{array}{cccc}b_{11}  &amp;  b_{12}  &amp;  \cdots  &amp;  b_{1 n} \\ b_{21}  &amp;  b_{22}  &amp;  \cdots  &amp;  b_{2 n} \\ \vdots  &amp;  \vdots  &amp;   &amp;  \vdots \\ b_{n 1}  &amp;  b_{n 2}  &amp;  \cdots  &amp;  b_{n n}\end{array}\right)=\left(\boldsymbol{\beta}, \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\beta}_{n}\right) </m>  </p> 
+
+                                <p> 所以矩阵  <m> \boldsymbol{C} </m>  的列向量组与矩阵  <m> \boldsymbol{A} </m>  的列向量组等价, 故选(B). </p> 
+                               
+                                <p> 总结:  <m> \boldsymbol{A B}=\boldsymbol{C} </m> , 即  <m> \boldsymbol{A} </m>  右乘  <m> \boldsymbol{B} </m> , 右乘相当于进行列变换. 
+                            </p>
+                      </answer>
+                </exercise>
+        
+
+                <!-- Q10 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            已知向量组  <m> \boldsymbol{\alpha}_{1}=(1+a, 1,1,1)^{\mathrm{T}}, \boldsymbol{\alpha}_{2}=(2,2+a, 2,2)^{\mathrm{T}}, \boldsymbol{\alpha}_{3}=(3,3,3+a, 3)^{\mathrm{T}} </m> ,  <m> \boldsymbol{\alpha}_{4}=(4,4,4,4+a)^{\mathrm{T}} </m> , 问  <m> a </m>  为何值时,  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m>  线性相关? 当  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4} </m> 线性相关时, 求其一个极大无关组, 并将其余向量用该极大无关组线性表出. 
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            解: 记  <m> \boldsymbol{A}=\left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}, \boldsymbol{\alpha}_{4}\right) </m> , 则  <m> |\boldsymbol{A}|=\left\lvert \begin{array}{cccc}1+a  &amp;  2  &amp;  3  &amp;  4 \\ 1  &amp;  2+a  &amp;  3  &amp;  4 \\ 1  &amp;  2  &amp;  3+a  &amp;  4 \\ 1  &amp;  2  &amp;  3  &amp;  4+a\end{array} \right\rvert=(a+10) a^{3} </m> . </p> 
+
+                            <p> 当  <m> a=0 </m>  或  <m> -10 </m>  时,  <m> \alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4} </m>  线性相关. </p> 
+
+                            <p> 当  <m> a=0 </m>  时,  <m> \alpha_{1}  </m>  为  <m>  \alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4} </m>  的一个极大无关组, 且  <m>  \alpha_{2}=2 \alpha_{1}, \alpha_{3}=3 \alpha_{1}, \alpha_{4}=4 \alpha_{1}  </m> .当  <m> a=-10 </m>  时 
+                            <me> \boldsymbol{A}=\left(\begin{array}{cccc}-9  &amp;  2  &amp;  3  &amp;  4 \\ 1  &amp;  -8  &amp;  3  &amp;  4 \\ 1  &amp;  2  &amp;  -7  &amp;  4 \\ 1  &amp;  2  &amp;  3  &amp;  -6\end{array}\right)\xrightarrow[ (i=2,3,4)]{r_{i}-r_{1}}\left(\begin{array}{cccc}-9  &amp;  2  &amp;  3  &amp;  4 \\ 10  &amp;  -10  &amp;  0  &amp;  0 \\ 10  &amp;  0  &amp;  -10  &amp;  0 \\ 10  &amp;  0  &amp;  0  &amp;  -10\end{array}\right)\xrightarrow[\begin{array}{l}r_{1}+2 r_{2} \\ r_{1}+3 r_{3} \\ r_{1}+4 r_{4}\end{array}]{\frac{1}{10}r_{i}(i=2,3,4)} \left(\begin{array}{cccc}0  &amp;  0  &amp;  0  &amp;  0 \\ 1  &amp;  -1  &amp;  0  &amp;  0 \\ 1  &amp;  0  &amp;  -1  &amp;  0 \\ 1  &amp;  0  &amp;  0  &amp;  -1\end{array}\right)  </me>  </p> 
+
+                            <p>  <m>  \alpha_{2}, \alpha_{3}, \alpha_{4} </m>  为其一个极大无关组, 且  <m> \alpha_{1}=-\alpha_{2}-\alpha_{3}-\alpha_{4} </m> 
+                        </p>
+                    </answer>
+                </exercise>
+
+                <!-- Q11 -->
+                <exercise>
+                    <statement>
+                        <p>
+                            设向量组  <m> I  </m> :  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{r} </m>  可由向量组  <m> II </m>  :  <m> \boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\beta}_{s} </m>  线性表示,下列命题正确的是 ( ). 
+                        </p>
+                    </statement>
+                    <choices>
+                        <choice correct="yes">
+                            <statement>
+                                <p>
+                                    若向量组  <m> I </m>  线性无关，则  <m> r \leq s </m>
+                                </p>
+                            </statement>
+                        </choice>
+                        
+                        <choice>
+                            <statement>
+                                <p>
+                                    若向量组  <m> I </m>  线性相关，则  <m> r \gt s </m>
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    若向量组  <m> II </m>  线性无关，则  <m> r \leq s </m> 
+                                </p>
+                            </statement>
+                        </choice>
+        
+                        <choice>
+                            <statement>
+                                <p>
+                                    若向量组  <m> II </m>  线性相关，则  <m> r \gt s </m> 
+                                </p>
+                            </statement>
+                        </choice>
+                    
+                    </choices>
+                    
+                    <answer>
+                            <p>
+                                解: 法1: 若向量组  <m> I </m>  能由向量组  <m> II </m>  线性表示  <m> \Rightarrow r({I}) \leq r({II})  </m> . 且  <m>  r({I}) \leq r, r({II}) \leq s  </m> .若向量组  <m> {I} </m>  线性无关, 则  <m> r({I})=r </m> , 所以  <m> r=r({I}) \leq r({II}) \leq s </m> .
+                                故选(A) </p> 
+                                
+                                 <p> 法2：设  <m>  \left(\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{r}\right)=\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \cdots, \boldsymbol{\beta}_{s}\right)\left(\begin{array}{cccc}p_{11}  &amp;  p_{12}  &amp;  \cdots  &amp;  p_{1 r} \\ p_{21}  &amp;  p_{22}  &amp;  \cdots  &amp;  p_{2 r} \\ \vdots  &amp;  \vdots  &amp;   &amp;  \vdots \\ p_{s 1}  &amp;  p_{s 2}  &amp;  \cdots  &amp;  p_{s r}\end{array}\right) </m> 
+                                 记为  <m> \boldsymbol{A}=\boldsymbol{B P} </m> ,  <m> r(\boldsymbol{A})=r(\boldsymbol{B P}) \leq \min \{r(\boldsymbol{B}), r(\boldsymbol{P})\} \leq r(\boldsymbol{B}) \leq s </m>  </p> 
+                                
+                                 <p> 因为  <m> \boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \cdots, \boldsymbol{\alpha}_{r} </m>  线性无关 , 所以  <m> r(\boldsymbol{A})=r \quad \therefore r=r(\boldsymbol{A}) \leq s </m>
+                            </p>
+                      </answer>
+                </exercise>
+
+
+            </exercises>
+        
+        </subsection>
 
 </section>
 

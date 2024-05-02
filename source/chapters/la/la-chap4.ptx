@@ -8,7 +8,7 @@
     
   
         <exercises xml:id="exercises-la4_1">
-                    
+            <title>练习题</title>              
             <!-- Q1 -->
             <exercise>
                 <statement>
@@ -300,6 +300,7 @@
         
       
         <exercises xml:id="exercises-la4_2">
+            <title>练习题</title>   
             <!-- Q8 -->
             <exercise>
                 <statement>
@@ -423,6 +424,7 @@
         
       
             <exercises xml:id="exercises-la4_3">
+                <title>练习题</title>   
             <!-- Q10 -->
             <exercise>
                 <statement>
@@ -462,7 +464,7 @@
         
       
         <exercises xml:id="exercises-la4_4">
-            
+            <title>练习题</title>   
             <!-- Q11 -->
             <exercise>
                 <statement>
