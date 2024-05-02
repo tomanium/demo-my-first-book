@@ -8,12 +8,15 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量  <m> X </m>  的数学期望为  <m> \mu </m> , 方差为  <m> \sigma^{2} </m> , 根据切比雪夫不等式估计  <m> P\{|X-\mu| \geq 3 \sigma\} \leq  </m> ___ 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:
+                    <me> 
+                    P\{|X-\mu| \geq 3 \sigma\} \leq \frac{D X}{(3 \sigma)^{2}}=\frac{1}{9}
+                    </me> 
                 </p>
             </answer>
         </exercise>
@@ -22,12 +25,18 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设总体  <m> X </m>  服从参数为  <m> 2 </m>  的指数分布,  <m> X_{1}, \ldots, X_{n} </m>  为来自总体的简单随机样本, 则当  <m> n \rightarrow \infty  </m>  时,  <m> Y_{n}=\frac{1}{n}\displaystyle \sum_{i=1}^{n} X_{i}^{2}  </m>  依概率收敛于
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解:
+                    <me> 
+                    \begin{array}{l}
+                    E Y_{n}=\frac{1}{n}\displaystyle \sum_{i=1}^{n} E X_{i}^{2}=E X^{2}=D X+(E X)^{2}=\frac{1}{4}+\frac{1}{4}=\frac{1}{2} \\
+                    Y_{n} \xrightarrow{p} E Y_{n}=\frac{1}{2}
+                    \end{array}
+                    </me>  
                 </p>
             </answer>
         </exercise>
@@ -36,508 +45,234 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量序列  <m> X_{1}, \ldots, X_{n}, \cdots </m>  独立同分布, 且均服从参数为  <m> \lambda(\lambda \gt 1) </m>  的指数分布, 记  <m> \Phi(\mathrm{x}) </m>  为标准正态分布函数, 则 ( ) 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \displaystyle \lim _{n \rightarrow \infty} P\left\{\frac{\displaystyle\sum_{i=1}^{n} X_{i}-n \lambda}{\lambda \sqrt{n}} \leq x\right\}=\Phi(x) </m> 
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \displaystyle \lim _{n \rightarrow \infty} P\left\{\frac{\displaystyle\sum_{i=1}^{n} X_{i}-n \lambda}{\sqrt{\lambda n}} \leq x\right\}=\Phi(x) </m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> \displaystyle \lim _{n \rightarrow \infty} P\left\{\frac{\lambda \displaystyle\sum_{i=1}^{n} X_{i}-n}{\sqrt{n}} \leq x\right\}=\Phi(x) </m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \displaystyle \lim _{n \rightarrow \infty} P\left\{\frac{\displaystyle\sum_{i=1}^{n} X_{i}-\lambda}{\sqrt{n \lambda}} \leq x\right\}=\Phi(x) </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解:标准化
+                        <me> 
+                       \begin{array}{l}
+                       Y=\displaystyle\sum_{i=1}^{n} X_{i}, E Y=n E X=n \frac{1}{\lambda}, D Y=n D X=n \frac{1}{\lambda^{2}} \\
+                       \frac{Y-E Y}{\sqrt{D Y}}=\frac{Y-n \frac{1}{\lambda}}{\sqrt{n \frac{1}{\lambda^{2}}}}=\frac{\lambda Y-n}{\sqrt{n}} \sim N(0,1)
+                       \end{array}
+                        </me>
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q4 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量序列  <m> X_{1}, \ldots, X_{n}, \ldots </m>  独立同分布, 且均服从参数为  <m> (-1,1) </m>  的均匀分布, 根据独立同分布中心极限定理有  <m> \displaystyle\lim _{n \rightarrow \infty} P\left\{\sum_{i=1}^{n} X_{i} \leq \sqrt{\mathrm{n}}\right\}=(  ) </m>
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \Phi(0) </m> 
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \Phi(1) </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> \Phi(\sqrt{3}) </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \Phi(2) </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解: 有题设知,  <m> E\left(X_{n}\right)=0, D\left(X_{n}\right)=\frac{1}{3} </m> . 由独立同分布中心极限定理, 对任意  <m> x </m> , 有 
+                        <me> \lim _{n \rightarrow \infty} P\left\{\frac{\displaystyle\sum_{i=1}^{n} X_{i}-E\left(\displaystyle\sum_{i=1}^{n} X_{i}\right)}{\sqrt{D\left(\displaystyle\sum_{i=1}^{n} X_{i}\right)}} \leq x\right\}=\lim _{n \rightarrow \infty} P\left\{\frac{\displaystyle\sum_{i=1}^{n} X_{i}}{\sqrt{\frac{n}{3}}} \leq x\right\}=\lim _{n \rightarrow \infty} P\left\{\sum_{i=1}^{n} X_{i} \leq x \sqrt{\frac{n}{3}}\right\}=\Phi(x)  </me> 
+                       取  <m>  x=\sqrt{3}  </m> , 有  <m> \displaystyle \lim _{n \rightarrow \infty} P\left\{\sum_{i=1}^{n} X_{i} \leq \sqrt{\mathrm{n}}\right\}=\Phi(\sqrt{3})  </m> . 选  <m> C </m>
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q5 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量  <m> X_{1}, X_{2} \cdots X_{n} </m>  独立同分布,  <m> E\left(X_{i}^{k}\right)=\mu_{k} </m> , 用切比雪夫不等式估计  <m> P\left\{\left|\frac{1}{n} \sum_{i=1}^{n} X_{i}^{2}-\mu_{2}\right| \geqslant \varepsilon\right\} \leqslant(\quad) </m> . 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> \dfrac{\mu_{4}-\mu_{2}^{2}}{n \varepsilon^{2}} </m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \dfrac{\mu_{4}-\mu_{2}^{2}}{\sqrt{n} \varepsilon^{2}} </m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \dfrac{\mu_{2}-\mu_{1}^{2}}{n \varepsilon^{2}} </m> 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \dfrac{\mu_{2}-\mu_{1}^{2}}{\sqrt{n} \varepsilon^{2}} </m> 
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解: 选A. </p> 
+
+                        <p> 切比雪夫不等式: 如果随机变量X的期望和方差都存在, 有  <m> P\{|X-E(X)| \geq \varepsilon\} \leq \frac{{D X}}{\varepsilon^{2}} </m> 
+                       利用公式得  <m>  X=\displaystyle\frac{1}{n} \sum_{i=1}^{n} X_{i}^{2}  </m> 
+                        <me> 
+                       \begin{aligned}
+                       E\left(\frac{1}{n} \sum_{i=1}^{n} X_{i}^{2}\right) &amp; =\frac{1}{n} \sum_{i=1}^{n} E\left(X_{i}^{2}\right)=\frac{1}{n} \times n \mu_{2}=\mu_{2} ; \\
+                       D\left(\frac{1}{n} \sum_{i=1}^{n} X_{i}^{2}\right) &amp; =\frac{1}{n^{2}} \sum_{i=1}^{n} D\left(X_{i}^{2}\right)=\frac{1}{n^{2}} \sum_{i=1}^{n}\left[E\left(X_{i}^{4}\right)-E^{2}\left(X_{i}^{2}\right)\right]\\ &amp; =\frac{1}{n^{2}} \sum_{i=1}^{n}\left[\mu_{4}-\mu_{2}^{2}\right]\\
+                        &amp; =\frac{1}{n^{2}}\left[n \mu_{4}-n \mu_{2}^{2}\right]=\frac{\mu_{4}-\mu_{2}^{2}}{n} 
+                       \end{aligned}
+                        </me>  </p> 
+                       
+                        <p> 代入上面公式中得到 选项  <m> A </m> . 
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q6 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设  <m> X_{1}, X_{2}, \cdots, X_{100} </m>  为来自总体  <m> X </m>  的简单随机样本, 其中  <m> P\{X=0\}=P\{X=1\}=\frac{1}{2} </m>  .  <m> \Phi(x) </m> 表示标准正态分布函数,则利用中心极限定理可得  <m> P\left\{\displaystyle\sum_{i=1}^{100} X_{i} \leqslant 55\right\}  </m>  的近似值为 ( ). 
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> 1-\Phi(1) </m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m> \Phi(1) </m> 
+                        </p>
+                    </statement>
+                </choice>
 
-        <!-- Q7 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> 1-\Phi(0.2) </m>
+                        </p>
+                    </statement>
+                </choice>
 
-        <!-- Q8 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                <choice>
+                    <statement>
+                        <p>
+                            <m> \Phi(0.2) </m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        选  <m> B </m> 
+                        <me> 
+                       \begin{array}{l}
+                       E(X)=0 \cdot \frac{1}{2}+1 \cdot \frac{1}{2}=\frac{1}{2} ; \quad D(X)=E\left(X^{2}\right)-E^{2}(X)=\frac{1}{2}-\frac{1}{4}=\frac{1}{4} \\
+                       E\left(\displaystyle\sum_{i=1}^{100} X_{i}\right)=100 \cdot \frac{1}{2}=50 ; \quad D\left(\displaystyle\sum_{i=1}^{100} X_{i}\right)=100 \cdot \frac{1}{4}=25
+                       \end{array}
+                        </me>  </p> 
+                       
+                        <p> 由中心极限定理可知,  <m> \displaystyle\sum_{i=1}^{100} X_{i} </m>  近似服从正态分布  <m> N(5 0 , 2 5 ) </m> .
+                        <me> 
+                       P\left(\sum_{i=1}^{100} X_{i} \leq 55\right)=P\left(\frac{\displaystyle\sum_{i=1}^{100} X_{i}-50}{5} \leq 1\right) \approx \Phi(1) .
+                        </me> 
+                	</p>
+          	</answer>
+		</exercise>
 
-        <!-- Q9 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
 
-        <!-- Q10 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q11 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q12 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q13 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q14 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q15 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q16 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q17 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q18 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q19 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q20 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q21 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q22 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q23 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q24 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q25 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q26 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q27 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q28 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q29 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q30 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q31 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q32 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q33 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q34 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q35 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q36 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q37 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-
-        <!-- Q38 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
         
-
-
     </exercises>
 </section>
 
