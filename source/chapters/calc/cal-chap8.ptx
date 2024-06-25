@@ -8,12 +8,29 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    <m>\lim\limits_{(x,y)\to (0,0)}\frac{xy}{2-\sqrt{xy+4}}</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    先将分母有理化</p>
+                    <p>
+                        <m>\begin{aligned}
+                        原式 &amp; =\lim\limits_{(x,y)\to (0,0)}\frac{xy(2+\sqrt{xy+4})}{4-(xy+4)}\\
+                        &amp; =\underset{(x,y)\to (0,0)}{\mathop{\lim }}\,\frac{xy(2+\sqrt{xy+4}}{-xy}\\
+                        &amp; =-4
+                        \end{aligned}</m> 
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    先恒等变形，然后利用等价无穷小代换</p>
+                    <p> <m>\begin{aligned}
+                    原式 &amp; =\underset{(x,y)\to (0,0)}{\mathop{\lim }}\ \frac{xy}{2-2\sqrt{\frac{xy}{4}+1}}\\
+                    &amp; =\underset{(x,y)\to (0,0)}{\mathop{\lim }}\ \frac{xy}{2\left( 1-\sqrt{\frac{xy}{4}+1} \right)}\\
+                    &amp; =\underset{xy\to 0}{\mathop{\lim }}\,\frac{xy}{2\left( \frac{-xy}{4}\cdot \frac{1}{2} \right)}\\
+                    &amp; =-4
+                    \end{aligned}</m>
                 </p>
             </answer>
         </exercise>
@@ -22,12 +39,16 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    <m>\lim\limits_{(x, y) \rightarrow(0,0)} \frac{1-\cos \sqrt{x y}}{\sqrt{2-\mathrm{e}^{x y}}-1}</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    <m>\begin{array}{l}
+                        =\lim\limits_{(x, y) \rightarrow(0,0)} \frac{1-\cos \sqrt{x y}}{\sqrt{1+\left(1-\mathrm{e}^{x y}\right)}-1} \\
+                        =\lim\limits_{(x, y) \rightarrow(0,0)} \frac{\frac{(\sqrt{x y})^{2}}{2}}{\frac{1-\mathrm{e}^{x y}}{2}} \\
+                        =-1 
+                        \end{array}</m>
                 </p>
             </answer>
         </exercise>
@@ -36,12 +57,28 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    证明：<m>f(x,y)=\frac{x{{y}^{2}}}{{{x}^{2}}+{{y}^{4}}}</m>在原点<m>(0,0)</m>的极限不存在
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    【分析】观察分子、分母中变量 <m>x,y</m> 的各次幂的特点，可考虑选择路径 <m>x=k{{y}^{2}}</m>，以便使分子分母中的部分零因子可以约去.</p>
+
+                    <p> 解：因为
+                        
+                        <me>\begin{aligned}
+                        \underset{\begin{matrix}
+                           y\to 0  \\
+                           x\to k{{y}^{2}}  \\
+                        \end{matrix}}{\mathop{\lim }}\,f(x,y) &amp; =\underset{\begin{matrix}
+                           y\to 0  \\
+                           x=k{{y}^{2}}  \\
+                        \end{matrix}}{\mathop{\lim }}\,\frac{x{{y}^{2}}}{{{x}^{2}}+{{y}^{4}}}\\
+                         &amp; =\underset{y\to 0}{\mathop{\lim }}\,\frac{k{{y}^{4}}}{{{k}^{2}}{{y}^{4}}+{{y}^{4}}}\\
+                         &amp; =\frac{k}{{{k}^{2}}+1}
+                        \end{aligned}</me></p>
+
+                        <p>故<m>\lim\limits_{(x,y)\to (0,0)}f(x,y)</m>不存在。
                 </p>
             </answer>
         </exercise>
@@ -50,12 +87,30 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>f(x,y)=\left\{ \begin{array}{*{35}{l}}
+                        \frac{{{x}^{2}}-{{y}^{2}}}{{{x}^{2}}+{{y}^{2}}},  &amp;  {{x}^{2}}+{{y}^{2}}\ne 0  \\
+                        0,  &amp;  {{x}^{2}}+{{y}^{2}}=0  \\
+                     \end{array} \right.</m>，讨论<m>f(x,y)</m>的连续性
                 </p>
             </statement>
             <answer>
                 <p>
+                    【分析】二元函数<m>f(x,y)</m>在<m>({{x}_{0}},{{y}_{0}})</m>点连续的充要条件是<m>\lim\limits_{(x,y)\to \left( {{x}_{0}},{{y}_{0}} \right)}f(x,y)=f\left( {{x}_{0}},{{y}_{0}} \right)</m></p>
+                        
+                    <p>本题中的函数<m>f(x,y)</m>是一个分段函数，因<m>\frac{{{x}^{2}}-{{y}^{2}}}{{{x}^{2}}+{{y}^{2}}}</m>是二元初等函数，在其定义域<m>{{\mathbf{R}}^{2}}-|(0,0)|</m>内每一点处是连续的，故只需考虑<m>f(x,y)</m>在<m>(0,0)</m>处的连续性。</p>
                     
+                    <p> 解：考虑极限<m>\lim\limits_{(x,y)\to (0,0)}\frac{{{x}^{2}}-{{y}^{2}}}{{{x}^{2}}+{{y}^{2}}}</m>，当<m>(x,y)</m>沿直线<m>y=kx</m>趋于<m>(0,0)</m>时</p>
+                    <p><me>\begin{aligned}
+                         &amp; \underset{\begin{matrix}
+                           (x,y)\to (0,0)  \\
+                           y=kx  \\
+                        \end{matrix}}{\mathop{\lim }}\,\frac{{{x}^{2}}-{{y}^{2}}}{{{x}^{2}}+{{y}^{2}}}\\= &amp; \underset{x\to 0}{\mathop{\lim }}\,\frac{{{x}^{2}}-{{(kx)}^{2}}}{{{x}^{2}}+{{(kx)}^{2}}}\\
+                        = &amp; \frac{1-{{k}^{2}}}{1+{{k}^{2}}}
+                        \end{aligned}</me></p>
+                        <p>
+                        这是一个与<m>k</m>有关的数值，从而当<m>(x,y)</m>沿不同路径趋于<m>(0,0)</m>时， <m>\frac{{{x}^{2}}-{{y}^{2}}}{{{x}^{2}}+{{y}^{2}}}</m>趋于不同的极限，故极限<m>\lim\limits_{(x,y)\to (0,0)}\frac{{{x}^{2}}-{{y}^{2}}}{{{x}^{2}}+{{y}^{2}}}</m>不存在，<m>\lim\limits_{(x,y)\to \left( {{x}_{0}},{{y}_{0}} \right)}f(x,y)</m>也不存在，<m>f(x,y)</m>在<m>(0,0)</m>点不连续。</p>
+                        <p>
+                        另外，当<m>(x,y)\ne (0,0)</m>时，<m>f(x,y)=\frac{{{x}^{2}}-{{y}^{2}}}{{{x}^{2}}+{{y}^{2}}}</m>是二元初等函数，故它在<m>{{\mathbf{R}}^{2}}-|(0,0)|</m>内处处连续。
                 </p>
             </answer>
         </exercise>
@@ -64,12 +119,25 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>z=x\sin (xy)+{{\text{e}}^{x+2y}}</m>，求<m>\frac{\partial z}{\partial x}</m>，<m>\frac{\partial z}{\partial y}</m>，<m>\frac{\partial z}{\partial x}\left| _{\begin{smallmatrix} 
+                        x=1 \\ 
+                        y=0 
+                       \end{smallmatrix}} \right.</m>
                 </p>
+                    
             </statement>
             <answer>
                 <p>
-                    
+                    <m>\begin{aligned}
+                        \frac{\partial z}{\partial x} &amp; =\sin (xy)+x\cos (xy)\cdot y+{{\text{e}}^{x+2y}}\cdot 1 \\ 
+                       &amp;  =\sin (xy)+xy\cos (xy)+{{\text{e}}^{x+2y}} \\ 
+                       \frac{\partial z}{\partial y} &amp; =x\cos (xy)\cdot x+{{\text{e}}^{x+2y}}\cdot 2 \\ 
+                       &amp;  ={{x}^{2}}\cos (xy)+2{{\text{e}}^{x+2y}} \\ 
+                       {{\left. \frac{\partial z}{\partial x} \right|}_{\begin{smallmatrix} 
+                      x=1 \\ 
+                      y=0 
+                     \end{smallmatrix}}} &amp; =\text{e} \\ 
+                     \end{aligned}</m> 
                 </p>
             </answer>
         </exercise>
@@ -78,12 +146,31 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>f(x,y)=\frac{\sin xy\cos \sqrt{y+2}-(y-1)\cos x}{1+\sin x+\sin (y-1)}</m>，则<m>{{f}_{y}}(0,1)=</m>____
                 </p>
             </statement>
+            <hint>
+                <p>
+                    利用偏导数的定义来解
+                </p>
+            </hint>
             <answer>
                 <p>
-                    
+                    <m>\begin{aligned}
+                        {{f}_{y}}(0,1) &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }y\to 0}{\mathop{\lim }}\,\frac{f(0,1+\text{ }\!\!\Delta\!\!\text{ }y)-f(0,1)}{\text{ }\!\!\Delta\!\!\text{ }y}\\
+                         &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }y\to 0}{\mathop{\lim }}\,\frac{-\text{ }\!\!\Delta\!\!\text{ }y}{(1+\sin \text{ }\!\!\Delta\!\!\text{ }y)\text{ }\!\!\Delta\!\!\text{ }y}\\
+                         &amp; =-1
+                        \end{aligned}</m> 
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    <m>f(0,y)=\frac{1-y}{1+\sin (y-1)}</m>，故
+                    <m>\begin{aligned}
+                    {{f}_{y}}(0,y) &amp; =\frac{d}{dy}\left[ \frac{1-y}{1+\sin (y-1)} \right]\\
+                    &amp; =\frac{-[1+\sin (y-1)]-(1-y)\cos (y-1)}{{{[1+\sin (y-1)]}^{2}}}
+                    \end{aligned}</m></p>
+                    <p>从而 <m>{{f}_{y}}(0,1)=-1</m>
                 </p>
             </answer>
         </exercise>
@@ -92,27 +179,115 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求设<m>f(x,y)={{\text{e}}^{\sqrt{{{x}^{2}}+{{y}^{4}}}}}</m>，则函数在原点偏导数存在的情况是
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m>{{f}_{x}}(0,0)</m>，<m>{{f}_{y}}(0,0)</m>均存在
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice >
+                    <statement>
+                        <p>
+                            <m>{{f}_{x}}(0,0)</m>存在，<m>{{f}_{y}}(0,0)</m>不存在
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>{{f}_{x}}(0,0)</m>不存在，<m>{{f}_{y}}(0,0)</m>存在
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>{{f}_{x}}(0,0)</m>，<m>{{f}_{y}}(0,0)</m>都不存在
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解：
+                        <me>\begin{aligned}
+                        {{f}_{x}}(0,0) &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }x\to 0}{\mathop{\lim }}\,\frac{f(0+\text{ }\!\!\Delta\!\!\text{ }x,0)-f(0,0)}{\text{ }\!\!\Delta\!\!\text{ }x}\\
+                         &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }x\to 0}{\mathop{\lim }}\,\frac{{{\text{e}}^{\sqrt{\text{ }\!\!\Delta\!\!\text{ }{{x}^{2}}+{{0}^{4}}}}}-1}{\text{ }\!\!\Delta\!\!\text{ }x}\\
+                         &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }x\to 0}{\mathop{\lim }}\,\frac{{{\text{e}}^{|\text{ }\!\!\Delta\!\!\text{ }x|}}-1}{\text{ }\!\!\Delta\!\!\text{ }x}
+                        \end{aligned}</me> </p>
+                        <p>因为<m>\begin{aligned}
+                        \underset{\text{ }\!\!\Delta\!\!\text{ }x\to {{0}^{+}}}{\mathop{\lim }}\,\frac{{{\text{e}}^{|\text{ }\!\!\Delta\!\!\text{ }x|}}-1}{\text{ }\!\!\Delta\!\!\text{ }x} &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }x\to {{0}^{+}}}{\mathop{\lim }}\,\frac{{{\text{e}}^{\text{ }\!\!\Delta\!\!\text{ }x}}-1}{\text{ }\!\!\Delta\!\!\text{ }x}\\
+                         &amp; =1,\\
+                        \underset{\text{ }\!\!\Delta\!\!\text{ }x\to {{0}^{-}}}{\mathop{\lim }}\,\frac{{{\text{e}}^{|\text{ }\!\!\Delta\!\!\text{ }x|}}-1}{\text{ }\!\!\Delta\!\!\text{ }x} &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }x\to {{0}^{-}}}{\mathop{\lim }}\,\frac{{{\text{e}}^{-\text{ }\!\!\Delta\!\!\text{ }x}}-1}{\text{ }\!\!\Delta\!\!\text{ }x}\\
+                         &amp; =-1
+                        \end{aligned}</m> </p>
+                        <p>故<m>\underset{\text{ }\!\!\Delta\!\!\text{ }x\to {{0}^{+}}}{\mathop{\lim }}\,\frac{{{e}^{|\text{ }\!\!\Delta\!\!\text{ }x|}}-1}{\text{ }\!\!\Delta\!\!\text{ }x}\ne \underset{\text{ }\!\!\Delta\!\!\text{ }x\to {{0}^{-}}}{\mathop{\lim }}\,\frac{{{e}^{|\text{ }\!\!\Delta\!\!\text{ }x|}}-1}{\text{ }\!\!\Delta\!\!\text{ }x}</m>，</p>
+                        <p>所以<m>{{f}_{x}}(0,0)</m>不存在</p>
+                        <p><m>\begin{aligned}
+                        {{f}_{y}}(0,0) &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }y\to 0}{\mathop{\lim }}\,\frac{f(0,0+\text{ }\!\!\Delta\!\!\text{ }y)-f(0,0)}{\text{ }\!\!\Delta\!\!\text{ }y}\\
+                         &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }y\to 0}{\mathop{\lim }}\,\frac{{{\text{e}}^{\sqrt{{{0}^{2}}+\text{ }\!\!\Delta\!\!\text{ }{{y}^{4}}}}}-1}{\text{ }\!\!\Delta\!\!\text{ }y}\\
+                         &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }y\to 0}{\mathop{\lim }}\,\frac{{{\text{e}}^{\text{ }\!\!\Delta\!\!\text{ }{{y}^{2}}}}-1}{\text{ }\!\!\Delta\!\!\text{ }y}\\
+                         &amp; =\underset{\text{ }\!\!\Delta\!\!\text{ }y\to 0}{\mathop{\lim }}\,\frac{\text{ }\!\!\Delta\!\!\text{ }{{y}^{2}}}{\text{ }\!\!\Delta\!\!\text{ }y}=0
+                        \end{aligned}</m></p>
+                        <p>所以 <m>{{f}_{y}}(0,0)=0</m>存在，故选C
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q8 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>f(x,y)=\left\{ \begin{matrix}
+                        \frac{xy}{{{x}^{2}}+{{y}^{2}}},  &amp;  {{x}^{2}}+{{y}^{2}}\ne 0,  \\
+                        0,  &amp;  {{x}^{2}}+{{y}^{2}}=0,  \\
+                     \end{matrix} \right.</m> . 求<m>f_{x}^{\prime }(x,y)</m>，<m>f_{y}^{\prime }(x,y).</m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
-                </p>
+                    解：当<m>{{x}^{2}}+{{y}^{2}}\ne 0</m>时</p>
+                    <p>
+                        <me>\begin{array}{*{35}{l}}
+                           f_{x}^{\prime }(x,y)=\frac{y\left( {{x}^{2}}+{{y}^{2}} \right)-xy\cdot 2x}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}}=\frac{{{y}^{3}}-{{x}^{2}}y}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}}  \\
+                           f_{y}^{\prime }(x,y)=\frac{x\left( {{x}^{2}}+{{y}^{2}} \right)-xy\cdot 2y}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}}=\frac{{{x}^{3}}-x{{y}^{2}}}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}}  \\
+                        \end{array}</me>
+                        </p><p>当 <m>{{x}^{2}}+{{y}^{2}}=0</m>时，</p><p>
+                        <me>\begin{aligned}
+                           f_{x}^{\prime }(0,0) &amp; =\underset{x\to 0}{\mathop{\lim }}\,\frac{f(x,0)-f(0,0)}{x-0}\\
+                            &amp; =\underset{x\to 0}{\mathop{\lim }}\,\frac{0-0}{x}\\
+                            &amp; =0  \\
+                           f_{y}^{\prime }(0,0) &amp; =\underset{y\to 0}{\mathop{\lim }}\,\frac{f(0,y)-f(0,0)}{y-0}\\
+                            &amp; =\underset{y\to 0}{\mathop{\lim }}\,\frac{0-0}{y}\\
+                            &amp; =0  \\
+                        \end{aligned}</me>
+                        
+                        </p><p>所以</p><p>
+                        <me>\begin{array}{*{35}{l}}
+                           f_{x}^{\prime }(x,y)=\left\{ \begin{matrix}
+                           \frac{{{y}^{3}}-{{x}^{2}}y}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}},  &amp;  {{x}^{2}}+{{y}^{2}}\ne 0,  \\
+                           0,  &amp;  {{x}^{2}}+{{y}^{2}}=0;  \\
+                        \end{matrix} \right.  \\
+                           f_{y}^{\prime }(x,y)=\left\{ \begin{matrix}
+                           \frac{{{x}^{3}}-x{{y}^{2}}}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}},  &amp;  {{x}^{2}}+{{y}^{2}}\ne 0,  \\
+                           0,  &amp;  {{x}^{2}}+{{y}^{2}}=0.  \\
+                        \end{matrix} \right.  \\
+                        \end{array}</me>
+                        
+                        </p>
+                        <p>注：此函数在点<m>(0,0)</m>不连续，但偏导数存在.
+                    </p>
             </answer>
         </exercise>
 
@@ -120,12 +295,37 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    讨论 <m>z=f(x,y)=\sqrt{{{x}^{2}}+{{y}^{2}}}</m>在<m>(0,0)</m>点的否连续, 及在<m>(0,0)</m>处偏导数是否存在.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：<m>\because \underset{\begin{matrix}
+                        x\to 0  \\
+                        y\to 0  \\
+                     \end{matrix}}{\mathop{\lim }}\,f(x,y)=f(0,0)=0</m></p><p>
+                     
+                     <m>\therefore f(x,y)</m>在<m>(0,0)</m>点连续</p><p>
+                     
+                     <me>\begin{aligned}
+                     \because \underset{x\to {{0}^{-}}}{\mathop{\lim }}\,\frac{f(x,0)-f(0,0)}{x-0} &amp; =\underset{x\to {{0}^{-}}}{\mathop{\lim }}\,\frac{\sqrt{{{x}^{2}}}}{x}\\
+                      &amp; =\underset{x\to {{0}^{-}}}{\mathop{\lim }}\,\frac{-x}{x}\\
+                      &amp; =-1
+                     \end{aligned}</me>
+                     
+                     </p><p>而
+                     
+                     <me>\begin{aligned}
+                     \underset{x\to {{0}^{+}}}{\mathop{\lim }}\,\frac{f(x,0)-f(0,0)}{x-0} &amp; =\underset{x\to {{0}^{+}}}{\mathop{\lim }}\,\frac{\sqrt{{{x}^{2}}}}{x}\\
+                      &amp; =\underset{x\to {{0}^{-}}}{\mathop{\lim }}\,\frac{x}{x}\\
+                      &amp; =1
+                     \end{aligned}</me>
+                     
+                     </p><p><m>\therefore \underset{x\to 0}{\mathop{\lim }}\,\frac{f(x,0)-f(0,0)}{x-0}</m>不存在
+                     
+                     </p><p>由对称性可知 <m>\lim\limits_{y\to 0}\frac{f(0,y)-f(0,0)}{y-0}</m>不存在
+                     
+                     </p><p>即<m>f(x,y)</m>在<m>(0,0)</m>处的两个偏导数不存在
                 </p>
             </answer>
         </exercise>
@@ -134,26 +334,77 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    考察二元函数<m>f(x,y)</m>的下面4条性质:</p><p>
+
+                        (1)  <m>f(x,y)</m>在处连续;</p><p>
+                        
+                        (2) <m>f(x,y)</m>在<m>\left( {{x}_{0}},{{y}_{0}} \right)</m>处的两个偏导数连续;</p><p>
+                        
+                        (3) <m>f(x,y)</m>在 <m>\left( {{x}_{0}},{{y}_{0}} \right)</m>处可微;</p><p>
+                        
+                        (4) <m>f(x,y)</m>在<m>\left( {{x}_{0}},{{y}_{0}} \right)</m>处的两个偏导数存在.</p><p>
+                        
+                        若用 “<m>P \Rightarrow Q</m>” 表示可由性质<m>P</m>推出性质<m>Q</m>，则有(   )
                 </p>
             </statement>
-            <answer>
-                <p>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            (2) <m>\Rightarrow</m> (3) <m>\Rightarrow</m> (1)
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            (3) <m>\Rightarrow</m> (2) <m>\Rightarrow</m> (1) 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            (3) <m>\Rightarrow</m> (4) <m>\Rightarrow</m> (1)
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            (3) <m>\Rightarrow</m> (1) <m>\Rightarrow</m> (4)
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
                     
-                </p>
-            </answer>
-        </exercise>
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q11 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>F(x,y)=\mathop{\int }_{0}^{xy}\frac{\sin t}{1+{{t}^{2}}}\text{d}t</m> ，则<m>\frac{{{\partial }^{2}}F}{\partial {{x}^{2}}} =</m>____.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：<m>\frac{\partial F}{\partial x}=\frac{y\sin xy}{1+{{(xy)}^{2}}}</m> ，由偏导数的定义可得</p><p>
+                        <me>\begin{aligned}
+                        {{\left. \frac{{{\partial }^{2}}F}{\partial {{x}^{2}}} \right|}_{(0,2)}} &amp; ={{\left. {{\left( \frac{2\sin 2x}{1+4{{x}^{2}}} \right)}^{\prime }} \right|}_{x=0}} \\ 
+                          &amp;  ={{\left. \frac{4\left( 1+4{{x}^{2}} \right)\cos 2x-16x\sin 2x}{{{\left( 1+4{{x}^{2}} \right)}^{2}}} \right|}_{x=0}}\\
+                          &amp; =4 
+                        \end{aligned}</me>
                 </p>
             </answer>
         </exercise>
@@ -162,12 +413,51 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>f(x,y)=\left\{ \begin{matrix}
+                        \frac{xy({{x}^{2}}-{{y}^{2}})}{{{x}^{2}}+{{y}^{2}}},  &amp;  {{x}^{2}}+{{y}^{2}}\ne 0,  \\
+                        0,  &amp;  {{x}^{2}}+{{y}^{2}}=0,  \\
+                     \end{matrix} \right.</m>求和<m>f_{yx}^{\prime \prime }(0,0)</m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：当<m>{{x}^{2}}+{{y}^{2}}\ne 0</m>时，<m>z=f(x,y)=\frac{{{x}^{3}}y-x{{y}^{3}}}{{{x}^{2}}+{{y}^{2}}}</m></p><p>
+
+                        <me>\begin{aligned}
+                           f_{x}^{\prime }(x,y)  &amp;  =\frac{\left( 3{{x}^{2}}y-{{y}^{3}} \right)\left( {{x}^{2}}+{{y}^{2}} \right)-\left( {{x}^{3}}y-x{{y}^{3}} \right)\cdot 2x}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}}  \\
+                           {}  &amp;  =\frac{y\left( {{x}^{4}}+4{{x}^{2}}{{y}^{2}}-{{y}^{4}} \right)}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}}  
+                        \end{aligned}</me>
+                        </p><p>
+                        <me>\begin{aligned}
+                           f_{y}^{\prime }(x,y)  &amp;  =\frac{\left( {{x}^{3}}-3x{{y}^{2}} \right)\left( {{x}^{2}}+{{y}^{2}} \right)-\left( {{x}^{3}}y-x{{y}^{3}} \right)\cdot 2y}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}}  \\
+                           {}  &amp;  =\frac{x\left( {{x}^{4}}-4{{x}^{2}}{{y}^{2}}-{{y}^{4}} \right)}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}}
+                        \end{aligned}</me>
+                        </p><p>
+                        当<m>{{x}^{2}}+{{y}^{2}}=0</m>时
+                        </p><p>
+                        <me>\begin{aligned}
+                           f_{x}^{\prime }(0,0) &amp; =\underset{x\to 0}{\mathop{\lim }}\,\frac{f(x,0)-f(0,0)}{x-0}\\
+                            &amp; =\underset{x\to 0}{\mathop{\lim }}\,\frac{0-0}{x}=0,  \\
+                           f_{y}^{\prime }(0,0) &amp; =\underset{y\to 0}{\mathop{\lim }}\,\frac{f(0,y)-f(0,0)}{y-0}\\
+                            &amp; =\underset{y\to 0}{\mathop{\lim }}\,\frac{0-0}{y}=0;  \\
+                        \end{aligned}</me>
+                        </p><p>
+                        <me>\begin{array}{*{35}{l}}
+                           f_{x}^{\prime }(x,y)=\left\{ \begin{array}{*{35}{l}}
+                           \frac{y\left( {{x}^{4}}+4{{x}^{2}}{{y}^{2}}-{{y}^{4}} \right)}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}},  &amp;  {{x}^{2}}+{{y}^{2}}\ne 0,  \\
+                           0,  &amp;  {{x}^{2}}+{{y}^{2}}=0.  \\
+                        \end{array} \right.  \\
+                           f_{y}^{\prime }(x,y)=\left\{ \begin{array}{*{35}{l}}
+                           \frac{x\left( {{x}^{4}}-4{{x}^{2}}{{y}^{2}}-{{y}^{4}} \right)}{{{\left( {{x}^{2}}+{{y}^{2}} \right)}^{2}}},  &amp;  {{x}^{2}}+{{y}^{2}}\ne 0,  \\
+                           0,  &amp;  {{x}^{2}}+{{y}^{2}}=0;  \\
+                        \end{array} \right.  \\
+                        \end{array}</me></p><p>
+                        <me>\begin{aligned}
+                           f_{xy}^{\prime \prime }(0,0) &amp; =\underset{y\to 0}{\mathop{\lim }}\,\frac{f_{x}^{\prime }(0,y)-f_{x}^{\prime }(0,0)}{y-0}\\
+                            &amp; =\underset{y\to 0}{\mathop{\lim }}\,\frac{-{{y}^{5}}}{{{y}^{5}}}=-1,  \\
+                           f_{yx}^{\prime \prime }(0,0) &amp; =\underset{x\to 0}{\mathop{\lim }}\,\frac{f_{y}^{\prime }(x,0)-f_{y}^{\prime }(0,0)}{x-0}\\
+                            &amp; =\underset{y\to 0}{\mathop{\lim }}\,\frac{{{x}^{5}}}{{{x}^{5}}}=1.  \\
+                        \end{aligned}</me> 
                 </p>
             </answer>
         </exercise>
@@ -176,12 +466,27 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>z=\left( {{x}^{2}}+{{y}^{2}} \right){{\text{e}}^{-\arctan \frac{y}{x}}}</m>，求<m>dz</m>及<m>\frac{{{\partial }^{2}}z}{\partial x\partial y}</m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：
+                    <me>\begin{aligned}
+                    dz &amp; ={{\text{e}}^{-\arctan \frac{y}{x}}}\text{ }\!\!~\!\!\text{ d}\left( {{x}^{2}}+{{y}^{2}} \right)+\left( {{x}^{2}}+{{y}^{2}} \right)\text{d}\left( {{\text{e}}^{-\arctan \frac{y}{x}}} \right) \\ 
+                    &amp;  ={{\text{e}}^{-\arctan \frac{y}{x}}}(2xdx+2ydy)+\left( {{x}^{2}}+{{y}^{2}} \right){{\text{e}}^{-\arctan \frac{y}{x}}}\text{ d}\left( -\arctan \frac{y}{x} \right) \\ 
+                    &amp;  ={{\text{e}}^{-\arctan \frac{y}{x}}}(2xdx+2ydy)-\left( {{x}^{2}}+{{y}^{2}} \right){{\text{e}}^{-\arctan \frac{y}{x}}}\frac{xdy-ydx}{{{x}^{2}}+{{y}^{2}}} \\ 
+                    &amp;  ={{\text{e}}^{-\arctan \frac{y}{x}}}[(2x+y)dx+(2y-x)dy] \\ 
+                    \end{aligned}</me>
+                    </p><p>
+                    由上可知 <m>\frac{\partial z}{\partial x}=(2x+y){{\text{e}}^{-\arctan \frac{y}{x}}}</m> 
+                    </p><p>
+                    故</p><p>
+                    <me>\begin{aligned}
+                    \frac{{{\partial }^{2}}z}{\partial x\partial y} &amp; =\frac{\partial }{\partial y}\left[ (2x+y){{\text{e}}^{-\arctan \frac{y}{x}}} \right] \\ 
+                    &amp;  ={{\text{e}}^{-\arctan \frac{y}{x}}}+(2x+y){{\text{e}}^{-\arctan \frac{y}{x}}}\left( -\frac{x}{{{x}^{2}}+{{y}^{2}}} \right) \\ 
+                    &amp;  =\frac{{{y}^{2}}-xy-{{x}^{2}}}{{{x}^{2}}+{{y}^{2}}}{{\text{e}}^{-\arctan \frac{y}{x}}} \\ 
+                    \end{aligned}</me>
                 </p>
             </answer>
         </exercise>
@@ -190,12 +495,36 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>u=f(x,y,z)</m>,<m>y=\varphi (x,t)</m>,<m>t=\psi (x,z)</m>，其中 <m>f,\varphi ,\psi </m> 均有连续偏导数，求<m>\frac{\partial u}{\partial x}</m>,<m>\frac{\partial u}{\partial z}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：法1：复合函数的复合关系很复杂</p><p>
+
+                        <m>\begin{aligned}
+                        \therefore \frac{\partial u}{\partial x} &amp; =\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}\left( \frac{\partial y}{\partial x}+\frac{\partial y}{\partial t}\frac{\partial t}{\partial x} \right)\\
+                         &amp; =\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}\left( \frac{\partial \varphi }{\partial x}+\frac{\partial \varphi }{\partial t}\frac{\partial \psi }{\partial x} \right)
+                        \end{aligned}</m></p><p>
+                        <m>\begin{aligned}
+                        \frac{\partial u}{\partial z} &amp; =\frac{\partial f}{\partial y}\frac{\partial y}{\partial t}\frac{\partial t}{\partial z}+\frac{\partial f}{\partial z}\\
+                         &amp; =\frac{\partial f}{\partial y}\frac{\partial \varphi }{\partial t}\frac{\partial \psi }{\partial z}+\frac{\partial f}{\partial z}\end{aligned}</m>
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    法2：两边求全微分，可避免分析复合关系</p><p>
+                        <me>\begin{aligned}
+                           \because \text{d}u &amp; =f_{x}^{\prime }\text{d}x+f_{y}^{\prime }\text{d}y+f_{z}^{\prime }\text{d}z \\ 
+                          &amp;  =f_{x}^{\prime }\text{d}x+f_{y}^{\prime }\left( \varphi _{x}^{\prime }\text{d}x+\varphi _{t}^{\prime }\text{d}t \right)+f_{z}^{\prime }\text{d}z \\ 
+                          &amp;  =f_{x}^{\prime }\text{d}x+f_{y}^{\prime }\varphi _{x}^{\prime }\text{d}x+f_{y}^{\prime }\varphi _{t}^{\prime }\text{d}t+f_{z}^{\prime }\text{d}z \\ 
+                          &amp;  =f_{x}^{\prime }\text{d}x+f_{y}^{\prime }\varphi _{x}^{\prime }\text{d}x+f_{y}^{\prime }\varphi _{t}^{\prime }\left( \psi _{x}^{\prime }\text{d}x+\psi _{z}^{\prime }\text{d}z \right)+f_{z}^{\prime }\text{d}z \\ 
+                          &amp;  =\left( f_{x}^{\prime }+f_{y}^{\prime }\varphi _{x}^{\prime }+f_{y}^{\prime }\varphi _{t}^{\prime }\psi _{x}^{\prime } \right)\text{d}x+\left( f_{y}^{\prime }\varphi _{t}^{\prime }\psi _{z}^{\prime }+f_{z}^{\prime } \right)\text{d}z \\ 
+                        \end{aligned}</me>
+                        </p><p>
+                        <m>\therefore \frac{\partial u}{\partial x}=f_{x}^{\prime }+f_{y}^{\prime }\varphi _{x}^{\prime }+f_{y}^{\prime }\varphi _{t}^{\prime }\psi _{x}^{\prime }</m>
+                        </p><p>
+                        <m>\frac{\partial u}{\partial z}=f_{y}^{\prime }\varphi _{t}^{\prime }\psi _{z}^{\prime }+f_{z}^{\prime }</m>
                 </p>
             </answer>
         </exercise>
@@ -204,12 +533,33 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>z=f\left( xy,\frac{x}{y} \right)</m>，<m>f</m>有连续的二阶偏导数，求<m>\frac{{{\partial }^{2}}z}{\partial {{x}^{2}}}</m>,<m>\frac{{{\partial }^{2}}z}{\partial x\partial y}</m>,<m>\frac{{{\partial }^{2}}z}{\partial {{y}^{2}}}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解： 设<m>u=xy</m>，<m>v=\frac{x}{y}</m>，则</p><p>
+                        <m>\begin{aligned}
+                           \frac{\partial z}{\partial x} &amp; =f_{u}^{\prime }\cdot y+f_{v}^{\prime }\cdot \frac{1}{y}\\
+                            &amp; =yf_{u}^{\prime }+\frac{1}{y}f_{v}^{\prime },  \\
+                           \frac{\partial z}{\partial y} &amp; =f_{u}^{\prime }\cdot x+f_{v}^{\prime }\cdot \frac{-x}{{{y}^{2}}}\\
+                            &amp; =yf_{u}^{\prime }-\frac{x}{{{y}^{2}}}f_{v}^{\prime }  \\
+                        \end{aligned}</m> 
+                        </p><p>
+                        <me>\begin{aligned}
+                           \frac{{{\partial }^{2}}z}{\partial {{x}^{2}}}  &amp;  =\left[ yf_{u}^{\prime }+\frac{1}{y}f_{v}^{\prime } \right]_{x}^{\prime }  \\
+                           &amp;  =y ( f_{uu}^{\prime \prime }\cdot y +f_{uv}^{\prime \prime }\cdot \frac{1}{y} ) \\
+                            &amp;  \quad +\frac{1}{y} ( f_{vu}^{\prime \prime }\cdot y +f_{vv}^{\prime \prime }\cdot \frac{1}{y} )  \\
+                            &amp;  ={{y}^{2}}f_{uu}^{\prime \prime }  +2f_{uv}^{\prime \prime } +\frac{1}{{{y}^{2}}}f_{vv}^{\prime \prime }  \\
+                        \frac{{{\partial }^{2}}z}{\partial x\partial y} &amp; =\left[ yf_{u}^{\prime }+\frac{1}{y}f_{v}^{\prime } \right]_{y}^{\prime }\\
+                         &amp; =f_{u}^{\prime }+y\left( f_{uu}^{\prime \prime }\cdot x+f_{uv}^{\prime \prime }\cdot \frac{-x}{{{y}^{2}}} \right)\\
+                         &amp;  \quad -\frac{1}{{{y}^{2}}}f_{v}^{\prime }+\frac{1}{y}\left( f_{vu}^{\prime \prime }\cdot x+f_{vv}^{\prime \prime }\cdot \frac{-x}{{{y}^{2}}} \right)\\
+                         &amp; =xyf_{uu}^{\prime \prime }-\frac{x}{{{y}^{3}}}f_{vv}^{\prime \prime }+f_{u}^{\prime }-\frac{1}{{{y}^{2}}}f_{v}^{\prime }\\
+                        \frac{{{\partial }^{2}}z}{\partial {{y}^{2}}}  &amp;  =\left[ xf_{u}^{\prime }+\frac{x}{y^2}f_{v}^{\prime } \right]_{y}^{\prime } \\
+                         &amp;  =x ( f_{uu}^{\prime \prime }\cdot x+f_{uv}^{\prime \prime }\cdot \frac{-x}{y^2} ) +\frac{2x}{{{y}^{3}}}f_{v}^{\prime } \\
+                         &amp;  \quad -\frac{x}{y^2} ( f_{vu}^{\prime \prime }\cdot x+f_{vv}^{\prime \prime }\cdot \frac{-x}{y^2} )  \\
+                         &amp;  ={{x}^{2}}f_{uu}^{\prime \prime }-\frac{2x^2}{{{y}^{2}}}f_{uv}^{\prime \prime }+\frac{x^2}{{{y}^{4}}}f_{vv}^{\prime \prime }+\frac{2x}{{{y}^{3}}}f_{v}^{\prime }
+                        \end{aligned}</me>
                 </p>
             </answer>
         </exercise>
@@ -218,12 +568,23 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>z=f\left( {{x}^{y}},{{y}^{x}} \right)</m>，<m>f</m> 有二阶连续导数，求<m>\frac{\partial z}{\partial x}</m>,<m>\frac{{{\partial }^{2}}u}{\partial x\partial y}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解： <m>\begin{aligned}
+                        \frac{\partial z}{\partial x} &amp; =f_{1}^{\prime }\cdot y{{x}^{y-1}}+f_{2}^{\prime }\cdot {{y}^{x}}\ln y\\
+                         &amp; =y{{x}^{y-1}}f_{1}^{\prime }+{{y}^{x}}\ln yf_{2}^{\prime }\\
+                         \frac{{{\partial }^{2}}z}{\partial x\partial y} &amp; =\left( y{{x}^{y-1}}f_{1}^{\prime }+{{y}^{x}}\ln yf_{2}^{\prime } \right)_{y}^{\prime } \\ 
+                          &amp;  ={{x}^{y-1}}f_{1}^{\prime }+y{{x}^{y-1}}\ln xf_{1}^{\prime }\\
+                          &amp;  \quad +y{{x}^{y-1}}\left( f_{11}^{\prime \prime }\cdot {{x}^{y}}\ln x+f_{12}^{\prime \prime }\cdot x{{y}^{x-1}} \right)n\\
+                          &amp;  \quad +x{{y}^{x-1}}\ln yf_{2}^{\prime }+\frac{{{y}^{x}}}{y}f_{2}^{\prime }\\
+                          &amp;  \quad +{{y}^{x}}\ln y\left( f_{21}^{\prime \prime }\cdot {{x}^{y}}\ln x+f_{22}^{\prime \prime }\cdot x{{y}^{x-1}} \right) \\ 
+                          &amp;  ={{x}^{y-1}}(1+y\ln x)f_{1}^{\prime }+y{{x}^{2y-1}}\ln x\cdot f_{11}^{\prime \prime }\\
+                          &amp;  \quad +{{x}^{y}}{{y}^{x}}(1+\ln x\ln y)f_{12}^{\prime \prime }n+x{{y}^{2x-1}}\ln y\cdot f_{22}^{\prime \prime }\\
+                          &amp;  \quad +{{y}^{x-1}}(x\ln y+1)f_{2}^{\prime } 
+                        \end{aligned}</m>
                 </p>
             </answer>
         </exercise>
@@ -232,12 +593,20 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>w=f(t)</m>, <m>t=\varphi \left( xy,{{x}^{2}}+{{y}^{2}} \right)</m>，<m>f</m>有二阶连续导数，<m>\varphi </m>有连续的二阶偏导数，求<m>\frac{{{\partial }^{2}}w}{\partial x\partial y}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：<m>\begin{aligned}
+                        \frac{\partial w}{\partial x} &amp; ={f}'(t)\frac{\partial t}{\partial x}\\
+                         &amp; ={f}'(t)\left[ \varphi _{1}^{\prime }\cdot y+\varphi _{2}^{\prime }\cdot 2x \right]\\
+                           \frac{{{\partial }^{2}}w}{\partial x\partial y} &amp; =\left[ {{f}^{\prime }}(t)\left( y\varphi _{1}^{\prime }+2x\varphi _{2}^{\prime } \right) \right]_{y}^{\prime } \\ 
+                          &amp;  ={{f}^{\prime \prime }}(t)\left( x\varphi _{1}^{\prime }+2y\varphi _{2}^{\prime } \right)\left( y\varphi _{1}^{\prime }+2x\varphi _{2}^{\prime } \right)\\
+                          &amp;  \quad +{{f}^{\prime }}(t)\left[ \varphi _{1}^{\prime }+y\left( \varphi _{11}^{\prime \prime }\cdot x+\varphi _{12}^{\prime \prime }\cdot 2y \right)+2x\left( \varphi _{21}^{\prime \prime }\cdot x+\varphi _{22}^{\prime \prime }\cdot 2y \right] \right. \\ 
+                          &amp;  ={{f}^{\prime \prime }}(t)\left( x\varphi _{1}^{\prime }+2y\varphi _{2}^{\prime } \right)\left( y\varphi _{1}^{\prime }+2x\varphi _{2}^{\prime } \right)\\
+                          &amp;  \quad +{{f}^{\prime }}(t)\left[ \varphi _{1}^{\prime }+xy\varphi _{11}^{\prime \prime }+2\left( {{x}^{2}}+{{y}^{2}} \right)\varphi _{12}^{\prime \prime }+4xy+\varphi _{22}^{\prime \prime } \right] \\
+                        \end{aligned}</m>
                 </p>
             </answer>
         </exercise>
@@ -246,12 +615,37 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>f(x,y,z)={{\text{e}}^{x}}y{{z}^{2}}</m>，其中<m>z=z(x,y)</m>是由方程<m>x+y+z+xyz=0</m>确定的隐函数，求<m>f_{x}^{\prime }(0,1,-1).</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    法1：<m>f_{x}^{\prime }(x,y,z)={{\text{e}}^{x}}y{{z}^{2}}+2{{\text{e}}^{x}}yz\cdot z_{x}^{\prime }(x,y)</m>
+                    </p><p>
+                    而<m>z(x,y)</m>由<m>x+y+z+xyz=0</m>确定，故对两边<m>x</m>求导得
+                    </p><p>
+                    <m>1+z_{x}^{\prime }+yz+xyz_{x}^{\prime }=0</m> 
+                    </p><p>
+                    解得<m>z_{x}^{\prime }=-\frac{1+yz}{1+xy}</m>，于是
+                    </p><p>
+                    <m>z_{x}^{\prime }(0,1)=-\frac{1+1\cdot (-1)}{1+0\times 1}=0</m>
+                    </p><p>
+                    所以</p><p>
+                    <me>{{\left. f_{x}^{\prime }(0,1,-1)=\left[ {{\text{e}}^{x}}y{{z}^{2}}+2{{\text{e}}^{x}}yz\cdot z_{x}^{\prime }(x,y) \right] \right|}_{\begin{smallmatrix} 
+                    x=0 \\ 
+                    y=1 
+                    \\ 
+                    z=-1 
+                    \end{smallmatrix}}}=1</me>
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    法2： <m>\begin{aligned}
+                        f_{x}^{\prime }(0,1,-1) &amp; ={{\left. {{[f(x,1,-1)]}_{x}} \right|}_{x=0}} \\ 
+                       &amp;  ={{\left. \left[ {{\text{e}}^{x}}\cdot 1\cdot {{(-1)}^{2}} \right]_{x}^{\prime } \right|}_{x=0}}\\
+                       &amp;  ={{\left. {{\text{e}}^{x}} \right|}_{x=0}}=1 \\ 
+                     \end{aligned}</m>
                 </p>
             </answer>
         </exercise>
@@ -260,12 +654,30 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    已知
+                    <me>\begin{aligned}
+                    \mathop{\int }_{0}^{{{x}^{2}}}{{\text{e}}^{-{{t}^{2}}}}\text{d}t+\mathop{\int }_{1}^{xy}\frac{\sin t}{t}\text{d}t+\mathop{\int }_{0}^{xyz}\cos {{t}^{2}}\text{d}t=0
+                    \end{aligned}</me>
+                    确定<m>z=z(x,y)</m>，求<m>\frac{\partial z}{\partial x}</m>,<m>\frac{\partial z}{\partial y}</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解： 记<m>\begin{aligned}
+                        &amp; \quad F(x,y,z)\\
+                        &amp; =\mathop{\int }_{0}^{{{x}^{2}}}{{\text{e}}^{-{{t}^{2}}}}dt
+                       +\mathop{\int }_{1}^{xy}\frac{\sin t}{t}dt+\mathop{\int }_{0}^{xyz}\cos {{t}^{2}}dt
+                       \end{aligned}</m>，则</p><p>
+                       <m>\begin{aligned}
+                          F_{x}^{\prime } &amp; =2x{{\text{e}}^{-{{x}^{4}}}}+\frac{\sin (xy)}{xy}y+yz\cos {{(xyz)}^{2}}, \\
+                        F_{y}^{\prime } &amp; =\frac{\sin (xy)}{y}+xz\cos {{(xyz)}^{2}}, \\ 
+                        F_{z}^{\prime } &amp; =xy\cos {{(xyz)}^{2}},
+                       \end{aligned}</m> 
+                       </p><p>
+                       故<m>\begin{aligned}
+                          \frac{\partial z}{\partial x} &amp; =-\frac{F_{x}^{\prime }}{F_{z}^{\prime }}=-\frac{2x{{\text{e}}^{-{{x}^{4}}}}+\frac{\sin (xy)}{x}+yz\cos {{(xyz)}^{2}}}{xy\cos {{(xyz)}^{2}}}  \\
+                          \frac{\partial z}{\partial y} &amp; =-\frac{F_{y}^{\prime }}{F_{z}^{\prime }}=-\frac{\frac{\sin (xy)}{y}+xz\cos {{(xyz)}^{2}}}{xy\cos {{(xyz)}^{2}}}.  \\
+                       \end{aligned}</m> 
                 </p>
             </answer>
         </exercise>
@@ -274,12 +686,25 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>{{x}^{2}}+{{y}^{2}}+{{z}^{2}}=y\varphi \left( \frac{z}{y} \right)</m>，其中<m>\varphi </m>可微，求<m>\frac{\partial z}{\partial x}</m>,<m>\frac{\partial z}{\partial y}</m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：设<m>F(x,y,z)={{x}^{2}}+{{y}^{2}}+{{z}^{2}}-y\varphi \left( \frac{z}{y} \right)</m>，则
+                    </p><p>
+                    <m>\begin{aligned}
+                    &amp;  F_{x}^{\prime }=2x, \\ 
+                    &amp;  F_{y}^{\prime }=2y-\varphi \left( \frac{z}{y} \right)+\frac{z}{y}{\varphi }'\left( \frac{z}{y} \right), \\ 
+                    &amp;  F_{z}^{\prime }=2z-{\varphi }'\left( \frac{z}{y} \right) \\ 
+                    \end{aligned}</m> 
+                    </p><p>
+                    故
+
+                    <m>\begin{aligned}
+                    \frac{\partial z}{\partial x} &amp; =-\frac{F_{x}^{\prime }}{F_{z}^{\prime }}=-\frac{2x}{2z-{\varphi }'\left( \frac{z}{y} \right)}  \\
+                    \frac{\partial z}{\partial y} &amp; =-\frac{F_{y}^{\prime }}{F_{z}^{\prime }}=-\frac{2y-\varphi \left( \frac{z}{y} \right)+\frac{z}{y}{\varphi }'\left( \frac{z}{y} \right)}{2z-{\varphi }'\left( \frac{z}{y} \right)}  \\
+                    \end{aligned}</m> 
                 </p>
             </answer>
         </exercise>
@@ -288,12 +713,17 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>z=z(x,y)</m>由方程<m>xy+yz+zx=1</m>确定，求<m>\frac{{{\partial }^{2}}z}{\partial x\partial y}</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解： 令<m>F(x,y,z)=xy+yz+zx-1</m>，则
+                    </p><p>
+                    <m>F_{x}^{\prime }=y+z,F_{y}^{\prime }=z+x,F_{z}^{\prime }=x+y</m> 
+                    </p><p>
+                    于是<m>\frac{\partial z}{\partial x}=-\frac{y+z}{x+y}</m>, <m>\frac{\partial z}{\partial y}=-\frac{z+x}{x+y}</m> </p><p>
+                    <me>\therefore \frac{{{\partial }^{2}}z}{\partial x\partial y}=\left( -\frac{y+z}{x+y} \right)_{y}^{\prime }=-\frac{\left( 1+\frac{\partial z}{\partial y} \right)(x+y)-(y+z)}{{{(x+y)}^{2}}}=\frac{2z}{{{(x+y)}^{2}}}</me> 
                 </p>
             </answer>
         </exercise>
@@ -302,12 +732,26 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求曲面<m>{{\text{e}}^{z}}-z+xy=3</m>在点<m>M(2,1,0)</m>处的切平面与法线方程.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：记<m>F(x,y,z)={{\text{e}}^{z}}-z+xy-3.</m>
+                    </p><p>
+                    <m>F_{x}^{\prime }=y,F_{y}^{\prime }=x,F_{z}^{\prime }={{\text{e}}^{z}}-1</m> 
+                    </p><p>
+                    在<m>M(2,1,1)</m>处，
+                    </p><p>
+                    <m>F_{x}^{\prime }=1</m>,<m>F_{y}^{\prime }=2</m>,<m>F_{z}^{\prime }=0</m>
+                    </p><p>
+                    于是 <m>\overrightarrow{n}=(1,2,0)</m>
+                    </p><p>
+                    <m>\therefore {{\text{ }\!\!\Pi\!\!\text{ }}_{T}}:1\cdot (x-2)+2(y-1)=0</m> 
+                    </p><p>
+                    即 <m>x+2y-4=0</m>
+                    </p><p>
+                    <m>\therefore {{L}_{N}}:\frac{x-2}{1}=\frac{y-1}{2}=\frac{z}{0}</m> 
                 </p>
             </answer>
         </exercise>
@@ -316,12 +760,35 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求<m>\Gamma :\left\{ \begin{aligned}
+                        &amp;  {{x}^{2}}+{{y}^{2}}+{{z}^{2}}=6 \\ 
+                       &amp;  z={{x}^{2}}+{{y}^{2}} \\ 
+                     \end{aligned} \right.</m>. 在点<m>M(1,1,2)</m>处的切平面与法线方程.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：记
+
+                    <m>F={{x}^{2}}+{{y}^{2}}+{{z}^{2}}-6=0</m>,<m>G={{x}^{2}}+{{y}^{2}}-z=0</m>
+                    </p><p>
+                    <m>F_{x}^{\prime }=2x</m>,<m>F_{y}^{\prime }=2y</m>,<m>F_{z}^{\prime }=2z</m>,<m>G_{x}^{\prime }=2x</m>,<m>G_{y}^{\prime }=2y</m>,<m>G_{z}^{\prime }=-1.</m> 
+                    </p><p>
+                    在点<m>M(1,1,2)</m>处<m>\overrightarrow{{{n}_{1}}}=(1,1,2)</m>,<m>\overrightarrow{{{n}_{2}}}=(2,2,-1)</m> 
+                    </p><p>
+                    <m>\because \overrightarrow{{{n}_{1}}}\times \overrightarrow{{{n}_{2}}}=\left| \begin{matrix}
+                    {\vec{i}}  &amp;  {\vec{j}}  &amp;  {\vec{k}}  \\
+                    1  &amp;  1  &amp;  2  \\
+                    2  &amp;  2  &amp;  -1  \\
+                    \end{matrix} \right|=-5(\vec{i}-\vec{j})</m> 
+                    </p><p>
+                    所以可取<m>\vec{\tau }=\vec{i}-\vec{j}</m>，
+                    </p><p>
+                    于是<m>{{l}_{T}}:\frac{x-1}{1}=\frac{y-1}{-1}=\frac{z-2}{0}</m> 
+                    </p><p>
+                    <m>{{\text{ }\!\!\Pi\!\!\text{ }}_{N}}:(x-1)-(y-1)=0</m>
+                    </p><p>
+                    即<m>x-y=0</m> 
                 </p>
             </answer>
         </exercise>
@@ -330,26 +797,104 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>z=f(x,y)</m>的全微分为<m>\text{d}z=x\text{ }\!\!~\!\!\text{ d}x+y\text{ }\!\!~\!\!\text{ d}y</m>，则点（     ）
                 </p>
             </statement>
-            <answer>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            不是<m>f(x,y)</m>的连续点 
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            不是<m>f(x,y)</m>的极值点
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            是<m>f(x,y)</m>的极大值点 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            是<m>f(x,y)</m>的极小值点
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        法１：由<m>dz=xdx+ydy</m>可知<m>z=f(x,y)=\frac{{{x}^{2}}+{{y}^{2}}}{2}+C</m> 
+                    </p><p>
+                    故<m>(0,0)</m>是极小值点
+                	</p>
+          	</answer>
+              <answer>
                 <p>
-                    
+                    法２：由<m>dz=xdx+ydy</m>可知
+                </p><p>
+                <m>f_{x}^{\prime }=x</m>,<m>f_{y}^{\prime }=y</m>;<m>f_{xx}^{\prime \prime }=1</m>,<m>f_{xy}^{\prime \prime }=0</m>,<m>f_{yy}^{\prime \prime }=1</m>
+                </p><p>
+                所以可以得到 <m>(0,0)</m>是驻点，且<m>{{B}^{2}}-AC=-1 \lt 0</m>，<m>A \gt 0</m>
+                </p><p>
+                所以 <m>(0,0)</m>是极小值点
+                </p><p>
+                注：可微必连续，排除A
                 </p>
-            </answer>
-        </exercise>
+          </answer>
+		</exercise>
+
 
         <!-- Q25 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    求<m>f(x,y)={{x}^{3}}+{{y}^{2}}+3{{x}^{2}}-2y-1</m>的极值
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    法１：<m>f_{x}^{\prime }(x,y)=3{{x}^{2}}+6x</m>,<m>f_{y}^{\prime }(x,y)=2y-2</m> 
+                    </p><p>
+                    令<m>\left\{ \begin{array}{*{35}{l}}
+                    f_{x}^{\prime }(x,y)=0  \\
+                    f_{y}^{\prime }(x,y)=0  \\
+                    \end{array} \right.</m>，
+                    </p><p>
+                    即<m>\left\{ \begin{array}{*{35}{l}}
+                    3{{x}^{2}}+6x=0  \\
+                    2y-2=0  \\
+                    \end{array} \right.</m> 
+                    </p><p>
+                    解得<m>{{x}_{1}}=0,{{x}_{2}}=-2,y=1</m> 
+                    </p><p>
+                    所以有２个驻点<m>(0,1)</m>和<m>(-2,1)</m>
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    法２：<m>f_{xx}^{\prime \prime }(x,y)=6x+6</m>,<m>f_{xy}^{\prime \prime }(x,y)=0</m>,<m>f_{yy}^{\prime \prime }(x,y)=2</m>
+                    </p><p>
+                    对于点<m>(0,1)</m> ，<m>A=-6 \lt 0</m>,<m>B=0</m>,<m>C=2</m>,<m>{{B}^{2}}-AC \lt 0</m>
+                    </p><p>
+                    故<m>(0,1)</m>是极小值点，极小值为<m>f(0,1)=-2</m>
+                    </p><p>
+                    对于点<m>(-2,1)</m>，<m>A=-6 \lt 0</m>,<m>B=0</m>,<m>C=2</m>,<m>{{B}^{2}}-AC \gt 0</m>
+                    </p><p>
+                    故<m>(-2,1)</m>不是极值点 
                 </p>
             </answer>
         </exercise>
@@ -358,12 +903,51 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求<m>f(x,y)={{x}^{2}}+2{{y}^{2}}-{{x}^{2}}{{y}^{2}}</m>在区域<m>D=\left\{ (x,y)\mid {{x}^{2}}+{{y}^{2}}\le 4,y\ge 0 \right\}</m>上的最大值和最小值.
                 </p>
             </statement>
             <answer>
                 <p>
                     
+                    解：由<m>\left\{ \begin{array}{*{35}{l}}
+                        f_{x}^{\prime }(x,y)=2x-2x{{y}^{2}}=0  \\
+                        f_{y}^{\prime }(x,y)=4y-2{{x}^{2}}y=0  \\
+                    \end{array} \right.</m>
+                    </p><p>
+                    得驻点<m>(\pm \sqrt{2},1)</m>，
+                    </p><p>
+                    而<m>f(\pm \sqrt{2},1)=2</m>
+                    在边界<m>{{L}_{1}}:y=0(-2\le x\le 2)</m>上，
+                    </p><p>
+                    <m>f(x,0)={{x}^{2}}</m>
+                    可知<m>{{L}_{1}}</m>上得最大值为 <m>f(\pm \sqrt{2},0)=4</m>，
+                    </p><p>
+                    最小值为<m>f(0,0)=0</m>
+                    在边界<m>{{L}_{2}}:{{x}^{2}}+{{y}^{2}}=4(y\ge 0)</m>上，
+                    </p><p>
+                    构造函数
+                    <m>F(x,y,\lambda )={{x}^{2}}+2{{y}^{2}}-{{x}^{2}}{{y}^{2}}+\lambda \left( {{x}^{2}}+{{y}^{2}}-4 \right)</m>
+                    </p><p>
+                    令<m>\left\{ \begin{array}{*{35}{l}}
+                        F_{x}^{\prime }=2x-2x{{y}^{2}}+2\lambda x=0,  \\
+                        F_{y}^{\prime }=4y-2{{x}^{2}}y+2\lambda y=0,  \\
+                        F_{\lambda }^{\prime }={{x}^{2}}+{{y}^{2}}-4=0,  \\
+                    \end{array} \right.</m>
+                    </p><p>
+                    解得 
+                    <m>\left\{ \begin{array}{*{35}{l}}
+                        x=0  \\
+                        y=2  \\
+                    \end{array} \right.</m>，<m>\left\{ \begin{array}{*{35}{l}}
+                        x=\pm \sqrt{\frac{5}{2}}  \\
+                        y=\sqrt{\frac{3}{2}}  \\
+                    \end{array} \right.</m>
+                    </p><p>
+                    所以<m>f(0,2)=8</m>,
+                    </p><p>
+                    <m>f\left( \pm \sqrt{\frac{5}{2}},\sqrt{\frac{3}{2}} \right)=\frac{7}{4}</m>
+                    </p><p>
+                    所以<m>f(x,y)</m>在<m>D</m>上的最大值为<m>8</m>，最小值为<m>0</m> 
                 </p>
             </answer>
         </exercise>
@@ -372,12 +956,41 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    要建一个长方体蓄水池，已知底面造价为3万元/米 ，侧面造价为1万元/米 .在预算为36万元的情况下，其尺寸如何才能使容积最大？
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：设蓄水池长宽高分别为<m>x,y,z</m>米，
+                    则容积为<m>V(x,y,z)=xyz</m>，<m>(x \gt 0,y \gt 0,z \gt 0)</m>
+                    </p><p>
+                    而造价为<m>3xy+1\cdot (2xz+2zy)</m>元
+                    </p><p>
+                    那么我们将问题简化为求函数 <m>V(x,y,z)</m>在条件<m>3xy+2xz+2zy=36</m>
+                    </p><p>
+                    即求<m>3xy+2xz+2zy-36=0</m>下的最大值点
+                    </p><p>
+                    1）做辅助函数
+                    <m>L(x,y,z,\lambda )=xyz+\lambda (3xy+2xz+2yz-36),(\lambda \ne 0)</m> 
+                    </p><p>
+                    2）令<m>\left\{ \begin{array}{*{35}{l}}
+                    L_{x}^{\prime }=yz+\lambda (3y+2z)=0  \\
+                    L_{y}^{\prime }=xz+\lambda (3x+2z)=0  \\
+                    L_{z}^{\prime }=xy+\lambda (2y+2x)=0  \\
+                    3xy+2xz+2yz-36=0  \\
+                    \end{array} \right.</m>
+                    </p><p>
+                    即<m>\left\{ \begin{array}{*{35}{l}}
+                    yz=-\lambda (3y+2z)  \\
+                    xz=-\lambda (3x+2z)  \\
+                    xy=-\lambda (2y+2x)  \\
+                    3xy+2xz+2yz-36=0  \\
+                    \end{array} \right.</m>
+                    </p><p>
+                    由前3式可得<m>y=x,z=\frac{3}{2}x</m>
+                    带入解得唯一驻点<m>(2,2,3)</m>
+                    </p><p>
+                    3）从问题的现实意义可知<m>(2,2,3)</m>就是最大值点，即在预算为36万元时，长宽均为2米，高为3米，此时蓄水池容积最大
                 </p>
             </answer>
         </exercise>
@@ -386,12 +999,25 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求<m>u={{x}^{2}}y-{{y}^{2}}{{z}^{2}}</m>在点<m>M(-1,1,0)</m>处沿方向<m>\vec{l}=\vec{i}-2\vec{j}+2\vec{k}</m>的方向导数.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：<m>\frac{\partial u}{\partial x}=2xy</m>,<m>\frac{\partial u}{\partial y}={{x}^{2}}-2y{{z}^{2}}</m>,<m>\frac{\partial u}{\partial z}=-2{{y}^{2}}z</m> </p><p>
+                        在点<m>M(-1,1,0)</m>处，
+                        </p><p>
+                        <m>\frac{\partial u}{\partial x}=-2</m>,<m>\frac{\partial u}{\partial y}=1</m>,<m>\frac{\partial u}{\partial z}=0</m> 
+                        </p><p>
+                        <m>\therefore grad u=-2\vec{i}+\vec{j}</m> 
+                        </p><p>
+                        而<m>\overrightarrow{{{l}^{0}}}=\frac{1}{3}\vec{i}-\frac{2}{3}\vec{j}+\frac{2}{3}\vec{k},</m>
+                        </p><p>
+                        <m>\begin{aligned}
+                        \therefore \frac{\partial u}{\partial l} &amp; =gradu\cdot \overrightarrow{{{l}^{0}}}\\
+                         &amp; =-2\times \frac{1}{3}+1\times \left( -\frac{2}{3} \right)+0\times \frac{2}{3}\\
+                         &amp; =-\frac{4}{3}
+                        \end{aligned}</m> 
                 </p>
             </answer>
         </exercise>
@@ -400,12 +1026,34 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    函数<m>u=\ln \left( x+\sqrt{{{y}^{2}}+{{z}^{2}}} \right)</m>在点<m>A(1,0,1)</m>处，沿点<m>B(3,-2,2)</m>指向点方向的方向导数为（    ）.
+
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：<m>\begin{aligned}
+                        {{\left. \frac{\partial u}{\partial x} \right|}_{a,0,1)}} &amp; ={{\left. \frac{1}{x+\sqrt{{{y}^{2}}+{{z}^{2}}}} \right|}_{(1,0,1)}}\\
+                         &amp; =\frac{1}{2},  \\
+                        {{\left. \frac{\partial u}{\partial y} \right|}_{a,0,1)}} &amp; ={{\left. \frac{1}{x+\sqrt{{{y}^{2}}+{{z}^{2}}}}\cdot \frac{y}{\sqrt{{{y}^{2}}+{{z}^{2}}}} \right|}_{(1,0,1)}}\\
+                         &amp; =0,  \\
+                     \end{aligned}</m>
+                     <m>\begin{aligned}
+                        {{\left. \frac{\partial u}{\partial z} \right|}_{(0,0,1)}} &amp; ={{\left. \frac{1}{x+\sqrt{{{y}^{2}}+{{z}^{2}}}}\cdot \frac{z}{\sqrt{{{y}^{2}}+{{z}^{2}}}} \right|}_{(1,0,1)}}\\
+                         &amp; =\frac{1}{2},\\
+                        l &amp; =\overrightarrow{AB}=(2,-2,1), \\ 
+                       \cos \alpha  &amp; =\frac{2}{3},\\
+                       \cos \beta  &amp; =-\frac{2}{3},\\
+                       \cos \gamma  &amp; =\frac{1}{3} \\ 
+                     \end{aligned}</m></p><p>
+                     <m>\begin{aligned}
+                     {{\left. \frac{\partial f}{\partial l} \right|}_{(2,-2,1)}} &amp; ={{\left. \frac{\partial u}{\partial x} \right|}_{(2,-2,1)}}\cos \alpha \\
+                      &amp; \quad +{{\left. \frac{\partial u}{\partial y} \right|}_{(2,-2,1)}}\cos \beta \\
+                      &amp; \quad +{{\left. \frac{\partial u}{\partial z} \right|}_{(2,-2,1)}}\cos \gamma \\
+                      &amp; =\frac{1}{2}\text{. }
+                     \end{aligned}</m>
+                     </p><p>
+                     注：一般方向<m>l</m>不一定直接给出，需要根据题设条件自己求出<m>l</m>及其方向余弦，然后再求方向导数
                 </p>
             </answer>
         </exercise>
@@ -414,12 +1062,19 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    函数<m>f(x,y)=\arctan \frac{x}{y}</m>在点<m>(0,1)</m>处的梯度等于（     ）.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：
+
+                    <m>\begin{aligned}
+                    {{\left. \frac{\partial f}{\partial x} \right|}_{(0,1)}} &amp; ={{\left. \frac{\frac{1}{y}}{1+{{\left( \frac{x}{y} \right)}^{2}}} \right|}_{(0,1)}}=1 \\ 
+                    {{\left. \frac{\partial f}{\partial y} \right|}_{(0,1)}} &amp; ={{\left. \frac{-\frac{x}{{{y}^{2}}}}{1+{{\left( \frac{x}{y} \right)}^{2}}} \right|}_{(0,1)}}=0 \\ 
+                    \end{aligned}</m>
+                    </p><p>
+                    所以<m>\operatorname{grad} f(0,1)=\left.\frac{\partial f}{\partial x}\right|_{(0,1)} i+\left.\frac{\partial f}{\partial y}\right|_{(0,1)} j=i</m>
                 </p>
             </answer>
         </exercise>
@@ -428,12 +1083,33 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求<m>a,b,c</m>的值，使函数<m>f(x, y, z)=a x y^{2}+b y z+c x^{3} z^{2}</m>在点<m>M(1,2,-1)</m>处沿<m>x</m>轴正方向的方向导数有最大值64.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解： 
+                    <m>f_{x}(x, y, z)=a y^{2}+3 c x^{2} z^{2}</m>, <m>f_{y}(x, y, z)=2 a x y+b z</m>, <m>f_{z}(x, y, z)=b y+2 c x^{3} z,</m>
+                    </p><p>
+                    <m>f_{x}(1,2,-1)=4 a+3 c</m>, <m>f_{y}(1,2,-1)=4 a-b</m>, <m>f_{z}(1,2,-1)=2 b-2 c</m></p><p>
+                    设<m>\pmb l=(1,0,0)</m>，则<m>\cos \alpha=1</m>, <m>\cos \beta=0</m>, <m>\cos \gamma=0</m>，故
+                    </p><p>
+                    <me>\begin{aligned}
+                    \left.\frac{\partial f}{\partial l}\right|_{(1,2,-1)}  &amp;  = f_{x}(1,2,-1) \cos \alpha+f_{y}(1,2,-1) \cos \beta+f_{z}(1,2,-1) \cos \gamma \\
+                    &amp;  = 4 a+3 c 
+                    \end{aligned}</me>
+                    </p><p>
+                    由方向导数与梯度的关系可知，当<m>\pmb l=(1,0,0)</m>的方向与
+                    梯度<m>\operatorname{grad} f(1,2,-1)</m>的方向一致时，
+                    方向导数达到最大值，且方向导数的最大值为梯度的模<m>|\operatorname{grad} f(1,2,-1)|</m>
+                    </p><p>
+                    所以有<m>\left\{\begin{array}{l}
+                    4 a+3 c=64 \\
+                    4 a-b=0 \\
+                    2 b-2 c=0
+                    \end{array}\right.</m>
+                    </p><p>
+                    故<m>a=4, b=c=16 </m>
                 </p>
             </answer>
         </exercise>
@@ -442,12 +1118,31 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求曲线<m>y=\mathrm{e}^{x}</m>与直线<m>x-y-1=0</m>之间的最短距离.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：设<m>(x, y)</m>是<m>y=\mathrm{e}^{x}</m>上任意一点，则<m>(x, y)</m>到已知直线的距离为<m>d=\frac{|x-y-1|}{\sqrt{2}}</m>
+                    </p><p>
+                    只要求出了函数
+                    <m>\begin{aligned}
+                    u  &amp;  = 2 d^{2} \\
+                    &amp;  = (x-y-1)^{2} \\
+                    &amp;  = x^{2}+y^{2}-2 x y-2 x+2 y+1
+                    \end{aligned}</m>
+                    </p><p>
+                    在条件<m>\varphi(x, y)=\mathrm{e}^{x}-y=0</m>下的最小值点，
+                    即可求得<m>d_{min}</m> 
+                    作<m>L(x, y, \lambda)=x^{2}+y^{2}-2 x y-2 x+2 y+1+\lambda\left(\mathrm{e}^{x}-y\right)</m>
+                    </p><p>
+                    令<m>\left\{\begin{array}{l}
+                    L_{x}^{\prime}=2 x-2 y-2+\lambda \mathrm{e}^{x}=0, \\
+                    L_{y}^{\prime}=2 y-2 x+2-\lambda=0, \\
+                    \mathrm{e}^{x}-y=0 .
+                    \end{array}\right.</m>
+                    </p><p>
+                    解得唯一驻点<m>(0,1)</m>即为最小值点，所求最短距离<m>d_{\min }=d(0,1)=\sqrt{2}</m> 
                 </p>
             </answer>
         </exercise>
@@ -456,12 +1151,48 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求曲线<m>C:\left\{\begin{array}{l}
+                        x^{2}+y^{2}-2 z^{2}=0 \\
+                        x+y+3 z=5
+                        \end{array}\right.</m>上距离<m>xOy</m>面最远的点和最近的点.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：求点<m>(x,y,z)</m>到<m>xOy</m>面得距离为<m>|z|</m>，故求<m>C</m>上距离<m>xOy</m>面最远点和最近点得坐标，就等价于求函数<m>H=z^2</m>在条件<m>x^{2}+y^{2}-2 z^{2}=0</m>和<m>x+y+3 z=5</m>下得最大值点和最小值点
+                    令
+                    </p><p>
+                    <m>\begin{aligned}
+                    L(x, y, z, \lambda, \mu)=z^{2}+  &amp;  \lambda (x^{2}+y^{2}-2 z^{2} ) \\
+                        +  &amp;  \mu(x+y+3 z-5)\\
+                    \end{aligned}</m>
+                    </p><p>
+                    由<m>\left\{\begin{array}{l}
+                    L_{x}^{\prime}=2 \lambda x+\mu=0 \\
+                    L_{y}^{\prime}=2 \lambda y+\mu=0 \\
+                    L_{z}^{\prime}=2 z-4 \lambda z+3 \mu=0 \\
+                    x^{2}+y^{2}-2 z^{2}=0 \\
+                    \quad x+y+3 z=5
+                    \end{array}\right.</m>，
+                    </p><p>
+                    得<m>x=y</m>
+                    </p><p>
+                    从而<m>\left\{\begin{array}{l}
+                    2 x^{2}-2 z^{2}=0 \\
+                    2 x+3 z=5
+                    \end{array}\right.</m>
+                    </p><p>
+                    解得<m>\left\{\begin{array}{l}
+                    x=-5 \\
+                    y=-5 \\
+                    z=5
+                    \end{array}\right.</m>或<m>\left\{\begin{array}{l}
+                    x=1 \\
+                    y=1 \\
+                    z=1
+                    \end{array}\right.</m> 
+                    </p><p>
+                    所以存在距离面最远的和最近的点，为<m>(-5,-5,5)</m>和<m>(1,1,1)</m>
                 </p>
             </answer>
         </exercise>
@@ -470,12 +1201,37 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求过第一挂限内的点<m>(a,b,c)</m>的平面，使它与三个坐标面所围立体的体积最小.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：设所求平面的截距式方程为<m>\frac{x}{\xi}+\frac{y}{\eta}+\frac{z}{\zeta}=1 \quad (\xi \gt 0, \eta \gt 0, \zeta \gt 0)</m>
+                    </p><p>
+                    因为平面过点<m>(a,b,c)</m>，故有<m>\frac{a}{\xi}+\frac{b}{\eta}+\frac{c}{\zeta}=1</m>
+                    </p><p>
+                    所围四面体的体积为<m>V=\frac{1}{6} \xi \eta \zeta </m>
+                    </p><p>
+                    问题化简为求<m>V=\frac{1}{6} \xi \eta \zeta </m>在条件<m>\frac{a}{\xi}+\frac{b}{\eta}+\frac{c}{\zeta}=1</m>下的最小值点
+                    </p><p>
+                    先做辅助函数
+                    <me>L(x, y, z, \lambda)=\frac{1}{6} \xi \eta \zeta+\lambda\left(\frac{a}{\xi}+\frac{b}{\eta}+\frac{c}{\zeta}-1\right),\quad (\lambda \neq 0)</me></p><p>
+                    令<m>\left\{\begin{array}{l}
+                    L_{\xi}^{\prime}=\frac{1}{6} \eta \zeta-\frac{\lambda a}{\xi^{2}}=0 \quad ...\boxed{1}\\
+                    L_{\eta}^{\prime}=\frac{1}{6} \xi \zeta-\frac{\lambda b}{\eta^{2}}=0 \quad ...\boxed{2}\\
+                    L_{\zeta}^{\prime}=\frac{1}{6} \xi \eta-\frac{\lambda c}{\zeta^{2}}=0 \quad ...\boxed{3}\\
+                    \frac{a}{\xi}+\frac{b}{\eta}+\frac{c}{\zeta}-1=0 \quad ...\boxed{4}
+                    \end{array}\right.</m>
+                    </p><p>
+                    由1，2得<m>\eta=\frac{b}{a} \xi</m>
+                    </p><p>
+                    由1，3得<m>\varsigma=\frac{c}{a} \xi</m>
+                    </p><p>
+                    代入4得<m>\xi=3 a</m>
+                    </p><p>
+                    从而<m>\eta=3 b, \varsigma=3 c </m>
+                    </p><p>
+                    所以<m>(3a,3b,3c)</m>是<m>V</m>的最小值点，故所求平面为<m>\frac{x}{3 a}+\frac{y}{3 b}+\frac{z}{3 c}=1 </m> 
                 </p>
             </answer>
         </exercise>
@@ -484,12 +1240,44 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>z=f(x, y)=(x y)^{x+y}</m>求<m>f_{x}^{\prime}(1,1), f_{y}^{\prime}(1,2)</m>. 
                 </p>
             </statement>
             <answer>
                 <p>
+                    法1：设<m>u=x y, v=x+y</m>，
+                    </p><p>
+                    则<m>z=u^{v}</m></p><p>
+                    <me>\begin{aligned}
+                    f_{x}^{\prime}  &amp;  =\frac{\partial z}{\partial x}=\frac{\partial z}{\partial u} \frac{\partial u}{\partial x}+\frac{\partial z}{\partial v} \frac{\partial v}{\partial x}\\
+                    &amp;  =v u^{v-1} \cdot y+u^{v} \ln u \cdot 1 \\
+                    &amp;  =y(x+y)(x y)^{x+y-1}+(x y)^{x+y} \ln (x y) \\
+                    &amp;  =(x y)^{x+y-1}\left[x y+y^{2}+x y \ln (x y)\right]
+                    \end{aligned}</me>
+                    </p><p>
+                    由对称性得<m>f_{y}^{\prime}=(x y)^{x+y-1}\left[x y+x^{2}+x y \ln (x y)\right] </m>
+                    </p><p>
+                    <m>\therefore f_{x}^{\prime}(1,1)=2, f_{y}^{\prime}(1,2)=4(3+\ln 2)</m>
+                </p>
+            </answer>
+            <answer>
+                <p>
                     
+                    法2：
+                    <m>\because f_{x}^{\prime}(1,1)=\left.[f(x, 1)]_{x}^{\prime}\right|_{x=1}</m>
+                    </p><p>
+                    而<m>f(x, 1)=x^{x+1}</m></p><p>
+                    <me>\begin{aligned}
+                    {[f(x, 1)]_{x}^{\prime} }  &amp;  =\left[\mathrm{e}^{(x+1) \ln x}\right]_{x}^{\prime}\\
+                    &amp;  =\mathrm{e}^{(x+1) \ln x}\left[\ln x+\frac{x+1}{x}\right] \\
+                    &amp;  =x^{x+1}\left[\ln x+\frac{x+1}{x}\right]
+                    \end{aligned}</me>
+                    </p><p>
+                    <m>\therefore f_{x}^{\prime}(1,1)=2 </m>
+                    </p><p>
+                    由对称性可知<m>[f(1, y)]_{x}^{\prime}=y^{1+y}\left[\ln y+\frac{y+1}{y}\right]</m>
+                    </p><p>
+                    <m>f_{y}^{\prime}(1,2)=4(3+\ln 2)</m>
                 </p>
             </answer>
         </exercise>
@@ -498,44 +1286,63 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>z=f(z,y)</m>在点<m>(0,0)</m>附近有定义，且<m>f_{x}^{\prime}(0,0)=3</m>,<m>f_{y}^{\prime}(0,0)=1</m>，则下列结论正确的是（     ）.
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            曲面<m>z=f(z,y)</m>在点<m>(0,0, f(0,0))</m>的法向量为（3,1,1）;
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            曲线<m>\left\{\begin{array}{l}
+                                z=f(x, y) \\
+                                y=0
+                                \end{array}\right.</m>在点<m>(0,0, f(0,0))</m>的切向量为（1,0,3）;
+                        </p>
+                    </statement>
+                </choice>
 
-        <!-- Q37 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                <choice>
+                    <statement>
+                        <p>
+                            曲线<m>\left\{\begin{array}{l}
+                                z=f(x, y) \\
+                                y=0
+                                \end{array}\right.</m>在点<m>(0,0, f(0,0))</m>的切向量为（3,0,1）;
+                        </p>
+                    </statement>
+                </choice>
 
-        <!-- Q38 -->
-        <exercise>
-            <statement>
-                <p>
-                    
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
-        
+                <choice>
+                    <statement>
+                        <p>
+                            <m>\left.\mathrm{d} z\right|_{(0,0)}=3 \mathrm{~d} x+\mathrm{d} y</m>.
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解：<m>z=f(z,y)</m>在点<m>(0,0, f(0,0))</m>的法向量为<m>(3,1,-1)</m>，排除A
+                    </p><p>
+                    曲线<m>\left\{\begin{array}{l}
+                    z=f(x, y) \\
+                    y=0
+                    \end{array}\right.</m>即在点<m>(0,0, f(0,0))</m>切向量为<m>(1,0,3)</m>，选B
+                    </p><p>
+                    注：只给出点<m>(0,0)</m>的偏导数不能保证<m>(0,0)</m>点可微，排除D.
+                	</p>
+          	</answer>
+		</exercise>
 
 
     </exercises>
