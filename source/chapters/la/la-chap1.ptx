@@ -6,18 +6,30 @@
     <exercises xml:id="exercises-la1">
         <title>练习题</title>
         
-        
+        <statement>
+            <p>
+                一、计算行列式
+            </p>
+        </statement>
     
         <!-- Q1 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>f(x)=\left|\begin{array}{rrrr}2 x   &amp;  5   &amp;  1   &amp;  1 \\ 2   &amp;  x   &amp;  -1   &amp;  2 \\ -2   &amp;  4   &amp;  x   &amp;  0 \\ x   &amp;  -3   &amp;  0   &amp;  x\end{array}\right|</m>，则<m>f(x)</m>的常数项为
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：<m>f(x)</m>的常数项为
+                    <me>(-1)^{\boldsymbol{r}(4312)} a_{14} a_{23} a_{31} a_{42}+(-1)^{\boldsymbol{T}(3412)} a_{13} a_{24} a_{31} a_{42}</me>
+                    </p><p>因为<m>\tau(4312)=2+2+1</m>, <m>\tau(3412)=2+2</m>
+                    </p><p>故<m>f(x)</m>的常数项为
+                    <me>\begin{aligned}
+                    &amp; (-1) a_{14} a_{23} a_{31} a_{42}+a_{13} a_{24} a_{31} a_{42}\\
+                    &amp; =(-1) \cdot 1 \cdot(-1) \cdot(-2) \cdot(-3)+1 \cdot 2 \cdot(-2) \cdot(-3)\\
+                    &amp; = 6 + 12 = 18
+                    \end{aligned}</me>
                 </p>
             </answer>
         </exercise>
@@ -26,12 +38,97 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    求证<m>\left|\begin{array}{lll}b+c   &amp;  c+a   &amp;  a+b \\ q+r   &amp;  r+p   &amp;  p+q \\ y+z   &amp;  z+x   &amp;  x+y\end{array}\right|=2\left|\begin{array}{ccc}a   &amp;  b   &amp;  c \\ p   &amp;  q   &amp;  r \\ x   &amp;  y   &amp;  z\end{array}\right|</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    证明：
+                    【法一】</p><p>
+
+                    左边<m>\overset{\begin{matrix}
+                    {{\text{C}}_{1}}+{{\text{C}}_{\text{i}}}  \\
+                    \text{i}=2,3  \\
+                    \end{matrix}}{\mathop{=}}\,\left| \begin{matrix}
+                    a+b+c   &amp;  c+a   &amp;  a+b  \\
+                    p+q+r   &amp;  r+p   &amp;  p+q  \\
+                    x+y+z   &amp;  z+x   &amp;  x+y  \\
+                    \end{matrix}
+                    \right|</m></p><p>
+                    <m>\overset{{{\text{C}}_{1}}-{{\text{C}}_{2}}}{\mathop{=}}\,\left| \begin{matrix}
+                    b   &amp;  c+a   &amp;  a+b  \\
+                    q   &amp;  r+p   &amp;  p+q  \\
+                    y   &amp;  z+x   &amp;  x+y  \\
+                    \end{matrix} \right|</m></p><p>
+                    <m>\overset{{{\text{C}}_{3}}-{{\text{C}}_{1}}}{\mathop{=}}\,\left| \begin{matrix}
+                    b   &amp;  c+a   &amp;  a  \\
+                    q   &amp;  r+p   &amp;  q  \\
+                    y   &amp;  z+x   &amp;  x  \\
+                    \end{matrix} \right|</m></p><p>
+                    <m>\overset{{{\text{C}}_{2}}-{{\text{C}}_{3}}}{\mathop{=}}\,\left| \begin{matrix}
+                    b   &amp;  c   &amp;  a  \\
+                    q   &amp;  r   &amp;  q  \\
+                    y   &amp;  z   &amp;  x  \\
+                    \end{matrix} \right|</m></p><p>
+                    <m>\overset{\begin{matrix}
+                    {{\text{C}}_{2}}\leftrightarrow {{\text{C}}_{2}}  \\
+                    {{\text{C}}_{2}}\leftrightarrow {{\text{C}}_{3}}  \\
+                    \end{matrix}}{\mathop{=}}\,\left| \begin{matrix}
+                    a   &amp;  b   &amp;  c  \\
+                    p   &amp;  q   &amp;  r  \\
+                    x   &amp;  y   &amp;  z  \\
+                    \end{matrix} \right|</m>
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    【法二】对于左边的行列式拆第一列</p><p>
+
+                        左边<m>=\left| \begin{matrix}
+                           b   &amp;  c+a   &amp;  a+b  \\
+                           q   &amp;  r+p   &amp;  p+q  \\
+                           y   &amp;  z+x   &amp;  x+y  \\
+                        \end{matrix} \right|+\left| \begin{matrix}
+                           c   &amp;  c+a   &amp;  a+b  \\
+                           r   &amp;  r+p   &amp;  p+q  \\
+                           z   &amp;  z+x   &amp;  x+y  \\
+                        \end{matrix} \right|</m></p><p>
+                        
+                        <m>=\left| \begin{matrix}
+                           b   &amp;  c+a   &amp;  a  \\
+                           q   &amp;  r+p   &amp;  p  \\
+                           y   &amp;  z+x   &amp;  x  \\
+                        \end{matrix} \right|+\left| \begin{matrix}
+                           c   &amp;  a   &amp;  a+b  \\
+                           r   &amp;  p   &amp;  p+q  \\
+                           z   &amp;  x   &amp;  x+y  \\
+                        \end{matrix} \right|</m></p><p>
+                        
+                        <m>=\left| \begin{matrix}
+                           b   &amp;  c   &amp;  a  \\
+                           q   &amp;  r   &amp;  p  \\
+                           y   &amp;  z   &amp;  x  \\
+                        \end{matrix} \right|+\left| \begin{matrix}
+                           c   &amp;  a   &amp;  b  \\
+                           r   &amp;  p   &amp;  q  \\
+                           z   &amp;  x   &amp;  y  \\
+                        \end{matrix} \right|</m></p><p>
+                        
+                        <m>=\left| \begin{matrix}
+                           a   &amp;  b   &amp;  c  \\
+                           p   &amp;  q   &amp;  r  \\
+                           x   &amp;  y   &amp;  z  \\
+                        \end{matrix} \right|+\left| \begin{matrix}
+                           a   &amp;  b   &amp;  c  \\
+                           p   &amp;  q   &amp;  r  \\
+                           x   &amp;  y   &amp;  z  \\
+                        \end{matrix} \right|</m></p><p>
+                        
+                        <m>=2\left| \begin{matrix}
+                           a   &amp;  b   &amp;  c  \\
+                           p   &amp;  q   &amp;  r  \\
+                           x   &amp;  y   &amp;  z  \\
+                        \end{matrix} \right|</m>
                 </p>
             </answer>
         </exercise>
@@ -40,12 +137,99 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    行列式<m>\left| \begin{matrix}
+                        0   &amp;  a   &amp;  b   &amp;  0  \\
+                        a   &amp;  0   &amp;  0   &amp;  b  \\
+                        0   &amp;  c   &amp;  d   &amp;  0  \\
+                        c   &amp;  0   &amp;  0   &amp;  d  \\
+                     \end{matrix} \right|=(\quad )</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    【法一】</p><p>
+
+                        <m>\left| \begin{matrix}
+                           0   &amp;  a   &amp;  b   &amp;  0  \\
+                           a   &amp;  0   &amp;  0   &amp;  b  \\
+                           0   &amp;  c   &amp;  d   &amp;  0  \\
+                           c   &amp;  0   &amp;  0   &amp;  d  \\
+                        \end{matrix} \right|\overset{{{r}_{1}}\leftrightarrow {{r}_{2}}}{\mathop{=}}\,-\left| \begin{matrix}
+                           a   &amp;  0   &amp;  0   &amp;  b  \\
+                           0   &amp;  a   &amp;  b   &amp;  b  \\
+                           0   &amp;  c   &amp;  d   &amp;  0  \\
+                           c   &amp;  0   &amp;  0   &amp;  d  \\
+                        \end{matrix} \right|</m></p><p>
+                        
+                        <m>=-\left| \begin{matrix}
+                           a   &amp;  b  \\
+                           c   &amp;  d  \\
+                        \end{matrix} \right|\cdot {{(-1)}^{2+3+2+3}}\left| \begin{matrix}
+                           a   &amp;  b  \\
+                           c   &amp;  d  \\
+                        \end{matrix} \right|</m></p><p>
+                        
+                        <m>=-{{(ad-bc)}^{2}}</m> 
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    【法二】</p><p>
+
+                        <m>\left| \begin{matrix}
+                           0   &amp;  a   &amp;  b   &amp;  0  \\
+                           a   &amp;  0   &amp;  0   &amp;  b  \\
+                           0   &amp;  c   &amp;  d   &amp;  0  \\
+                           c   &amp;  0   &amp;  0   &amp;  d  \\
+                        \end{matrix} \right|\overset{{{r}_{1}}\leftrightarrow {{r}_{4}}}{\mathop{=}}\,-\left| \begin{matrix}
+                           c   &amp;  0   &amp;  0   &amp;  d  \\
+                           a   &amp;  0   &amp;  0   &amp;  b  \\
+                           0   &amp;  c   &amp;  d   &amp;  0  \\
+                           0   &amp;  a   &amp;  b   &amp;  0  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>\overset{{{C}_{2}}\leftrightarrow {{C}_{4}}}{\mathop{=}}\,\left| \begin{matrix}
+                           c   &amp;  d   &amp;  0   &amp;  0  \\
+                           a   &amp;  b   &amp;  0   &amp;  0  \\
+                           0   &amp;  0   &amp;  d   &amp;  c  \\
+                           0   &amp;  0   &amp;  b   &amp;  a  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=\left| \begin{matrix}
+                           c   &amp;  d  \\
+                           a   &amp;  b  \\
+                        \end{matrix} \right|\left| \begin{matrix}
+                           d   &amp;  c  \\
+                           b   &amp;  a  \\
+                        \end{matrix} \right|</m> </p><p>
+                        <m>=-{{(ad-bc)}^{2}}</m>
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    【法三】按第一行展开</p><p>
+
+                        <m>\left| \begin{matrix}
+                           0   &amp;  a   &amp;  b   &amp;  0  \\
+                           a   &amp;  0   &amp;  0   &amp;  b  \\
+                           0   &amp;  c   &amp;  d   &amp;  0  \\
+                           c   &amp;  0   &amp;  0   &amp;  d  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=-a\left| \begin{matrix}
+                           a   &amp;  0   &amp;  b  \\
+                           0   &amp;  d   &amp;  0  \\
+                           c   &amp;  0   &amp;  d  \\
+                        \end{matrix} \right|+b\left| \begin{matrix}
+                           a   &amp;  0   &amp;  b  \\
+                           0   &amp;  c   &amp;  0  \\
+                           c   &amp;  0   &amp;  d  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=-ad\left| \begin{matrix}
+                           a   &amp;  b  \\
+                           c   &amp;  d  \\
+                        \end{matrix} \right|+bc\left| \begin{matrix}
+                           a   &amp;  b  \\
+                           c   &amp;  d  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=(ad-bc)(-ad+bc)\quad =-{{(ad-bc)}^{2}}</m> 
                 </p>
             </answer>
         </exercise>
@@ -54,26 +238,139 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    行列式<m>\left| \begin{matrix}
+                        x+2   &amp;  1   &amp;  1   &amp;  1  \\
+                        1   &amp;  x+2   &amp;  1   &amp;  1  \\
+                        1   &amp;  1   &amp;  x+2   &amp;  1  \\
+                        1   &amp;  1   &amp;  1   &amp;  x+2  \\
+                     \end{matrix} \right|=0</m> ，则<m>x</m>的值为(       ).
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            5或-1
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            -5或1
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            5或1
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            -5或-1
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解：
+
+                        <m>\left| \begin{matrix}
+                           x+2   &amp;  1   &amp;  1   &amp;  1  \\
+                           1   &amp;  x+2   &amp;  1   &amp;  1  \\
+                           1   &amp;  1   &amp;  x+2   &amp;  1  \\
+                           1   &amp;  1   &amp;  1   &amp;  x+2  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>\overset{\begin{matrix}
+                           {{r}_{1}}+{{r}_{i}}  \\
+                           (i=2,3,4)  \\
+                        \end{matrix}}{\mathop{=}}\,\left| \begin{matrix}
+                           x+5   &amp;  x+5   &amp;  x+5   &amp;  x+5  \\
+                           1   &amp;  x+2   &amp;  1   &amp;  1  \\
+                           1   &amp;  1   &amp;  x+2   &amp;  1  \\
+                           1   &amp;  1   &amp;  1   &amp;  x+2  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=(x+5)\left| \begin{matrix}
+                           1   &amp;  1   &amp;  1   &amp;  1  \\
+                           1   &amp;  x+2   &amp;  1   &amp;  1  \\
+                           1   &amp;  1   &amp;  x+2   &amp;  1  \\
+                           1   &amp;  1   &amp;  1   &amp;  x+2  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>\overset{\begin{matrix}
+                           {{r}_{i}}-{{r}_{1}}  \\
+                           (i=2,3,4)  \\
+                        \end{matrix}}{\mathop{=}}\,(x+5)\left| \begin{matrix}
+                           1   &amp;  1   &amp;  1   &amp;  1  \\
+                           0   &amp;  x+1   &amp;  0   &amp;  0  \\
+                           0   &amp;  0   &amp;  x+1   &amp;  0  \\
+                           0   &amp;  0   &amp;  0   &amp;  x+1  \\
+                        \end{matrix} \right|</m> </p><p>
+                        <m>=(x+5){{(x+1)}^{3}}</m></p><p>
+                        
+                        选（D）
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q5 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    计算<m>{{D}_{n}}=\left| \begin{matrix}
+                        {{x}_{1}}   &amp;  {{a}_{2}}   &amp;  {{a}_{3}}   &amp;  \cdots    &amp;  {{a}_{n}}  \\
+                        {{a}_{1}}   &amp;  {{x}_{2}}   &amp;  {{a}_{3}}   &amp;  \cdots    &amp;  {{a}_{n}}  \\
+                        {{a}_{1}}   &amp;  {{a}_{2}}   &amp;  {{x}_{3}}   &amp;  \cdots    &amp;  {{a}_{n}}  \\
+                        \vdots    &amp;  \vdots    &amp;  \vdots    &amp;  {}   &amp;  \vdots   \\
+                        {{a}_{1}}   &amp;  {{a}_{2}}   &amp;  {{a}_{3}}   &amp;  \cdots    &amp;  {{x}_{n}}  \\
+                     \end{matrix} \right|</m>，其中 <m>{{x}_{i}}\ne {{a}_{i}}</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：【加边法】</p><p>
+
+                        <m>\pmb D_{n+1}=\left| \begin{matrix}
+                           1   &amp;  {{a}_{1}}   &amp;  {{a}_{2}}   &amp;  {{a}_{3}}   &amp;  \cdots    &amp;  {{a}_{n}}  \\
+                           0   &amp;  {{x}_{1}}   &amp;  {{a}_{2}}   &amp;  {{a}_{3}}   &amp;  \cdots    &amp;  {{a}_{n}}  \\
+                           0   &amp;  {{a}_{1}}   &amp;  {{x}_{2}}   &amp;  {{a}_{3}}   &amp;  \cdots    &amp;  {{a}_{n}}  \\
+                           0   &amp;  {{a}_{1}}   &amp;  {{a}_{2}}   &amp;  {{x}_{3}}   &amp;  \cdots    &amp;  {{a}_{n}}  \\
+                           \vdots    &amp;  \vdots    &amp;  \vdots    &amp;  \vdots    &amp;  {}   &amp;  \vdots   \\
+                           0   &amp;  {{a}_{1}}   &amp;  {{a}_{2}}   &amp;  {{a}_{3}}   &amp;  \cdots    &amp;  {{x}_{n}}  \\
+                        \end{matrix} \right|</m></p><p>
+                        
+                        <m>\overset{\begin{matrix}
+                           {{r}_{i}}-\frac{1}{{{a}_{1}}}{{r}_{1}}  \\
+                           (i=2,\cdots n)  \\
+                        \end{matrix}=}{\mathop{{}}}\,\left| \begin{matrix}
+                           1   &amp;  {{a}_{1}}   &amp;  {{a}_{2}}   &amp;  {{a}_{3}}   &amp;  \cdots    &amp;  {{a}_{n}}  \\
+                           -1   &amp;  {{x}_{1}}-{{a}_{1}}   &amp;  0   &amp;  0   &amp;  \cdots    &amp;  0  \\
+                           -1   &amp;  0   &amp;  {{x}_{2}}-{{a}_{2}}   &amp;  {}   &amp;  \cdots    &amp;  0  \\
+                           -1   &amp;  0   &amp;  0   &amp;  {{x}_{3}}-{{a}_{3}}   &amp;  \cdots    &amp;  0  \\
+                           \vdots    &amp;  \vdots    &amp;  \vdots    &amp;  \vdots    &amp;  {}   &amp;  \vdots   \\
+                           -1   &amp;  0   &amp;  0   &amp;  0   &amp;  \cdots    &amp;  {{x}_{n}}-{{a}_{n}}  \\
+                        \end{matrix} \right|</m> </p><p>
+                        
+                        <m>{{C}_{1}}+\frac{1}{{{x}_{i}}-{{a}_{i}}}{{C}_{i+1}}\left| \begin{matrix}
+                           1+\sum\limits_{i=1}^n\frac{{{a}_{i}}}{{{x}_{i}}-{{a}_{i}}}   &amp;  {{a}_{1}}   &amp;  {{a}_{2}}   &amp;  {{a}_{3}}   &amp;  \cdots    &amp;  {{a}_{n}}  \\
+                           0   &amp;  {{x}_{1}}-{{a}_{1}}   &amp;  0   &amp;  0   &amp;  \cdots    &amp;  0  \\
+                           0   &amp;  0   &amp;  {{x}_{2}}-{{a}_{2}}   &amp;  {}   &amp;  \cdots    &amp;  0  \\
+                           0   &amp;  0   &amp;  0   &amp;  {{x}_{3}}-{{a}_{3}}   &amp;  \cdots    &amp;  0  \\
+                           \vdots    &amp;  \vdots    &amp;  \vdots    &amp;  \vdots    &amp;  {}   &amp;  \vdots   \\
+                           0   &amp;  0   &amp;  0   &amp;  0   &amp;  \cdots    &amp;  {{x}_{n}}-{{a}_{n}}  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=\prod\limits_{i=1}^n(x_{i}-a_{i})[ 1+\sum\limits_{i=1}^n\frac{{{a}_{i}}}{{{x}_{i}}-{{a}_{i}}} ] 
+                        </m> 
                 </p>
             </answer>
         </exercise>
@@ -82,12 +379,67 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    计算4阶行列式<m>\left| \begin{matrix}
+                        4   &amp;  3   &amp;  0   &amp;  0  \\
+                        1   &amp;  4   &amp;  3   &amp;  0  \\
+                        0   &amp;  1   &amp;  4   &amp;  3  \\
+                        0   &amp;  0   &amp;  1   &amp;  4  \\
+                     \end{matrix} \right|=</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    【法1】</p><p>
+
+                        <m>\left| \begin{matrix}
+                           4   &amp;  3   &amp;  0   &amp;  0  \\
+                           1   &amp;  4   &amp;  3   &amp;  0  \\
+                           0   &amp;  1   &amp;  4   &amp;  3  \\
+                           0   &amp;  0   &amp;  1   &amp;  4  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=4\left| \begin{matrix}
+                           4   &amp;  3   &amp;  0  \\
+                           1   &amp;  4   &amp;  3  \\
+                           0   &amp;  1   &amp;  4  \\
+                        \end{matrix} \right|+1\cdot {{(-1)}^{1+2}}\left| \begin{matrix}
+                           3   &amp;  0   &amp;  0  \\
+                           1   &amp;  4   &amp;  3  \\
+                           0   &amp;  1   &amp;  4  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=4(64-12-12)-3(16-3)</m></p><p>
+                        <m>=160-39=121</m> 
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    【法2】</p><p>
+
+                        记<m>{{D}_{4}}=\left| \begin{matrix}
+                           4   &amp;  3   &amp;  0   &amp;  0  \\
+                           1   &amp;  4   &amp;  3   &amp;  0  \\
+                           0   &amp;  1   &amp;  4   &amp;  3  \\
+                           0   &amp;  0   &amp;  1   &amp;  4  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=4\left| \begin{matrix}
+                           4   &amp;  3   &amp;  0  \\
+                           1   &amp;  4   &amp;  3  \\
+                           0   &amp;  1   &amp;  4  \\
+                        \end{matrix} \right|+1\cdot {{(-1)}^{1+2}}\left| \begin{matrix}
+                           3   &amp;  0   &amp;  0  \\
+                           1   &amp;  4   &amp;  3  \\
+                           0   &amp;  1   &amp;  4  \\
+                        \end{matrix} \right|</m></p><p>
+                        <m>=4{{D}_{3}}-3{{D}_{2}}</m> </p><p>
+                        <m>=4( 4{{D}_{2}}-3{{D}_{1}})-3{{D}_{2}}</m> </p><p>
+                        
+                        又<m>{{D}_{2}}=\left| \begin{matrix}
+                           4   &amp;  3  \\
+                           1   &amp;  4  \\
+                        \end{matrix} \right|=13</m>，<m>{{D}_{1}}=|4|=4</m> </p><p>
+                        
+                        <m>\begin{aligned}
+                        \therefore D_4  &amp; =13{{D}_{2}}-12{{D}_{1}}\\  &amp; =13\cdot 13-12\cdot 4\\  &amp; =169-48=121
+                        \end{aligned}</m>
                 </p>
             </answer>
         </exercise>
@@ -96,26 +448,133 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    证明n阶行列式<m>{{D}_{n}}=\left| \begin{matrix}
+                        5   &amp;  3   &amp;  {}   &amp;  {}   &amp;  {}   &amp;  {}  \\
+                        2   &amp;  5   &amp;  3   &amp;  {}   &amp;  {}   &amp;  {}  \\
+                        {}   &amp;  2   &amp;  5   &amp;  3   &amp;  {}   &amp;  {}  \\
+                        {}   &amp;  {}   &amp;  \ddots    &amp;  \ddots    &amp;  \ddots    &amp;  {}  \\
+                        {}   &amp;  {}   &amp;  {}   &amp;  2   &amp;  5   &amp;  3  \\
+                        {}   &amp;  {}   &amp;  {}   &amp;  {}   &amp;  2   &amp;  5  \\
+                     \end{matrix} \right|={{3}^{n+1}}-{{2}^{n+1}}.</m>
+                     
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    用递推法证明</p><p>
+
+                        <m>{{D}_{n}}=5{{\left| \begin{matrix}
+                           5   &amp;  3   &amp;  {}   &amp;  {}  \\
+                           2   &amp;  5   &amp;  \ddots    &amp;  {}  \\
+                           {}   &amp;  \ddots    &amp;  \ddots    &amp;  3  \\
+                           {}   &amp;  {}   &amp;  2   &amp;  5  \\
+                        \end{matrix} \right|}_{n-1}}{{\left| \begin{matrix}
+                           3   &amp;  {}   &amp;  {}   &amp;  {}   &amp;  {}  \\
+                           2   &amp;  5   &amp;  3   &amp;  {}   &amp;  {}  \\
+                           {}   &amp;  \ddots    &amp;  \ddots    &amp;  \ddots    &amp;  {}  \\
+                           {}   &amp;  {}   &amp;  2   &amp;  5   &amp;  3  \\
+                           {}   &amp;  {}   &amp;  {}   &amp;  2   &amp;  5  \\
+                        \end{matrix} \right|}_{n=1}}</m></p><p>
+                        
+                        <m>=5{{D}_{n-1}}+2\times {{(-1)}^{1+2}}\times 3{{\left| \begin{matrix}
+                           5   &amp;  3   &amp;  {}   &amp;  {}  \\
+                           2   &amp;  5   &amp;  \ddots    &amp;  {}  \\
+                           {}   &amp;  \ddots    &amp;  \ddots    &amp;  3  \\
+                           {}   &amp;  {}   &amp;  2   &amp;  5  \\
+                        \end{matrix} \right|}_{n-2}}</m></p><p>
+                        <m>=5{{D}_{n-1}}-6{{D}_{n-2}}</m> </p><p>
+                        
+                        得递推公式 <m>{{D}_{n}}=5{{D}_{n-1}}-6{{D}_{n-2}}</m></p><p>
+                        
+                        将此递推公式变形为
+                        <me>\begin{aligned}
+                        {{D}_{n}}-2{{D}_{n-1}}  &amp; =3{{D}_{n-1}}-6{{D}_{n-2}}\\  &amp; =3\left( {{D}_{n-1}}-2{{D}_{n-2}} \right)
+                        \end{aligned}</me></p><p>
+                        并由此类推得到
+                        <me>\begin{aligned}
+                        {{D}_{n}}-2{{D}_{n-1}}  &amp; ={{3}^{2}}\left( {{D}_{n-2}}-2{{D}_{n-3}} \right)\\  &amp; =\cdots ={{3}^{n-2}}\left( {{D}_{2}}-2{{D}_{1}} \right)\\  &amp; ={{3}^{n-2}}(19-10)\\  &amp; ={{3}^{n}} \quad ...\boxed{1}
+                        \end{aligned}</me></p><p>
+                        上述递推公式还可以变形为
+                        <me>\begin{aligned}
+                        {{D}_{n}}-3{{D}_{n-1}}  &amp; ={{2}^{2}}\left( {{D}_{n-2}}-3{{D}_{n-3}} \right)\\  &amp; =\cdots ={{2}^{n-2}}\left( {{D}_{2}}-3{{D}_{1}} \right)\\  &amp; ={{2}^{n-2}}(19-15)\\  &amp; ={{2}^{n}} \quad ...\boxed{2}
+                        \end{aligned}</me> </p><p>
+                        于是，由 <m>\boxed{1}</m>，<m>\boxed{2}</m> 两式可得
+                        <m>{{D}_{n}}={{3}^{n+1}}-{{2}^{n+1}}</m> 
                 </p>
             </answer>
+            
         </exercise>
+
+
+        <statement>
+            <p>
+                二、代数余子式求和
+            </p>
+        </statement>
 
         <!-- Q8 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设<m>D=\left| \begin{matrix}
+                        1   &amp;  1   &amp;  2   &amp;  -1  \\
+                        -2   &amp;  3   &amp;  4   &amp;  1  \\
+                        3   &amp;  4   &amp;  1   &amp;  2  \\
+                        -4   &amp;  2   &amp;  0   &amp;  6  \\
+                     \end{matrix} \right|</m>，则</p><p>
+                      （1）<m>{{A}_{12}}-2{{A}_{22}}+3{{A}_{32}}-4{{A}_{42}}=</m> </p><p>
+                      （2）<m>{{A}_{31}}+2{{A}_{32}}+{{A}_{34}}=</m> 
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：
+                    （1）
+
+                    <m>\begin{aligned}
+                    {{A}_{12}}-2{{A}_{22}}+3{{A}_{32}}-4{{A}_{42}}=  &amp; \left| \begin{matrix}
+                    1   &amp;  1   &amp;  2   &amp;  -1  \\
+                    -2   &amp;  -2   &amp;  4   &amp;  1  \\
+                    3   &amp;  3   &amp;  1   &amp;  2  \\
+                    -4   &amp;  4   &amp;  0   &amp;  6  \\
+                    \end{matrix} \right|\\=  &amp; 0
+                    \end{aligned}</m></p><p>
+
+                    （2）
+
+                    <m>\begin{aligned}
+                    {{A}_{31}}+2{{A}_{32}}+{{A}_{34}}  &amp; =\left| \begin{matrix}
+                    1   &amp;  1   &amp;  2   &amp;  -1  \\
+                    -2   &amp;  3   &amp;  4   &amp;  1  \\
+                    1   &amp;  2   &amp;  0   &amp;  1  \\
+                    -4   &amp;  2   &amp;  0   &amp;  6  \\
+                    \end{matrix} \right| \\
+                    &amp; \overset{{{r}_{2}}-2{{r}_{1}}}{\mathop{=}}\,\left| \begin{matrix}
+                    1   &amp;  1   &amp;  2   &amp;  -1  \\
+                    -4   &amp;  1   &amp;  0   &amp;  3  \\
+                    1   &amp;  2   &amp;  0   &amp;  1  \\
+                    -4   &amp;  2   &amp;  0   &amp;  6  \\
+                    \end{matrix} \right|\\
+                    &amp; =2{{(-1)}^{1+3}}\left| \begin{matrix}
+                    -4   &amp;  1   &amp;  3  \\
+                    1   &amp;  2   &amp;  1  \\
+                    -4   &amp;  2   &amp;  6  \\
+                    \end{matrix} \right|\\
+                    &amp; \overset{{{r}_{3}}-{{r}_{1}}}{\mathop{=}}\,2{{(-1)}^{1+3}}\left| \begin{matrix}
+                    -4   &amp;  1   &amp;  3  \\
+                    1   &amp;  2   &amp;  1  \\
+                    0   &amp;  1   &amp;  3  \\
+                    \end{matrix} \right|\\
+                    &amp; \overset{{{r}_{1}}-{{r}_{3}}}{\mathop{=}}\,2\left| \begin{matrix}
+                    -4   &amp;  0   &amp;  0  \\
+                    1   &amp;  2   &amp;  1  \\
+                    0   &amp;  1   &amp;  3  \\
+                    \end{matrix} \right|\\
+                    &amp; =-8\left| \begin{matrix}
+                    2   &amp;  1  \\
+                    1   &amp;  3  \\
+                    \end{matrix} \right|=-40
+                    \end{aligned}</m>
                 </p>
             </answer>
         </exercise>
@@ -124,71 +583,280 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设行列式<m>D=\left| \begin{matrix}
+                        3   &amp;  0   &amp;  4   &amp;  0  \\
+                        2   &amp;  2   &amp;  2   &amp;  2  \\
+                        0   &amp;  -7   &amp;  0   &amp;  0  \\
+                        5   &amp;  3   &amp;  -2   &amp;  2  \\
+                     \end{matrix} \right|</m>，则第4行各元素余子式之和的值为
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：
+
+                    <m>\begin{aligned}
+                    &amp; {{M}_{41}}+{{M}_{42}}+{{M}_{43}}+{{M}_{44}}\\
+                    =  &amp; -{{A}_{41}}+{{A}_{42}}-{{A}_{43}}+{{A}_{44}}\\
+                    =  &amp; \left| \begin{matrix}
+                    3   &amp;  0   &amp;  4   &amp;  0  \\
+                    2   &amp;  2   &amp;  2   &amp;  2  \\
+                    0   &amp;  -7   &amp;  0   &amp;  0  \\
+                    -1   &amp;  1   &amp;  -1   &amp;  1  \\
+                    \end{matrix} \right|\\
+                    =  &amp; 2(-7){{(-1)}^{3+2}}\left| \begin{matrix}
+                    3   &amp;  4   &amp;  0  \\
+                    1   &amp;  1   &amp;  1  \\
+                    -1   &amp;  -1   &amp;  1  \\
+                    \end{matrix} \right|\\
+                    \overset{{{r}_{3}}+{{r}_{2}}}{\mathop{=}}\,  &amp; 14\left| \begin{matrix}
+                    3   &amp;  4   &amp;  0  \\
+                    1   &amp;  1   &amp;  1  \\
+                    0   &amp;  0   &amp;  2  \\
+                    \end{matrix} \right|\\
+                    =  &amp; 14\cdot 2\left| \begin{matrix}
+                    3   &amp;  4  \\
+                    1   &amp;  1  \\
+                    \end{matrix} \right|=-28
+                    \end{aligned}</m> 
                 </p>
             </answer>
         </exercise>
+
+
+        <statement>
+            <p>
+                三、克拉默法则
+            </p>
+        </statement>
 
         <!-- Q10 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    三元一次方程组 <m>\left\{ \begin{matrix}
+                        {{x}_{1}}+{{x}_{2}}+{{x}_{3}}=1  \\
+                        2{{x}_{1}}-{{x}_{2}}+3{{x}_{3}}=4  \\
+                        4{{x}_{1}}+{{x}_{2}}+9{{x}_{3}}=16  \\
+                     \end{matrix} \right.</m> 的解中，未知数<m>{{x}_{2}}</m>的值必为（   ）
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            1
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            5/2
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            7/3
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            1/6
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解：方程组的系数行列式（范德蒙德行列式） </p><p>
+
+                            由克拉默法则 <m>{{x}_{2}}=\frac{{{D}_{2}}}{D}</m></p><p>
+                            
+                            <m>\begin{aligned}
+                            {{D}_{2}}=  &amp; \left| \begin{matrix}
+                               1   &amp;  1   &amp;  1  \\
+                               2   &amp;  4   &amp;  3  \\
+                               4   &amp;  16   &amp;  9  \\
+                            \end{matrix} \right|\\
+                            =  &amp; (3-2)(4-2)(3-4)\\
+                            =  &amp; -2\quad {{x}_{2}}\\
+                            =  &amp; \frac{-2}{-12}=\frac{1}{6}
+                            \end{aligned}</m></p><p>
+                            
+                            故选（D）
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q11 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设齐次方程组 <m>\left\{ \begin{matrix}
+                        k{{x}_{1}}+2{{x}_{2}}+{{x}_{3}}=0  \\
+                        2{{x}_{1}}+k{{x}_{2}}=0  \\
+                        {{x}_{1}}-{{x}_{2}}+{{x}_{3}}=0  \\
+                     \end{matrix} \right.</m>有非零解，则<m>k</m>的取值为（    ）
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            2
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            3或-2
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            3 
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            -3或2
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解：
+                        齐次方程组<m>\left\{ \begin{matrix}
+                           k{{x}_{1}}+2{{x}_{2}}+{{x}_{3}}=0  \\
+                           2{{x}_{1}}+k{{x}_{2}}=0  \\
+                           {{x}_{1}}-{{x}_{2}}+{{x}_{3}}=0  \\
+                        \end{matrix} \right.</m></p><p>
+                        
+                        有非零解 <m>\Leftrightarrow \left| \begin{matrix}
+                           k   &amp;  2   &amp;  1  \\
+                           2   &amp;  k   &amp;  0  \\
+                           1   &amp;  -1   &amp;  1  \\
+                        \end{matrix} \right|=0</m></p><p>
+                        
+                        <m>\begin{aligned}
+                          &amp; \left| \begin{matrix}
+                           k   &amp;  2   &amp;  1  \\
+                           2   &amp;  k   &amp;  0  \\
+                           1   &amp;  -1   &amp;  1  \\
+                        \end{matrix} \right|\\
+                        \overset{\begin{matrix}
+                           {{c}_{1}}-{{c}_{3}}  \\
+                           {{c}_{2}}+{{c}_{3}}  \\
+                        \end{matrix}}{\mathop{=}}\,  &amp; \left| \begin{matrix}
+                           k-1   &amp;  3   &amp;  1  \\
+                           2   &amp;  k   &amp;  0  \\
+                           0   &amp;  0   &amp;  1  \\
+                        \end{matrix} \right|\\
+                        =  &amp; \left| \begin{matrix}
+                           k-1   &amp;  3  \\
+                           2   &amp;  k  \\
+                        \end{matrix} \right|\\
+                        =  &amp; k(k-1)-6\\
+                        =  &amp; {{k}^{2}}-k-6\\
+                        =  &amp; (k-3)(k+2)=0
+                        \end{aligned}</m></p><p>
+                        
+                        <m>\therefore k=-2,k=3</m> </p><p>选（B）
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q12 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设非齐次线性方程组<m>\left\{ \begin{matrix}
+                        \lambda {{x}_{1}}+{{x}_{2}}+{{x}_{3}}=1  \\
+                        {{x}_{1}}+\lambda {{x}_{2}}+{{x}_{3}}=\lambda   \\
+                        {{x}_{1}}+{{x}_{2}}+\lambda {{x}_{3}}={{\lambda }^{2}}  \\
+                     \end{matrix} \right.</m> 有唯一解，则<m>\lambda </m>应满足（  ）.
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m>\lambda \ne -1</m>且<m>\lambda \ne 2</m>	
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m>\lambda \ne 1</m>且<m>\lambda \ne 2</m>
+                        </p>
+                    </statement>
+                </choice>
 
-        <!-- Q13 -->
-        <exercise>
-            <statement>
-                <p>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>\lambda \ne 1</m>且<m>\lambda \ne -2</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>\lambda \ne -1</m>且<m>\lambda \ne -2</m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
                     
-                </p>
-            </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+                    解：该齐次线性方程组的系数行列式为</p><p>
+
+                        <m>D=\left| \begin{matrix}
+                        \lambda    &amp;  1   &amp;  1  \\
+                        1   &amp;  \lambda    &amp;  1  \\
+                        1   &amp;  1   &amp;  \lambda   \\
+                        \end{matrix} \right|=(\lambda +2){{(\lambda -1)}^{2}}</m></p><p>
+                        
+                        方程组仅有唯一解时，
+                        
+                        <m>D=(\lambda +2){{(\lambda -1)}^{2}}\ne 0</m> 
+                        
+                        </p><p>故  <m>\lambda \ne 1</m>且<m>\lambda \ne -2</m>，选（C）
+                	</p>
+          	</answer>
+		</exercise>
+
+
+
 
         
 
