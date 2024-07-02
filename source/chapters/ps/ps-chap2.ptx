@@ -8,12 +8,36 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量 <m>X</m> 的分布函数为
+                        <me>
+                        F(x)=A+B \arctan x \quad(-\infty \lt x \lt +\infty)
+                        </me></p>
+
+                        <p>求常数 <m>A , B</m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: 由分布函数的性质, 我们有
+                    <me>
+                    \begin{aligned}
+                    0=\lim _{x \rightarrow-\infty} F(x)=\lim _{x \rightarrow-\infty}(A+B \arctan x)=A-\frac{\pi}{2} B \\
+                    1=\lim _{x \rightarrow+\infty} F(x)=\lim _{x \rightarrow+\infty}(A+B \arctan x)=A+\frac{\pi}{2} B
+                    \end{aligned}
+                    </me></p>
+
+                    <p>解方程组
+                    <me>
+                    \left\{\begin{array}{l}
+                    A-\frac{\pi}{2} B=0 \\
+                    A+\frac{\pi}{2} B=1
+                    \end{array}\right.
+                    </me></p>
+
+                    <p>得解
+                    <me>
+                    A=\frac{1}{2}, \quad B=\frac{1}{\pi} .
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -22,12 +46,32 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设离散型随机变量 <m> X </m> 的分布律如下,
+                    <me>
+                    \begin{array}{|c|c|c|c|}
+                    \hline  X   &amp;  1  &amp;  2  &amp;  3 \\
+                    \hline P\{{X}={k}\}   &amp;   \theta^{2}   &amp;   2 \theta(1-\theta)   &amp;   (1-\theta)^{2}  \\
+                    \hline
+                    \end{array}
+                    </me></p>
+
+                    <p>且 <m>P\{X \geq 2\}=\frac{3}{4}</m>, 求未知参数 <m>\theta</m> 及 <m>X</m> 的分布函数.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    <m>P\{X \geq 2\}=P\{X=2\}+P\{X=3\}=2 \theta(1-\theta)+(1-\theta)^{2}=1-\theta^{2}=\frac{3}{4}</m>, 解得 <m>\theta= \pm \frac{1}{2}</m>.
+                    <m>P\{X=2\} \geq 0</m>, 得 <m>\theta=\frac{1}{2}</m>, 从而得 <m>X</m> 的概率分布为</p>
+
+                    <p><me>
+                    \begin{array}{|c|c|c|c|}
+                    \hline  X   &amp;  1  &amp;  2  &amp;  3 \\
+                    \hline  P\{X=k\}   &amp;   \frac 1 4   &amp;   \frac 1 2   &amp;   \frac 1  4 \\
+                    \hline
+                    \end{array}
+                    </me></p>
+
+                    <p>分布函数 <m>F(x)=\left\{\begin{array}{l}0, \quad x  \lt  1 \\ \frac 1  4, \quad 1 \leqslant x  \lt  2 \\ \frac 3 4, \quad 2 \leqslant x  \lt  3 \\ 1, \quad x \geqslant 3 .\end{array}\right.</m>
                 </p>
             </answer>
         </exercise>
@@ -36,12 +80,22 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设一个人在一年内的感冒次数服从参数 <m>\lambda=5</m> 的 Poisson 分布, 现有一种预防感冒的药, 它对 <m>30 \%</m> 的人来讲, 可将上述参数 <m>\lambda</m> 降为 <m>\lambda=1</m> (疗效显著) ; 对另 <m>45 \%</m> 的人来讲, 可将参数 <m>\lambda</m> 降为 <m>\lambda=4</m> （疗效一般）; 而对其余 <m>25 \%</m> 的人来讲, 则是无效的. 现某人服用此药一年, 在这一年中, 他得了3次感冒, 试求此药对他 “疗效显著”的概率.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解：设 <m>B=\{</m> 此人在一年中得 <m>3</m> 次感冒 <m> \}</m>,
+                    <m>A_{1}=\{</m> 该药疗效显著 <m>\}</m>, <m>A_{2}=\{</m> 该药疗效一般 <m>\}</m>,
+                    <m>A_{3}=\{</m> 该药无效 <m>\}</m>, 则由Bayes公式, 得</p>
+
+                    <p><me>
+                    \begin{aligned}
+                    P\left(A_{1} \mid B\right)  &amp;  =\frac{P\left(A_{1}\right) P\left(B \mid A_{1}\right)}{P\left(A_{1}\right) P\left(B \mid A_{1}\right)+P\left(A_{2}\right) P\left(B \mid A_{2}\right)+P\left(A_{3}\right) P\left(B \mid A_{3}\right)} \\
+                    &amp;  =\frac{0.30 \times \frac{1^{3}}{3 !} e^{-1}}{0.30 \times \frac{1^{3}}{3 !} e^{-1}+0.45 \times \frac{4^{3}}{3 !} e^{-4}+0.25 \times \frac{5^{3}}{3 !} e^{-5}} \\
+                    &amp;  =0.1301
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -50,26 +104,103 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    通过某交叉路口的汽车流可以看做服从泊松分布, 已知在 <m>1</m> 分钟内有汽车通过的概率是 <m>0.7</m> , 则 <m>1</m> 分钟内最多有 <m>1</m> 辆汽车通过的概率为 (   )
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m>0.7(1-\ln 0.7)</m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m>0.3(1-\ln 0.7)</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>0.3(1-\ln0.3)</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>0.7(1-\ln 0.3)</m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        选<m>C</m>
+                        <m>X</m> 表示通过路口的车辆数, <m>X \sim P(\lambda), \quad P\{X=k\}=\frac{\lambda^{k} e^{-\lambda}}{k !}</m>.</p>
+                        
+                        <p><m>P\{X \leq 1\}=P\{X=1\}+P\{X=0\}=\frac{\lambda e^{-\lambda}}{1}+\frac{e^{-\lambda}}{1}=(\lambda+1) e^{-\lambda}</m>.</p>
+                        
+                        <p>由题目知 <m> P\{X \geq 1\}=1-P\{X=0\}=1-e^{-\lambda}=0.7 \Rightarrow \lambda=-\ln 0.3 </m>, 即 <m> P\{X \leq 1\}=0.3(1-\ln 0.3) </m>.
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q5 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量 <m>X</m> 的密度函数为
+                    <me>
+                    f(x)=\left\{\begin{array}{cc}
+                    a e^{-3 x},  &amp;  x \gt 0 \\
+                    0,  &amp;  x \leq 0
+                    \end{array}\right.
+                    </me></p>
+
+                    <p>（1）确定常数 <m>a</m>; (2) 求 <m>P\{X \gt 0.1\}</m> (3) 求 <m>X</m> 的分布函数 <m>F(x)</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 (1) 由归一性, 我们有
+                    <me>
+                    \int_{-\infty}^{+\infty} f(x) \mathrm{d} x=\int_{0}^{+\infty} a e^{-3 x} \mathrm{~d} x=\left.\frac{a}{-3} e^{-3 x}\right|_{0} ^{+\infty}=\frac{a}{3}=1
+                    </me></p>
+
+                    <p>解得 <m> a=3 </m>, 于是 <m> X </m> 得密度函数为
+                    <me>
+                    f(x)=\left\{\begin{array}{cc}
+                    3 e^{-3 x},  &amp;  x \gt 0 ; \\
+                    0,  &amp;  x \leq 0 .
+                    \end{array}\right.
+                    </me></p>
+
+                    <p>(2) 
+                    <me>
+                    \begin{aligned}
+                    P\{X \gt 0.1\}  &amp;  =\int_{0.1}^{+\infty} f(x) \mathrm{d} x \\
+                    &amp;  =\int_{0.1}^{+\infty} 3 e^{-3 x} \mathrm{~d} x=-\int_{0.1}^{+\infty} e^{-3 x} \mathrm{~d}(-3 x)=-\left.e^{-3 x}\right|_{0.1} ^{+\infty}=e^{-0.3}
+                    \end{aligned}
+                    </me></p>
+
+                    <p>（3）由密度函数的定义知当 <m>x \leq 0</m> 时, <m>F(x)=0</m>;</p>
+
+                    <p>当 <m> x \gt 0 </m> 时,
+                    <me>
+                    F(x)=\int_{-\infty}^{x} f(t) \mathrm{d} t=\int_{0}^{x} 3 e^{-3 x} \mathrm{~d} x=1-e^{-3 x}
+                    </me></p>
+
+                    <p>所以 <m>F(x)=\left\{\begin{array}{cc}1-e^{-3 x},  &amp;  x \gt 0 ; \\ 0,  &amp;  x \leq 0 .\end{array}\right.</m>
                 </p>
             </answer>
         </exercise>
@@ -78,12 +209,55 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设连续型随机变量 <m>X</m> 的分布函数为
+                    <me>
+                    F(x)=\left\{\begin{array}{ll}
+                    0,  &amp;  x \leq-a, \\
+                    A+B \arcsin \frac{x}{a},  &amp;  -a \lt x \leq a, \\
+                    1,  &amp;  x \gt a .
+                    \end{array}\right.
+                    </me></p>
+
+                    <p>求: (1) 系数 <m>A, B</m> 的值;
+                    (2) <m>P\left\{-a  \lt  X  \lt  \frac{a}{2}\right\}</m>;
+                    (3) 随机变量 <m> X </m> 的概率密度 .
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: (1) 因为 <m> X </m> 是连续型随机变量, 所以 <m> F(x) </m> 连续,
+                    故有
+                    <me>
+                    F(-a)=\displaystyle\lim _{x \rightarrow-a} F(x),\quad F(a)=\lim _{x \rightarrow a} F(x),
+                    </me></p>
+
+                    <p>即
+                    <me>
+                    \begin{array}{l}
+                    A+B \arcsin \left(\frac{-a}{a}\right)=A-\frac{\pi}{2} B=0, \\
+                    A+B \arcsin \left(\frac{a}{a}\right)=A+\frac{\pi}{2} B=1,
+                    \end{array}
+                    </me></p>
+
+                    <p>解之得 <m>A=\frac{1}{2}, \quad B=\frac{1}{\pi}</m>.</p>
+
+                    <p>所以 <m>F(x)=\left\{\begin{array}{ll}0,  &amp;  x \leq-a, \\ \frac{1}{2}+\frac{1}{\pi} \arcsin \frac{x}{a},  &amp;  -a \lt x \leq a, \\ 1,  &amp;  x \gt a .\end{array}\right. </m></p>
+
+                    <p>(2) 
+                    <me>
+                    \begin{aligned}
+                    P\left\{-a \lt X \lt \frac{a}{2}\right\} &amp; =F\left(\frac{a}{2}\right)-F(-a)\\
+                    &amp; =\frac{1}{2}+\frac{1}{\pi} \arcsin \left(\frac{a}{2 a}\right)-0 \\
+                    &amp; =\frac{1}{2}+\frac{1}{\pi} \times \frac{\pi}{6}=\frac{2}{3} .
+                    \end{aligned}
+                    </me>
+                    (3) 随机变量 <m> X </m> 的概率密度为
+                    <me>
+                    f(x)=F^{\prime}(x)=\left\{\begin{array}{ll}
+                    1 / \pi \sqrt{a^{2}-x^{2}},  &amp;  -a \lt  x  \lt  a, \\
+                    0,  &amp;  \text { 其它 } .
+                    \end{array}\right.
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -92,26 +266,91 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量 <m>X \sim N\left(\mu, \sigma^{2}\right)(\sigma  \gt  0)</m>, 记 <m> p=P\left\{X \leqslant \mu+\sigma^{2}\right\} </m>, 则 <m> (\quad) </m>.
                 </p>
             </statement>
-            <answer>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            <m>p</m> 随着 <m>\mu</m> 的增加而增加
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>p</m> 随着 <m>\sigma</m> 的增加而增加
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>p</m> 随着 <m>\mu</m> 的增加而减少
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>p</m> 随着 <m>\sigma</m> 的增加而减少
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        解：选 <m>B</m>
+                        <me>
+                        p=P\left\{X \leqslant \mu+\sigma^{2}\right\}=P\left\{\frac{X-\mu}{\sigma} \leqslant \sigma\right\}=\Phi(\sigma),
+                        </me>
+                        随着 <m>\sigma</m> 的增加而增加
+                        
+                       
+                	</p>
+          	</answer>
+            <hint>
                 <p>
-                    
+                    熟练掌握一般正态分布标准化的过程, 以及标准正态分布下分布函数的性质.
                 </p>
-            </answer>
-        </exercise>
+            </hint>
+		</exercise>
+
 
         <!-- Q8 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    已知 <m>X</m> 为随机变量, <m>Y=X^{2}+X+1</m>,已知 <m>X</m> 的概率分布为 <m>P\{X=-1\}=P\{X=0\}=P\{X=1\}=\frac{1}{3}</m>, 求 <m>Y</m> 的分布函数 <m>F_Y(y) </m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解: <m>Y</m> 的分布律为
+                    <me>
+                    \begin{array}{c|rcc}
+                    X   &amp;  -1  &amp;  0  &amp;  1 \\
+                    \hline Y   &amp;  1  &amp;  1  &amp;  3 \\
+                    \hline p_{k}   &amp;   \frac{1}{3}   &amp;   \frac{1}{3}   &amp;   \frac{1}{3} 
+                    \end{array} \quad \Rightarrow\begin{array}{c|cc}
+                    Y   &amp;   1   &amp;   3  \\
+                    \hline  p   &amp;   \frac{2}{3}   &amp;   \frac{1}{3} 
+                    \end{array}
+                    </me></p>
+
+                    <p><me>
+                    F_{Y}(y)=\left\{\begin{array}{ll}
+                    0,  &amp;  y \lt 1 \\
+                    \frac{2}{3},  &amp;  1 \leq y \lt 3 \\
+                    1,  &amp;  y \geq 3
+                    \end{array}\right.
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -120,12 +359,68 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量 <m>X</m> 的概率密度为
+                    <me>
+                    f_{X}(x)=\left\{\begin{array}{ll}
+                    \frac{x}{8},  &amp;  0 \lt x \lt 4, \\
+                    0,  &amp;  \text { 其他. }
+                    \end{array}\right.
+                    </me></p>
+
+                    <p>求随机变量 <m>Y=2 X+8</m> 的概率密度.    
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    方法一: 第一步 先求 <m>Y=2 X+8</m> 的分布函数 <m>F_{Y}(y)</m>.
+                    <me>
+                    F_{Y}(y)=P\{Y \leq y\}=P\{2 X+8 \leq y\}=P\left\{X \leq \frac{y-8}{2}\right\}=\int_{-\infty}^{\frac{y-8}{2}} f_{X}(x) \mathrm{d} x
+                    </me></p>
+
+                    <p>第二步 由分布函数求概率密度.
+                    <me>
+                    f_{Y}(y)=F_{y}^{\prime}(y)=\left[\int_{-\infty}^{\frac{y-8}{2}} f_{X}(x) \mathrm{d} x\right]^{\prime}=f_{X}\left(\frac{y-8}{2}\right)\left(\frac{y-8}{2}\right)^{\prime},
+                    </me></p>
+
+                    <p>所以
+                    <me>
+                    \begin{aligned}
+                    f_{Y}(y)  &amp;  =\left\{\begin{array}{cc}
+                    \frac{1}{8}\left(\frac{y-8}{2}\right) \cdot \frac{1}{2},  &amp;  0 \lt \frac{y-8}{2} \lt 4, \\
+                    0,  &amp;  \text { 其他. }
+                    \end{array}\right. \\
+                    &amp;  =\left\{\begin{array}{cc}
+                    \frac{y-8}{32},  &amp;  8 \lt y \lt 16, \\
+                    0,  &amp;  \text { 其他. }
+                    \end{array}\right.
+                    \end{aligned}
+                    </me></p>
+
+                    <p>由上述例题可归纳 出计算连续型随机变量 的函数的概率密度的方法.
+                </p>
+            </answer>
+            <answer>
+                <p>
+                    方法二</p>
+
+                    <p>由 <m>Y=2 X+8</m> 得当 <m>0  \lt  x  \lt  4</m>, 则有 <m>8  \lt  2 x+8  \lt  16</m>, 即 <m>8  \lt  y  \lt  16</m>,</p>
+
+                    <p><m>x=h(y)=\frac{y-8}{2}</m>, <m>h^{\prime}(y)=\frac{1}{2}</m>,</p>
+
+                    <p><me>
+                    \begin{array}{l}
+                    f_{Y}(y)=\left\{\begin{array}{l}
+                    f_{x}(h(y))\left|h^{\prime}(y)\right|, 8 \lt y \lt 16 \\
+                    0, \text { 其他 }
+                    \end{array}=\left\{\begin{array}{l}
+                    \frac{1}{8}\left(\frac{y-8}{2}\right) \frac{1}{2}, 8 \lt y \lt 16 \\
+                    0, \text { 其他 }
+                    \end{array}=\left\{\begin{array}{l}
+                    \frac{y-8}{32}, 8 \lt y \lt 16 \\
+                    0, \text { 其他 }
+                    \end{array}\right.\right.\right.
+                    \end{array}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -134,12 +429,56 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量 <m>X</m> 的概率密度为 <m>f_{X}(x)=\left\{\begin{array}{ll}\frac{1}{2}  &amp;  -1 \lt x \lt 0 \\ \frac{1}{4}  &amp;  0 \leq x \lt 2 \\ 0  &amp;  \text { 其它 }\end{array}\right.</m>, 令 <m>Y=X^{2}</m>,
+                    <m> F(x, y)</m> 为二维随机变量 <m>(X, Y)</m> 的分布函数, 求:</p>
+
+                    <p>(1) <m>Y</m> 的概率密度 <m>f_Y(y)</m></p>
+
+                    <p>(2) <m>F\left(-\frac{1}{2}, 4\right)</m>
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    解 :</p>
+
+                    <p>(1) <m>Y</m> 的分布函数为 <m>F_{Y}(y)=P\{Y \leq y\}=P\left\{X^{2} \leq y\right\} </m></p>
+
+                    <p>当 <m>y \lt 0</m> 时, <m>F_{Y}(y)=0, f_{Y}(y)=0</m></p>
+
+                    <p>当 <m>0 \leq y  \lt 1</m> 时</p>
+
+                    <p><me>\begin{aligned}
+                        F_{Y}(y) &amp; =P\{-\sqrt{y} \leq X \leq \sqrt{y}\}=P\{-\sqrt{y} \leq X \lt 0\}+P\{0 \leq X \leq \sqrt{y}\}\\
+                    &amp; =\frac{1}{2} \sqrt{y}+\frac{1}{4} \sqrt{y}=\frac{3}{4} \sqrt{y} \\ f_{Y}(y) &amp; =\frac{3}{8 \sqrt{y}}
+                    \end{aligned}</me></p>
+
+                    <p>当 <m>1 \leq y \lt 4</m> 时</p>
+
+                    <p><me>\begin{aligned}
+                        F_{Y}(y) &amp; =P\{-1 \leq X \lt 0\}+P\{0 \leq X \leq \sqrt{y}\}\\
+                        &amp; =\frac{1}{2}+\frac{1}{4} \sqrt{y}=\frac{3}{4} \sqrt{y} \\
+                        f_{Y}(y) &amp; =\frac{1}{8 \sqrt{y}}
+                    \end{aligned}</me></p>
+
+                    <p>当 <m>y \geq 4</m> 时, <m>F_{Y}(y)=1, f_{Y}(y)=0</m>.</p>
+
+                    <p>故 <m> Y </m> 的概率密度为
+                    <me>
+                    f_{Y}(y)=\left\{\begin{array}{ll}
+                    \frac{3}{8 \sqrt{y}}  &amp;  0 \lt y \lt 1 \\
+                    \frac{1}{8 \sqrt{y}}  &amp;  1 \lt y \lt 4 \\
+                    0  &amp;  \text { 其它 }
+                    \end{array}\right.
+                    </me></p>
+
+                    <p>(2)</p>
+
+                    <p><me>
+                    \begin{aligned}
+                    F\left(-\frac{1}{2}, 4\right)  &amp;  =P\left\{X \leq-\frac{1}{2}, Y \leq 4\right\}=P\left\{X \leq-\frac{1}{2}, X^{2} \leq 4\right\}=P\left\{X \leq-\frac{1}{2},-2 \leq X \leq 2\right\} \\
+                    &amp;  =P\left\{-2 \leq X \leq-\frac{1}{2}\right\}+P\left\{-1 \lt X \leq-\frac{1}{2}\right\}=\frac{1}{4}
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
@@ -148,26 +487,82 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量 <m>X \sim U(0,2)</m>, 则随机变量 <m>Y=X^{2}</m> 在 <m>(0,4)</m> 内的概率密度 <m>f_{Y}(y)=(  )</m>
                 </p>
             </statement>
-            <answer>
-                <p>
-                    
-                </p>
-            </answer>
-        </exercise>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            <m>\frac{1}{4 \sqrt{y}}</m>
+                        </p>
+                    </statement>
+                </choice>
+                
+                <choice>
+                    <statement>
+                        <p>
+                            <m>\frac{1}{2 \sqrt{y}}</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>\frac{4}{\sqrt{y}}</m>
+                        </p>
+                    </statement>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>
+                            <m>\frac{2}{\sqrt{y}}</m>
+                        </p>
+                    </statement>
+                </choice>
+            
+            </choices>
+            
+			<answer>
+                	<p>
+                        由于 <m>y=x^{2}</m> 在 <m>(0,4)</m> 内,即 <m>x \in(0,2)</m> 是单调可导的, 所以可以采用公式法得
+                        <me>
+                        f_{Y}(y)=f_{X}(h(y))\left|h^{\prime}(y)\right|=\frac{1}{2}(\sqrt{y})^{\prime}=\frac{1}{4 \sqrt{y}}
+                        </me>
+                	</p>
+          	</answer>
+		</exercise>
+
 
         <!-- Q12 -->
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量 <m>X \sim f(x)=\left\{\begin{array}{ll}\frac{1}{6},  &amp;  0 \leq x \lt 3 \\ \frac{1}{4},  &amp;  3 \leq x \lt 5 \\ 0,  &amp;  \text { 其他 }\end{array}\right.</m> </p>
+                    <p>令随机变量 <m>Y=\left\{\begin{array}{ll}0,  &amp;  X \lt 1 \\ 1,  &amp;  1 \leq X \lt 4 \\ 2,  &amp;  X \geq 4\end{array}\right.</m></p>
+
+                <p>求 <m>Y</m> 的分布律及分布函数.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    随机变量 <m> Y </m> 的可能取值为 <m> 0,1,2 </m>,
+                    <me>
+                    \begin{array}{l}
+                    P\{Y=0\}=P\{X \lt 1\}=\displaystyle\int_{0}^{1} \frac{1}{6} \mathrm{d}x=\frac{1}{6} ; \\
+                    P\{{Y}=1\}={P}\{1 \leq {X} \lt 4\}=\displaystyle\int_{1}^{3} \frac{1}{6} {dx}+\int_{3}^{4} \frac{1}{4} {dx}=\frac{7}{12} ; \\
+                    {P}\{{Y}=2\}={P}\{{X} \geq 4\}=\displaystyle\int_{4}^{5} \frac{1}{4} \mathrm{d}x=\frac{1}{4} ; 
+                    \end{array}
+                    </me></p>
+
+                    <p><me>\therefore F_{Y}(\mathrm{y})=\left\{\begin{array}{l}
+                    0, y \lt 0 \\
+                    \frac 1  6,0 \leqslant y \lt 1 \\
+                    \frac 3 4,1 \leqslant y \lt 2 \\
+                    1, y \geqslant 2
+                    \end{array}\right.</me>
                 </p>
             </answer>
         </exercise>
@@ -176,12 +571,42 @@
         <exercise>
             <statement>
                 <p>
-                    
+                    设随机变量 <m>X</m> 的概率密度为<me>f(x)=\left\{\begin{array}{ll}
+                    \frac{1}{9} x^{2},  &amp;  0 \lt  x \lt  3 \\
+                    0,  &amp;  \text { 其他. }
+                    \end{array}\right. </me></p>
+
+                    <p>令随机变量<m>Y=\left\{\begin{array}{ll}
+                    2,  &amp;  X \leqslant 1, \\
+                    X,  &amp;  1 \lt X \lt 2, \\
+                    1,  &amp;  X \geqslant 2 .
+                    \end{array}\right.</m></p>
+
+                    <p>(1) 求 <m> Y </m> 的分布函数;</p>
+
+                    <p>(2) 求概率 <m> P\{X \leqslant Y\} </m>.
                 </p>
             </statement>
             <answer>
                 <p>
-                    
+                    由题目得到随机变量 <m> Y </m> 有效取值区间为 <m> [1,2] </m>, 且 <m> F(y)=p\{Y \leq y\} </m></p>
+
+                    <p>当 <m>y \lt 1</m> 时, <m>F(y)=p\{Y \leq y\}=0</m>,  当  <m>y \geq 2</m>  时,  <m>F(y)=p\{Y \leq y\}=1</m></p>
+
+                    <p>当 <m>1\leq y \lt 2 </m> 时,</p>
+
+                    <p><me>\begin{aligned}
+                        F(y)=p\{Y \leq y\} &amp; =p\{Y \lt 1\}+p\{Y=1\}+p\{1 \lt Y \leq y\}\\ &amp; =0+p\{X \geq 2\}+p\{1 \lt X \leq y\}\\
+                        &amp; =\int_{2}^{3} \frac{1}{9} x^{2} d x+\int_{1}^{y} \frac{1}{9} x^{2} d x\\ &amp; =\frac{1}{27}\left[\left.x^{3}\right|_{2} ^{3}+\left.x^{3}\right|_{1} ^{y}\right]\\ &amp; =\frac{1}{27}\left[18+y^{3}\right]
+                    \end{aligned}</me></p>
+
+                    <p>分布函数为 <m>F(y)=\left\{\begin{array}{ll}0  &amp;  y \lt 1 \\ \frac{1}{27}\left(18+y^{3}\right) \\ 1  &amp;  y \geq 2\end{array}\right.</m>
+                    <me>
+                    \begin{aligned}
+                    P\{X \leq Y\} &amp; =P\{X=Y\}+P\{X \lt Y\}\\ &amp; =P\{1 \lt X \lt 2\}+P\{X \leq 1\} \\
+                    &amp; =\int_{1}^{2} \frac{1}{9} x^{2} d x+\int_{0}^{1} \frac{1}{9} x^{2} d x\\ &amp; =\int_{0}^{2} \frac{1}{9} x^{2} d x=\left.\frac{x^{3}}{27}\right|_{0} ^{2}=\frac{8}{27}
+                    \end{aligned}
+                    </me>
                 </p>
             </answer>
         </exercise>
